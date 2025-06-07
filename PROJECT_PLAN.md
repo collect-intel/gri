@@ -178,6 +178,8 @@ Implement the scripts for acquiring and processing the benchmark data.
 - Use libraries like `requests` and `urllib` to download the population data files from their public sources. Add comments indicating the source URLs.
 - Save the raw files into `data/raw/benchmark_data/`.
 
+**NOTE: The raw sources are simply too complex and scattered and required too much manual cleaning to get into a usuable format to use from their original downloadable origins. Instead these files are already provided in `data/raw/benchmark_data/`. The URL sources for each file are documented in `data/raw/benchmark_data/Sources.csv/`. Therefore skip implementing `scripts/download_benchmarks.py`.**
+
 **File: `scripts/process_data.py`**
 
 - Load the raw data files from `data/raw/benchmark_data/`.
@@ -198,7 +200,7 @@ Develop a series of Jupyter Notebooks in the `notebooks/` directory to demonstra
 
 **Notebook: `1-data-preparation.ipynb`**
 
-- Provide markdown instructions on how to run the `scripts/download_benchmarks.py` and `scripts/process_data.py` scripts first.
+- Provide markdown instructions on how to run the `scripts/download_benchmarks.py` (SEE UPDATE NOTE IN TASK 5) and `scripts/process_data.py` scripts first.
 - Show how to load a sample survey dataset (e.g., `data/raw/survey_data/global_dialogues/GD4_participant.csv`).
 - Demonstrate necessary cleaning steps for the survey data (e.g., standardizing column names, mapping values to match benchmark categories).
 
