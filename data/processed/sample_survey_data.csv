@@ -1,0 +1,501 @@
+country,age_group,gender,religion,environment
+Germany,18-25,Female,I do not identify with any religious group or faith,Rural
+Nigeria,65+,Male,Christianity,Urban
+Brazil,65+,Female,Islam,Urban
+Nigeria,56-65,Female,Judaism,Rural
+Nigeria,26-35,Male,Buddhism,Urban
+India,26-35,Female,Hinduism,Rural
+Brazil,65+,Female,Buddhism,Urban
+Brazil,56-65,Female,Islam,Urban
+Brazil,46-55,Male,I do not identify with any religious group or faith,Urban
+Nigeria,26-35,Female,Buddhism,Urban
+Germany,46-55,Female,Christianity,Rural
+Brazil,26-35,Female,Islam,Urban
+Japan,26-35,Male,I do not identify with any religious group or faith,Urban
+Nigeria,36-45,Female,Hinduism,Rural
+India,26-35,Male,I do not identify with any religious group or faith,Urban
+Germany,18-25,Male,Other religious group,Urban
+Japan,56-65,Male,Christianity,Rural
+Japan,56-65,Male,Islam,Urban
+India,46-55,Male,Hinduism,Rural
+Germany,26-35,Male,Christianity,Rural
+Nigeria,18-25,Female,I do not identify with any religious group or faith,Rural
+United States of America,46-55,Male,Christianity,Rural
+Germany,36-45,Female,Islam,Urban
+India,46-55,Female,Judaism,Rural
+Japan,46-55,Male,Christianity,Urban
+Nigeria,26-35,Female,Other religious group,Urban
+Germany,36-45,Female,Christianity,Urban
+United States of America,46-55,Female,I do not identify with any religious group or faith,Urban
+United States of America,18-25,Female,I do not identify with any religious group or faith,Urban
+Brazil,18-25,Male,Hinduism,Urban
+Brazil,56-65,Female,I do not identify with any religious group or faith,Urban
+India,36-45,Male,Buddhism,Urban
+Germany,36-45,Female,Islam,Urban
+Germany,56-65,Female,Islam,Urban
+Japan,46-55,Male,Judaism,Rural
+Japan,36-45,Female,Judaism,Rural
+Japan,18-25,Female,Islam,Rural
+Brazil,18-25,Female,Other religious group,Urban
+Germany,26-35,Male,Judaism,Rural
+Germany,36-45,Female,Hinduism,Rural
+United States of America,46-55,Male,I do not identify with any religious group or faith,Rural
+Brazil,56-65,Female,Islam,Urban
+Nigeria,56-65,Male,Judaism,Urban
+Brazil,46-55,Male,Islam,Urban
+Nigeria,65+,Female,Buddhism,Urban
+United States of America,26-35,Female,Christianity,Rural
+India,56-65,Male,I do not identify with any religious group or faith,Rural
+Germany,36-45,Male,Islam,Rural
+United States of America,26-35,Female,Christianity,Rural
+Germany,36-45,Male,Judaism,Urban
+Japan,18-25,Female,Christianity,Urban
+India,26-35,Female,I do not identify with any religious group or faith,Urban
+India,56-65,Female,Islam,Rural
+United States of America,26-35,Female,Buddhism,Urban
+India,26-35,Male,Other religious group,Urban
+Nigeria,26-35,Female,Judaism,Rural
+India,65+,Male,Islam,Rural
+Germany,26-35,Female,I do not identify with any religious group or faith,Urban
+Germany,36-45,Male,Judaism,Urban
+Germany,18-25,Female,Hinduism,Urban
+Germany,46-55,Male,Christianity,Urban
+Nigeria,26-35,Male,Other religious group,Urban
+Brazil,56-65,Female,I do not identify with any religious group or faith,Urban
+Japan,26-35,Female,Hinduism,Rural
+United States of America,56-65,Female,Islam,Rural
+Germany,36-45,Female,Buddhism,Rural
+India,56-65,Male,Judaism,Urban
+Germany,46-55,Female,Christianity,Rural
+India,18-25,Male,Judaism,Urban
+Japan,56-65,Male,Other religious group,Urban
+Japan,56-65,Female,Islam,Rural
+Japan,18-25,Male,Judaism,Urban
+India,46-55,Male,Christianity,Urban
+Germany,26-35,Male,Islam,Rural
+Japan,56-65,Male,Judaism,Rural
+Nigeria,18-25,Female,Buddhism,Rural
+India,36-45,Female,I do not identify with any religious group or faith,Urban
+India,18-25,Female,Islam,Rural
+Germany,36-45,Female,I do not identify with any religious group or faith,Rural
+India,46-55,Male,Islam,Urban
+India,26-35,Male,Buddhism,Rural
+Japan,18-25,Female,I do not identify with any religious group or faith,Rural
+Germany,65+,Female,Hinduism,Rural
+Japan,56-65,Female,Christianity,Urban
+Japan,46-55,Male,Hinduism,Urban
+Germany,18-25,Female,Judaism,Urban
+United States of America,56-65,Female,Buddhism,Urban
+Japan,18-25,Female,Hinduism,Rural
+Nigeria,36-45,Male,Islam,Urban
+Nigeria,18-25,Male,Judaism,Urban
+India,65+,Male,Judaism,Rural
+Nigeria,18-25,Male,Hinduism,Rural
+India,18-25,Male,Hinduism,Rural
+United States of America,65+,Male,Buddhism,Urban
+Germany,46-55,Male,Christianity,Urban
+Germany,18-25,Male,Hinduism,Urban
+Germany,65+,Female,Other religious group,Rural
+Nigeria,56-65,Female,Hinduism,Rural
+United States of America,36-45,Male,I do not identify with any religious group or faith,Urban
+Nigeria,36-45,Male,Islam,Rural
+Nigeria,18-25,Female,Other religious group,Rural
+United States of America,46-55,Male,Other religious group,Rural
+United States of America,46-55,Male,I do not identify with any religious group or faith,Urban
+United States of America,56-65,Male,I do not identify with any religious group or faith,Rural
+United States of America,18-25,Female,Judaism,Rural
+Germany,36-45,Female,Christianity,Urban
+Brazil,46-55,Female,Islam,Urban
+Brazil,18-25,Female,Buddhism,Rural
+United States of America,46-55,Female,Other religious group,Rural
+Brazil,65+,Male,Buddhism,Urban
+Brazil,46-55,Female,Hinduism,Urban
+United States of America,36-45,Male,Hinduism,Rural
+Brazil,26-35,Male,Buddhism,Rural
+Nigeria,56-65,Female,Hinduism,Rural
+India,56-65,Female,Christianity,Rural
+India,36-45,Male,I do not identify with any religious group or faith,Urban
+United States of America,46-55,Male,Hinduism,Rural
+Germany,18-25,Male,Judaism,Rural
+United States of America,46-55,Female,Hinduism,Urban
+Germany,36-45,Female,Islam,Rural
+India,56-65,Female,Christianity,Urban
+United States of America,46-55,Female,Islam,Rural
+Japan,56-65,Female,Islam,Rural
+Nigeria,18-25,Male,Judaism,Urban
+Brazil,56-65,Female,Christianity,Urban
+Germany,56-65,Male,Christianity,Rural
+Japan,26-35,Male,Christianity,Rural
+Brazil,26-35,Male,Christianity,Rural
+Brazil,65+,Female,Christianity,Urban
+United States of America,26-35,Female,Judaism,Rural
+Brazil,56-65,Female,Hinduism,Urban
+Nigeria,36-45,Male,Islam,Urban
+Japan,56-65,Male,Christianity,Rural
+Brazil,36-45,Male,Other religious group,Urban
+United States of America,36-45,Male,Hinduism,Rural
+Nigeria,26-35,Male,Hinduism,Rural
+India,46-55,Male,Islam,Rural
+Japan,18-25,Female,Judaism,Rural
+Brazil,26-35,Female,Buddhism,Rural
+United States of America,26-35,Female,Buddhism,Urban
+India,46-55,Female,Hinduism,Urban
+India,18-25,Male,I do not identify with any religious group or faith,Rural
+Germany,56-65,Male,I do not identify with any religious group or faith,Rural
+Nigeria,65+,Female,Islam,Urban
+Brazil,65+,Male,Buddhism,Urban
+United States of America,56-65,Female,Hinduism,Urban
+Germany,26-35,Female,Judaism,Urban
+Nigeria,18-25,Female,Buddhism,Rural
+Germany,26-35,Male,Hinduism,Rural
+Japan,36-45,Female,Hinduism,Urban
+Nigeria,26-35,Female,Christianity,Rural
+Nigeria,26-35,Female,Judaism,Urban
+Brazil,56-65,Male,Christianity,Rural
+Nigeria,56-65,Male,Islam,Urban
+Germany,56-65,Female,Christianity,Rural
+Nigeria,65+,Male,Other religious group,Urban
+Brazil,36-45,Male,Christianity,Urban
+Brazil,56-65,Male,Other religious group,Rural
+Japan,18-25,Male,Buddhism,Urban
+Germany,65+,Male,I do not identify with any religious group or faith,Rural
+India,46-55,Male,Hinduism,Rural
+India,18-25,Male,Other religious group,Urban
+Nigeria,18-25,Male,Judaism,Rural
+Japan,56-65,Male,Christianity,Rural
+United States of America,46-55,Male,Other religious group,Rural
+Nigeria,46-55,Female,Judaism,Rural
+Japan,65+,Female,I do not identify with any religious group or faith,Rural
+Germany,46-55,Male,I do not identify with any religious group or faith,Urban
+Germany,36-45,Female,Christianity,Rural
+Germany,56-65,Female,Islam,Rural
+Germany,46-55,Male,Christianity,Rural
+Germany,65+,Male,Buddhism,Rural
+Japan,36-45,Male,Other religious group,Rural
+Japan,26-35,Female,Hinduism,Urban
+Brazil,26-35,Female,Islam,Rural
+India,36-45,Male,Christianity,Urban
+Germany,65+,Male,Judaism,Urban
+United States of America,36-45,Male,Islam,Urban
+Japan,56-65,Female,Other religious group,Urban
+United States of America,56-65,Female,Islam,Rural
+United States of America,26-35,Female,Other religious group,Urban
+United States of America,46-55,Female,Christianity,Urban
+Brazil,65+,Male,Other religious group,Rural
+Japan,26-35,Male,Islam,Rural
+United States of America,46-55,Male,Judaism,Rural
+Germany,46-55,Male,I do not identify with any religious group or faith,Urban
+Nigeria,56-65,Female,Islam,Rural
+United States of America,18-25,Female,Other religious group,Rural
+Brazil,18-25,Male,I do not identify with any religious group or faith,Urban
+Japan,36-45,Male,Other religious group,Rural
+Brazil,56-65,Female,Judaism,Rural
+United States of America,46-55,Male,Other religious group,Rural
+Japan,65+,Female,Christianity,Rural
+Nigeria,18-25,Male,Hinduism,Urban
+United States of America,46-55,Male,Islam,Rural
+Brazil,18-25,Male,Hinduism,Rural
+India,18-25,Male,Other religious group,Urban
+Germany,18-25,Male,Judaism,Rural
+Brazil,65+,Male,Islam,Urban
+Japan,56-65,Male,Other religious group,Rural
+United States of America,65+,Female,I do not identify with any religious group or faith,Urban
+Germany,26-35,Female,Buddhism,Urban
+United States of America,46-55,Female,Other religious group,Urban
+Japan,56-65,Female,Hinduism,Urban
+United States of America,56-65,Female,Islam,Rural
+India,56-65,Male,Hinduism,Urban
+Germany,56-65,Male,Islam,Rural
+Germany,65+,Female,Other religious group,Urban
+Japan,56-65,Male,Christianity,Urban
+India,36-45,Female,I do not identify with any religious group or faith,Urban
+Brazil,46-55,Female,Other religious group,Rural
+United States of America,56-65,Male,Hinduism,Urban
+Nigeria,46-55,Male,Buddhism,Rural
+United States of America,36-45,Male,Buddhism,Rural
+United States of America,36-45,Female,Judaism,Rural
+Brazil,46-55,Male,Islam,Rural
+United States of America,18-25,Female,Hinduism,Rural
+India,26-35,Female,Judaism,Rural
+India,18-25,Female,Hinduism,Rural
+Germany,18-25,Male,Islam,Rural
+Japan,65+,Male,Other religious group,Rural
+Nigeria,18-25,Female,Other religious group,Urban
+United States of America,56-65,Male,Buddhism,Urban
+United States of America,65+,Male,Other religious group,Urban
+Brazil,65+,Male,Other religious group,Urban
+Japan,36-45,Female,Christianity,Urban
+India,18-25,Female,Buddhism,Rural
+Nigeria,36-45,Male,Judaism,Rural
+Germany,46-55,Female,I do not identify with any religious group or faith,Rural
+India,26-35,Male,Christianity,Rural
+Japan,65+,Male,Judaism,Rural
+Germany,46-55,Male,Islam,Rural
+Brazil,46-55,Male,Christianity,Rural
+Brazil,56-65,Female,Judaism,Urban
+United States of America,26-35,Female,Islam,Urban
+Japan,46-55,Female,Buddhism,Urban
+Nigeria,46-55,Male,I do not identify with any religious group or faith,Urban
+Germany,26-35,Male,Islam,Rural
+India,26-35,Male,Other religious group,Rural
+Japan,46-55,Female,Hinduism,Rural
+Japan,26-35,Male,Islam,Urban
+Brazil,46-55,Female,Islam,Rural
+United States of America,46-55,Female,I do not identify with any religious group or faith,Rural
+United States of America,56-65,Female,Hinduism,Rural
+Germany,18-25,Female,Other religious group,Urban
+Brazil,46-55,Female,Judaism,Rural
+Japan,36-45,Female,Judaism,Urban
+Nigeria,65+,Male,Islam,Urban
+Brazil,18-25,Male,Hinduism,Urban
+Germany,18-25,Female,Hinduism,Urban
+Germany,18-25,Female,Other religious group,Rural
+Brazil,56-65,Male,I do not identify with any religious group or faith,Urban
+Germany,46-55,Female,Buddhism,Urban
+Brazil,56-65,Female,Judaism,Rural
+India,46-55,Male,I do not identify with any religious group or faith,Rural
+Brazil,56-65,Female,Christianity,Urban
+Brazil,56-65,Female,Judaism,Rural
+Germany,65+,Female,I do not identify with any religious group or faith,Urban
+Germany,36-45,Male,Judaism,Urban
+United States of America,56-65,Male,Buddhism,Urban
+United States of America,65+,Male,Christianity,Urban
+India,26-35,Female,Buddhism,Rural
+United States of America,36-45,Female,Other religious group,Urban
+Brazil,56-65,Male,Christianity,Rural
+Germany,18-25,Female,Islam,Rural
+United States of America,26-35,Female,I do not identify with any religious group or faith,Rural
+United States of America,26-35,Female,Christianity,Rural
+India,65+,Female,Other religious group,Urban
+Japan,26-35,Female,Other religious group,Rural
+India,36-45,Male,Buddhism,Urban
+Brazil,56-65,Female,Judaism,Rural
+Germany,56-65,Male,Christianity,Rural
+India,18-25,Female,I do not identify with any religious group or faith,Urban
+United States of America,65+,Male,Christianity,Urban
+Germany,18-25,Female,Hinduism,Urban
+Germany,26-35,Male,Judaism,Rural
+United States of America,18-25,Female,I do not identify with any religious group or faith,Rural
+India,36-45,Male,I do not identify with any religious group or faith,Urban
+United States of America,56-65,Female,Islam,Urban
+Japan,26-35,Male,Buddhism,Urban
+Germany,18-25,Female,Islam,Urban
+Nigeria,65+,Male,I do not identify with any religious group or faith,Rural
+Nigeria,36-45,Male,Judaism,Urban
+Brazil,36-45,Female,Christianity,Urban
+United States of America,18-25,Female,Christianity,Urban
+United States of America,56-65,Male,Judaism,Urban
+Brazil,18-25,Female,I do not identify with any religious group or faith,Rural
+Brazil,26-35,Male,Other religious group,Urban
+Brazil,18-25,Male,Christianity,Rural
+Germany,36-45,Male,Other religious group,Urban
+Japan,18-25,Female,Christianity,Urban
+United States of America,56-65,Male,Christianity,Rural
+Germany,65+,Male,Buddhism,Urban
+Brazil,46-55,Female,Buddhism,Rural
+United States of America,18-25,Female,Hinduism,Rural
+Germany,56-65,Female,Islam,Urban
+Japan,56-65,Female,Judaism,Rural
+Germany,65+,Male,Judaism,Rural
+Japan,36-45,Male,Judaism,Rural
+Brazil,56-65,Male,Hinduism,Rural
+Japan,56-65,Male,Buddhism,Rural
+United States of America,56-65,Female,I do not identify with any religious group or faith,Rural
+Brazil,56-65,Male,Other religious group,Rural
+United States of America,26-35,Male,Other religious group,Rural
+Nigeria,26-35,Female,I do not identify with any religious group or faith,Urban
+India,36-45,Male,Hinduism,Urban
+Japan,18-25,Male,I do not identify with any religious group or faith,Rural
+India,56-65,Male,Judaism,Urban
+India,65+,Male,Islam,Rural
+Japan,18-25,Male,Christianity,Rural
+Brazil,65+,Male,Other religious group,Urban
+Nigeria,18-25,Female,Buddhism,Rural
+United States of America,36-45,Female,Buddhism,Rural
+Germany,56-65,Male,Hinduism,Rural
+United States of America,56-65,Male,Buddhism,Rural
+Germany,46-55,Female,Judaism,Urban
+United States of America,65+,Male,Other religious group,Rural
+Japan,18-25,Male,I do not identify with any religious group or faith,Rural
+Nigeria,18-25,Male,Judaism,Rural
+Germany,26-35,Female,Hinduism,Urban
+Brazil,46-55,Male,Judaism,Rural
+United States of America,26-35,Female,I do not identify with any religious group or faith,Urban
+United States of America,26-35,Male,Islam,Urban
+Germany,26-35,Female,Hinduism,Rural
+Brazil,65+,Female,Islam,Rural
+Brazil,65+,Male,Christianity,Urban
+Japan,36-45,Female,Islam,Rural
+Japan,36-45,Male,Christianity,Urban
+Japan,26-35,Female,Christianity,Urban
+Japan,46-55,Male,Islam,Rural
+Japan,18-25,Male,Hinduism,Rural
+Japan,65+,Female,I do not identify with any religious group or faith,Urban
+Nigeria,46-55,Male,Judaism,Urban
+Brazil,56-65,Male,Judaism,Urban
+Japan,65+,Female,I do not identify with any religious group or faith,Urban
+Brazil,65+,Male,Other religious group,Rural
+Brazil,36-45,Male,Other religious group,Rural
+India,18-25,Female,Christianity,Rural
+Nigeria,18-25,Female,Christianity,Rural
+Japan,56-65,Male,Hinduism,Rural
+United States of America,56-65,Male,Buddhism,Urban
+Germany,65+,Female,Islam,Rural
+United States of America,26-35,Female,Christianity,Rural
+Nigeria,36-45,Male,Judaism,Rural
+Germany,36-45,Female,Hinduism,Rural
+Nigeria,65+,Male,Islam,Rural
+Brazil,46-55,Male,Hinduism,Urban
+Germany,26-35,Male,Islam,Urban
+Brazil,65+,Male,Islam,Urban
+United States of America,26-35,Male,I do not identify with any religious group or faith,Rural
+United States of America,26-35,Female,Christianity,Urban
+Germany,26-35,Female,Hinduism,Urban
+Germany,65+,Female,Hinduism,Rural
+Japan,36-45,Female,I do not identify with any religious group or faith,Rural
+Nigeria,36-45,Male,Judaism,Rural
+Japan,26-35,Male,Judaism,Urban
+Nigeria,46-55,Male,Other religious group,Urban
+Japan,18-25,Male,Christianity,Rural
+Brazil,65+,Female,Christianity,Rural
+Germany,18-25,Male,Buddhism,Urban
+United States of America,46-55,Male,I do not identify with any religious group or faith,Urban
+Nigeria,65+,Female,Judaism,Rural
+Nigeria,26-35,Female,Islam,Rural
+United States of America,36-45,Female,Hinduism,Urban
+Japan,18-25,Female,Christianity,Rural
+Nigeria,56-65,Male,Hinduism,Urban
+Brazil,56-65,Male,Hinduism,Urban
+Germany,46-55,Female,Buddhism,Urban
+United States of America,26-35,Male,Judaism,Urban
+Germany,18-25,Male,Christianity,Rural
+Nigeria,26-35,Male,Hinduism,Rural
+Nigeria,18-25,Female,Christianity,Urban
+United States of America,46-55,Male,Islam,Urban
+Brazil,46-55,Female,Buddhism,Urban
+India,56-65,Male,Islam,Urban
+United States of America,26-35,Male,Christianity,Urban
+India,65+,Male,Other religious group,Rural
+Japan,56-65,Female,Christianity,Rural
+India,26-35,Male,Judaism,Rural
+Brazil,56-65,Female,Hinduism,Rural
+Japan,65+,Female,Hinduism,Urban
+India,36-45,Female,Islam,Urban
+Japan,36-45,Male,Buddhism,Urban
+India,36-45,Male,Other religious group,Urban
+Brazil,36-45,Male,I do not identify with any religious group or faith,Urban
+India,18-25,Male,Hinduism,Rural
+India,36-45,Female,Judaism,Urban
+India,65+,Female,Islam,Rural
+United States of America,46-55,Female,Islam,Rural
+United States of America,46-55,Male,I do not identify with any religious group or faith,Rural
+United States of America,18-25,Female,Judaism,Rural
+Brazil,36-45,Male,Buddhism,Urban
+Japan,36-45,Female,Judaism,Rural
+Nigeria,36-45,Male,Buddhism,Rural
+India,56-65,Male,Judaism,Rural
+India,26-35,Female,Judaism,Urban
+Brazil,56-65,Female,Christianity,Urban
+India,26-35,Female,Islam,Urban
+United States of America,36-45,Female,Judaism,Rural
+Nigeria,36-45,Male,I do not identify with any religious group or faith,Rural
+Germany,56-65,Female,Judaism,Urban
+India,56-65,Female,Hinduism,Rural
+United States of America,26-35,Female,Islam,Urban
+Germany,46-55,Male,Hinduism,Urban
+Nigeria,26-35,Male,Islam,Rural
+Germany,56-65,Female,Hinduism,Rural
+United States of America,65+,Male,Judaism,Rural
+Japan,56-65,Female,Judaism,Rural
+Japan,65+,Male,Christianity,Urban
+Germany,18-25,Male,I do not identify with any religious group or faith,Urban
+Brazil,56-65,Male,Hinduism,Urban
+Germany,18-25,Male,Buddhism,Urban
+India,46-55,Female,Christianity,Urban
+India,26-35,Female,Hinduism,Rural
+Japan,65+,Female,Hinduism,Urban
+Brazil,26-35,Male,Christianity,Urban
+United States of America,18-25,Female,Judaism,Urban
+India,65+,Female,Hinduism,Rural
+Japan,26-35,Female,Judaism,Rural
+Nigeria,56-65,Male,Christianity,Rural
+Japan,36-45,Male,Judaism,Rural
+India,18-25,Male,Islam,Urban
+India,26-35,Female,Buddhism,Urban
+Japan,18-25,Female,Other religious group,Rural
+United States of America,18-25,Female,Hinduism,Rural
+Germany,65+,Male,I do not identify with any religious group or faith,Urban
+India,65+,Male,Buddhism,Urban
+Japan,36-45,Female,Other religious group,Rural
+Japan,56-65,Male,Judaism,Rural
+Brazil,18-25,Male,Hinduism,Rural
+Germany,26-35,Male,Judaism,Rural
+Nigeria,46-55,Male,Islam,Urban
+United States of America,18-25,Female,Christianity,Urban
+Nigeria,18-25,Male,Hinduism,Urban
+Germany,36-45,Male,Other religious group,Rural
+Germany,56-65,Male,Other religious group,Rural
+Germany,46-55,Male,Islam,Urban
+Nigeria,65+,Female,Islam,Urban
+Germany,65+,Female,Hinduism,Urban
+Japan,26-35,Male,Judaism,Urban
+Nigeria,46-55,Male,I do not identify with any religious group or faith,Rural
+Germany,65+,Male,Other religious group,Urban
+Japan,26-35,Male,Other religious group,Urban
+Brazil,56-65,Male,Islam,Urban
+Germany,26-35,Male,Buddhism,Urban
+Nigeria,65+,Female,Islam,Urban
+India,36-45,Male,I do not identify with any religious group or faith,Urban
+Germany,36-45,Female,Judaism,Urban
+India,36-45,Female,Judaism,Rural
+Japan,65+,Male,Buddhism,Rural
+Brazil,36-45,Female,Other religious group,Rural
+United States of America,46-55,Female,Islam,Rural
+Brazil,56-65,Female,Judaism,Urban
+Germany,26-35,Female,I do not identify with any religious group or faith,Rural
+India,26-35,Female,Hinduism,Rural
+India,65+,Female,Christianity,Urban
+Nigeria,36-45,Male,Christianity,Urban
+India,36-45,Female,Christianity,Rural
+Nigeria,18-25,Female,Other religious group,Rural
+Japan,56-65,Female,Islam,Urban
+United States of America,46-55,Male,Buddhism,Rural
+Germany,26-35,Female,Judaism,Urban
+Nigeria,18-25,Male,Hinduism,Urban
+United States of America,18-25,Female,I do not identify with any religious group or faith,Urban
+India,65+,Male,Hinduism,Urban
+India,26-35,Male,I do not identify with any religious group or faith,Rural
+United States of America,65+,Female,Other religious group,Urban
+India,46-55,Female,Islam,Urban
+Japan,18-25,Male,Christianity,Rural
+Japan,18-25,Female,Islam,Urban
+United States of America,56-65,Male,Other religious group,Rural
+Nigeria,46-55,Male,Buddhism,Rural
+Nigeria,18-25,Male,Buddhism,Rural
+United States of America,46-55,Male,Other religious group,Urban
+Nigeria,26-35,Male,I do not identify with any religious group or faith,Rural
+Nigeria,36-45,Female,Judaism,Rural
+Japan,18-25,Male,Judaism,Urban
+Nigeria,56-65,Male,I do not identify with any religious group or faith,Rural
+Brazil,26-35,Female,Buddhism,Rural
+Germany,46-55,Male,Buddhism,Rural
+India,65+,Female,Buddhism,Rural
+Brazil,26-35,Female,Islam,Rural
+Nigeria,18-25,Female,Buddhism,Urban
+Japan,46-55,Male,Hinduism,Rural
+United States of America,36-45,Male,Christianity,Rural
+Nigeria,26-35,Male,Buddhism,Urban
+Japan,18-25,Female,I do not identify with any religious group or faith,Urban
+Germany,56-65,Male,Christianity,Urban
+Nigeria,65+,Female,Islam,Rural
+United States of America,46-55,Male,I do not identify with any religious group or faith,Urban
+Japan,26-35,Female,Christianity,Rural
+Japan,26-35,Male,I do not identify with any religious group or faith,Rural
+Japan,36-45,Male,Islam,Urban
+Germany,36-45,Male,Hinduism,Urban
+Nigeria,56-65,Female,Islam,Rural
+Germany,65+,Female,Islam,Urban
+India,56-65,Male,I do not identify with any religious group or faith,Rural
+India,18-25,Male,Other religious group,Urban
+Nigeria,18-25,Female,Judaism,Urban
+Germany,56-65,Female,Buddhism,Urban

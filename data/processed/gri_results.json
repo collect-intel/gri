@@ -1,0 +1,13 @@
+{
+  "survey_participants": 500,
+  "gri_country_gender_age": 0.26127770595067257,
+  "gri_country_religion": 0.06805819557879489,
+  "gri_country_environment": 0.0899105063548693,
+  "average_gri": 0.13974880262811226,
+  "diversity_country_gender_age": 0.037075718015665796,
+  "diversity_country_religion": 0.04771371769383698,
+  "diversity_country_environment": 0.030927835051546393,
+  "average_diversity": 0.03857242358701639,
+  "assessment": "Poor representativeness",
+  "coverage_assessment": "Poor diversity coverage"
+}
