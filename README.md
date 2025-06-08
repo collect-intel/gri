@@ -62,3 +62,205 @@ Calculating the GRI requires reliable benchmark data for the global population. 
     * Pew Research Center. (2012). *The Global Religious Landscape*.
 
 This repository provides tools to calculate the GRI and Diversity Score for any survey, given the survey data and the corresponding global population benchmarks.
+
+## Getting Started
+
+### Quick Start (5 minutes)
+
+The fastest way to get started with GRI is using our automated setup:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-org/gri.git
+cd gri
+
+# One-command setup and demo
+make setup
+make demo
+```
+
+This will:
+1. Create a virtual environment
+2. Install all dependencies 
+3. Process benchmark data from UN and Pew Research
+4. Run a demonstration with sample survey data
+5. Show you a complete GRI Scorecard
+
+### Prerequisites
+
+- **Python 3.8+** 
+- **Git** (for cloning the repository)
+- **10 GB disk space** (for benchmark data processing)
+
+### Step-by-Step Setup
+
+#### 1. Environment Setup
+```bash
+# Create virtual environment
+make venv
+
+# Install dependencies
+make install
+
+# Verify setup
+make health-check
+```
+
+#### 2. Process Benchmark Data
+```bash
+# Process UN and Pew Research data into GRI format
+make process-data
+
+# Verify data processing
+make validate-data
+
+# View data summary
+make show-benchmarks
+```
+
+#### 3. Calculate Your First GRI
+```bash
+# Run demonstration with sample data
+make calculate-gri
+```
+
+You'll see output like:
+```
+GRI Scorecard Results:
+  Country × Gender × Age:  GRI=0.2345, Diversity=0.8901
+  Country × Religion:      GRI=0.1234, Diversity=0.7654
+  Country × Environment:   GRI=0.3456, Diversity=0.5432
+
+Average GRI: 0.2345
+Assessment: Moderate representativeness
+```
+
+### Using GRI with Your Data
+
+#### Basic Usage
+
+```python
+from gri import calculate_gri, calculate_diversity_score, load_data
+import pandas as pd
+
+# Load your survey data (CSV with demographic columns)
+survey_data = pd.read_csv('your_survey.csv')
+
+# Load processed benchmark data
+benchmark = load_data('data/processed/benchmark_country_gender_age.csv')
+
+# Calculate GRI score
+gri_score = calculate_gri(
+    survey_data, 
+    benchmark, 
+    strata_cols=['country', 'gender', 'age_group']
+)
+
+print(f"GRI Score: {gri_score:.4f}")
+```
+
+#### Required Data Format
+
+Your survey data should be a CSV with these columns:
+
+| Column | Description | Example Values |
+|--------|-------------|----------------|
+| `country` | Country name | "United States", "India", "Brazil" |
+| `gender` | Gender identity | "Male", "Female" |
+| `age_group` | Age bracket | "18-25", "26-35", "36-45", "46-55", "56-65", "65+" |
+| `religion` | Religious affiliation | "Christianity", "Islam", "Hinduism", "Buddhism", "Judaism", "I do not identify with any religious group or faith", "Other religious group" |
+| `environment` | Location type | "Urban", "Rural" |
+
+#### Complete GRI Scorecard
+
+For a comprehensive assessment, calculate GRI across all three dimensions:
+
+```python
+from gri import calculate_gri, load_data
+
+# Load benchmark data for all dimensions
+benchmark_age_gender = load_data('data/processed/benchmark_country_gender_age.csv')
+benchmark_religion = load_data('data/processed/benchmark_country_religion.csv')  
+benchmark_environment = load_data('data/processed/benchmark_country_environment.csv')
+
+# Calculate GRI for each dimension
+gri_age_gender = calculate_gri(survey_data, benchmark_age_gender, 
+                              ['country', 'gender', 'age_group'])
+gri_religion = calculate_gri(survey_data, benchmark_religion, 
+                            ['country', 'religion'])
+gri_environment = calculate_gri(survey_data, benchmark_environment, 
+                               ['country', 'environment'])
+
+# Calculate average GRI
+average_gri = (gri_age_gender + gri_religion + gri_environment) / 3
+print(f"Average GRI: {average_gri:.4f}")
+```
+
+### Learning Path
+
+#### 1. **Start Here**: Run the Demo
+```bash
+make demo
+```
+
+#### 2. **Explore Examples**: Jupyter Notebooks
+```bash
+# Execute all example notebooks
+make run-notebooks
+
+# Or manually open individual notebooks:
+jupyter notebook notebooks/1-data-preparation.ipynb
+jupyter notebook notebooks/2-gri-calculation-example.ipynb  
+jupyter notebook notebooks/3-advanced-analysis.ipynb
+```
+
+#### 3. **Understand the Data**: View Benchmarks
+```bash
+make show-benchmarks
+```
+
+#### 4. **Advanced Analysis**: Gap Identification
+The advanced notebook (`3-advanced-analysis.ipynb`) shows you how to:
+- Identify which demographic groups are over/under-represented
+- Generate actionable recommendations for improving sample balance
+- Compare surveys over time or across methodologies
+
+### Interpreting GRI Scores
+
+| GRI Score | Interpretation |
+|-----------|----------------|
+| 0.8 - 1.0 | **Excellent** representativeness |
+| 0.6 - 0.8 | **Good** representativeness |
+| 0.4 - 0.6 | **Moderate** representativeness |
+| 0.0 - 0.4 | **Poor** representativeness |
+
+**Diversity Score** measures coverage breadth (0.0 = no relevant strata covered, 1.0 = all relevant strata covered).
+
+### Common Use Cases
+
+- **Survey Quality Assessment**: Evaluate how well your sample represents the global population
+- **Recruitment Optimization**: Identify which demographic groups to target for better balance
+- **Research Validation**: Provide quantitative evidence of sample representativeness in publications
+- **Comparative Analysis**: Compare representativeness across studies, time periods, or methodologies
+- **Real-time Monitoring**: Track representativeness during data collection to course-correct
+
+### Getting Help
+
+- **Examples**: Check the `notebooks/` directory for detailed examples
+- **API Reference**: See function docstrings in `gri/calculator.py` and `gri/utils.py`
+- **Issues**: Report bugs or request features on GitHub
+- **Makefile Commands**: Run `make help` for all available commands
+
+### Development and Testing
+
+```bash
+# Run test suite
+make test
+
+# Code quality checks
+make lint
+make format
+
+# Clean up
+make clean
+```
