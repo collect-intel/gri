@@ -109,7 +109,11 @@ This should aggregate country data on the Benchmark side, but on the GD Survey s
 
 4. Task: Add some coarser dimensions to the standard scorecard throughout the scripts and Notebook. (By setting this in the dimension config file created above). Ensure support for these throughout the rest of the codebase and Documentation.
 
-Speciically, in addition to the existing dimensions:
+**Status**: ✅ COMPLETED
+**Priority**: Medium  
+**Dependencies**: Task 2 completed
+
+Specifically, in addition to the existing dimensions:
  ['country', 'age_group', 'gender'],
  ['country', 'religion'],
  ['country', 'environment']
