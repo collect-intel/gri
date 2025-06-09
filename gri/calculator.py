@@ -53,42 +53,63 @@ def calculate_gri(survey_df: pd.DataFrame, benchmark_df: pd.DataFrame, strata_co
 
 
 def calculate_diversity_score(survey_df: pd.DataFrame, benchmark_df: pd.DataFrame, 
-                            strata_cols: List[str], population_threshold: float = 0.00001) -> float:
+                            strata_cols: List[str], population_threshold: float = None) -> float:
     """
     Calculates the Diversity Score (strata coverage rate).
 
     This score measures the percentage of relevant benchmark strata that are
-    represented in the survey sample.
+    represented in the survey sample (i.e., have at least one participant).
+    
+    The relevance threshold X is set dynamically as X = 1/(2N) where N is the sample size,
+    representing an expected count of 0.5 participants (rounding up to 1).
 
     Args:
         survey_df (pd.DataFrame): DataFrame with survey participant data.
         benchmark_df (pd.DataFrame): DataFrame with true population proportions.
         strata_cols (List[str]): List of column names that define the strata.
-        population_threshold (float): The minimum population proportion for a stratum
-                                      to be considered 'relevant'. Defaults to 0.00001.
+        population_threshold (float, optional): Custom threshold for relevant strata.
+                                              If None, uses X = 1/(2N).
 
     Returns:
         float: The Diversity Score, from 0.0 to 1.0.
     """
-    # 1. Identify unique strata present in the survey sample
-    sample_strata = survey_df[strata_cols].drop_duplicates()
+    # Get sample size N
+    N = len(survey_df)
     
-    # 2. Identify relevant strata from the benchmark data
+    # Handle empty survey case
+    if N == 0:
+        return 0.0
+    
+    # Calculate dynamic threshold X = 1/(2N) if not provided
+    if population_threshold is None:
+        population_threshold = 1.0 / (2 * N)
+    
+    # 1. Calculate sample proportions to identify represented strata
+    sample_counts = survey_df.groupby(strata_cols).size().reset_index(name='count')
+    sample_proportions = sample_counts[strata_cols].copy()
+    sample_proportions['sample_proportion'] = sample_counts['count'] / N
+    
+    # 2. Identify relevant strata from benchmark (q_i > X)
     relevant_benchmark = benchmark_df[benchmark_df['population_proportion'] > population_threshold]
     
-    # 3. Calculate the number of relevant strata
+    # 3. Calculate number of relevant strata
     num_relevant_strata = len(relevant_benchmark)
     
     # If no relevant strata, return 1.0 (perfect coverage of empty set)
     if num_relevant_strata == 0:
         return 1.0
     
-    # 4. Calculate how many of the relevant strata are present in the sample
-    covered_strata = pd.merge(sample_strata, relevant_benchmark[strata_cols], 
-                             on=strata_cols, how='inner')
-    num_covered_strata = len(covered_strata)
+    # 4. Calculate number of represented AND relevant strata
+    # (strata with s_i > 0 AND q_i > X)
+    represented_and_relevant = pd.merge(
+        sample_proportions[sample_proportions['sample_proportion'] > 0][strata_cols],
+        relevant_benchmark[strata_cols],
+        on=strata_cols,
+        how='inner'
+    )
+    num_represented_relevant = len(represented_and_relevant)
     
-    # 5. Calculate the score
-    diversity_score = num_covered_strata / num_relevant_strata
+    # 5. Calculate diversity score
+    diversity_score = num_represented_relevant / num_relevant_strata
     
     return diversity_score

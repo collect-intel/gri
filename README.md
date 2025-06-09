@@ -48,7 +48,19 @@ An **Average GRI** from this scorecard can be used as a standalone metric to des
 
 ### Diversity Score (Coverage Rate)
 
-In addition to the GRI, which measures the proportional match, the **Diversity Score** measures the breadth of coverage of the sample. It is calculated as the percentage of relevant strata (with a population proportion $q_i$ above a certain threshold) that are actually represented in the sample.
+In addition to the GRI, which measures the proportional match, the **Diversity Score** measures the breadth of coverage of the sample. It calculates the percentage of relevant strata (with a population proportion $q_i$ above a certain threshold $X$) that are actually represented in the sample (i.e., have at least one participant).
+
+Let:
+* $X$ be a pre-defined threshold for the population proportion $q_i$. Only consider strata $i$ where $q_i > X$ as "relevant" for this diversity score (to avoid penalizing for exceedingly small strata). By default, we choose $X = \frac{1}{2N}$, where $N$ is the sample size, representing an expected count of 0.5 participants (rounding up to 1 participant).
+
+Using indicator functions, where $\mathbf{1}(\text{condition})$ is 1 if the condition is true, and 0 otherwise:
+
+$$\text{DiversityScore} = \frac{\text{NumRepresentedStrata}}{\text{NumRelevantStrata}} = \frac{\sum_{i \in I} \mathbf{1}(s_i > 0 \text{ AND } q_i > X)}{\sum_{i \in I} \mathbf{1}(q_i > X)}$$
+
+This formula ensures that:
+- **Relevant strata**: Only demographic strata with meaningful population proportions are considered
+- **Dynamic threshold**: The relevance threshold adapts to sample size - larger samples can represent smaller population segments
+- **Coverage focus**: The score measures breadth of representation, not proportional accuracy
 
 ## Data Sources
 
@@ -264,3 +276,9 @@ make format
 # Clean up
 make clean
 ```
+
+## Development Note
+
+The Jupyter notebooks in this repository include executed outputs for demonstration purposes. This provides immediate value for new users who can see complete examples with results, visualizations, and analysis without needing to run the code.
+
+If you're contributing code changes that affect the notebooks, please run `make run-notebooks` after your changes to update the documentation with fresh outputs.

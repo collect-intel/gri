@@ -104,55 +104,60 @@ def test_diversity_score_full_coverage():
 
 def test_diversity_score_partial_coverage():
     """Test diversity score with partial coverage."""
-    # Survey data covering only 2 out of 3 relevant strata
+    # Survey data with 100 participants covering only 2 out of 3 relevant strata
+    # Threshold X = 1/(2*100) = 0.005
     survey_df = pd.DataFrame({
-        'country': ['USA', 'Canada'],
-        'gender': ['Male', 'Female']
+        'country': ['USA'] * 50 + ['Canada'] * 50,
+        'gender': ['Male'] * 50 + ['Female'] * 50
     })
     
-    # Benchmark data with 3 relevant strata
+    # Benchmark data with 3 relevant strata (all > 0.005)
     benchmark_df = pd.DataFrame({
         'country': ['USA', 'Canada', 'Mexico'],
         'gender': ['Male', 'Female', 'Male'],
-        'population_proportion': [0.4, 0.4, 0.2]  # All above threshold
+        'population_proportion': [0.4, 0.4, 0.2]  # All above 0.005 threshold
     })
     
     diversity_score = calculate_diversity_score(survey_df, benchmark_df, ['country', 'gender'])
+    # 2 represented relevant strata out of 3 relevant strata: 2/3
     assert abs(diversity_score - (2/3)) < 1e-10
 
 
 def test_diversity_score_zero_coverage():
     """Test diversity score with no coverage of relevant strata."""
-    # Survey data with different strata than benchmark
+    # Survey data with 100 participants in different strata than benchmark
+    # Threshold X = 1/(2*100) = 0.005
     survey_df = pd.DataFrame({
-        'country': ['Brazil'],
-        'gender': ['Male']
+        'country': ['Brazil'] * 100,
+        'gender': ['Male'] * 100
     })
     
-    # Benchmark data with different strata
+    # Benchmark data with different relevant strata (all > 0.005)
     benchmark_df = pd.DataFrame({
         'country': ['USA', 'Canada'],
         'gender': ['Male', 'Female'],
-        'population_proportion': [0.5, 0.5]
+        'population_proportion': [0.5, 0.5]  # Both above 0.005 threshold
     })
     
     diversity_score = calculate_diversity_score(survey_df, benchmark_df, ['country', 'gender'])
+    # 0 represented relevant strata out of 2 relevant strata: 0/2 = 0.0
     assert diversity_score == 0.0
 
 
 def test_diversity_score_threshold_filtering():
     """Test that strata below threshold are excluded from diversity calculation."""
-    # Survey covering one stratum
+    # Survey with 100 participants, covering one stratum
     survey_df = pd.DataFrame({
-        'country': ['USA'],
-        'gender': ['Male']
+        'country': ['USA'] * 100,
+        'gender': ['Male'] * 100
     })
     
     # Benchmark with one relevant and one irrelevant stratum
+    # With N=100, threshold X = 1/(2*100) = 0.005
     benchmark_df = pd.DataFrame({
         'country': ['USA', 'Micronesia'],
         'gender': ['Male', 'Female'],
-        'population_proportion': [0.5, 0.000005]  # Second below 0.00001 threshold
+        'population_proportion': [0.5, 0.001]  # Second below 0.005 threshold
     })
     
     diversity_score = calculate_diversity_score(survey_df, benchmark_df, ['country', 'gender'])
@@ -162,17 +167,38 @@ def test_diversity_score_threshold_filtering():
 
 def test_diversity_score_no_relevant_strata():
     """Test diversity score when no strata meet the threshold."""
+    # Survey with 10 participants, threshold X = 1/(2*10) = 0.05
     survey_df = pd.DataFrame({
-        'country': ['USA'],
-        'gender': ['Male']
+        'country': ['USA'] * 10,
+        'gender': ['Male'] * 10
     })
     
     # Benchmark with all strata below threshold
     benchmark_df = pd.DataFrame({
         'country': ['Micronesia', 'Vatican'],
         'gender': ['Male', 'Female'],
-        'population_proportion': [0.000005, 0.000003]  # Both below threshold
+        'population_proportion': [0.01, 0.005]  # Both below 0.05 threshold
     })
     
     diversity_score = calculate_diversity_score(survey_df, benchmark_df, ['country', 'gender'])
     assert diversity_score == 1.0  # Perfect coverage of empty relevant set
+
+
+def test_diversity_score_dynamic_threshold():
+    """Test that diversity score uses dynamic threshold X = 1/(2N)."""
+    # Survey with 200 participants covering 2 strata, threshold X = 1/(2*200) = 0.0025
+    survey_df = pd.DataFrame({
+        'country': ['USA'] * 100 + ['Canada'] * 100,
+        'gender': ['Male'] * 100 + ['Female'] * 100
+    })
+    
+    # Benchmark with 3 strata: 2 above threshold, 1 below
+    benchmark_df = pd.DataFrame({
+        'country': ['USA', 'Canada', 'Micronesia'],
+        'gender': ['Male', 'Female', 'Male'],
+        'population_proportion': [0.4, 0.4, 0.002]  # Third below 0.0025 threshold
+    })
+    
+    diversity_score = calculate_diversity_score(survey_df, benchmark_df, ['country', 'gender'])
+    # 2 relevant strata (USA/Male, Canada/Female), both covered: 2/2 = 1.0
+    assert diversity_score == 1.0
