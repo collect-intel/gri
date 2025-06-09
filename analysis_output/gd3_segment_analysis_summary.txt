@@ -1,0 +1,90 @@
+Top Contributing Segments Analysis: GD3
+============================================================
+
+Survey: GD3
+Total participants: 970
+Analysis date: 2025-06-09 16:33:46
+
+Country × Gender × Age:
+  Total segments: 2,699
+  Represented segments: 238
+  Missing segments: 2,461
+  Coverage rate: 8.8%
+  Top 10 segments contribute: 11.28 pp to GRI
+
+Country × Religion:
+  Total segments: 1,654
+  Represented segments: 123
+  Missing segments: 1,531
+  Coverage rate: 7.4%
+  Top 10 segments contribute: 34.03 pp to GRI
+
+Country × Environment:
+  Total segments: 509
+  Represented segments: 81
+  Missing segments: 428
+  Coverage rate: 15.9%
+  Top 10 segments contribute: 35.23 pp to GRI
+
+TOP 10 CONTRIBUTING SEGMENTS (All Dimensions):
+--------------------------------------------------
+ 1. country:India × environment:Urban (Country × Environment)
+    GRI Impact: 7.500 pp
+    Deviation: +15.00 pp
+    Representation: +831.7%
+    Category: Highly Over-represented
+
+ 2. country:Kenya × environment:Urban (Country × Environment)
+    GRI Impact: 6.829 pp
+    Deviation: +13.66 pp
+    Representation: +25335.5%
+    Category: Highly Over-represented
+
+ 3. country:Kenya × religion:Christianity (Country × Religion)
+    GRI Impact: 6.771 pp
+    Deviation: +13.54 pp
+    Representation: +8020.5%
+    Category: Highly Over-represented
+
+ 4. country:World × religion:Christianity (Country × Religion)
+    GRI Impact: 5.338 pp
+    Deviation: -10.68 pp
+    Representation: -100.0%
+    Category: Missing
+
+ 5. country:ASIA × environment:Rural (Country × Environment)
+    GRI Impact: 4.460 pp
+    Deviation: -8.92 pp
+    Representation: -100.0%
+    Category: Missing
+
+ 6. country:ASIA × environment:Urban (Country × Environment)
+    GRI Impact: 4.435 pp
+    Deviation: -8.87 pp
+    Representation: -100.0%
+    Category: Missing
+
+ 7. country:India × religion:Hinduism (Country × Religion)
+    GRI Impact: 4.257 pp
+    Deviation: +8.51 pp
+    Representation: +177.9%
+    Category: Highly Over-represented
+
+ 8. country:World × religion:Islam (Country × Religion)
+    GRI Impact: 3.932 pp
+    Deviation: -7.86 pp
+    Representation: -100.0%
+    Category: Missing
+
+ 9. country:World × religion:I do not identify with any religious group or faith (Country × Religion)
+    GRI Impact: 2.762 pp
+    Deviation: -5.52 pp
+    Representation: -100.0%
+    Category: Missing
+
+10. country:World × religion:Hinduism (Country × Religion)
+    GRI Impact: 2.542 pp
+    Deviation: -5.08 pp
+    Representation: -100.0%
+    Category: Missing
+
