@@ -41,6 +41,7 @@ help:
 	@echo ""
 	@echo "$(BLUE)Analysis Commands:$(RESET)"
 	@echo "  $(GREEN)make calculate-gri$(RESET)        - Run GRI calculation on sample data"
+	@echo "  $(GREEN)make demo-config$(RESET)          - Demonstrate configuration system capabilities"
 	@echo "  $(GREEN)make run-notebooks$(RESET)        - Execute all Jupyter notebooks"
 	@echo "  $(GREEN)make demo$(RESET)                 - Run complete demo workflow"
 	@echo ""
@@ -157,7 +158,12 @@ print(f'  Countries: {environment[\"country\"].nunique()}'); \
 print(f'  Environments: {sorted(environment[\"environment\"].unique())}'); \
 print(f'  Proportion sum: {environment[\"population_proportion\"].sum():.6f}');"
 
-# Analysis commands
+# Analysis commands  
+demo-config: venv-check validate-data
+	@echo "$(BLUE)Demonstrating GRI configuration system...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/demo_config_system.py
+	@echo "$(GREEN)Configuration demo completed$(RESET)"
+
 calculate-gri: venv-check validate-data
 	@echo "$(BLUE)Running GRI calculation demo...$(RESET)"
 	@$(VENV_ACTIVATE) $(PYTHON) -c "\

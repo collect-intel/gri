@@ -1,0 +1,121 @@
+# Global Representativeness Index (GRI) Segment Mappings
+#
+# This file defines how to map between different data sources and 
+# the standardized GRI segment names.
+
+# Benchmark data mappings (UN/Pew Research -> GRI standard)
+benchmark_mappings:
+  age_group:
+    # UN World Population Prospects age groups -> GRI standard
+    "18-25": ["15-19", "20-24"]  # Approximate mapping for 18-25
+    "26-35": ["25-29", "30-34"]
+    "36-45": ["35-39", "40-44"] 
+    "46-55": ["45-49", "50-54"]
+    "56-65": ["55-59", "60-64"]
+    "65+": ["65-69", "70-74", "75-79", "80-84", "85-89", "90-94", "95-99", "100+"]
+    
+  gender:
+    # UN gender categories -> GRI standard
+    "Male": ["Male", "male"]
+    "Female": ["Female", "female"]
+    
+  religion:
+    # Pew Research religious categories -> GRI standard
+    "Christianity": ["Christianity", "Christian"]
+    "Islam": ["Islam", "Muslim"]
+    "Hinduism": ["Hinduism", "Hindu"]
+    "Buddhism": ["Buddhism", "Buddhist"]
+    "Judaism": ["Judaism", "Jewish"]
+    "I do not identify with any religious group or faith": ["Unaffiliated", "None", "No religion"]
+    "Other religious group": ["Other", "Folk religion", "Other religions"]
+    
+  environment:
+    # UN World Urbanization Prospects -> GRI standard
+    "Urban": ["Urban"]
+    "Rural": ["Rural"]
+    
+  country:
+    # Handle country name variations -> GRI standard
+    "United States": ["United States of America", "USA", "US", "United States"]
+    "United Kingdom": ["United Kingdom", "UK", "Great Britain", "Britain"]
+    "South Korea": ["Republic of Korea", "Korea, Republic of"]
+    "North Korea": ["Democratic People's Republic of Korea", "Korea, Democratic People's Republic of"]
+    "Russia": ["Russian Federation", "Russia"]
+    "Iran": ["Iran (Islamic Republic of)", "Iran, Islamic Republic of"]
+    "Venezuela": ["Venezuela (Bolivarian Republic of)", "Venezuela, Bolivarian Republic of"]
+    "Syria": ["Syrian Arab Republic"]
+    "Tanzania": ["United Republic of Tanzania", "Tanzania, United Republic of"]
+    "Moldova": ["Republic of Moldova", "Moldova, Republic of"]
+    "Bolivia": ["Bolivia (Plurinational State of)", "Bolivia, Plurinational State of"]
+    "Laos": ["Lao People's Democratic Republic", "Lao PDR"]
+    "Vietnam": ["Viet Nam"]
+    "Palestine": ["State of Palestine", "Palestinian Territory", "Palestine, State of"]
+
+# Survey data mappings (Survey sources -> GRI standard)
+survey_mappings:
+  # Global Dialogues survey mappings
+  global_dialogues:
+    age_group:
+      "18-25": ["18-25"]
+      "26-35": ["26-35"] 
+      "36-45": ["36-45"]
+      "46-55": ["46-55"]
+      "56-65": ["56-65"]
+      "65+": ["65+"]
+      
+    gender:
+      "Male": ["Male", "male"]
+      "Female": ["Female", "female"]
+      # Note: Non-binary/Other gender excluded as no benchmark equivalent
+      
+    religion:
+      "Christianity": ["Christianity"]
+      "Islam": ["Islam"]
+      "Hinduism": ["Hinduism"]
+      "Buddhism": ["Buddhism"]
+      "Judaism": ["Judaism"]
+      "I do not identify with any religious group or faith": ["I do not identify with any religious group or faith"]
+      "Other religious group": ["Other religious group"]
+      
+    environment:
+      "Urban": ["Urban"]
+      "Rural": ["Rural"]
+      
+    country:
+      # Use benchmark country mapping as base
+      inherit_from: "benchmark_mappings.country"
+      
+  # World Values Survey mappings (example for future implementation)
+  world_values_survey:
+    age_group:
+      # WVS uses different age brackets - map to closest GRI standard
+      "18-25": ["18-24", "18-29"]  # Approximate mapping
+      "26-35": ["25-29", "30-34"]
+      "36-45": ["35-39", "40-44"]
+      "46-55": ["45-49", "50-54"] 
+      "56-65": ["55-59", "60-64"]
+      "65+": ["65+", "65-69", "70+"]
+      
+    gender:
+      "Male": ["1", "Male"]  # WVS uses numeric codes
+      "Female": ["2", "Female"]
+      
+    religion:
+      # WVS religious categories mapped to GRI standard
+      "Christianity": ["1", "2", "3"]  # Roman Catholic, Protestant, Orthodox
+      "Islam": ["5"]
+      "Hinduism": ["6"]
+      "Buddhism": ["7"]
+      "Judaism": ["4"]
+      "I do not identify with any religious group or faith": ["0", "12"]
+      "Other religious group": ["8", "9", "10", "11"]
+
+# Metadata
+metadata:
+  version: "1.0"
+  last_updated: "2025-06-09"
+  description: "Segment mappings between data sources and GRI standard"
+  notes: |
+    - Mappings allow flexible integration of different survey formats
+    - Segments not listed in mappings are excluded from analysis
+    - inherit_from allows reuse of mapping definitions

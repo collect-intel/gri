@@ -1,0 +1,74 @@
+# Global Representativeness Index (GRI) Dimensions Configuration
+#
+# This file defines the standard GRI scorecard dimensions and all available
+# dimension combinations for calculating representativeness.
+
+# Standard GRI Scorecard - the core dimensions reported by default
+standard_scorecard:
+  - name: "Country × Gender × Age"
+    columns: ["country", "gender", "age_group"]
+    description: "Fine-grained demographic representativeness"
+    
+  - name: "Country × Religion"
+    columns: ["country", "religion"] 
+    description: "Religious representativeness by country"
+    
+  - name: "Country × Environment"
+    columns: ["country", "environment"]
+    description: "Urban/rural representativeness by country"
+
+# Extended dimension combinations available for analysis
+extended_dimensions:
+  # Single dimensions
+  - name: "Country"
+    columns: ["country"]
+    description: "Country-level representativeness"
+    
+  - name: "Gender"
+    columns: ["gender"]
+    description: "Global gender representativeness"
+    
+  - name: "Age Group"
+    columns: ["age_group"]
+    description: "Global age representativeness"
+    
+  - name: "Religion"
+    columns: ["religion"]
+    description: "Global religious representativeness"
+    
+  - name: "Environment"
+    columns: ["environment"]
+    description: "Global urban/rural representativeness"
+    
+  # Regional dimensions (requires region mapping)
+  - name: "Region × Gender × Age"
+    columns: ["region", "gender", "age_group"]
+    description: "Regional demographic representativeness"
+    requires_mapping: ["country_to_region"]
+    
+  - name: "Region × Religion"
+    columns: ["region", "religion"]
+    description: "Regional religious representativeness"
+    requires_mapping: ["country_to_region"]
+    
+  - name: "Region × Environment"
+    columns: ["region", "environment"]
+    description: "Regional urban/rural representativeness"
+    requires_mapping: ["country_to_region"]
+    
+  - name: "Region"
+    columns: ["region"]
+    description: "Regional representativeness"
+    requires_mapping: ["country_to_region"]
+    
+  # Continental dimensions
+  - name: "Continent"
+    columns: ["continent"]
+    description: "Continental representativeness"
+    requires_mapping: ["country_to_continent"]
+
+# Metadata
+metadata:
+  version: "1.0"
+  last_updated: "2025-06-09"
+  description: "Dimension definitions for GRI calculations"
