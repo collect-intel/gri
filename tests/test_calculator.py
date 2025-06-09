@@ -202,3 +202,48 @@ def test_diversity_score_dynamic_threshold():
     diversity_score = calculate_diversity_score(survey_df, benchmark_df, ['country', 'gender'])
     # 2 relevant strata (USA/Male, Canada/Female), both covered: 2/2 = 1.0
     assert diversity_score == 1.0
+
+
+def test_diversity_score_formula_precision():
+    """Test precise calculation of diversity score formula with known values."""
+    # Create exact test case for formula validation
+    # Population proportions: 0.6, 0.3, 0.09, 0.01
+    benchmark_df = pd.DataFrame({
+        'segment': ['A', 'B', 'C', 'D'],
+        'population_proportion': [0.6, 0.3, 0.09, 0.01]
+    })
+    
+    # Sample with N=100, threshold = 1/(2*100) = 0.005
+    # Relevant strata: A (0.6 > 0.005), B (0.3 > 0.005), C (0.09 > 0.005), D (0.01 > 0.005) = 4 relevant
+    # Represented: A, B only = 2 represented
+    survey_df = pd.DataFrame({
+        'segment': ['A'] * 60 + ['B'] * 40
+    })
+    
+    diversity = calculate_diversity_score(survey_df, benchmark_df, ['segment'])
+    expected = 2.0 / 4.0  # 2 represented / 4 relevant
+    assert diversity == expected
+
+
+def test_diversity_score_custom_threshold():
+    """Test diversity score with custom (non-dynamic) threshold."""
+    benchmark_df = pd.DataFrame({
+        'type': ['Alpha', 'Beta', 'Gamma'],
+        'population_proportion': [0.5, 0.3, 0.2]
+    })
+    
+    survey_df = pd.DataFrame({
+        'type': ['Alpha'] * 5 + ['Beta'] * 3  # Missing Gamma
+    })
+    
+    # Custom threshold of 0.1 - all strata are relevant
+    diversity_custom = calculate_diversity_score(
+        survey_df, benchmark_df, ['type'], population_threshold=0.1
+    )
+    assert diversity_custom == 2.0 / 3.0  # 2 represented / 3 relevant
+    
+    # Custom threshold of 0.4 - only Alpha is relevant
+    diversity_high_threshold = calculate_diversity_score(
+        survey_df, benchmark_df, ['type'], population_threshold=0.4
+    )
+    assert diversity_high_threshold == 1.0  # 1 represented / 1 relevant
