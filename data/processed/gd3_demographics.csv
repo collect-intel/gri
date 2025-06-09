@@ -1,0 +1,971 @@
+participant_id,age,gender,environment,religion,country,age_group
+b0476ecd-7bab-4ae7-970d-6d94381e5fc8,36-45,Male,Urban,I do not identify with any religious group or faith,Denmark,36-45
+41a8cd22-6fdf-479d-bdd8-cfee66f1f8d8,46-55,Male,Urban,I do not identify with any religious group or faith,Canada,46-55
+a6bc9f62-d8e3-46b9-b183-28cb628db383,46-55,Male,Urban,I do not identify with any religious group or faith,United States,46-55
+2a9458bd-0e94-4f50-b0a1-d1636c747083,26-35,Female,Urban,I do not identify with any religious group or faith,United States,26-35
+72f0f018-5104-46d8-8ad3-1ce192e2c769,26-35,Female,Rural,Christianity,United States,26-35
+d837bc56-59f0-4670-b3a1-c58f82e729d7,46-55,Female,Urban,Christianity,Italy,46-55
+2d682f4d-00ce-402f-8b19-a59127822385,18-25,Male,Urban,Christianity,United States,18-25
+cd012b0a-cb68-4f94-8994-080fe1ed9dca,46-55,Male,Rural,I do not identify with any religious group or faith,United Kingdom,46-55
+fce0af51-9cf7-4c53-bfa0-f04aeb271ac2,46-55,Female,Rural,Christianity,United States,46-55
+5106f4d9-754b-40e9-89a8-fedd7e367075,26-35,Female,Urban,Christianity,United States,26-35
+e6dd50c5-4a9d-44e7-ac6a-60e6ff4dd62d,18-25,Male,Urban,Other religious group,United States,18-25
+8dd16239-5185-406f-8e97-2ad52100e1e1,18-25,Female,Urban,I do not identify with any religious group or faith,Mexico,18-25
+efcac8b2-8dd3-4a72-9051-5dce0ddfa98a,36-45,Female,Urban,Christianity,United States,36-45
+17d979c0-e07d-43e8-845a-541eb8f23502,46-55,Female,Urban,Christianity,United Kingdom,46-55
+e8256c24-7b34-4f1b-98bb-620fd870c2c3,26-35,Female,Rural,I do not identify with any religious group or faith,Netherlands,26-35
+0fbf53e1-e062-4cf7-b77b-cd58a6b87e0f,46-55,Male,Urban,Christianity,United Kingdom,46-55
+5bfcab58-dbc5-41ce-bd78-d0b63d91a12e,36-45,Male,Urban,Christianity,South Africa,36-45
+8690385f-1871-49c6-baee-39bc4fe63168,46-55,Female,Rural,I do not identify with any religious group or faith,United States,46-55
+267d35ac-324b-430a-b2b6-5b6231e6d162,26-35,Female,Urban,I do not identify with any religious group or faith,United Kingdom,26-35
+118e3499-da7e-40f3-a142-95d66ff4544d,26-35,Male,Urban,I do not identify with any religious group or faith,United Kingdom,26-35
+e5c222ba-b14d-4d25-9670-77e939d6ea52,26-35,Female,Urban,Christianity,United States,26-35
+6ef4d8c9-4e0e-430b-b106-f2ce1f9141c4,26-35,Male,Urban,I do not identify with any religious group or faith,United Kingdom,26-35
+f8599e1a-db82-4dc9-b6b6-eaf9be9b339f,46-55,Female,Urban,Christianity,United Kingdom,46-55
+26d6d157-a431-47f2-bd5f-48467c796257,26-35,Female,Rural,I do not identify with any religious group or faith,United Kingdom,26-35
+808b6841-aaf5-4365-951c-9c64acb9ef74,26-35,Male,Urban,I do not identify with any religious group or faith,Canada,26-35
+c86f4a3f-afb1-4111-a51d-fc9640ae24b4,36-45,Male,Urban,I do not identify with any religious group or faith,Germany,36-45
+6ac9ec3b-a15c-4804-b14d-89ec67008ec0,26-35,Female,Urban,Christianity,South Africa,26-35
+5b3aff03-bca4-4489-9f63-d8fb47b68eb7,36-45,Female,Urban,Christianity,United Kingdom,36-45
+214f8cd8-d005-451f-9313-49c321334b1c,26-35,Female,Urban,Christianity,United States,26-35
+3df2d42a-dde1-4fec-b780-2e8032b0c6a2,18-25,Male,Urban,Christianity,United States,18-25
+f2bf4387-629d-4ac2-a8c4-28be4ee5a398,26-35,Female,Urban,Christianity,Poland,26-35
+68b7e23e-e689-41b5-adef-ecdb9f4e60a0,26-35,Male,Rural,I do not identify with any religious group or faith,Mexico,26-35
+4621168f-da83-477b-b65f-f8a9aecee8e1,36-45,Male,Urban,Christianity,United States,36-45
+8887c51d-3910-42c8-b28a-58e79230f399,26-35,Female,Urban,Buddhism,China,26-35
+97333f7c-1f1a-44cc-8452-515b134e1def,36-45,Male,Urban,Christianity,United States,36-45
+c7e24338-d55d-4d16-b97b-e1f8893ccbec,46-55,Female,Urban,Christianity,United States,46-55
+0fb5df6d-77ae-4eae-9586-62b674149977,46-55,Female,Rural,I do not identify with any religious group or faith,United States,46-55
+42038650-f203-427c-8fa3-20d37c726fe8,46-55,Male,Urban,Christianity,United States,46-55
+4311474e-5376-421d-9f8e-57336cd57f27,26-35,Female,Urban,Christianity,South Africa,26-35
+047d3b7e-9404-4435-8905-dae7bec3e675,26-35,Female,Urban,Christianity,South Africa,26-35
+56657497-e6e4-4b1a-8b8b-98a30661ba18,46-55,Male,Urban,Christianity,United States,46-55
+47415c25-c6f0-45ab-858c-edd5a75bdd35,36-45,Male,Rural,Islam,Pakistan,36-45
+269c4134-c710-4c14-8422-39d084459aa2,26-35,Female,Urban,Christianity,United States,26-35
+d499f75c-8a70-4acc-9635-6b26e7814bb8,65+,Female,Urban,Christianity,United States,65+
+841bb364-3e10-4d32-a9e7-a2da70db6bdb,18-25,Male,Urban,Christianity,United States,18-25
+084991b4-b64c-4371-bbc4-8df4564001f5,65+,Female,Urban,Christianity,South Africa,65+
+857a7111-bc55-4c15-84db-d24ae3265d28,26-35,Female,Urban,Christianity,United States,26-35
+11484420-e806-474e-b06d-d0f43759e7a8,26-35,Male,Urban,Christianity,Kenya,26-35
+bedd1b1f-f469-445c-89cc-589835476124,26-35,Male,Urban,Christianity,Kenya,26-35
+6cb0239b-faf9-4e22-8e0c-4f0abf2d232c,18-25,Male,Urban,Christianity,Kenya,18-25
+80fc9b4f-d50c-4bc7-b60e-c861992ad743,36-45,Male,Urban,I do not identify with any religious group or faith,United States,36-45
+fe9887fe-0e9e-45d8-a809-8c98db3395df,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+168d2f15-3fb1-47f2-8202-3f508f42abf6,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+c12db7cd-2727-47d2-be42-fc53b0604b98,65+,Male,Urban,Christianity,United States,65+
+d1cb4179-5989-4cec-8f4e-2e682ecded45,46-55,Female,Urban,Other religious group,India,46-55
+845e766f-fb2b-4597-a7c4-7b12caab560d,26-35,Male,Urban,Hinduism,India,26-35
+e647b4c6-8ac5-402b-88ae-97299c9dbf52,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+462414f9-aa0b-4572-92b1-d52e25683c67,46-55,Female,Rural,Hinduism,Hungary,46-55
+6cb3023a-22c4-49ab-9c09-e8eb1a92a604,26-35,Male,Urban,Hinduism,India,26-35
+45e296f3-3412-4800-99ae-dcd5523be806,46-55,Male,Urban,Hinduism,India,46-55
+9c3370d6-621b-4689-8f13-1ee7dd461fe4,18-25,Female,Urban,Christianity,Kenya,18-25
+51bb3460-88c9-41c4-8805-9495d3249c7a,26-35,Male,Urban,Christianity,Kenya,26-35
+d5d243e4-6fcb-419f-b0c8-51cb52a177d5,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+7a59b133-ba75-458a-b9be-268772e9e70f,36-45,Male,Urban,Buddhism,Chile,36-45
+af514344-2119-411d-a4ba-38a9be3b68a7,18-25,Male,Urban,Christianity,Kenya,18-25
+14881da7-5ed7-45b2-8f31-9ed3238c43a8,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+4dbb4cd2-2e5a-4838-a7dd-855bd821a2fb,26-35,Male,Urban,Hinduism,India,26-35
+95367fb0-892c-461a-9474-8f3b7a2109d2,18-25,Male,Urban,Christianity,Kenya,18-25
+62743e7e-61f6-409b-b034-f76b7b9c0f31,26-35,Male,Urban,Christianity,Kenya,26-35
+afa74158-fa90-4f36-8933-032603f7fb9d,36-45,Female,Urban,Hinduism,India,36-45
+d4903815-831f-45fe-9c6a-7029045d504d,36-45,Female,Urban,Christianity,Kenya,36-45
+bd093845-ae4a-42fb-abff-eb873695c01d,56-65,Male,Urban,Christianity,United States,56-65
+f3a80a42-5aba-4a66-852e-d3531f56eacf,18-25,Male,Urban,Christianity,Kenya,18-25
+87ec341a-e0cd-4c54-b7af-f09b5b7e9b61,18-25,Male,Urban,Christianity,Kenya,18-25
+16eafce7-80a4-4015-8bfe-d323ed17467e,18-25,Male,Urban,Christianity,United States,18-25
+118b9539-46dc-4317-b0f5-38d2a86e3cf6,18-25,Male,Urban,Hinduism,India,18-25
+67c63be9-7376-4499-a669-7786bb1a595f,18-25,Male,Urban,Hinduism,India,18-25
+42478af1-3e9e-4bab-add7-abe37b025523,26-35,Male,Urban,Christianity,Kenya,26-35
+a958dc36-9425-4e88-af18-37e4ceebe35d,18-25,Female,Urban,Hinduism,India,18-25
+aeb15002-1615-4066-bcde-5d39f7f9b0ab,18-25,Male,Urban,I do not identify with any religious group or faith,Chile,18-25
+f33687d8-5d0d-4f65-b97d-d8a7415f95f1,18-25,Female,Urban,Christianity,Kenya,18-25
+11ddef55-ce2f-42b2-9141-c863dfe3b713,18-25,Male,Urban,Hinduism,India,18-25
+259c0372-35fa-4057-9fc8-9deca37e2e22,56-65,Female,Urban,I do not identify with any religious group or faith,United States,56-65
+5933191f-aca0-4bba-b597-e231a0027671,18-25,Female,Urban,I do not identify with any religious group or faith,United States,18-25
+de38f8df-23ab-4578-bff3-dccd79706a8b,26-35,Female,Urban,Other religious group,Kenya,26-35
+119d7dd7-3b74-43cf-be91-ff0649e0a935,18-25,Female,Urban,I do not identify with any religious group or faith,Chile,18-25
+08c907ff-00c8-4117-9426-b705b1606b96,18-25,Female,Urban,Christianity,Kenya,18-25
+da1fd2b0-adbd-4362-8fc2-954349948729,46-55,Female,Urban,Christianity,Chile,46-55
+4545684c-c798-473c-9bd0-72c41d7490b6,26-35,Female,Urban,Islam,Bangladesh,26-35
+1f8d3e1b-199c-4b0b-9340-ed3696611af1,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+d0b7c1fa-3422-458a-96e8-212d566abc04,18-25,Male,Urban,Christianity,Kenya,18-25
+7ca0134a-794a-41d4-b450-3fe09b7c41b6,26-35,Female,Urban,Christianity,Brazil,26-35
+1b2aa72b-924a-4ecf-87e3-f06d2e2badf1,18-25,Female,Urban,I do not identify with any religious group or faith,Chile,18-25
+927b9c4b-2da5-41b6-8465-5c1ef0fa83ea,36-45,Male,Rural,Christianity,United States,36-45
+6735c92f-8e30-4f0e-a4d3-7ed916ce2bbf,26-35,Female,Urban,I do not identify with any religious group or faith,Chile,26-35
+7a8ef50f-ce7b-424e-9efa-057a517605c7,36-45,Male,Rural,Islam,India,36-45
+320ab629-e6d6-451b-b41a-218b9be1d5b2,18-25,Male,Urban,Hinduism,India,18-25
+f67a85af-c8fc-47a8-b672-79b44116fdba,36-45,Male,Urban,I do not identify with any religious group or faith,India,36-45
+84ce9e8e-1e80-429b-8c1f-b42a3e62111c,18-25,Female,Urban,I do not identify with any religious group or faith,Türkiye,18-25
+0f9aa88d-e413-408f-a364-cdd92bdb56a9,26-35,Male,Urban,Christianity,Kenya,26-35
+063ebd44-7a1b-4970-bfa7-010119e1a4a8,36-45,Male,Urban,Christianity,Kenya,36-45
+e1d5d207-b3f9-4ce1-8dcf-204d3abfaf1a,26-35,Male,Urban,Hinduism,India,26-35
+4a2f0a1b-3f7a-4fd0-bad7-6e2a970ddd25,36-45,Female,Urban,I do not identify with any religious group or faith,Portugal,36-45
+6bbd4a23-4043-42f4-a22b-977b46af4328,26-35,Female,Urban,Christianity,United States,26-35
+e53eb124-ebae-492a-8018-b19f4716ae25,26-35,Female,Urban,Hinduism,India,26-35
+a334d03a-bc6f-4924-a62c-b88049b7a0d0,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+4a7174d8-35cb-490f-af66-515170356dd1,26-35,Female,Urban,Christianity,South Africa,26-35
+2dca436b-abe5-4ea8-b68d-734828e7c016,36-45,Male,Urban,I do not identify with any religious group or faith,Chile,36-45
+e9370ec6-4c98-4ced-8552-b736fde6493d,18-25,Male,Urban,Christianity,United States,18-25
+9450fd9e-659d-4b06-8e72-d74c7435b58a,18-25,Male,Urban,Hinduism,India,18-25
+db18cab1-5913-4c43-b108-77e1bbf8a570,18-25,Male,Urban,Christianity,Kenya,18-25
+49d9a8e0-8487-4b4c-a4e7-91664941a6ac,36-45,Male,Urban,Islam,Kenya,36-45
+efc9b018-548c-4022-ba33-6d7a101563d7,36-45,Male,Urban,I do not identify with any religious group or faith,Argentina,36-45
+c925f43a-c125-4643-8385-f27510c47596,18-25,Female,Urban,Christianity,Kenya,18-25
+502cae50-9fed-42cd-aa49-3650b4596795,36-45,Male,Urban,I do not identify with any religious group or faith,Mexico,36-45
+61011617-805a-42c4-a654-19b8aa655a53,36-45,Female,Urban,I do not identify with any religious group or faith,Brazil,36-45
+8b2d2b63-295a-4b61-8d95-b1be3204ffa1,26-35,Male,Urban,I do not identify with any religious group or faith,Singapore,26-35
+e4c6a03f-c4d5-42b4-98d6-8eff46e01d37,18-25,Male,Urban,Other religious group,Chile,18-25
+9c58d6c7-cb38-40a6-ae18-f6f3651c28f3,26-35,Male,Urban,Christianity,Kenya,26-35
+eaffc3e9-065d-4fd2-b370-6278744bf38b,18-25,Female,Urban,Other religious group,Germany,18-25
+5456a8ed-cc3d-45b1-93c3-a97605586a1d,26-35,Male,Urban,Christianity,Chile,26-35
+4a2fd9b7-f0c3-4e3a-87dc-f69df567d037,18-25,Female,Urban,Christianity,Kenya,18-25
+8574f7bb-4398-4a02-a197-5142474e14d5,46-55,Female,Urban,Christianity,Brazil,46-55
+7ce163d4-df25-479f-ba20-2c78d3828871,26-35,Male,Urban,Christianity,Kenya,26-35
+3ffd602d-6d75-49d9-a6c7-08fc25cb5ea5,18-25,Male,Urban,Islam,Morocco,18-25
+0d28af2d-2aa8-4e7c-8924-f511317ad0e2,56-65,Male,Urban,I do not identify with any religious group or faith,France,56-65
+04e9c5a6-8e1c-4b12-bea0-901aabb4bd06,26-35,Male,Urban,Christianity,Kenya,26-35
+577a5f2a-94d9-4369-84fb-809404688611,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+d3edce2b-ae69-4f1a-bcb0-5ebf19e64ebb,18-25,Male,Urban,Christianity,Kenya,18-25
+b181be19-dc4e-4383-acbf-839db79e045c,18-25,Male,Urban,Christianity,Kenya,18-25
+41c85a2a-40cc-4e23-986e-1c98af375c92,36-45,Female,Rural,I do not identify with any religious group or faith,Spain,36-45
+ba768354-17b1-484a-8fdd-71531960c3f4,36-45,Male,Rural,I do not identify with any religious group or faith,France,36-45
+a88118a2-74ab-4902-baa4-5a62bf5af3f9,26-35,Female,Urban,I do not identify with any religious group or faith,Chile,26-35
+254f7150-2a78-45ea-a587-367e9bf1b9c9,26-35,Female,Urban,Christianity,Italy,26-35
+9056b327-9748-4c32-a267-33c08713dc3d,36-45,Male,Rural,Christianity,Poland,36-45
+9fef933b-9bfe-4d9b-a2bd-4c33e432fca9,36-45,Male,Urban,Christianity,Chile,36-45
+d515336e-fff5-4c03-9a15-a590745cdd81,36-45,Female,Urban,I do not identify with any religious group or faith,Türkiye,36-45
+28817b91-26e1-41e9-9476-d19ccf30160b,18-25,Male,Urban,Christianity,Kenya,18-25
+878d614b-fd02-4571-a000-b72377a39887,26-35,Female,Urban,I do not identify with any religious group or faith,United States,26-35
+29da2f09-086c-4ae8-8cea-a585ab87d707,26-35,Male,Urban,I do not identify with any religious group or faith,Spain,26-35
+6ecf22d9-da09-46a8-81e7-d08cf972551f,26-35,Male,Urban,Christianity,Kenya,26-35
+b3251879-482a-441a-bfe1-84153bc1479e,26-35,Female,Urban,I do not identify with any religious group or faith,Chile,26-35
+ae31128f-360b-4be4-a054-d9ebf5e3e122,36-45,Male,Urban,Christianity,Brazil,36-45
+cd73522a-b72e-4059-959a-87e215bdc33e,36-45,Male,Urban,I do not identify with any religious group or faith,Türkiye,36-45
+a6ce5884-5df6-46da-92a3-e16d3ee46f81,46-55,Male,Urban,Christianity,Germany,46-55
+0911f2f4-6823-40c3-9705-9a6e950952a5,26-35,Male,Urban,Hinduism,India,26-35
+e1c2642b-c9f3-49e5-a35b-782470bff3ae,26-35,Male,Urban,Christianity,Mexico,26-35
+7f604581-8879-42bc-beb6-7392da689e59,18-25,Female,Urban,Islam,Algeria,18-25
+13557712-96a4-4980-bee4-be5c6317a72c,18-25,Female,Urban,I do not identify with any religious group or faith,Chile,18-25
+3eefacd9-048e-4e1d-9d70-0f44808e2d43,36-45,Male,Urban,Christianity,United States,36-45
+4ddf976f-6b33-409a-af84-93207b59f8c3,36-45,Male,Urban,Christianity,Mexico,36-45
+e7e23767-de42-4541-b68d-95b15f67deb1,26-35,Female,Urban,Christianity,Brazil,26-35
+0b65458e-7dee-43f0-a4b8-6273a830bd64,36-45,Male,Urban,I do not identify with any religious group or faith,Brazil,36-45
+cc6a129f-e781-45e5-bdb2-11ac3f03ae62,18-25,Male,Urban,Christianity,Kenya,18-25
+06ba4f19-61bf-488a-be50-53ee1815933b,26-35,Female,Urban,I do not identify with any religious group or faith,Russian Federation,26-35
+6ff4b00f-1d8f-464d-8714-6fa31037ebfa,56-65,Female,Urban,Christianity,Brazil,56-65
+95d1d4d4-6f56-4338-bc73-9afdd5917e22,36-45,Female,Urban,I do not identify with any religious group or faith,Türkiye,36-45
+582f18cf-6e9e-4d77-9296-3773d59b7b41,18-25,Male,Urban,Other religious group,Bangladesh,18-25
+e547bbb3-68b4-41a3-9ea5-7286fa4130f8,65+,Female,Rural,Christianity,South Africa,65+
+2a16348a-9e1b-44ba-92b9-84e3000d30c2,18-25,Male,Urban,Hinduism,India,18-25
+5052f908-fd81-4d81-a9d5-d65a1bc8ebb5,26-35,Male,Urban,Islam,Egypt,26-35
+a3323db6-89c4-43c4-a92e-180e2503c29b,26-35,Female,Urban,Christianity,Mexico,26-35
+27dbbced-0b3c-4ade-bf1c-6f1f386b67da,18-25,Male,Urban,I do not identify with any religious group or faith,Brazil,18-25
+111f5b06-1d3c-4e6f-8518-750bb3691b7c,18-25,Male,Urban,Hinduism,India,18-25
+0e6fb8eb-c217-42a4-9276-57aa08de35c1,18-25,Male,Urban,I do not identify with any religious group or faith,Japan,18-25
+349e968c-d6fa-4533-bfe2-c4bfe66375f2,26-35,Female,Urban,Christianity,Kenya,26-35
+53520fbd-08e2-472e-8bfd-445c4b6bddfc,26-35,Male,Urban,I do not identify with any religious group or faith,Chile,26-35
+18af77fe-5f36-458c-a4a9-84484490b196,18-25,Female,Urban,Christianity,Kenya,18-25
+830694af-4f3b-44e0-b211-506e76a73c45,18-25,Female,Urban,Christianity,Kenya,18-25
+87752742-c8b3-409e-bbac-800945bfd997,18-25,Female,Urban,Other religious group,India,18-25
+f085b64a-ede7-4767-851e-7b8730385860,26-35,Female,Urban,Christianity,Kenya,26-35
+2d45fe1e-b751-44ce-be41-9cef434ed76c,36-45,Male,Urban,Christianity,Canada,36-45
+a26a4c3c-2190-4ed7-bb1e-f8c8ade3646b,36-45,Male,Urban,I do not identify with any religious group or faith,Mexico,36-45
+f6f51615-c71c-4665-a2f6-ee1a7d023d8c,18-25,Female,Rural,Christianity,Poland,18-25
+fb15934e-e32b-4949-bd1d-a6c24d298e7e,26-35,Female,Rural,I do not identify with any religious group or faith,Germany,26-35
+42946d72-dcc3-44bc-9ca6-df27f521a30c,36-45,Female,Urban,Islam,India,36-45
+e15b0fbf-1881-4c06-b6c9-192b0c79d05a,26-35,Male,Urban,Christianity,Kenya,26-35
+52209e78-4fcf-4012-b781-27e8c7023ad9,26-35,Male,Urban,Islam,India,26-35
+ce3b4a8f-bfaa-441f-a92b-4d381c20d052,36-45,Female,Urban,Christianity,Ukraine,36-45
+ee4c741a-1831-4e68-90c5-7b9267091901,18-25,Male,Urban,Christianity,Kenya,18-25
+3ed13600-974f-4071-a55d-68e9c132238d,26-35,Female,Urban,Other religious group,Brazil,26-35
+a98c329f-cca1-473c-b74e-823bf2601949,36-45,Male,Urban,I do not identify with any religious group or faith,Canada,36-45
+561b2b7f-adfc-42be-806d-c794e272983a,26-35,Male,Urban,I do not identify with any religious group or faith,Italy,26-35
+7efdbf45-8634-409b-98e7-42a4b7f759d3,46-55,Male,Urban,Christianity,Australia,46-55
+a79871f7-7ff1-4e52-b1f4-29683b0e8fd4,46-55,Male,Urban,I do not identify with any religious group or faith,Germany,46-55
+d19689c8-440d-4ba1-8d5f-daf795f3aad8,26-35,Male,Urban,I do not identify with any religious group or faith,Slovakia,26-35
+2b326ea5-1513-432e-a18e-79549ae9ddf8,26-35,Female,Urban,I do not identify with any religious group or faith,Mexico,26-35
+62711271-8853-40e2-a967-6848d67d63c1,26-35,Male,Urban,Christianity,Kenya,26-35
+9c4d6183-42fb-4df3-b086-ce23ee483361,18-25,Male,Urban,Islam,Indonesia,18-25
+6be8f790-ce11-4858-9320-f6c4c72943ec,26-35,Male,Urban,Christianity,Kenya,26-35
+bc2d0146-f218-4d2a-9f72-a3002f5cb34a,18-25,Female,Urban,Christianity,Brazil,18-25
+c95712a8-b8a9-45a7-a376-ca82c6b0fe3b,18-25,Female,Rural,I do not identify with any religious group or faith,Germany,18-25
+7079e349-7ae7-4eef-8382-40b8d9087eaa,36-45,Female,Urban,I do not identify with any religious group or faith,Chile,36-45
+ce8c659f-196d-49ff-ac5e-5cb6e20fe764,36-45,Male,Urban,I do not identify with any religious group or faith,Italy,36-45
+cd5cb5d3-f2bc-4246-bb72-43fd31a8c223,26-35,Male,Urban,Christianity,Kenya,26-35
+f91480b7-2483-486b-aee3-0348db89f45b,18-25,Male,Urban,Christianity,Brazil,18-25
+925382f5-d47e-4013-894f-a9fc32f8ace6,26-35,Male,Urban,Christianity,Kenya,26-35
+18d6a829-b007-4e3f-a105-38df4c5448fc,26-35,Male,Urban,I do not identify with any religious group or faith,Croatia,26-35
+ed4d4150-823f-4255-a08b-0f9e3e449cb6,26-35,Male,Rural,I do not identify with any religious group or faith,France,26-35
+969c8488-7b86-4847-aa9f-d7df932674e4,46-55,Male,Urban,Christianity,United States,46-55
+7298a301-433f-47b6-95c1-9be23fd08ebd,18-25,Male,Urban,Christianity,Kenya,18-25
+e60787ea-9434-4aef-8815-66aca89d0c96,56-65,Female,Urban,Buddhism,Brazil,56-65
+7f2f00be-6c9f-4259-bbe9-29ac712ec99b,18-25,Male,Urban,Christianity,Kenya,18-25
+a4562461-b5eb-426e-a18d-697e5a83095f,26-35,Male,Urban,Islam,Indonesia,26-35
+7106eb05-29ad-42e5-86b6-039c5a018a7c,26-35,Female,Urban,Hinduism,India,26-35
+0134dbc2-4d78-4716-9322-b1c0ce1699cc,46-55,Female,Urban,Christianity,Canada,46-55
+f1246ed7-a6ad-4981-85fe-4fce379ea689,18-25,Male,Urban,Christianity,Germany,18-25
+9c6e83af-6165-4249-9c3c-2fa00cdd81d2,26-35,Female,Urban,Hinduism,India,26-35
+87876ae1-ff4d-4030-82da-7db5d4e9585f,26-35,Female,Urban,Other religious group,Mexico,26-35
+11023cdd-3976-48b5-9c15-fd289128a391,18-25,Male,Urban,Christianity,United States,18-25
+35606e90-7107-4f7d-bb34-c3392ab22b4c,26-35,Female,Urban,Judaism,Israel,26-35
+d6d6c291-d6eb-4dfd-b705-4acd3de68eea,36-45,Male,Urban,Christianity,Italy,36-45
+984affef-a509-4e96-8163-002ab61e8f35,46-55,Male,Urban,I do not identify with any religious group or faith,Norway,46-55
+f81845f8-498d-451d-b882-5f03ced40795,36-45,Male,Urban,Christianity,Greece,36-45
+4433122c-6bea-41cb-8a7b-39f38c598999,26-35,Female,Urban,I do not identify with any religious group or faith,Türkiye,26-35
+1f6d9211-afbc-47f3-a370-8dc225e73e05,26-35,Male,Urban,I do not identify with any religious group or faith,Italy,26-35
+983d08bc-82df-43ed-9875-4d9e2bf9e72d,26-35,Female,Urban,Other religious group,Mexico,26-35
+64594302-5337-49c0-a6b0-e7fc71031e2f,26-35,Female,Urban,Islam,Pakistan,26-35
+05f83f62-f5e2-4c8d-bfd7-9eb43eb58888,26-35,Male,Urban,I do not identify with any religious group or faith,Poland,26-35
+2ea3ba1a-ffa0-42a3-a172-99943509a444,26-35,Male,Urban,Hinduism,India,26-35
+8bd90308-0c57-443a-947e-5dd048632159,18-25,Male,Urban,Christianity,Kenya,18-25
+fc0176e1-8719-4682-96d5-ad26e47a0036,26-35,Male,Urban,Islam,Morocco,26-35
+2d334ead-a406-4a71-bb3e-e9c13c479125,26-35,Female,Urban,Christianity,Kenya,26-35
+e5361980-7ac2-4382-b5dc-04a9e68bcaf2,26-35,Female,Urban,I do not identify with any religious group or faith,United Kingdom,26-35
+cfe6fe81-4906-4c28-8653-8a1174e88b8a,26-35,Male,Urban,Christianity,Mexico,26-35
+8269d27f-7a6e-4b8a-9ff9-4c66f3c71539,18-25,Male,Urban,Christianity,Kenya,18-25
+568c4552-40c6-4f32-a8cd-9da31be29497,18-25,Female,Urban,Christianity,Kenya,18-25
+c7f09bfb-1c21-49eb-8bb9-879174eb1f09,26-35,Male,Urban,I do not identify with any religious group or faith,Austria,26-35
+859b8475-c4e4-4d46-a14b-20499199fc4b,26-35,Male,Urban,Christianity,Kenya,26-35
+6813e6ec-d572-4ed7-85c6-72aac2c94e69,18-25,Male,Urban,I do not identify with any religious group or faith,Mexico,18-25
+c7831e61-634c-4ae2-84ba-d819f77c096a,26-35,Male,Urban,I do not identify with any religious group or faith,Mexico,26-35
+0cc036c4-16c4-41b7-b972-b84469ba049a,26-35,Male,Urban,Christianity,Kenya,26-35
+36c125d9-bd15-434b-b9d9-28dc99518fce,26-35,Male,Rural,Christianity,Netherlands,26-35
+26124cca-d0b1-492c-b9e8-845b21ebeda5,36-45,Male,Urban,Islam,India,36-45
+c3c2df0c-107a-46ad-9ecc-f64e72acdc5f,26-35,Female,Urban,Other religious group,Brazil,26-35
+c397b827-863c-4530-aeaf-e75b373895e0,18-25,Male,Urban,Christianity,South Africa,18-25
+294ef198-2d59-40db-92b7-6de1a81c4ad2,26-35,Male,Urban,Hinduism,India,26-35
+f10200e8-12d9-4e3e-b816-bcfabd9d7bc3,56-65,Male,Urban,Christianity,Brazil,56-65
+32dc23aa-7db5-48ff-9a90-cf9b5749ece5,26-35,Male,Rural,I do not identify with any religious group or faith,Spain,26-35
+71f0a07c-ac59-45c1-811c-55693878be7a,36-45,Female,Urban,I do not identify with any religious group or faith,United Kingdom,36-45
+8f6f0197-057c-427c-9ddd-da6419f1619b,26-35,Male,Urban,Christianity,Germany,26-35
+09dc6eac-6278-427d-ab75-b4109bc7c193,36-45,Female,Urban,Christianity,Malawi,36-45
+99eed4c0-8af6-4af7-86f3-d840ed9d96dd,26-35,Male,Urban,Christianity,Brazil,26-35
+17f2bcaf-533d-4d68-a8b4-1a9946bf5892,26-35,Female,Urban,Islam,Algeria,26-35
+dc90fe0e-8929-461e-952c-eea0a43a3353,26-35,Male,Urban,I do not identify with any religious group or faith,Germany,26-35
+85508207-b14a-4ba9-b83d-804d41bb121e,18-25,Male,Urban,Hinduism,India,18-25
+1bc1d307-4def-4914-bc0f-5ce49ce2bc4a,56-65,Male,Urban,Christianity,Ireland {Republic},56-65
+f119dbdb-c33d-4c09-aa95-ef8eaf5e7779,56-65,Female,Urban,Christianity,Chile,56-65
+fd33163b-382e-4fad-9283-b77b87d689f3,46-55,Female,Urban,Christianity,Canada,46-55
+e80e18db-0abb-461f-a66c-a3dcb8b8ed8a,36-45,Female,Urban,Judaism,Israel,36-45
+e474fee5-fdd1-4662-a26e-c0b389e28e3d,18-25,Female,Rural,Islam,India,18-25
+bc5b28a1-4e90-419c-9f85-37f6e80739e4,36-45,Female,Urban,Christianity,Armenia,36-45
+975cac6c-9f96-46c3-ab97-bca03a8d54f0,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+a17a8375-fea2-4ef1-8b38-baae5b0e0c95,56-65,Female,Urban,Christianity,United States,56-65
+10fa5b7f-29ba-4f98-addb-8b26a9418479,18-25,Male,Urban,I do not identify with any religious group or faith,Bangladesh,18-25
+9538cd88-0fdc-42d3-8bb3-ccc107698a21,26-35,Male,Urban,I do not identify with any religious group or faith,Slovakia,26-35
+40ad9d36-b7ac-4025-a5ac-9519b090024e,26-35,Male,Urban,Christianity,Brazil,26-35
+be91f692-130c-46aa-bdfc-f1bde0a09e33,36-45,Male,Urban,Christianity,Poland,36-45
+a385a3d2-1302-4ba2-b19a-470c8fdd4d32,18-25,Male,Urban,Islam,Pakistan,18-25
+68c47f9b-0634-4fb8-8106-42959a5ab058,36-45,Male,Urban,I do not identify with any religious group or faith,Switzerland,36-45
+6a70d00a-a244-4ac5-bfa4-2dec945cc841,26-35,Male,Urban,Hinduism,India,26-35
+203fc9ab-fd66-4cc4-9610-a992e96026e2,56-65,Male,Urban,Christianity,United States,56-65
+8ee75c2f-b0ad-4bbf-896f-54c96ccf42d2,18-25,Female,Urban,Islam,Canada,18-25
+df875e39-e3ed-407d-8e14-6590bbf1035c,26-35,Male,Urban,Christianity,Israel,26-35
+f9406062-35ca-4fbc-b0a4-606210bc7904,18-25,Male,Urban,Islam,Egypt,18-25
+a3f864d6-4852-4c92-851d-cffa2b7832a9,26-35,Male,Urban,Christianity,Kenya,26-35
+5091ab13-a33f-49e4-85b0-bf53405d6169,26-35,Female,Urban,Christianity,Chile,26-35
+2861e192-18d7-49a9-a931-07b604598c55,18-25,Female,Urban,Hinduism,India,18-25
+10109692-785b-451b-adf6-7133069c5459,26-35,Male,Urban,Christianity,France,26-35
+8f1ba1c2-edb9-47c3-ba4a-77c1933d3369,26-35,Male,Urban,I do not identify with any religious group or faith,Australia,26-35
+2373faa3-6cc2-4098-9832-d0b1bc073de9,46-55,Male,Urban,Christianity,United States,46-55
+465e30a2-6860-4c4d-87f6-4d911df96f83,18-25,Male,Urban,I do not identify with any religious group or faith,Brazil,18-25
+1c1b82d5-32c0-47e8-b29c-4a044cbb2327,36-45,Male,Urban,I do not identify with any religious group or faith,Mexico,36-45
+639026b0-f65f-476b-875b-06e7b64f5ee4,18-25,Male,Urban,I do not identify with any religious group or faith,France,18-25
+d3ba99d9-c550-4967-b1fd-cd5a0614969d,36-45,Male,Urban,I do not identify with any religious group or faith,Portugal,36-45
+73722739-5719-41db-b39a-9a40f898b62d,26-35,Female,Urban,Islam,Pakistan,26-35
+7eaa1b13-50a8-4111-a171-0c0c4451be00,18-25,Female,Urban,Hinduism,India,18-25
+3df674a6-69f6-4caf-864b-a21f0c1a2c55,26-35,Female,Urban,I do not identify with any religious group or faith,Chile,26-35
+032945ff-f576-4794-a9b3-41719e57d47e,18-25,Male,Urban,Christianity,Brazil,18-25
+2f8f066e-488f-47fb-a73f-851982a1bd01,18-25,Male,Urban,I do not identify with any religious group or faith,Vietnam,18-25
+5ed278f0-14a3-40d0-9ddb-54257b5375cf,18-25,Male,Urban,Other religious group,France,18-25
+65b1c36e-37db-4647-a429-4f4b630f715e,18-25,Male,Urban,Christianity,Kenya,18-25
+3ee45a27-105d-4a26-8e73-faed153bdc4b,18-25,Female,Rural,Hinduism,India,18-25
+607d3e8d-aceb-4096-9e93-8614f68f92cc,56-65,Male,Urban,Christianity,Brazil,56-65
+580020ec-d3c2-40df-be8d-1aa52b9c8c54,18-25,Female,Urban,Islam,Canada,18-25
+7f8c37e1-b578-4ef5-9804-81b492442c63,36-45,Female,Urban,I do not identify with any religious group or faith,France,36-45
+5827cf0b-8ac2-4f14-a0ee-528b1d5a69d9,26-35,Female,Rural,I do not identify with any religious group or faith,New Zealand,26-35
+1275fd9e-9a50-4af4-9137-2ddd146c2b64,26-35,Male,Urban,Hinduism,India,26-35
+16d45637-637e-44a0-a4d3-9670fa70bb96,18-25,Male,Urban,Christianity,Slovakia,18-25
+f3df0563-4bad-4c0a-a6d1-e6a61cf9ef4a,18-25,Female,Rural,I do not identify with any religious group or faith,Poland,18-25
+521a6dc4-14e3-4d31-b22b-5ba2ba750a57,26-35,Female,Urban,Christianity,Kenya,26-35
+1b45e3da-caaf-4bbb-a9be-6302c76b76ad,26-35,Male,Urban,I do not identify with any religious group or faith,Brazil,26-35
+e451ff6d-9b78-4778-8dc3-362d98ff6570,18-25,Female,Urban,Christianity,Kenya,18-25
+f058c231-9706-4d4e-b181-059b6095a995,26-35,Male,Urban,Islam,Pakistan,26-35
+9d6bcfa7-ce02-43e2-b7f0-b313647874c8,26-35,Male,Urban,Islam,India,26-35
+fed816ca-280c-4b31-9896-e7541f5f7b47,26-35,Female,Urban,I do not identify with any religious group or faith,Australia,26-35
+aa1aba36-6aa2-42da-88d9-f04a2f570db3,46-55,Male,Urban,Christianity,Brazil,46-55
+7e0bf3c7-0cfe-446c-a8fe-6a6b9f7a3954,36-45,Female,Urban,I do not identify with any religious group or faith,Australia,36-45
+b8d4a06a-a490-4144-b1cd-c1cba146aa0a,26-35,Female,Urban,Hinduism,India,26-35
+27c7a461-e50c-4d41-8b50-2faca73836f3,26-35,Male,Urban,Christianity,Chile,26-35
+58ec9ccd-4574-443b-a419-d97afe67eb10,56-65,Female,Rural,Christianity,United States,56-65
+e305f5c9-9a7d-4971-a899-746a1380f30f,26-35,Female,Rural,Islam,Indonesia,26-35
+9838777f-fdb0-4c90-8154-ed17d0e6ada2,46-55,Female,Urban,Christianity,Brazil,46-55
+2c78e96e-fc29-4aa6-9f36-4d8e8c934307,26-35,Female,Urban,Buddhism,Chile,26-35
+440d8318-c21d-4995-8e0f-d0015b95d2f7,26-35,Male,Urban,I do not identify with any religious group or faith,Israel,26-35
+f68cfd0e-0bfb-4787-b1fb-948a25687d03,26-35,Male,Urban,Judaism,Israel,26-35
+09f4b739-d358-41bb-97e9-085ae5049343,36-45,Male,Urban,Christianity,Belgium,36-45
+09e83c29-9962-4aea-aa7f-e035bf4e9eff,26-35,Female,Urban,Other religious group,Brazil,26-35
+4b5d54b1-98cf-4d65-9a20-7ee95787ac66,18-25,Male,Urban,Christianity,Kenya,18-25
+f06fa856-0ab5-49e5-8c27-4dd0eafc87a0,26-35,Female,Urban,Buddhism,Korea South,26-35
+19a9fef0-17d6-43c4-9b5d-095976f01cfe,36-45,Female,Urban,Hinduism,India,36-45
+c7723ede-25f9-4285-9c81-7ed37abaa461,46-55,Female,Urban,Islam,Indonesia,46-55
+79343ee6-0ba9-4611-a180-6390715d47d9,26-35,Female,Urban,Christianity,Brazil,26-35
+7ea8ed2c-a2cd-4a6e-8362-573ed26ef77e,36-45,Male,Urban,I do not identify with any religious group or faith,Sweden,36-45
+5a1bd69e-4127-4881-bec6-4486c88bb16f,18-25,Male,Urban,Islam,Morocco,18-25
+ce323bfd-7753-465c-8009-3566a84ca875,18-25,Male,Urban,Islam,Bangladesh,18-25
+3fa8a1ae-5fb9-4667-83ea-867a1f4fa5d3,26-35,Male,Urban,Islam,Türkiye,26-35
+c7e78138-3658-4e14-a18d-f42ff8e1045d,26-35,Male,Urban,Christianity,Kenya,26-35
+6cd25dd9-d710-40b6-97c4-f3f505aa6ec4,26-35,Male,Urban,I do not identify with any religious group or faith,China,26-35
+34655636-ed63-49b7-9a01-49a13ceb4e72,26-35,Female,Urban,I do not identify with any religious group or faith,Italy,26-35
+b114dcbc-dc50-454d-9fc9-5ba11a56b1a6,26-35,Female,Urban,Christianity,Kenya,26-35
+728e4ac8-33e4-4dde-843a-1dab7ecbbce7,26-35,Female,Urban,Christianity,Chile,26-35
+033fbba1-c09b-4860-a5d7-7bbd09b71e7b,36-45,Female,Urban,Christianity,Brazil,36-45
+f4907298-2452-4d4c-863d-4ddee4e3705e,26-35,Female,Urban,Islam,Hungary,26-35
+9ee3bca6-a1c5-418c-9c05-3b1a14d1caa3,36-45,Female,Urban,Christianity,Kenya,36-45
+21f5ea8b-f675-4dd4-85ba-09ca19fa4e3e,18-25,Male,Urban,I do not identify with any religious group or faith,France,18-25
+99f4c06d-9d57-4841-99f5-c0fe6105452a,18-25,Male,Urban,Christianity,Kenya,18-25
+5a06a974-9262-4729-902a-f6fbe56dec68,26-35,Female,Urban,I do not identify with any religious group or faith,Chile,26-35
+21da1810-8674-4677-811c-3d5c3df7f322,26-35,Male,Urban,Christianity,Chile,26-35
+55d748c9-f0ae-444f-a4a7-20c8a49f3435,26-35,Male,Urban,Christianity,Kenya,26-35
+aa5d0a7d-1923-4b76-988a-84d2a730aa49,18-25,Male,Urban,Hinduism,India,18-25
+2a44dd1c-7629-4eb9-b64a-2240a7849822,18-25,Male,Urban,Hinduism,India,18-25
+74f5d406-40f9-4c7b-9718-c62b30ff6571,36-45,Female,Urban,Judaism,Israel,36-45
+be4b5de3-7de1-4751-a720-879ada98e717,26-35,Female,Urban,Islam,Morocco,26-35
+efa9ad7e-3680-4fd5-bb23-cee5058e6a3d,46-55,Female,Urban,Christianity,Canada,46-55
+a783246a-2dbd-430b-8a51-d539f4bef33a,18-25,Male,Urban,Christianity,Kenya,18-25
+77876b6c-97b3-4020-8195-2ebfc52e0423,26-35,Female,Urban,Other religious group,Kenya,26-35
+2eeff7bd-06c2-49fb-bd21-cb766c395f61,18-25,Female,Urban,Buddhism,China,18-25
+dac8d130-6251-479f-8af6-2df4af103f4c,18-25,Female,Urban,Islam,India,18-25
+5ceff220-491a-49f7-b986-95490ffa6d52,46-55,Female,Urban,I do not identify with any religious group or faith,China,46-55
+ef9942b1-f878-42b0-8b3e-82baffff5a90,18-25,Male,Urban,Hinduism,India,18-25
+14767164-9c59-4233-aa9b-6bdf6dad4bc5,36-45,Female,Urban,Christianity,Russian Federation,36-45
+1a89c4ac-cd16-4883-affd-9cf53efbe1fc,18-25,Female,Urban,Christianity,Kenya,18-25
+12c8a057-35f9-495d-834a-988f67ced42b,26-35,Female,Urban,Christianity,Russian Federation,26-35
+65bf80f9-754a-42f7-8286-24c502a1ac3e,18-25,Female,Urban,I do not identify with any religious group or faith,Chile,18-25
+140877f3-73e5-4529-abf1-36c9de6d2519,18-25,Male,Urban,Islam,Egypt,18-25
+6d4cd97b-405e-4bb5-95f8-766d9becff05,46-55,Female,Urban,Hinduism,India,46-55
+00b3696a-eabc-4ec7-b4fb-fb330a439b2f,26-35,Female,Urban,Islam,India,26-35
+0efe6d88-037f-4561-a7dd-436a0681302b,18-25,Male,Rural,I do not identify with any religious group or faith,Finland,18-25
+5eb3c73e-bb43-4bb0-981a-3f98e9ddfd87,18-25,Male,Urban,Christianity,Mexico,18-25
+c1466edc-a173-433a-8dfc-16730f120a9f,36-45,Male,Urban,I do not identify with any religious group or faith,United Arab Emirates,36-45
+53dba2ab-390c-4b87-831e-a943783dafe1,18-25,Female,Urban,Christianity,India,18-25
+5279403c-5e7d-4213-9182-3786309bfa2b,18-25,Male,Urban,Christianity,Kenya,18-25
+b0b60713-60f8-4878-b41b-3572c2c8ef78,18-25,Female,Urban,Islam,Palestine,18-25
+88ca74f1-955f-4cb4-8fdc-cda017365fae,46-55,Male,Urban,Christianity,Spain,46-55
+a6308e3a-51b5-434c-ada3-8117385d8565,46-55,Male,Urban,I do not identify with any religious group or faith,Japan,46-55
+f82c6422-7f32-4591-b8c2-6639e058ea33,36-45,Male,Urban,I do not identify with any religious group or faith,Brazil,36-45
+5b4f60b1-caa7-4f6a-aa91-37f54886f848,18-25,Female,Urban,Islam,Türkiye,18-25
+04af4820-102b-4357-8ba9-c79f6b2f4a33,46-55,Female,Urban,Christianity,United States,46-55
+de01efab-81f6-4af8-ba33-889f035ae8c3,26-35,Female,Urban,I do not identify with any religious group or faith,Japan,26-35
+d0710cc7-51f4-4792-af9a-f0b109a6c3e4,26-35,Male,Urban,I do not identify with any religious group or faith,Germany,26-35
+b48a549d-c8fa-4292-9ae0-b541cbd4c0b8,18-25,Female,Urban,Islam,Morocco,18-25
+fd229e73-02d6-4ee8-bee6-e9089e6b85bc,36-45,Male,Rural,Hinduism,India,36-45
+0e159c65-2af1-46bd-bbcf-e6917fca4cd8,46-55,Female,Urban,Judaism,Israel,46-55
+572f420b-e7a8-4e02-be5c-5f772a2bc698,36-45,Male,Urban,Christianity,Brazil,36-45
+05bb7978-6e40-4874-8aa9-b401f8558c03,36-45,Male,Urban,I do not identify with any religious group or faith,Slovakia,36-45
+e6dac369-2a8b-46e5-b03f-708226a9cdf5,46-55,Female,Rural,I do not identify with any religious group or faith,Russian Federation,46-55
+ecc20296-f3d8-4771-9d11-d79e1c8b1b7c,46-55,Female,Urban,Christianity,Chile,46-55
+149443a9-4d64-4acc-87b6-ba4a5b5269f7,18-25,Female,Rural,I do not identify with any religious group or faith,France,18-25
+47a915dd-6c5b-4f95-9a00-76bdb28bebf6,26-35,Female,Urban,Hinduism,India,26-35
+7ae717b9-847c-4731-8f97-a02d65515d5f,26-35,Female,Urban,Christianity,Chile,26-35
+582def79-6d29-4072-8792-65d3f1c242dc,18-25,Male,Urban,Hinduism,India,18-25
+a77e03a0-af8a-4bd6-8c42-f1fab56099bc,36-45,Female,Urban,I do not identify with any religious group or faith,China,36-45
+ab80572b-e31e-4ff0-ab0b-8c997031708f,26-35,Female,Urban,Christianity,Chile,26-35
+709567ba-c638-4ad8-bd14-e4c19cddbc42,36-45,Male,Urban,I do not identify with any religious group or faith,Australia,36-45
+2af9b8f5-3d31-46a7-9db6-f0acbb2c9f7f,26-35,Male,Urban,Christianity,France,26-35
+71e0641f-6bfa-4a91-b4fb-3317f3e14fc5,26-35,Female,Urban,Hinduism,United States,26-35
+6cf85f32-2f73-48f1-bf61-21bec123db0e,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+8e263116-83ea-46d9-9f49-199db49c79cd,46-55,Male,Urban,Islam,Türkiye,46-55
+baf5c928-e385-4fcc-af95-2d97eb7d3d73,18-25,Male,Urban,Christianity,Kenya,18-25
+47eb5cac-7026-455c-803e-8f82c7b7d3b6,26-35,Female,Urban,I do not identify with any religious group or faith,Netherlands,26-35
+5143dce6-eb48-4bfc-b921-47367b648544,18-25,Male,Urban,Christianity,India,18-25
+77eba8ea-d6b6-4afc-b36f-abb243606753,26-35,Male,Urban,Christianity,Kenya,26-35
+d73c1211-a8f3-4291-a7f3-89bb75b905be,18-25,Female,Urban,I do not identify with any religious group or faith,Kazakhstan,18-25
+977a715e-d6e9-4d26-b74d-3e37e661acc2,26-35,Female,Urban,Christianity,Spain,26-35
+d96db005-7167-4b18-9741-a4028adf6728,26-35,Female,Urban,Hinduism,India,26-35
+7e309c20-e3c6-4d3d-b29a-fe135e385119,26-35,Male,Urban,Islam,United Kingdom,26-35
+3904e6e2-3952-45d3-a54b-1c0676b2a51d,65+,Female,Urban,I do not identify with any religious group or faith,Cuba,65+
+f98ea469-7d07-4548-adab-d6665adf52cf,18-25,Female,Rural,Christianity,Kenya,18-25
+a664f8e5-c444-42d6-9d97-3bbb5ca2808d,36-45,Female,Urban,Christianity,Kenya,36-45
+aec4fc2a-9422-430d-a0a5-5bb402ada8f6,46-55,Male,Urban,Islam,Indonesia,46-55
+34876f65-e912-4b58-bae2-5cdd8cb9b483,65+,Male,Urban,Christianity,United States,65+
+463f4be3-a92e-4225-b8c1-c2c926f6d2cd,18-25,Male,Urban,Islam,Egypt,18-25
+b6a955ab-d388-4cb6-af0d-73f7b8f843ca,26-35,Female,Urban,Christianity,Australia,26-35
+db970c09-5438-4680-a556-90b150ae6ee8,36-45,Male,Urban,Hinduism,India,36-45
+0c163693-0b07-46cc-90b9-ab8f6a6248fc,26-35,Female,Urban,Islam,Bangladesh,26-35
+4e9f0f70-c97b-4279-b1f4-020a749a89a8,26-35,Female,Urban,Islam,Türkiye,26-35
+0612102c-65c2-4d29-b5bb-35220335e54a,26-35,Male,Urban,Christianity,Kenya,26-35
+b5f8e5ca-c437-4def-bcac-b354a0d1ba41,36-45,Male,Rural,I do not identify with any religious group or faith,Australia,36-45
+247e6eea-fc94-4ba9-9499-d5b1f6e68440,26-35,Female,Urban,Islam,Indonesia,26-35
+63c9d0c3-13a7-4d98-aaa1-e606dffa6bd6,18-25,Female,Urban,Christianity,Kenya,18-25
+02e90912-d058-4133-abd2-cdf802b63ff1,18-25,Female,Urban,Christianity,Kenya,18-25
+f8825e41-fa22-481b-987c-f3400575e969,26-35,Male,Urban,Christianity,Poland,26-35
+5986d28e-2ca6-4c5f-8f6f-3d9f3f834b31,26-35,Female,Urban,I do not identify with any religious group or faith,Chile,26-35
+ed3e6676-129b-43c0-889e-1272481d96b8,26-35,Female,Urban,Islam,Egypt,26-35
+9dc5bc9e-a285-431b-838b-d1052f87f8e8,26-35,Female,Urban,Islam,India,26-35
+56c355b3-81d2-48a6-93e3-146afb5460a9,46-55,Male,Urban,I do not identify with any religious group or faith,United Kingdom,46-55
+3d57f07d-3dc4-4cd5-a9e7-055c0c60cae5,36-45,Male,Rural,Islam,Pakistan,36-45
+4c2c67dd-0b75-480b-a6c0-48c9d07b2a59,18-25,Male,Urban,Judaism,Israel,18-25
+df618189-efc3-4c8a-b8ad-489db9088a4f,18-25,Male,Rural,Christianity,Kenya,18-25
+eac528e7-fb35-4154-9f7e-15bdec9699fa,36-45,Female,Urban,I do not identify with any religious group or faith,Russian Federation,36-45
+f13bfcc6-ef90-4351-9abf-b0700f3db1ad,26-35,Female,Urban,Christianity,Kenya,26-35
+0cbb0840-891a-4e04-ae15-62a53be92c80,36-45,Female,Urban,I do not identify with any religious group or faith,China,36-45
+2c60233d-bf64-4c81-ab1e-2534c6765a65,18-25,Female,Urban,Hinduism,India,18-25
+046db6db-4d2b-48b6-9a3d-701e0d17a423,18-25,Male,Urban,Christianity,Kenya,18-25
+775a660e-14c8-456a-88cd-9d340f009c18,26-35,Female,Rural,Islam,Indonesia,26-35
+d0fef76c-6c16-47a1-a01b-00294f083655,26-35,Female,Urban,Christianity,Brazil,26-35
+6ae18c64-4786-46dc-8dcf-eaa0e52081f4,26-35,Male,Urban,Christianity,Kenya,26-35
+79e00d7e-9cd2-4fc5-8403-4a7f177423d6,18-25,Female,Urban,Christianity,Chile,18-25
+51148323-e642-40a5-bed1-a0984936e223,36-45,Male,Urban,Christianity,Kenya,36-45
+efcb734b-eede-4ff8-b99e-31047439a93b,46-55,Male,Urban,I do not identify with any religious group or faith,Brazil,46-55
+77804968-0b99-4a5b-9e84-0b43b8c14252,26-35,Male,Urban,I do not identify with any religious group or faith,Kenya,26-35
+573326d4-d20a-4dc0-974c-63266426b204,26-35,Female,Rural,Islam,Pakistan,26-35
+4d039d65-6241-4c30-91d4-aae39f5baa08,26-35,Male,Urban,Buddhism,China,26-35
+c6ef6478-4df0-4569-b134-580d05249d7e,18-25,Male,Rural,I do not identify with any religious group or faith,Spain,18-25
+199da574-8e60-4de3-b171-58dade041d49,26-35,Male,Urban,Islam,India,26-35
+7019b346-d970-436d-a8a4-4f75a81dfd09,46-55,Male,Urban,Christianity,Brazil,46-55
+064510f2-8453-4d1d-94db-703a41dbbf04,46-55,Female,Urban,I do not identify with any religious group or faith,Russian Federation,46-55
+29ac6a27-f716-4573-8ec6-416a3f0c5da3,36-45,Female,Urban,I do not identify with any religious group or faith,Slovakia,36-45
+6991f06b-b363-41b7-86a4-4dbf333f9b66,36-45,Female,Urban,I do not identify with any religious group or faith,Canada,36-45
+fd07c59c-8a9e-4f60-b6f0-fe31864a4bcd,26-35,Female,Urban,Hinduism,India,26-35
+e4977309-5f40-4682-a0a1-be2c252f2b37,18-25,Female,Rural,I do not identify with any religious group or faith,Slovakia,18-25
+da313a1d-dc37-4563-848f-360690ab9484,18-25,Male,Urban,Judaism,Israel,18-25
+ddb7ad21-9529-4e9b-b155-c72a1f9db6fd,26-35,Female,Urban,I do not identify with any religious group or faith,Kazakhstan,26-35
+6d02fbed-1ec6-4187-ba0b-da291eb9013f,18-25,Female,Urban,Islam,Saudi Arabia,18-25
+feb1806c-338e-4fc7-a1ca-78979d41e3c9,26-35,Female,Urban,Christianity,Kenya,26-35
+f9b3784e-0e21-42cf-abff-b570fd2efcd7,18-25,Female,Urban,Islam,Algeria,18-25
+37f753ee-77c5-43b7-b354-aa9dd4124de2,46-55,Male,Urban,Christianity,France,46-55
+4a96833d-7bd6-4572-976f-d8d4e54f8f77,26-35,Female,Urban,Islam,Pakistan,26-35
+a104d65f-1ce6-42fa-9d1f-41eef909a7ab,26-35,Male,Urban,Islam,Kenya,26-35
+fca98e6c-3365-4257-9b34-2c920a0781ed,26-35,Male,Urban,Christianity,Slovakia,26-35
+49d6b293-e3ca-4eb6-87f3-80870e66c59f,18-25,Female,Urban,Islam,Morocco,18-25
+617d46eb-f4f6-4630-b6cf-95da3ac2244d,18-25,Male,Urban,Christianity,Canada,18-25
+51eb2779-6e9a-412f-afad-2d1d2518d53e,18-25,Female,Urban,Christianity,Kenya,18-25
+85e473d5-48fd-44d4-b1af-b0b266419cbd,18-25,Male,Rural,Islam,Indonesia,18-25
+debbf664-0311-465e-9d55-226f464a0714,36-45,Male,Urban,Hinduism,India,36-45
+c9ceb986-915e-4e26-80c8-6bb3c509326e,36-45,Male,Urban,Islam,Saudi Arabia,36-45
+1febfcfc-bc09-4987-93a6-c170b75775dc,18-25,Male,Urban,Islam,Israel,18-25
+f817a91a-8b6b-4f50-b15f-ee04638c3923,36-45,Male,Urban,I do not identify with any religious group or faith,Canada,36-45
+893c2f51-d223-4902-8c9a-25d86a4fcd23,26-35,Female,Urban,Buddhism,Vietnam,26-35
+f691f036-fce6-49ca-bcd5-7a6b457672fa,36-45,Female,Urban,Christianity,Kenya,36-45
+e3303c0f-430a-44a8-ae0b-c2ae0bf5d004,26-35,Female,Urban,Islam,Canada,26-35
+8e8d0c50-4687-42e2-991d-26389ab11d47,46-55,Male,Urban,Christianity,Spain,46-55
+60bc5d17-6e9d-400e-b696-5653a767816a,26-35,Male,Urban,Islam,Indonesia,26-35
+f4f92402-5fbb-4724-bab3-5c6508dad30a,26-35,Female,Rural,Christianity,Philippines,26-35
+2438e9bc-7ef1-454c-9fb3-6f432f63efd0,18-25,Female,Rural,Judaism,Israel,18-25
+30ae8bfd-9e0a-4c22-ac88-6c56a9113211,18-25,Male,Urban,I do not identify with any religious group or faith,Japan,18-25
+51efd13f-6f04-4a03-baad-1341a188c236,26-35,Female,Urban,I do not identify with any religious group or faith,Indonesia,26-35
+99440f3e-bde1-4569-b677-998b9f6cf1bc,26-35,Male,Urban,Islam,Egypt,26-35
+8b958cea-2287-47cd-8512-df59d26ea200,26-35,Male,Urban,Hinduism,India,26-35
+b32dcbea-1cbe-41c6-aa86-efa62cc53bcd,18-25,Female,Rural,Christianity,Kenya,18-25
+85b35191-fc1b-46ec-97a8-d527f45635e7,36-45,Male,Urban,Islam,Malaysia,36-45
+173354cb-1f89-4202-ace9-6a88f43d86ec,36-45,Male,Urban,Christianity,Indonesia,36-45
+8f09b036-1692-4113-9ba3-b37381fb0458,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+e7bebbad-774b-4a67-ac33-ead075d42511,26-35,Male,Rural,Islam,Indonesia,26-35
+1e206e6a-56f6-41ac-83d1-bdf87477748e,26-35,Female,Urban,Hinduism,India,26-35
+c1ac95b5-b40a-43d0-80ca-116c36c5743e,26-35,Male,Urban,Christianity,United Kingdom,26-35
+818f5e87-1ca6-47ae-955d-1c1b80fdfa8f,36-45,Female,Urban,Christianity,Indonesia,36-45
+2db9a227-7b81-4023-a33b-dd014535f06d,26-35,Male,Urban,Buddhism,Vietnam,26-35
+cfc7899a-7fc4-4013-b9fa-bc6d4a1cbb94,18-25,Male,Urban,Christianity,Kenya,18-25
+f7eb0530-9051-424b-8198-a56919213802,26-35,Male,Urban,I do not identify with any religious group or faith,Vietnam,26-35
+02142d3a-93e0-4b0c-a28d-b09dd50b7c03,18-25,Female,Urban,Islam,Tunisia,18-25
+ed745e54-f607-4983-9751-9553ef54aacb,26-35,Male,Urban,Islam,Pakistan,26-35
+23bc1af8-1969-482e-98dc-e7a0a2610f07,26-35,Female,Urban,I do not identify with any religious group or faith,Canada,26-35
+9d2ce045-7b58-4e20-857c-7baae1621930,26-35,Female,Urban,Islam,Egypt,26-35
+a91bf4a7-bd70-4abd-9fb7-bf72a444fb9b,26-35,Male,Urban,Hinduism,India,26-35
+31d9f134-fbe4-4000-b7e8-2010f106bac7,26-35,Male,Urban,Christianity,Kenya,26-35
+cd5dd918-06dd-45a8-ae23-e66ace5e6687,26-35,Female,Urban,Islam,Indonesia,26-35
+967ac2fa-1be0-4f47-9246-8d376b7122c6,18-25,Male,Urban,Islam,Hungary,18-25
+3acc3dfc-bf93-4619-aa97-6ad783f24414,46-55,Male,Urban,Islam,Indonesia,46-55
+f01f2d43-9896-4a2c-8d46-d4ccbb3c04e7,26-35,Male,Urban,Christianity,Ukraine,26-35
+cca5b429-c73b-4567-9ea5-4b165b3769c9,18-25,Female,Urban,Christianity,Kenya,18-25
+64e89d35-2e6f-4b43-ac22-cd9e76fc938c,26-35,Male,Urban,Islam,Kenya,26-35
+610e53c1-5187-492b-a6b8-b248f902e63c,18-25,Male,Urban,Christianity,Vietnam,18-25
+275db9c7-e84b-47ca-8c3a-b1d331d2d267,46-55,Female,Urban,I do not identify with any religious group or faith,India,46-55
+b5018d13-835b-4507-a600-12fec06d22c4,26-35,Female,Urban,I do not identify with any religious group or faith,Canada,26-35
+b3a6a1d2-92ba-4d3d-99c3-1dc2222cbe2d,26-35,Male,Urban,Islam,Belgium,26-35
+bbfff3cc-8287-4da6-a0b6-441e73c6df94,36-45,Male,Urban,I do not identify with any religious group or faith,Canada,36-45
+593afa91-4428-48a2-8792-b934ab7bbd42,46-55,Female,Rural,Islam,United Kingdom,46-55
+679ac1e6-fb2d-4cc1-865e-5dbee62f94fa,18-25,Male,Urban,Islam,Morocco,18-25
+0dfba45c-a513-46ee-b5ba-d029fa2d9670,18-25,Female,Urban,Islam,India,18-25
+8b93f34d-0408-4e8c-a13e-17d3d08dd7dc,26-35,Female,Urban,Christianity,Kenya,26-35
+34d83cf8-e86b-4a9b-8ab1-52ae8317d6a8,18-25,Male,Rural,Hinduism,India,18-25
+df2843a1-0e5b-4f5c-852e-139c7c33877e,26-35,Female,Urban,Islam,India,26-35
+3173615c-bee0-4f3e-99cb-c1732a409f90,18-25,Female,Urban,Islam,Kazakhstan,18-25
+24c85015-29f4-448c-b3ed-f1cdcb8cc2be,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+676f6ea8-353c-464d-b562-f733a0d7dd52,36-45,Male,Urban,Islam,Malaysia,36-45
+70703530-2581-43cf-8cfa-d0df26e4df62,26-35,Female,Rural,Islam,Indonesia,26-35
+7d9d5c21-2cc7-4988-b9bd-2dffb82ac381,36-45,Male,Urban,Islam,India,36-45
+aae1ee98-d303-4f8c-9507-4b367ebbd970,26-35,Male,Urban,Christianity,Kenya,26-35
+cb6b4ca5-9da7-4853-9157-8b986150edb5,26-35,Male,Urban,Christianity,Australia,26-35
+46c35171-0484-4ee4-9b66-b8827a3a515c,18-25,Female,Rural,Christianity,Philippines,18-25
+9d942d75-50c6-4ddf-b776-9f4a72c2b945,26-35,Male,Urban,Islam,Canada,26-35
+98241847-56c9-469a-8d8e-3adbcf3c2f45,18-25,Female,Urban,Christianity,Philippines,18-25
+1dcf442f-6543-462c-a9c7-457d73c07a97,18-25,Male,Urban,I do not identify with any religious group or faith,Korea South,18-25
+dfe677a6-d587-423a-ae21-98fa88dee7a9,18-25,Female,Urban,Islam,United Kingdom,18-25
+25caeaf5-ab5e-4211-b2cd-b7c2ae104407,36-45,Male,Urban,I do not identify with any religious group or faith,Italy,36-45
+7814e457-13f8-4c48-9552-19a219043f5c,18-25,Male,Urban,Hinduism,India,18-25
+6c36f433-d10c-4dcc-9753-67c5627493c4,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+8405afbf-0545-492e-8756-942cf068b0a4,18-25,Male,Urban,Islam,Egypt,18-25
+1d0106a2-9c7a-48c6-977b-c10d126a3215,26-35,Female,Urban,I do not identify with any religious group or faith,Japan,26-35
+715eb625-5a35-4e65-9bd2-e216b7ad0f7b,26-35,Female,Urban,I do not identify with any religious group or faith,Israel,26-35
+ed662d65-976b-4535-b0bf-5779d0a5d153,18-25,Female,Urban,I do not identify with any religious group or faith,Egypt,18-25
+fbeabfa0-9814-42b7-9ea2-a8ffc1cd8baa,18-25,Female,Urban,Christianity,Philippines,18-25
+bcc970fb-19e0-4a76-ab61-8dd53fca0af6,18-25,Male,Rural,Islam,Belgium,18-25
+91251c03-9900-4393-9614-532c1b5e494e,18-25,Female,Urban,Hinduism,India,18-25
+f6c7b4b3-2988-4a87-b457-4796481c354b,18-25,Female,Urban,I do not identify with any religious group or faith,Korea South,18-25
+0a92b4fd-a15c-43c3-8985-08bc47ae6bb8,26-35,Female,Urban,Christianity,Kenya,26-35
+cbc80ad4-2d19-4424-a78e-27fc81f0998f,18-25,Female,Urban,Islam,Morocco,18-25
+7798ef57-8ffe-4565-b592-091775ff39e9,46-55,Male,Urban,I do not identify with any religious group or faith,India,46-55
+20cb3cfb-4911-4d94-afef-7629676cbf81,26-35,Male,Urban,Islam,India,26-35
+bb83d017-8a72-4e48-ac58-5f87eb1124f3,26-35,Female,Urban,Christianity,Philippines,26-35
+b2054100-ab3d-45ca-b21c-46a71c78066c,26-35,Female,Urban,I do not identify with any religious group or faith,Canada,26-35
+03024659-ad64-4206-b347-cd2535bbd70c,26-35,Male,Urban,I do not identify with any religious group or faith,China,26-35
+f87b44ef-19fa-4fdc-b9b4-9379c9054512,46-55,Male,Urban,Hinduism,India,46-55
+83079bb4-aa5f-46ce-8d0f-5dbf10bb20cd,46-55,Male,Urban,Hinduism,India,46-55
+1f018da4-009c-460c-aefb-e1b83575907f,26-35,Female,Urban,Hinduism,India,26-35
+1c7e2011-0d5a-45ad-a2f2-c13ac059fb99,18-25,Female,Urban,Islam,Morocco,18-25
+d08abad0-c062-4e02-8acf-a1c6b55e796b,36-45,Male,Urban,Hinduism,India,36-45
+8ba7997e-3130-460a-bc5a-a45e4283444a,36-45,Female,Urban,I do not identify with any religious group or faith,China,36-45
+a09f199d-cee8-455b-9bc5-ac44edf6c875,36-45,Male,Urban,Hinduism,India,36-45
+2863f019-9eae-4821-9404-9d844cefd9d8,18-25,Female,Urban,Christianity,Philippines,18-25
+4d49276a-520a-491f-8563-d319b58b4d31,26-35,Female,Urban,Hinduism,India,26-35
+26296361-82e8-4e37-b77d-45848971c561,26-35,Female,Urban,Hinduism,India,26-35
+cca6ab2e-8e03-4314-bed5-b22a77f07540,18-25,Female,Urban,Islam,Sudan,18-25
+167414f4-44d8-47ef-af95-f6d083935263,36-45,Male,Urban,Judaism,Israel,36-45
+662ef604-9f5d-44aa-aa48-3f7dd26aa01f,36-45,Male,Urban,Islam,Indonesia,36-45
+c6f90a9e-8130-4d44-ad09-b990bcda55e0,18-25,Male,Urban,Islam,Indonesia,18-25
+0b9019a6-4b6a-45e5-874f-495a696b6ab2,26-35,Male,Urban,Islam,Saudi Arabia,26-35
+41847302-eab1-4623-adc6-88090195c8b9,26-35,Female,Urban,Christianity,Malawi,26-35
+77dd4002-df05-43b0-b68f-9033de9c29b4,26-35,Male,Urban,Hinduism,India,26-35
+00ddd55b-42c4-4fff-b0bd-5861f28c3819,36-45,Female,Urban,Hinduism,India,36-45
+84689d7a-6c19-4e78-ad20-516552b770f2,26-35,Male,Urban,Hinduism,India,26-35
+857ba272-6b29-4291-af29-5844faefcd9e,26-35,Male,Urban,I do not identify with any religious group or faith,Korea South,26-35
+981b4b2d-7722-4b9d-9dd6-add0901f0966,36-45,Female,Urban,Hinduism,India,36-45
+33ca2ef6-22d4-4f14-bee5-09955cf0ed08,46-55,Female,Urban,Islam,India,46-55
+37d13b22-f687-4e54-997e-b3d79b368927,36-45,Male,Urban,Other religious group,Bangladesh,36-45
+7a32f42b-d4f1-4a47-9896-1e684442f320,26-35,Female,Rural,Islam,Morocco,26-35
+20f8d409-b909-4d16-8bc5-4a62d21d49e9,26-35,Female,Urban,Islam,Indonesia,26-35
+8c9b2f99-ab3a-4510-b261-dc23380b1fa3,18-25,Female,Urban,Hinduism,India,18-25
+df9591af-e5b4-4fb1-9d2f-0fd876dc374d,26-35,Female,Urban,Islam,Indonesia,26-35
+8df43016-9347-44d9-9ba4-d23187e0666a,36-45,Male,Urban,Hinduism,India,36-45
+29c561b4-dca7-4e74-ac52-0cadd018f315,46-55,Female,Urban,I do not identify with any religious group or faith,Japan,46-55
+6656137d-5327-4dba-99fa-1f094d340e8e,46-55,Female,Rural,Hinduism,India,46-55
+000ccdf0-8943-4682-aca8-cad7922c538b,18-25,Male,Urban,Christianity,Indonesia,18-25
+5ce2e06d-3719-41ec-abc5-2ba67c0f469b,18-25,Male,Urban,Islam,Singapore,18-25
+e60b62bc-f0a5-46ee-9307-f6a463c153c1,26-35,Female,Urban,Islam,Algeria,26-35
+db45de89-8225-4fad-96a1-08ae19f743c3,18-25,Male,Urban,Islam,Indonesia,18-25
+f5e6d17e-b3f2-4c86-b179-3c38408ef40e,18-25,Female,Urban,Islam,Saudi Arabia,18-25
+73b509b2-716d-4037-9fad-8589616dce92,26-35,Female,Urban,Hinduism,India,26-35
+eafa8449-dcab-4597-871f-988e6f5632a1,36-45,Female,Urban,Hinduism,India,36-45
+c07647f4-a1ec-413b-a0ed-b9cb67b1f913,36-45,Female,Urban,Hinduism,India,36-45
+02fcc43c-7e05-4644-b6f0-80f48fa8a034,18-25,Male,Urban,Islam,Pakistan,18-25
+93671e38-35e6-4925-9934-aa821fb31ad3,26-35,Female,Urban,Hinduism,India,26-35
+f1fc335c-f402-40ac-994d-0e8cba0fe43b,36-45,Male,Urban,Christianity,Vietnam,36-45
+a680a183-bab9-426e-95b6-6e32872ccaa7,46-55,Female,Urban,I do not identify with any religious group or faith,India,46-55
+3e01b765-9e71-4386-afb4-583bf97a8880,36-45,Female,Urban,Christianity,Malaysia,36-45
+76ffde94-7453-4e5a-97cc-16d9b44734e7,36-45,Male,Urban,Islam,Indonesia,36-45
+a947fc27-7860-4f47-a41a-284bb85aac74,56-65,Male,Urban,Buddhism,Japan,56-65
+65439dba-2d32-4920-a7fb-1dcc4e0f3bfe,65+,Female,Urban,Christianity,Canada,65+
+4f6c413d-3f62-4f36-b4c9-5dc1396e9bd6,36-45,Female,Urban,Hinduism,India,36-45
+a3981121-7a9b-4054-a682-f9868dbbd7d5,26-35,Female,Urban,I do not identify with any religious group or faith,Singapore,26-35
+be1f2d84-3a8a-4569-ba03-1c83bdb4dc51,36-45,Male,Urban,Hinduism,India,36-45
+e26d9238-7fd3-4c97-b659-5bc27105d05a,18-25,Female,Urban,Hinduism,India,18-25
+a203c8c3-fff7-4f60-a06c-c7be46ceecfd,36-45,Male,Urban,Hinduism,India,36-45
+1d8abd90-ff2c-45aa-a51f-d3de502ad851,18-25,Male,Urban,I do not identify with any religious group or faith,Singapore,18-25
+a2235b5b-b30b-4cd5-8706-d2e79c23ea74,36-45,Female,Urban,Hinduism,India,36-45
+bf60fb8a-2667-4ac8-974e-7f64665ae79c,56-65,Male,Urban,Christianity,India,56-65
+585f073b-4450-421f-8b3e-41ab31b252af,56-65,Male,Rural,I do not identify with any religious group or faith,Japan,56-65
+44d04a9f-d96c-41f6-8b82-7bbf50387259,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+6d3f8e8b-683a-4023-964b-8e8f0928f5b4,46-55,Male,Rural,Christianity,India,46-55
+235035c3-fbe2-4d0f-b369-947c575c01dc,26-35,Male,Urban,I do not identify with any religious group or faith,Korea South,26-35
+8ef953cc-1c59-4cf7-92a4-d546250acd18,18-25,Female,Urban,Islam,Indonesia,18-25
+270f80bb-d444-4c52-ace5-e978292d3e17,36-45,Female,Urban,,India,36-45
+d942e573-b4d7-4ae7-a6f3-7fea333ed621,18-25,Male,Urban,I do not identify with any religious group or faith,Japan,18-25
+8c8fcd2b-2dac-407b-b992-ed787742802b,26-35,Female,Urban,Hinduism,India,26-35
+b61ddece-1483-45bb-adc1-b3a1be4c2d3b,46-55,Female,Urban,Christianity,Kenya,46-55
+c34930b8-49e2-4bbf-b67e-76bff747ace8,26-35,Male,Urban,Hinduism,India,26-35
+c5035680-5b84-4006-9b81-4468f35ad905,26-35,Female,Rural,Hinduism,India,26-35
+a8ba4f38-75eb-4369-8c6a-a8f59af7870b,46-55,Male,Urban,I do not identify with any religious group or faith,India,46-55
+a014acbd-d860-4c2a-8787-90b915e2237c,26-35,Female,Urban,Islam,United Arab Emirates,26-35
+7b78383f-129d-4b9d-b00d-51b727c7193b,18-25,Male,Urban,Hinduism,India,18-25
+24fc273f-78cb-4a38-b936-e9c6c233a0bf,18-25,Female,Urban,Islam,India,18-25
+f3e34267-f875-470e-bf9f-ac4972dfe0e3,26-35,Female,Urban,Hinduism,India,26-35
+bfb26da4-677e-43b1-951d-eaf74aeefc08,18-25,Female,Urban,I do not identify with any religious group or faith,Vietnam,18-25
+30a3b2ab-6105-4d74-81db-fbedf16d920f,26-35,Female,Urban,Hinduism,India,26-35
+bf2c2f36-5e3a-446c-80f3-f0509c64ef5c,26-35,Female,Urban,Christianity,Kenya,26-35
+cf9f9fa2-5700-41b8-8c2c-ee900e54f07b,46-55,Male,Urban,Christianity,Philippines,46-55
+24a195b5-19be-41b2-9673-9c3dfd13e79a,26-35,Female,Urban,Hinduism,India,26-35
+cee17f35-f170-49b8-ac73-3ea7cfa5a661,18-25,Female,Urban,Hinduism,India,18-25
+3921056f-3a25-4126-bdae-aa8361d85ccc,26-35,Female,Urban,Buddhism,India,26-35
+7d6d143e-3fdc-439a-8d2e-92452632f81a,18-25,Male,Urban,I do not identify with any religious group or faith,Vietnam,18-25
+93dfb55d-4525-4a4a-bff1-d1a32a6af6a3,18-25,Male,Urban,Islam,Kenya,18-25
+d89352a3-88fa-433c-895f-837a1ca98d4a,18-25,Female,Urban,Hinduism,India,18-25
+12575a7b-525d-45a9-9f50-e06e19d78d37,36-45,Female,Urban,Hinduism,India,36-45
+b7a42aec-b5d5-4973-80b4-bf14a5af8250,36-45,Female,Rural,Christianity,India,36-45
+3ae5ff31-b065-497b-9e61-c3d56e8e5455,18-25,Male,Urban,Buddhism,Vietnam,18-25
+a4a0674a-8f58-46da-9761-7c849355e652,46-55,Male,Rural,Christianity,India,46-55
+eea482b6-acb4-4123-9308-cc32ca393f85,18-25,Male,Urban,Christianity,Kenya,18-25
+0649123f-dd87-49e7-9bfe-05694054d9a9,36-45,Male,Urban,Hinduism,India,36-45
+a5db5a2a-dade-4647-8d99-0abe87246c42,26-35,Male,Rural,I do not identify with any religious group or faith,Kenya,26-35
+9af7a1b3-25d8-455e-b11e-e4e000d9008b,36-45,Female,Urban,Islam,Malaysia,36-45
+96f6d73b-1e66-47e7-9476-de82dff6982f,18-25,Male,Urban,Hinduism,India,18-25
+4dabd28b-36ba-4e7e-b398-b3ad7945078c,18-25,Male,Urban,Christianity,Kenya,18-25
+bbe959e2-cf43-4b19-ae26-d2489f4589b7,26-35,Female,Urban,Christianity,Indonesia,26-35
+c3fa4915-dd55-4a57-a8c4-bfdfb808f405,18-25,Male,Urban,Christianity,India,18-25
+8222fc7b-04a3-4942-8ad7-3385dabd98cd,18-25,Female,Urban,Hinduism,India,18-25
+a1a32f87-442a-4f3a-9dda-9145da210f4f,46-55,Female,Urban,Christianity,Kenya,46-55
+cd95619c-e50c-4c2e-b04f-738e5896788b,46-55,Male,Urban,Hinduism,India,46-55
+486465a1-a506-4d4b-b8d3-3d44c45c81c3,26-35,Male,Urban,Hinduism,India,26-35
+5aeeb291-0b14-4460-b014-bd054fb61c87,26-35,Male,Urban,Hinduism,India,26-35
+38bdc929-c0f7-4f8a-9987-5ea482869ff7,18-25,Male,Rural,Hinduism,India,18-25
+6fffe35c-5645-4b39-8189-327dc015a14d,26-35,Female,Urban,Christianity,India,26-35
+448897bc-6957-4a73-9008-ea3d8479ab84,18-25,Male,Urban,I do not identify with any religious group or faith,Vietnam,18-25
+9d6c261f-a053-4e16-b4c9-e33aacfc9df9,26-35,Female,Urban,Hinduism,India,26-35
+bacd4497-3d26-4bc0-ae99-2e01089b911c,26-35,Male,Urban,Hinduism,India,26-35
+027bc28b-7a62-4a01-9dc3-864041173723,26-35,Male,Urban,Christianity,Kenya,26-35
+b3ef0dac-9d1c-48cd-bbed-36d50c22170d,26-35,Male,Urban,Hinduism,India,26-35
+e8d0b5c1-34f0-4b8c-949d-8febed80187c,46-55,Female,Urban,Hinduism,India,46-55
+bca25771-2ed6-440d-b798-d3af57ef9357,18-25,Male,Urban,Islam,Bangladesh,18-25
+b7a67ab0-686b-493a-80ac-3c569b71a9df,46-55,Female,Urban,I do not identify with any religious group or faith,India,46-55
+0ee8fae4-4d86-4713-9656-07d6a671206a,26-35,Male,Urban,Islam,Canada,26-35
+63973656-a0e2-402d-bd79-98f512df13a5,36-45,Female,Urban,Hinduism,India,36-45
+07cf698b-1ae6-4ac6-bd05-8ea1674d77f7,36-45,Male,Urban,Hinduism,India,36-45
+c051ba5b-d528-4e55-8b18-656a33a14ea8,18-25,Female,Urban,Hinduism,India,18-25
+45f661e2-2601-4b2a-a784-5d6a2e8a7cdf,46-55,Female,Urban,Islam,Indonesia,46-55
+3bf76cff-46c5-4fd6-b05a-d42d59a50344,26-35,Female,Urban,I do not identify with any religious group or faith,Korea South,26-35
+780270bf-994c-401f-9988-25185a995484,26-35,Female,Urban,Christianity,Kenya,26-35
+d61807a6-2e76-4218-8076-7d350b8a305f,26-35,Female,Urban,Christianity,Kenya,26-35
+37183b46-1a3a-4bb3-a598-2302cb9385c3,18-25,Male,Urban,Hinduism,India,18-25
+92d9bf7e-560d-4b4b-975b-0e1a8d4ae8db,36-45,Male,Urban,Christianity,Kenya,36-45
+058fc8ea-f425-4518-9f06-b85895870cdf,36-45,Male,Urban,Christianity,Kenya,36-45
+f765a223-072c-4ff0-af58-f948770feef1,18-25,Male,Rural,Christianity,Kenya,18-25
+8fa7b75b-98e2-4cef-9bfa-5e19b643a4b0,26-35,Male,Urban,Hinduism,India,26-35
+8232fd52-4e82-4d74-836a-90e0704b8b89,26-35,Female,Urban,Islam,Canada,26-35
+3d735231-0a56-4df2-af97-23e06d7a6ed4,36-45,Female,Urban,I do not identify with any religious group or faith,Russian Federation,36-45
+2bbf7d67-1423-4513-b266-31b622a2a63c,36-45,Female,Urban,Christianity,India,36-45
+7d0ac625-c4b7-4f7a-a24c-60162eeece0a,18-25,Male,Urban,Hinduism,India,18-25
+6e87941f-9d2f-4dd2-bbd6-9f38be016406,18-25,Female,Urban,Christianity,Kenya,18-25
+776b2de2-355d-464d-8de1-a2809e666a82,26-35,Female,Urban,,India,26-35
+97c00ed5-9b58-4877-810c-d2e1e77ab376,18-25,Male,Rural,Hinduism,India,18-25
+a53f07db-330e-4369-b88c-e7ba65df386d,26-35,Female,Urban,Hinduism,India,26-35
+0906ec9a-db22-4f17-a9d2-fabf9d3d00cb,26-35,Female,Urban,Christianity,Kenya,26-35
+8ee4428a-32e8-4da4-8efc-d2865715c20d,18-25,Female,Urban,Christianity,Kenya,18-25
+773c1d3a-9bd1-4a6c-bbf4-351f35eaca6e,18-25,Male,Urban,Christianity,Philippines,18-25
+71acfa36-3edc-40a4-83a3-dae95211b8bb,18-25,Female,Urban,I do not identify with any religious group or faith,Kazakhstan,18-25
+b6c74f98-881f-4d7f-90ad-c8932bb43d17,36-45,Male,Urban,I do not identify with any religious group or faith,Israel,36-45
+950c5fcc-1e6b-405e-b324-4bcb7dcf9601,26-35,Male,Urban,Christianity,Kenya,26-35
+3168809e-c0f1-449c-8706-27886f42995e,26-35,Female,Urban,Christianity,Kenya,26-35
+ba4c0502-3555-4992-aef1-45a2dded6de8,36-45,Male,Urban,Christianity,Philippines,36-45
+76ee17a7-2613-4d87-8485-5eabe17f3f79,18-25,Female,Urban,I do not identify with any religious group or faith,China,18-25
+6f9e76b8-16e0-4f5c-a1c1-aae463e16cc6,36-45,Male,Urban,Other religious group,India,36-45
+86e421ec-f250-4d46-a7a7-97cee12a189e,26-35,Female,Rural,Hinduism,India,26-35
+1cac2db1-e5ce-48b9-afd9-9726e65eb1b1,36-45,Female,Urban,Hinduism,United States,36-45
+56c2e4c5-d77f-41d1-ab9f-3d3bf1360bb9,18-25,Male,Rural,Christianity,Kenya,18-25
+af299bfd-6677-4cf6-83d2-fe5796b8640d,18-25,Male,Urban,I do not identify with any religious group or faith,Japan,18-25
+b7c69aed-2a97-4019-93d4-f5bfd7289eb1,36-45,Female,Urban,Christianity,Kenya,36-45
+64199dc4-54e7-45ff-9d9b-6e85792d5f24,36-45,Female,Rural,Hinduism,India,36-45
+9bd1f02a-2884-47b2-9444-3119dee1199d,18-25,Male,Urban,Christianity,India,18-25
+3f844b0b-66b4-4002-830b-b3cd8c79c0d9,18-25,Male,Rural,Hinduism,India,18-25
+b77cb754-8b0e-43ee-936e-ad8a41d61909,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+8f824d0b-3e4a-4c7a-a9a8-3d63c3ed4533,18-25,Female,Rural,Christianity,India,18-25
+37928bc4-0021-4eaa-8bf6-d916ec2c8a15,26-35,Male,Urban,Buddhism,France,26-35
+19c32ddb-7d6f-4f77-bfc8-fa59f2e58cd0,26-35,Male,Urban,Hinduism,India,26-35
+defcb31a-3a23-4676-82f4-59fcd2fa7566,26-35,Female,Urban,Christianity,Kenya,26-35
+35e2ee3a-2215-463c-b365-31e1982df4a2,18-25,Female,Urban,Hinduism,India,18-25
+31c4e983-c3db-4e97-be06-e077323dde94,26-35,Male,Urban,Islam,Pakistan,26-35
+36853845-506a-4568-b24e-08a40e3483f4,18-25,Male,Urban,Islam,Kenya,18-25
+ecf4babe-e2ff-4ab8-848e-f67440a36439,36-45,Male,Urban,Christianity,Kenya,36-45
+d604af23-b667-4034-8273-36f658c1f685,26-35,Female,Urban,Judaism,Israel,26-35
+308bc3c6-72d9-4e87-b751-a78af1bc5dcf,36-45,Male,Urban,,India,36-45
+c4e002f7-007f-4839-93b8-e7254c0ad013,18-25,Male,Urban,Hinduism,India,18-25
+2c2af0bd-8b93-4b91-8c51-b721a6def5ee,26-35,Male,Urban,Islam,India,26-35
+9a8fc90e-b0ee-4d9c-857f-6cb900710d49,46-55,Male,Urban,Hinduism,India,46-55
+94cd4552-53d5-409d-ba3c-d19e0ea52a83,18-25,Female,Urban,Islam,Malaysia,18-25
+6c2eae1f-5bfc-4392-b5c6-4b02d0ea17d1,36-45,Female,Urban,Christianity,Philippines,36-45
+9e239944-9e6c-4ec0-893c-c165c6587940,36-45,Male,Urban,Hinduism,India,36-45
+25a81ed5-e06c-4858-bdc6-df33dc7804eb,26-35,Female,Rural,Christianity,Kenya,26-35
+aaaa6389-15db-4d2e-827a-50e274c80940,36-45,Female,Urban,I do not identify with any religious group or faith,Canada,36-45
+09a654e6-90a7-48d6-b164-0efb0ed7895e,18-25,Male,Urban,Christianity,Kenya,18-25
+fb6ef7c0-343f-42aa-8700-94a39534d4d1,18-25,Male,Urban,Christianity,Kenya,18-25
+4731a8a1-02ea-436d-b3ff-a07f48016455,26-35,Female,Urban,Hinduism,India,26-35
+81c66741-8cb0-4e89-995e-694b3425e07b,18-25,Male,Urban,Christianity,Kenya,18-25
+38078b60-12d8-49b7-b221-7fea46aadaa1,18-25,Male,Urban,Christianity,Kenya,18-25
+9f32c6f5-d20e-47f7-89d1-47c2615d4bfa,26-35,Female,Urban,I do not identify with any religious group or faith,Japan,26-35
+3f7c2e30-afdf-480b-b3c6-695231ed28fc,26-35,Male,Urban,Christianity,Kenya,26-35
+a5067acc-3e36-46fb-adfa-552781acc6e5,56-65,Male,Urban,Christianity,India,56-65
+5ce4f054-6988-4c53-998b-f61e03791ee4,18-25,Male,Urban,Hinduism,India,18-25
+452792b5-2212-4694-8099-6e95b2f657b2,46-55,Male,Urban,Christianity,Singapore,46-55
+1c77b149-f144-4451-8f77-a351ffb3787f,36-45,Female,Urban,Christianity,Kazakhstan,36-45
+e18bf5de-929a-4c2d-9885-7700644a84fd,36-45,Female,Urban,Christianity,Kenya,36-45
+3de502fa-9826-4175-ab49-cd1042b0c003,18-25,Male,Urban,Christianity,Kenya,18-25
+8a4e225f-597a-41d4-89f4-3be68f8d1327,46-55,Female,Urban,Christianity,Kazakhstan,46-55
+b70fb23d-3aaa-43da-ba16-7e8a42888f5a,18-25,Male,Urban,Christianity,Slovakia,18-25
+b521f72f-2e93-4ca4-b6cc-d04541bc1121,26-35,Female,Urban,I do not identify with any religious group or faith,Iceland,26-35
+49b9404d-e052-4afd-861c-7d3ba8c1891c,18-25,Male,Urban,Judaism,Israel,18-25
+b22afa00-9bc5-489c-aaf3-bebd001edc60,26-35,Female,Urban,Christianity,Kenya,26-35
+c11057d0-1b75-453b-b871-f84805f2e233,18-25,Female,Urban,Christianity,Kenya,18-25
+37f89477-e8c1-4728-8154-47ae6473ee8b,56-65,Male,Urban,I do not identify with any religious group or faith,Korea South,56-65
+7b7d38e0-d9cb-4f65-9ec6-a8140669d83c,26-35,Female,Rural,Christianity,Kenya,26-35
+1f4035e3-3c8f-4eb5-b3a8-8a2cb779313f,46-55,Male,Urban,Islam,Indonesia,46-55
+42cc5c10-4e21-492c-ac34-a7678098fe2c,36-45,Female,Urban,Hinduism,India,36-45
+0961110d-980a-4e9b-8bd4-22b627843e5a,18-25,Female,Urban,Judaism,Israel,18-25
+d32c9c45-4f7d-4719-a367-4678a788c29d,18-25,Male,Urban,Christianity,Kenya,18-25
+6a859c79-4c4e-4e9c-b422-49db0b6c28f5,26-35,Male,Rural,Islam,Indonesia,26-35
+476c3f9a-8d99-42d2-b079-d323ace860ae,18-25,Male,Urban,Islam,India,18-25
+ad5e284c-c047-4814-a949-a350180b72d9,26-35,Female,Urban,Christianity,Kazakhstan,26-35
+ad9ec2fb-e763-4d2b-844e-c663aa2aa103,46-55,Male,Urban,Islam,India,46-55
+d03cc99a-82c4-4824-9d7f-a3b517fc1700,56-65,Female,Urban,I do not identify with any religious group or faith,Russian Federation,56-65
+896f413d-b0ef-436d-b565-672987fa7738,26-35,Female,Urban,Christianity,Kenya,26-35
+aec720ea-f0c1-434f-96eb-46e6260addeb,46-55,Male,Urban,Hinduism,India,46-55
+e9f41227-0b37-4302-936d-13e474e35b75,26-35,Female,Urban,I do not identify with any religious group or faith,Indonesia,26-35
+d7062826-f399-4b66-baa4-f82f23ad3515,36-45,Male,Urban,I do not identify with any religious group or faith,India,36-45
+47cf6196-495d-42b4-9cfe-2cd591fb7400,26-35,Male,Urban,Islam,Egypt,26-35
+fd6abd40-0695-40b8-8579-517e1ccbd686,36-45,Female,Urban,Hinduism,India,36-45
+4c6c908a-e7ad-47cf-92d3-a06a7ae48d26,26-35,Female,Urban,Christianity,Kazakhstan,26-35
+db8e9daa-9a12-471e-982c-3c6a3bd94939,26-35,Male,Urban,Hinduism,India,26-35
+a9d8feaf-c609-46d0-8c78-651c84b9ed83,36-45,Female,Urban,Hinduism,India,36-45
+4c08b375-a8ec-4425-9141-5ba823262617,36-45,Female,Urban,Hinduism,India,36-45
+0e5ae75b-3983-4faa-908f-579dfb8c3f75,36-45,Male,Urban,,India,36-45
+1d8bbc5d-5d12-49fe-93e1-af6a00f79500,18-25,Female,Urban,Christianity,Kenya,18-25
+05e010cc-36fe-421a-b585-07c91395f74b,18-25,Female,Rural,Christianity,Kenya,18-25
+061b8bd6-4b1b-4cc9-ba8f-8ec8af2e2efa,18-25,Female,Urban,I do not identify with any religious group or faith,Vietnam,18-25
+fa4fdb6b-8fe5-4b1b-ad08-529e345ccf3f,26-35,Male,Urban,Hinduism,India,26-35
+06acd988-cb73-463f-9342-10e12d104e25,36-45,Female,Urban,Islam,India,36-45
+814c795e-7131-4c4b-a216-73e4e6253039,26-35,Female,Urban,Christianity,Kenya,26-35
+331a8a62-3be7-4047-8014-938426c66136,36-45,Male,Urban,Christianity,Kenya,36-45
+674bf735-a718-4583-8182-76f10ba6e969,18-25,Female,Urban,Christianity,Kenya,18-25
+566c98fc-fc1c-4a53-9a5e-e9f2042619fe,18-25,Female,Urban,Judaism,Israel,18-25
+056ccf43-151c-4cb5-a57c-c5c0779123b6,26-35,Female,Urban,Hinduism,India,26-35
+ae2dc195-8397-4507-b55c-784d3e02e4af,26-35,Male,Urban,Islam,Bangladesh,26-35
+ac41446e-ac7b-4e2d-8234-16bfe73c60e7,26-35,Male,Urban,I do not identify with any religious group or faith,Romania,26-35
+46c5d106-648b-48de-948d-339bff1baa15,26-35,Female,Urban,Christianity,Kenya,26-35
+2c150bb2-ce0f-494a-8e15-284415cceb8b,26-35,Male,Urban,Judaism,Israel,26-35
+c8c9509d-f495-4319-af92-1fa593b66913,36-45,Male,Rural,Christianity,Kenya,36-45
+d6efabb8-5f73-425e-94c4-114f472713fd,18-25,Female,Urban,Hinduism,India,18-25
+3c8d7668-88de-4ea1-9513-674bd8383ae9,26-35,Female,Urban,Islam,Kazakhstan,26-35
+5bc2b3d1-fba4-49b0-b6c3-2607c15d2306,36-45,Male,Urban,I do not identify with any religious group or faith,Kazakhstan,36-45
+f7801a79-3ae9-40bc-8e6e-849c68e14cfa,18-25,Male,Urban,I do not identify with any religious group or faith,Slovakia,18-25
+d6f22fb3-d0ad-49f1-8f85-7b6254ab6618,26-35,Female,Urban,Hinduism,India,26-35
+a61630ce-b6bf-44d6-bed6-d3f8c1b197e7,36-45,Male,Urban,Judaism,Israel,36-45
+16c5cd93-8e02-4c81-865f-94156e9e448c,26-35,Male,Urban,Christianity,Singapore,26-35
+658b9894-b08b-44c2-abb7-3cd4988870fa,36-45,Male,Urban,I do not identify with any religious group or faith,Slovakia,36-45
+866e7a19-33ba-4706-8982-2f207854ddf5,36-45,Female,Urban,I do not identify with any religious group or faith,Sweden,36-45
+a76aee09-9b38-4f6e-b466-a8273a0166e3,26-35,Female,Urban,Islam,Indonesia,26-35
+17d5fb71-917e-4828-a47c-87daf4b8408b,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+7f57b9ab-643c-4e64-a755-eb09a5cbbab0,36-45,Female,Urban,Judaism,Israel,36-45
+8d6515d8-442c-4817-b496-2eaeb7e14c5d,18-25,Female,Urban,Judaism,Israel,18-25
+e8a93268-400b-4bfb-a374-3bc7bb8796ca,36-45,Female,Urban,Hinduism,India,36-45
+80036e21-83ff-4308-9a6e-da7ea86af091,26-35,Male,Urban,Islam,Pakistan,26-35
+2ea4d6b3-cc1f-42ec-9bd7-65ea9d396159,26-35,Female,Urban,Christianity,Kenya,26-35
+50d20c64-b0d4-4452-a898-e1f9115e856e,26-35,Male,Urban,I do not identify with any religious group or faith,Israel,26-35
+532977cf-de44-462e-b766-05c15622fa08,36-45,Female,Urban,I do not identify with any religious group or faith,India,36-45
+88aceab5-5202-4afa-91de-93f2f22265bb,18-25,Female,Urban,Hinduism,India,18-25
+e23cfc5e-350f-4c26-982f-12473c714548,26-35,Female,Urban,Buddhism,India,26-35
+4dc724df-e178-409d-a33b-c07ca9803fa5,18-25,Female,Urban,Christianity,Kenya,18-25
+d0ec6b3d-dea2-4a37-9894-de7a94d71741,18-25,Male,Urban,Hinduism,India,18-25
+015db10d-e8dd-4e28-a2ef-91aeabf4d02e,18-25,Male,Urban,Christianity,Indonesia,18-25
+3084490f-06c2-424e-81af-e3a94b9d8563,26-35,Male,Rural,I do not identify with any religious group or faith,Israel,26-35
+63886dc7-abe7-4eb2-bcaf-04ad8f601c22,18-25,Female,Urban,Christianity,Malawi,18-25
+64f8f717-74ee-488e-8ac3-2fa32da927a7,36-45,Male,Urban,Judaism,Israel,36-45
+82ad346c-230f-440f-9959-301c824cfa5c,26-35,Male,Urban,Hinduism,India,26-35
+893189a9-220d-4c73-9373-77fde35eebad,36-45,Female,Urban,Islam,Spain,36-45
+d66882ec-7c24-49e2-8fff-ebc5dbb02a35,36-45,Female,Urban,Christianity,Finland,36-45
+ff1126fc-86be-4036-9c62-372637b0de58,18-25,Male,Urban,I do not identify with any religious group or faith,Korea South,18-25
+62e256a3-4a7c-4bc8-98ef-6370d8fc87c3,18-25,Male,Urban,Judaism,Israel,18-25
+78f5e9b4-0b86-49ba-b139-4c771f1a5ae7,36-45,Female,Urban,I do not identify with any religious group or faith,Germany,36-45
+4c016c4f-f2f3-4ec6-944d-98280b4007cb,36-45,Male,Urban,Christianity,Kazakhstan,36-45
+231a5bfe-6451-434c-943d-7bd53fb6e50b,26-35,Female,Urban,Hinduism,India,26-35
+1f2a5b02-3d7a-4897-be99-f7a0ccf1b2d0,18-25,Female,Urban,Christianity,Kenya,18-25
+f4d94dca-8e53-4dd5-b3c8-20be2a9418cb,18-25,Female,Urban,Christianity,Philippines,18-25
+d582a744-0aae-4bc4-88f8-14e9fd90628b,18-25,Female,Urban,I do not identify with any religious group or faith,Russian Federation,18-25
+6a211816-3fa4-44ba-82d2-d4369a7801d5,26-35,Female,Urban,Christianity,Kenya,26-35
+1b5d3e79-3509-44a0-bdb4-aca5b68871a1,36-45,Female,Urban,Christianity,Saint Vincent & the Grenadines,36-45
+dec18f30-d42b-4b34-916b-b565b31a7d02,18-25,Male,Rural,Islam,Indonesia,18-25
+1a9aa568-4c74-437f-90d0-6beaf5154814,26-35,Male,Urban,Christianity,Philippines,26-35
+440a30ef-3021-480b-8d22-b6a2fed7956c,18-25,Female,Urban,Christianity,Malawi,18-25
+a5572e44-c62f-47c2-920a-39bb133cd5f4,26-35,Female,Urban,Islam,Indonesia,26-35
+1ffdb989-7287-4c14-83e3-3c0b03a3dd28,18-25,Male,Urban,Islam,Malaysia,18-25
+143ba39d-7951-4c89-bb3e-b089824a4966,18-25,Male,Rural,Buddhism,Indonesia,18-25
+6135fc8f-8611-429c-90b9-6f9f23ff3f96,36-45,Male,Urban,I do not identify with any religious group or faith,Kazakhstan,36-45
+ba24cc0c-dc6b-412e-a17f-0b09276bd2dc,36-45,Female,Urban,Christianity,Spain,36-45
+56c8f14e-f030-42e7-9f14-82da3bb5e527,18-25,Male,Urban,Islam,Indonesia,18-25
+bf8e93bc-04d0-402d-98e3-3e442042bb01,18-25,Female,Urban,I do not identify with any religious group or faith,Japan,18-25
+8aace98a-e84a-4fad-9571-d9619887fc2a,26-35,Male,Rural,Islam,Hungary,26-35
+636a378e-2055-4f67-9142-eca39a5e5ddd,26-35,Male,Urban,Buddhism,Malaysia,26-35
+2f47dd1a-1ce4-4da2-b6ee-f73819f7e560,18-25,Male,Urban,Hinduism,India,18-25
+ab685334-5157-455f-a74f-b988c6cd7827,46-55,Male,Urban,Hinduism,India,46-55
+fb887db1-88a7-4f06-a1b3-c5c2fe499a88,36-45,Female,Rural,Christianity,India,36-45
+8fd2992b-320a-472d-8dbb-d63d259f3d83,36-45,Female,Urban,I do not identify with any religious group or faith,China,36-45
+a7710429-4ffb-4c02-a886-fb26e7f72c77,46-55,Male,Urban,Judaism,Israel,46-55
+0381a5ba-f201-4ed9-a720-10dae730a43f,46-55,Male,Urban,Hinduism,India,46-55
+5a606718-c052-4f84-b9a0-0a4bca9df6f6,18-25,Male,Urban,Hinduism,India,18-25
+0d5d5765-187e-4512-9626-fff9fd33dd45,26-35,Female,Urban,Islam,Indonesia,26-35
+3b95110f-2a3b-4ff7-a811-0c4546229932,18-25,Male,Urban,Christianity,Philippines,18-25
+0c57890a-46cd-4895-9d16-b4cc1bcef4bd,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+8a00f658-23b0-41d4-9a41-6d9d91ab5c90,46-55,Male,Urban,I do not identify with any religious group or faith,China,46-55
+afa7d9b0-8fc7-432c-9d2e-0a0e3ec77882,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+fea20601-f6df-47cf-b631-672c98192aad,18-25,Male,Urban,I do not identify with any religious group or faith,India,18-25
+b08b7b51-ffe2-4c55-aa71-74a3a59f4e5b,26-35,Female,Urban,Christianity,Malawi,26-35
+1d4eb8e1-66e7-4232-8e7c-4d5a59b812db,36-45,Male,Urban,Islam,Egypt,36-45
+2bf27e1c-02df-41b2-8dcd-374441db7e04,18-25,Male,Urban,Hinduism,India,18-25
+28eb2257-2c64-4a41-a11f-91707390c5ad,36-45,Male,Urban,I do not identify with any religious group or faith,China,36-45
+e6ac83d7-c2bd-4822-b750-098e9dff1dca,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+885f9334-b235-49ba-aa75-4d706c086429,36-45,Female,Urban,I do not identify with any religious group or faith,China,36-45
+1bec32d9-050f-4fcc-8c2f-493f4faab34d,26-35,Male,Urban,I do not identify with any religious group or faith,Kazakhstan,26-35
+6b7e4a09-6bbe-48ce-82e3-6e82f6a6faf5,46-55,Male,Urban,Islam,Canada,46-55
+a9b21430-9bcf-4bf3-88da-65b174a34938,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+80e6827a-ec0f-4f09-b81a-9b7faee73262,26-35,Male,Urban,Islam,Morocco,26-35
+1870b2cf-2bd9-471d-91c5-8df90ab0ccd8,26-35,Female,Urban,Buddhism,Finland,26-35
+69436f2e-0fe6-4ae5-9771-a51ed25ebb73,36-45,Male,Urban,I do not identify with any religious group or faith,Malaysia,36-45
+23adf290-b773-41d9-942e-b21c2da0e1d6,26-35,Female,Urban,I do not identify with any religious group or faith,Canada,26-35
+e6292c53-2da8-4816-beca-ac91d0126472,18-25,Female,Urban,Islam,Indonesia,18-25
+bddcb897-5356-44fc-8bd2-ccdcb4d74515,18-25,Male,Urban,Islam,Algeria,18-25
+2cf9dcd6-b8ab-4d61-943d-75f4048bd581,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+96b36456-546e-4247-9a2d-b282403dd013,56-65,Male,Urban,Islam,Egypt,56-65
+2f01386e-8dba-48ed-aae3-06384c8e339d,26-35,Male,Urban,Islam,Pakistan,26-35
+18ec2ace-2fc6-4beb-aa95-f212711d1cf4,18-25,Male,Urban,Christianity,Philippines,18-25
+703796ca-339d-4749-8337-dcf1d8964513,26-35,Male,Urban,Islam,Kazakhstan,26-35
+758a6e22-2154-480c-afe0-d6e04fb1bdb8,26-35,Female,Urban,Islam,Indonesia,26-35
+71e8aa80-1000-4e4e-abe0-602d7e380454,36-45,Male,Urban,I do not identify with any religious group or faith,Korea South,36-45
+b94881a1-6ad7-4a45-91d2-2af59359c290,26-35,Female,Urban,Christianity,Philippines,26-35
+c846b296-2848-47be-be7c-900aedecb4d2,26-35,Female,Urban,I do not identify with any religious group or faith,Japan,26-35
+e1f9703b-212a-4473-bbcd-7d6132dfda62,26-35,Male,Urban,Islam,Pakistan,26-35
+e0ec2f02-9c54-440c-8aa3-2f61602dde12,18-25,Female,Urban,I do not identify with any religious group or faith,Zimbabwe,18-25
+ed242054-9b93-4a92-985d-04321f7f01ae,26-35,Female,Urban,I do not identify with any religious group or faith,Japan,26-35
+2baaaf5c-423a-4ba5-8d76-a8e0801a6ccc,18-25,Female,Urban,Christianity,Kenya,18-25
+1806df28-3f56-4992-aa0c-efcddb8172ab,26-35,Male,Urban,Islam,Türkiye,26-35
+0f8e122d-48de-4b83-ad20-3e81350fda47,18-25,Male,Rural,Islam,Malaysia,18-25
+3a5c4cbf-322b-4c7d-bfd6-aa70b752e53f,26-35,Female,Urban,Islam,Kenya,26-35
+0b192a7d-f2a8-4f70-96d0-5feb871e997c,36-45,Male,Urban,I do not identify with any religious group or faith,Japan,36-45
+df72d1ed-1864-4e08-9e41-399a589a972e,56-65,Female,Urban,Buddhism,Japan,56-65
+fd5f3625-632d-4cf8-866d-9edabaab982d,26-35,Female,Urban,Buddhism,China,26-35
+bce4cfde-7e46-4a86-ba57-0884ca929120,26-35,Female,Rural,Christianity,United Kingdom,26-35
+32d11c0a-ee11-47eb-9cd4-d1028aeef51b,18-25,Male,Urban,Judaism,Japan,18-25
+8733cae9-e371-49fa-a3ec-4204a99aab1d,26-35,Male,Urban,Christianity,Philippines,26-35
+4e22c3c4-8505-4c5b-82ca-bd26b4312931,26-35,Female,Urban,I do not identify with any religious group or faith,Korea South,26-35
+edd0a047-d6c3-47bd-b680-b9a47cb081a4,36-45,Female,Urban,Christianity,Kenya,36-45
+c9a758a9-5068-4c7d-a138-e2f6bfd35133,46-55,Female,Urban,I do not identify with any religious group or faith,Japan,46-55
+1fec7347-0cd6-41b5-be91-55f37f89a956,18-25,Male,Rural,Buddhism,Japan,18-25
+b871b020-b6b0-459b-9a83-ac451c4db731,18-25,Female,Urban,I do not identify with any religious group or faith,Australia,18-25
+46886898-bc14-4439-bc14-250f5e45fafe,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+1a1cedde-a1ab-4655-8afb-5f46af246a3b,18-25,Female,Urban,Islam,Algeria,18-25
+73fda3d4-f04d-4443-86d8-42cf39e5891c,65+,Male,Urban,I do not identify with any religious group or faith,Kazakhstan,65+
+36fa94de-9c46-4939-81ac-004342a7981a,26-35,Female,Urban,Islam,Pakistan,26-35
+7b9efff9-7170-496e-a325-58478def0f0d,26-35,Female,Urban,I do not identify with any religious group or faith,Kazakhstan,26-35
+dcfb7258-bb5c-47ff-87d6-f45d9f9020d9,36-45,Male,Urban,Islam,Bangladesh,36-45
+31fcf7e7-1ec9-4219-a179-7cb173c320f5,18-25,Female,Urban,Buddhism,China,18-25
+ea5cf154-0b0d-478f-9bc4-2e1f171252f9,26-35,Female,Urban,Christianity,Kenya,26-35
+83e135b5-a875-4697-a61f-f04d68f4041c,26-35,Female,Urban,I do not identify with any religious group or faith,New Zealand,26-35
+cdc7a783-a379-40b7-ab0c-67c1f0a3dfec,18-25,Female,Urban,Christianity,Kenya,18-25
+748ce664-fa73-4df5-99f3-12cafa2cdc98,26-35,Male,Urban,Islam,Morocco,26-35
+ebe70e4f-92b1-47c3-8cb2-b690efae9e74,56-65,Female,Urban,I do not identify with any religious group or faith,Japan,56-65
+39ac1303-f306-49e0-82dc-37a3d2766f65,26-35,Female,Urban,Islam,Pakistan,26-35
+09e3feef-82f0-470b-a01f-a44c219dd2bb,18-25,Male,Urban,Christianity,Philippines,18-25
+a077e3ed-b08a-4b21-8216-0467ce90a846,18-25,Male,Urban,Christianity,Philippines,18-25
+e96a02da-05af-491d-89e3-a7d599a69d74,26-35,Male,Urban,Islam,Pakistan,26-35
+9cacc45b-a817-4943-af1a-7a8c643f49bd,26-35,Male,Urban,I do not identify with any religious group or faith,Pakistan,26-35
+14a20de4-89c4-440b-aa64-450fe3af689f,26-35,Female,Urban,Christianity,Kenya,26-35
+14590c64-3ee7-421e-bce5-11a5b0ce4e5e,26-35,Female,Urban,Christianity,Kenya,26-35
+7a3934a6-f626-43cb-927c-b6bb76f8f7c7,18-25,Female,Urban,I do not identify with any religious group or faith,China,18-25
+ec68cfd1-c78a-40ef-bee4-2c39c818f87b,36-45,Female,Rural,Christianity,Indonesia,36-45
+5c367661-dad3-42d6-8f34-25427510072c,18-25,Female,Urban,Buddhism,China,18-25
+49437200-26c2-4a4c-b665-8e27a1e9aba6,36-45,Male,Urban,Christianity,Spain,36-45
+ee383d90-7d20-4fac-b79a-0bf6ec735347,46-55,Male,Urban,Other religious group,Libya,46-55
+e6a5ff95-4405-42ec-8646-eeeb8a2c6106,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+021fae78-46c1-43c6-9d93-bd35f7eee23f,26-35,Female,Urban,Christianity,Kenya,26-35
+cf9685ce-dcfd-4314-bc97-9db1f5056e25,26-35,Male,Urban,Buddhism,Vietnam,26-35
+fccc3e22-7649-47c5-a121-0b2030e8d3c1,46-55,Female,Urban,Islam,Indonesia,46-55
+3a4e7003-1c49-40da-969a-7edea36b0060,18-25,Female,Urban,Christianity,Kenya,18-25
+62a6b613-e413-41d4-b4a2-6cefa86c3a29,26-35,Female,Urban,Christianity,Malawi,26-35
+a7546aa0-cd28-434e-80a5-87d3e9ce7c61,26-35,Female,Urban,Christianity,Malawi,26-35
+3b466606-309d-4326-adc9-a50bc15b8cad,46-55,Male,Urban,I do not identify with any religious group or faith,Japan,46-55
+5470c669-5ed6-4b31-937e-dcfe7b96070a,46-55,Male,Urban,Hinduism,India,46-55
+b0ddb04a-fcf7-4431-8c27-63ef8fbe8210,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+941b3c01-faf8-4aa6-8a6e-4dcf31129459,26-35,Male,Urban,I do not identify with any religious group or faith,China,26-35
+60f3dd20-2f57-41cb-834d-1354cb93a674,36-45,Female,Urban,Christianity,Philippines,36-45
+e845c131-be71-4309-a526-8d7435d5e8ae,18-25,Male,Urban,I do not identify with any religious group or faith,Korea South,18-25
+c108ed2c-de31-447f-a228-627e84aa5d1e,26-35,Male,Urban,I do not identify with any religious group or faith,Sweden,26-35
+a3ed443c-6840-4e87-ac76-c8d79f3112c1,46-55,Female,Urban,Buddhism,Singapore,46-55
+29a27d49-a35f-402d-b86a-bb7adac2b2fe,36-45,Female,Urban,Islam,United Kingdom,36-45
+5f04ac67-c713-4fd7-b2ce-5e52711b6fd3,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+7efb50bd-8ca5-4bac-ac35-f778faeb7be9,36-45,Male,Urban,Islam,Bangladesh,36-45
+48b4e6b3-4ee0-49f1-b5d6-30b43d4529a7,36-45,Female,Urban,Christianity,China,36-45
+395ce4aa-009d-4ce6-bc44-ebfac6a94f26,18-25,Male,Urban,I do not identify with any religious group or faith,Korea South,18-25
+824c1588-a543-41d4-85ac-7f3993a98979,36-45,Male,Urban,I do not identify with any religious group or faith,Bangladesh,36-45
+2c9ffd57-4980-4a41-a9f0-332a553686e8,36-45,Male,Urban,Islam,Bangladesh,36-45
+53fa6116-c21f-4561-87db-c6c33364d27b,26-35,Female,Urban,I do not identify with any religious group or faith,Netherlands,26-35
+8d185c3f-ab4b-4599-9e42-2f52fee18337,26-35,Male,Urban,Islam,Bangladesh,26-35
+8a7ea13d-7787-422a-9929-095477e0a262,26-35,Female,Urban,Buddhism,China,26-35
+713f30e1-eeea-4c3a-9ce0-db7c77c16fc7,36-45,Male,Urban,Buddhism,China,36-45
+68c3a52a-290b-4e76-a2a0-77578d5a4232,26-35,Male,Urban,Christianity,United Kingdom,26-35
+c6227697-95b6-49a9-95c5-98afaa51df6f,26-35,Female,Urban,Buddhism,Malaysia,26-35
+652b2333-a810-4aa9-9251-163a4f3bf857,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+b76fee7a-06ff-418f-8e35-15e2a0ea462a,26-35,Female,Urban,I do not identify with any religious group or faith,France,26-35
+f77ade53-23cd-45a2-b7be-60c049790e39,26-35,Male,Urban,Islam,Bangladesh,26-35
+8683238c-7c82-415b-b3ff-2af587b71544,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+73ee4c32-38a5-44a7-b6d5-d55e2267b58c,26-35,Female,Urban,Islam,Pakistan,26-35
+81c74c36-0823-49f5-817d-46564b8e73ed,36-45,Female,Urban,Christianity,Malaysia,36-45
+2db5a7a4-e40c-4484-8421-6e9138c46def,18-25,Male,Urban,Islam,Bangladesh,18-25
+e935e7b0-63d1-4d25-b4b2-aae0385d4814,26-35,Female,Urban,Christianity,Singapore,26-35
+c0722e3d-6fed-4b6e-83ac-1d34c1baf2a2,26-35,Female,Urban,I do not identify with any religious group or faith,Switzerland,26-35
+0f9b7c36-25c8-423e-9a34-3a6e96cbfe7e,18-25,Female,Urban,Buddhism,Malaysia,18-25
+4ad034c3-f067-4db6-b7b9-ea873a1e630b,26-35,Male,Urban,Christianity,Malaysia,26-35
+deda887b-faf4-4041-94bc-e93d84a2f52c,36-45,Female,Urban,Buddhism,Canada,36-45
+615b444a-9624-4cd6-9eb6-b3451c0e5d14,46-55,Female,Rural,Islam,Pakistan,46-55
+d31a7f0a-2b6d-42d9-b729-cf4446c36a32,26-35,Female,Urban,Islam,Pakistan,26-35
+fd28e862-f236-4a16-9afd-3c783bef978e,18-25,Female,Urban,Islam,Bangladesh,18-25
+692e1ecf-08bf-4b66-8aee-44e80c1aeab8,18-25,Female,Urban,Buddhism,China,18-25
+627325a4-9c67-4a76-8605-c9136c640f25,26-35,Female,Urban,I do not identify with any religious group or faith,Korea South,26-35
+7d13d7b5-1ff8-42d3-832f-21ebe2ddf86a,18-25,Female,Urban,Islam,Pakistan,18-25
+d3a5ddbf-708a-44e6-9fe5-b5892650f770,36-45,Female,Urban,I do not identify with any religious group or faith,China,36-45
+5781bcc7-b7da-469f-bd1e-8e7fe3086c54,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+b3a90ba2-0f1a-483a-900b-1f4831c00e4d,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+96cd2683-1122-4612-b883-161c3b08179c,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+623460f2-62c5-4ff6-bd55-8ee7c817a709,26-35,Female,Urban,I do not identify with any religious group or faith,Korea South,26-35
+7689e960-c6c5-4303-986e-2684b3175b96,18-25,Female,Urban,I do not identify with any religious group or faith,China,18-25
+1f67044d-461a-49ba-befe-9fa1aca5b5c3,26-35,Female,Rural,Christianity,Panama,26-35
+564d5eb8-1fd8-4356-8b7b-0e3de7036012,18-25,Female,Urban,I do not identify with any religious group or faith,China,18-25
+f41e3c7c-b983-403b-8b0d-7ec363522605,26-35,Female,Urban,Other religious group,China,26-35
+be72da31-4267-47eb-8115-db25f67a8cf4,26-35,Female,Urban,I do not identify with any religious group or faith,Netherlands,26-35
+0d8d7b70-ec0a-4dd1-8cd9-8ebe74486528,26-35,Female,Urban,I do not identify with any religious group or faith,Italy,26-35
+5201657c-8b81-4aaf-8ca0-83ecb191264a,26-35,Male,Urban,I do not identify with any religious group or faith,China,26-35
+89ef6da4-2f5f-4a85-aee7-b68e6a8251a5,36-45,Male,Urban,Christianity,United Kingdom,36-45
+a6722656-6ada-46d2-ae92-475f3067f4d4,26-35,Female,Urban,Christianity,United States,26-35
+5e9b25e8-99a9-466b-b3b1-c6fae1c501b8,36-45,Female,Urban,I do not identify with any religious group or faith,United States,36-45
+22eb2dd4-d797-401f-822f-07ee81eb2a73,46-55,Female,Urban,Christianity,Korea South,46-55
+aeeafca8-21e2-42fe-9e8c-3f4e6903fb9b,26-35,Female,Urban,Islam,United Kingdom,26-35
+8b81fb32-598b-4b71-aa8c-400c4a004d3b,26-35,Male,Rural,I do not identify with any religious group or faith,China,26-35
+e3ba3c5b-9b87-4430-ad0f-0079e6c31516,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+45785d3e-605d-4855-a096-1b88bf77ba06,26-35,Male,Urban,I do not identify with any religious group or faith,China,26-35
+4e7dd26b-7fbf-4b7a-8091-f0fd89f59f85,26-35,Male,Rural,I do not identify with any religious group or faith,United Kingdom,26-35
+5e6bdfcc-2ab8-44f6-868a-4793e2dcd2dc,18-25,Female,Urban,Christianity,China,18-25
+20e07f26-098e-4387-90c6-08028554c6d3,18-25,Female,Urban,I do not identify with any religious group or faith,China,18-25
+3838bf0e-91d5-4097-a8e6-94fa58b9eadc,18-25,Male,Urban,I do not identify with any religious group or faith,United States,18-25
+3c761fb3-7e3a-4285-9488-f7e7cf965596,18-25,Female,Urban,I do not identify with any religious group or faith,China,18-25
+cf928ac2-9c1c-40f4-bd4c-ab3a8fa3f2b7,26-35,Female,Urban,I do not identify with any religious group or faith,United States,26-35
+f04c986f-91c4-4f8a-b607-59e45874903a,36-45,Female,Rural,I do not identify with any religious group or faith,United States,36-45
+cab00b44-c993-450a-9713-681c262ec063,26-35,Female,Urban,Christianity,Canada,26-35
+e724149e-7dd4-4103-b201-4ef90a5a521a,36-45,Male,Urban,I do not identify with any religious group or faith,China,36-45
+41b0ae6c-5931-46d3-a814-77cb3ba69448,26-35,Female,Urban,I do not identify with any religious group or faith,United States,26-35
+f4e73031-23d1-42d8-bc06-f1957240359c,18-25,Male,Rural,Christianity,United Kingdom,18-25
+0200948d-8aa3-4a5e-8f4b-8a6c5fdc7720,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+5aed4ee8-ef9f-4277-a387-e11f22bacd9a,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+ee76f5c2-ee5f-4198-aaea-05c8d8e76991,26-35,Male,Urban,I do not identify with any religious group or faith,China,26-35
+4d0fa132-317f-43e4-96e2-b8b7e3d704c9,18-25,Female,Urban,I do not identify with any religious group or faith,United Kingdom,18-25
+675dc2f6-c22f-4fc4-b549-b570984ad752,18-25,Female,Urban,Buddhism,Japan,18-25
+2502ffb3-361b-430b-beed-3bd58689cb47,36-45,Female,Rural,I do not identify with any religious group or faith,China,36-45
+7074d946-2f5a-4a3a-af83-aeb4cf560a31,36-45,Female,Urban,I do not identify with any religious group or faith,China,36-45
+12b1fdb9-73b0-4577-88ee-60aa4befcd51,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
+22f8ac4a-51ac-4d3d-9f55-a92c74081b05,18-25,Female,Urban,I do not identify with any religious group or faith,United Kingdom,18-25
+e563d981-66bd-4f1d-9339-0d1cd2b04888,26-35,Male,Urban,I do not identify with any religious group or faith,Denmark,26-35
+ea3631cc-5bc5-43ca-b4a7-c348fc80bae5,26-35,Male,Urban,Christianity,China,26-35
+4d17792a-55e4-4799-9d20-73490317eadc,26-35,Male,Urban,I do not identify with any religious group or faith,China,26-35
+3c65dc63-2117-480c-a3fb-16d35efaedb6,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+cd65da72-7a22-404c-bebb-5e4a4a28a934,26-35,Female,Urban,Islam,Pakistan,26-35
+ef07f7b7-0454-46d6-b40e-b773bbc8af9c,18-25,Female,Urban,I do not identify with any religious group or faith,Australia,18-25
+167a4353-2b29-474e-8b4e-57e03c5af2a2,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+8ef5c794-c741-43bf-889e-3dc18d80d4c7,18-25,Male,Urban,I do not identify with any religious group or faith,China,18-25
+b8e4778d-1cbb-4797-8575-722e6af715bf,26-35,Female,Urban,I do not identify with any religious group or faith,China,26-35
