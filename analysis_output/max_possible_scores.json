@@ -1,0 +1,208 @@
+{
+  "Country \u00d7 Gender \u00d7 Age": {
+    "N_500": {
+      "sample_size": 500,
+      "threshold": 0.001,
+      "n_simulations": 50,
+      "total_strata": 2699,
+      "relevant_strata": 167,
+      "max_gri": {
+        "mean": 0.6910845060026157,
+        "std": 0.00699837112455623,
+        "min": 0.6722350445918057,
+        "max": 0.7018886652395153,
+        "median": 0.6914601007806918,
+        "q25": 0.6875628003526081,
+        "q75": 0.6963027283833632
+      },
+      "max_diversity": {
+        "mean": 0.9482634730538922,
+        "std": 0.0247113204819716,
+        "min": 0.8802395209580839,
+        "max": 0.9880239520958084,
+        "median": 0.9520958083832335,
+        "q25": 0.9341317365269461,
+        "q75": 0.9640718562874252
+      },
+      "dimension_info": {
+        "strata_columns": [
+          "country",
+          "gender",
+          "age_group"
+        ],
+        "sample_size": 500,
+        "threshold_percentage": 0.1
+      }
+    },
+    "N_1000": {
+      "sample_size": 1000,
+      "threshold": 0.0005,
+      "n_simulations": 50,
+      "total_strata": 2699,
+      "relevant_strata": 376,
+      "max_gri": {
+        "mean": 0.792132931929206,
+        "std": 0.00419443218803456,
+        "min": 0.779726143045804,
+        "max": 0.8006958600542404,
+        "median": 0.7922065334703867,
+        "q25": 0.789739983412006,
+        "q75": 0.7951138231255005
+      },
+      "max_diversity": {
+        "mean": 0.9260106382978723,
+        "std": 0.015892509716760574,
+        "min": 0.8909574468085106,
+        "max": 0.9654255319148937,
+        "median": 0.925531914893617,
+        "q25": 0.9155585106382979,
+        "q75": 0.9361702127659575
+      },
+      "dimension_info": {
+        "strata_columns": [
+          "country",
+          "gender",
+          "age_group"
+        ],
+        "sample_size": 1000,
+        "threshold_percentage": 0.05
+      }
+    }
+  },
+  "Country \u00d7 Religion": {
+    "N_500": {
+      "sample_size": 500,
+      "threshold": 0.001,
+      "n_simulations": 50,
+      "total_strata": 1654,
+      "relevant_strata": 84,
+      "max_gri": {
+        "mean": 0.9237896289720166,
+        "std": 0.0050100890290279134,
+        "min": 0.9104385305077058,
+        "max": 0.9308915057735663,
+        "median": 0.9237374205826498,
+        "q25": 0.9209402007031494,
+        "q75": 0.9282074930584912
+      },
+      "max_diversity": {
+        "mean": 0.9659523809523809,
+        "std": 0.027459514622634143,
+        "min": 0.8690476190476191,
+        "max": 1.0,
+        "median": 0.9642857142857143,
+        "q25": 0.9523809523809523,
+        "q75": 0.9880952380952381
+      },
+      "dimension_info": {
+        "strata_columns": [
+          "country",
+          "religion"
+        ],
+        "sample_size": 500,
+        "threshold_percentage": 0.1
+      }
+    },
+    "N_1000": {
+      "sample_size": 1000,
+      "threshold": 0.0005,
+      "n_simulations": 50,
+      "total_strata": 1654,
+      "relevant_strata": 119,
+      "max_gri": {
+        "mean": 0.9498136382990348,
+        "std": 0.0025905398698305147,
+        "min": 0.9402326409279103,
+        "max": 0.9544286532555825,
+        "median": 0.9500827586105526,
+        "q25": 0.9486664134514328,
+        "q75": 0.9513475031018246
+      },
+      "max_diversity": {
+        "mean": 0.9742857142857144,
+        "std": 0.016672573865467936,
+        "min": 0.9327731092436975,
+        "max": 1.0,
+        "median": 0.9747899159663865,
+        "q25": 0.957983193277311,
+        "q75": 0.9915966386554622
+      },
+      "dimension_info": {
+        "strata_columns": [
+          "country",
+          "religion"
+        ],
+        "sample_size": 1000,
+        "threshold_percentage": 0.05
+      }
+    }
+  },
+  "Country \u00d7 Environment": {
+    "N_500": {
+      "sample_size": 500,
+      "threshold": 0.001,
+      "n_simulations": 50,
+      "total_strata": 509,
+      "relevant_strata": 101,
+      "max_gri": {
+        "mean": 0.9164605355010975,
+        "std": 0.004336984494029531,
+        "min": 0.9065865145748211,
+        "max": 0.9245720770073035,
+        "median": 0.9167708476698715,
+        "q25": 0.9130853218428922,
+        "q75": 0.9192941567878083
+      },
+      "max_diversity": {
+        "mean": 0.973069306930693,
+        "std": 0.019805940198098997,
+        "min": 0.9207920792079208,
+        "max": 1.0,
+        "median": 0.9752475247524752,
+        "q25": 0.9603960396039604,
+        "q75": 0.9900990099009901
+      },
+      "dimension_info": {
+        "strata_columns": [
+          "country",
+          "environment"
+        ],
+        "sample_size": 500,
+        "threshold_percentage": 0.1
+      }
+    },
+    "N_1000": {
+      "sample_size": 1000,
+      "threshold": 0.0005,
+      "n_simulations": 50,
+      "total_strata": 509,
+      "relevant_strata": 141,
+      "max_gri": {
+        "mean": 0.9489150901161983,
+        "std": 0.002741691153286791,
+        "min": 0.9427959418149429,
+        "max": 0.9546613539237478,
+        "median": 0.9491507176216957,
+        "q25": 0.9470029478155133,
+        "q75": 0.9509692125973046
+      },
+      "max_diversity": {
+        "mean": 0.9743262411347519,
+        "std": 0.018704589730277936,
+        "min": 0.9148936170212766,
+        "max": 1.0,
+        "median": 0.9787234042553191,
+        "q25": 0.9645390070921985,
+        "q75": 0.9911347517730497
+      },
+      "dimension_info": {
+        "strata_columns": [
+          "country",
+          "environment"
+        ],
+        "sample_size": 1000,
+        "threshold_percentage": 0.05
+      }
+    }
+  }
+}
