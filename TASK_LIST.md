@@ -26,7 +26,7 @@ $$\text{DiversityScore} = \frac{\text{NumRepresentedStrata}}{\text{NumRelevantSt
 
 2. Task: Refactor how Dimensions for the Benchmark and Survey data are defined to be more easily configurable.
 
-**Status**: Pending  
+**Status**: ✅ COMPLETED
 **Priority**: High
 **Dependencies**: Task 1 completed
 **Implementation Strategy**: Modular config approach with separate files for dimensions, segments, and regions
@@ -100,7 +100,12 @@ Think through some approaches to this and determine if there's a robust and stre
 
 
 3. Task: Add a 'region' dimension that is a coarser-grained version of the 'country' dimension.
-This should aggregate country data on the Benchmark side, but on the GD Survey side can map to explicit Regions already defined in the Survey data. If we have the config file descrbibed above this could help with this.
+
+**Status**: ✅ COMPLETED  
+**Priority**: Medium
+**Dependencies**: Task 2 completed
+
+This should aggregate country data on the Benchmark side, but on the GD Survey side can map to explicit Regions already defined in the Survey data. If we have the config file described above this could help with this.
 
 4. Task: Add some coarser dimensions to the standard scorecard throughout the scripts and Notebook. (By setting this in the dimension config file created above). Ensure support for these throughout the rest of the codebase and Documentation.
 

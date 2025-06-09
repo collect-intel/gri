@@ -16,31 +16,12 @@ standard_scorecard:
   - name: "Country × Environment"
     columns: ["country", "environment"]
     description: "Urban/rural representativeness by country"
-
-# Extended dimension combinations available for analysis
-extended_dimensions:
-  # Single dimensions
+    
+  # Coarser dimensions added to standard scorecard
   - name: "Country"
     columns: ["country"]
     description: "Country-level representativeness"
     
-  - name: "Gender"
-    columns: ["gender"]
-    description: "Global gender representativeness"
-    
-  - name: "Age Group"
-    columns: ["age_group"]
-    description: "Global age representativeness"
-    
-  - name: "Religion"
-    columns: ["religion"]
-    description: "Global religious representativeness"
-    
-  - name: "Environment"
-    columns: ["environment"]
-    description: "Global urban/rural representativeness"
-    
-  # Regional dimensions (requires region mapping)
   - name: "Region × Gender × Age"
     columns: ["region", "gender", "age_group"]
     description: "Regional demographic representativeness"
@@ -61,11 +42,37 @@ extended_dimensions:
     description: "Regional representativeness"
     requires_mapping: ["country_to_region"]
     
-  # Continental dimensions
   - name: "Continent"
     columns: ["continent"]
     description: "Continental representativeness"
     requires_mapping: ["country_to_continent"]
+    
+  - name: "Religion"
+    columns: ["religion"]
+    description: "Global religious representativeness"
+    
+  - name: "Environment"
+    columns: ["environment"]
+    description: "Global urban/rural representativeness"
+    
+  - name: "Age Group"
+    columns: ["age_group"]
+    description: "Global age representativeness"
+    
+  - name: "Gender"
+    columns: ["gender"]
+    description: "Global gender representativeness"
+
+# Extended dimension combinations available for analysis
+extended_dimensions:
+  # Specialized or experimental dimensions can be added here
+  # (Most common dimensions are now part of standard scorecard)
+  
+  # Example future extensions:
+  # - name: "Income Level"
+  #   columns: ["income_level"] 
+  #   description: "Economic representativeness"
+  #   requires_mapping: ["country_to_income"]
 
 # Metadata
 metadata:

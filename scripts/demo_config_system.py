@@ -33,9 +33,14 @@ def main():
         print(f"  • {dim['name']}: {dim['columns']}")
     
     # Show extended dimensions
-    print(f"\nExtended Dimensions Available: {len(config.get_extended_dimensions())}")
-    for dim in config.get_extended_dimensions()[:5]:  # Show first 5
-        print(f"  • {dim['name']}: {dim['columns']}")
+    extended_dims = config.get_extended_dimensions()
+    if extended_dims:
+        print(f"\nExtended Dimensions Available: {len(extended_dims)}")
+        for dim in extended_dims[:5]:  # Show first 5
+            print(f"  • {dim['name']}: {dim['columns']}")
+    else:
+        print(f"\nExtended Dimensions Available: 0")
+        print("  (All common dimensions are now part of standard scorecard)")
     
     print("\n2. SEGMENT MAPPINGS")
     print("-" * 30)

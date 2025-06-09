@@ -67,7 +67,11 @@ class GRIConfig:
     
     def get_extended_dimensions(self) -> List[Dict[str, Any]]:
         """Get all available extended dimensions."""
-        return self.dimensions.get("extended_dimensions", [])
+        extended = self.dimensions.get("extended_dimensions", [])
+        # Handle case where extended_dimensions is None or empty
+        if extended is None:
+            return []
+        return extended
     
     def get_all_dimensions(self) -> List[Dict[str, Any]]:
         """Get all dimensions (standard + extended)."""
