@@ -162,6 +162,22 @@ def process_country_religion(religion_df: pd.DataFrame) -> pd.DataFrame:
     
     for _, row in religion_df.iterrows():
         country = row['COUNTRY']
+        
+        # Skip regional aggregates and non-country entries
+        # These don't have valid ISO3 codes and are regional summaries
+        iso3_code = str(row.get('ISO3_Code', '')).strip()
+        if not iso3_code or iso3_code == '' or iso3_code == 'nan':
+            continue
+            
+        # Skip known regional aggregates by name
+        regional_aggregates = {
+            'Asia-Pacific', 'Europe', 'Latin America-Caribbean', 'Sub-Saharan Africa',
+            'North America', 'South America', 'Africa', 'Asia', 'Oceania', 'WORLD',
+            'More developed regions', 'Less developed regions', 'World'
+        }
+        if country in regional_aggregates:
+            continue
+        
         pop_str = str(row['2010 COUNTRY POPULATION']).replace(',', '')
         
         # Handle special cases like '<10,000'
@@ -226,17 +242,36 @@ def process_country_environment(urban_rural_df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         DataFrame with columns: country, environment, population_proportion
     """
-    # Filter to get only country-level data (exclude regions and aggregates)
-    countries = urban_rural_df[
-        ~urban_rural_df['Region, subregion, country or area'].str.contains(
-            'region|WORLD|developed|income|countries', case=False, na=False
-        )
-    ].copy()
-    
     result_rows = []
     
-    for _, row in countries.iterrows():
+    for _, row in urban_rural_df.iterrows():
         country = row['Region, subregion, country or area']
+        
+        # Skip regional aggregates and non-country entries
+        # Check for valid ISO3 code first
+        iso3_code = str(row.get('ISO3_Code', '')).strip()
+        if not iso3_code or iso3_code == '' or iso3_code == 'nan':
+            continue
+            
+        # Skip known regional aggregates by name
+        regional_aggregates = {
+            'WORLD', 'More developed regions', 'Less developed regions', 'World',
+            'Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania',
+            'Eastern Africa', 'Western Africa', 'Middle Africa', 'Northern Africa', 'Southern Africa',
+            'Eastern Asia', 'South-eastern Asia', 'Southern Asia', 'Western Asia', 'Central Asia',
+            'Eastern Europe', 'Northern Europe', 'Southern Europe', 'Western Europe',
+            'Caribbean', 'Central America', 'Northern America',
+            'Australia and New Zealand', 'Melanesia', 'Micronesia', 'Polynesia',
+            'Least Developed Countries', 'Less developed countries', 'Less developed regions',
+            'More developed regions', 'Lower-middle-income countries', 'Upper-middle-income countries',
+            'High-income countries', 'Low-income countries'
+        }
+        if country in regional_aggregates:
+            continue
+            
+        # Skip if it contains regional indicator words
+        if any(word in country.lower() for word in ['region', 'developed', 'income', 'countries']):
+            continue
         
         # Get urban and rural populations (in thousands)
         try:

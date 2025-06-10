@@ -25,6 +25,7 @@ country_to_region:
     - "South Sudan"
     - "Uganda"
     - "Tanzania"
+    - "United Republic of Tanzania"
     - "Zambia"
     - "Zimbabwe"
     
@@ -39,6 +40,7 @@ country_to_region:
     - "Equatorial Guinea"
     - "Gabon"
     - "São Tomé and Príncipe"
+    - "Sao Tome and Principe"
     
   # Northern Africa
   "Northern Africa":
@@ -88,7 +90,11 @@ country_to_region:
   # Eastern Asia
   "Eastern Asia":
     - "China"
+    - "China, Hong Kong SAR"
+    - "China, Macao SAR"
+    - "China, Taiwan Province of China"
     - "Democratic People's Republic of Korea"
+    - "Dem. People's Republic of Korea"
     - "Japan"
     - "Mongolia"
     - "Republic of Korea"
@@ -105,6 +111,7 @@ country_to_region:
     - "Singapore"
     - "Thailand"
     - "Timor-Leste"
+    - "Viet Nam"
     - "Vietnam"
     
   # Southern Asia
@@ -137,14 +144,17 @@ country_to_region:
     - "State of Palestine"
     - "Syrian Arab Republic"
     - "Turkey"
+    - "Türkiye"
     - "United Arab Emirates"
     - "Yemen"
+    - "Iran (Islamic Republic of)"
     
   # Eastern Europe
   "Eastern Europe":
     - "Belarus"
     - "Bulgaria"
     - "Czech Republic"
+    - "Czechia"
     - "Hungary"
     - "Poland"
     - "Republic of Moldova"
@@ -183,6 +193,7 @@ country_to_region:
     - "Greece"
     - "Holy See"
     - "Italy"
+    - "Kosovo (under UNSC res. 1244)"
     - "Malta"
     - "Montenegro"
     - "North Macedonia"
@@ -253,11 +264,13 @@ country_to_region:
     - "Greenland"
     - "Saint Pierre and Miquelon"
     - "United States"
+    - "United States of America"
     
   # South America
   "South America":
     - "Argentina"
     - "Bolivia"
+    - "Bolivia (Plurinational State of)"
     - "Bouvet Island"
     - "Brazil"
     - "Chile"
@@ -272,6 +285,7 @@ country_to_region:
     - "Suriname"
     - "Uruguay"
     - "Venezuela"
+    - "Venezuela (Bolivarian Republic of)"
     
   # Australia and New Zealand
   "Australia and New Zealand":
@@ -296,6 +310,7 @@ country_to_region:
     - "Kiribati"
     - "Marshall Islands"
     - "Micronesia (Federated States of)"
+    - "Micronesia (Fed. States of)"
     - "Nauru"
     - "Northern Mariana Islands"
     - "Palau"
