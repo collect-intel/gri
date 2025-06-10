@@ -1,0 +1,155 @@
+region,religion,population_proportion
+Australia and New Zealand,Buddhism,3.299121030618967e-05
+Australia and New Zealand,Christianity,0.0008591059405698211
+Australia and New Zealand,Hinduism,1.9835227304513993e-05
+Australia and New Zealand,I do not identify with any religious group or faith,0.00034351045267425403
+Australia and New Zealand,Islam,2.8848201237926787e-05
+Australia and New Zealand,Judaism,5.902645141863674e-06
+Australia and New Zealand,Other religious group,1.8996696818043895e-05
+Caribbean,Buddhism,1.6377394964351538e-06
+Caribbean,Christianity,0.0016028038391157897
+Caribbean,Hinduism,1.7013174087592498e-05
+Caribbean,I do not identify with any religious group or faith,0.0002631943708388729
+Caribbean,Islam,5.175197826520328e-06
+Caribbean,Judaism,1.0493919042284074e-06
+Caribbean,Other religious group,0.00012648072404844554
+Central America,Buddhism,4.34576043149202e-06
+Central America,Christianity,0.0071971966217319145
+Central America,Hinduism,3.853750456722636e-06
+Central America,I do not identify with any religious group or faith,0.0004270346754739906
+Central America,Islam,5.149884626020205e-06
+Central America,Judaism,4.5811977720659816e-06
+Central America,Other religious group,2.73729085913031e-05
+Central Asia,Buddhism,2.6741061615712646e-06
+Central Asia,Christianity,0.0002775516249477778
+Central Asia,Hinduism,1.4922500333664847e-06
+Central Asia,I do not identify with any religious group or faith,5.124079907063769e-05
+Central Asia,Islam,0.0026468347515411906
+Central Asia,Judaism,1.4922500333664847e-06
+Central Asia,Other religious group,5.479201991749963e-06
+Eastern Africa,Buddhism,8.186731408350517e-06
+Eastern Africa,Christianity,0.011662073847759899
+Eastern Africa,Hinduism,5.080949162522296e-05
+Eastern Africa,I do not identify with any religious group or faith,0.000459797821216451
+Eastern Africa,Islam,0.00361143480687103
+Eastern Africa,Judaism,8.252349122268311e-06
+Eastern Africa,Other religious group,0.0005947864839844476
+Eastern Asia,Buddhism,0.014325409611157204
+Eastern Asia,Christianity,0.003465031119473618
+Eastern Asia,Hinduism,3.614233512961276e-05
+Eastern Asia,I do not identify with any religious group or faith,0.03800902982122002
+Eastern Asia,Islam,0.0012035084992422836
+Eastern Asia,Judaism,3.614233512961276e-05
+Eastern Asia,Other religious group,0.01522204937560646
+Eastern Europe,Buddhism,3.643134798192485e-06
+Eastern Europe,Christianity,0.006081927973359236
+Eastern Europe,Hinduism,3.643134798192485e-06
+Eastern Europe,I do not identify with any religious group or faith,0.001108763401603376
+Eastern Europe,Islam,8.333670850865309e-05
+Eastern Europe,Judaism,2.2808913965208077e-06
+Eastern Europe,Other religious group,7.28626959638497e-06
+Melanesia,Buddhism,3.4897810398228065e-07
+Melanesia,Christianity,0.00040903379504843697
+Melanesia,Hinduism,1.1987397871791339e-05
+Melanesia,I do not identify with any religious group or faith,1.9793448235727386e-06
+Melanesia,Islam,3.194869966034964e-06
+Melanesia,Judaism,2.150393246369687e-07
+Melanesia,Other religious group,3.558102105250324e-06
+Micronesia,Buddhism,1.142780410927891e-07
+Micronesia,Christianity,1.6738661029741644e-05
+Micronesia,Hinduism,8.847332213635285e-09
+Micronesia,I do not identify with any religious group or faith,2.605047818459278e-07
+Micronesia,Islam,8.847332213635285e-09
+Micronesia,Judaism,8.847332213635285e-09
+Micronesia,Other religious group,5.981779613330079e-07
+Middle Africa,Buddhism,1.3890311575407397e-06
+Middle Africa,Christianity,0.0020309360753027273
+Middle Africa,Hinduism,1.3890311575407397e-06
+Middle Africa,I do not identify with any religious group or faith,0.00012072627172116027
+Middle Africa,Islam,0.0005114873766377025
+Middle Africa,Judaism,1.3890311575407397e-06
+Middle Africa,Other religious group,0.0001139398763948457
+Northern Africa,Buddhism,5.684656706488826e-06
+Northern Africa,Christianity,0.00030632290354729155
+Northern Africa,Hinduism,4.903142360951043e-06
+Northern Africa,I do not identify with any religious group or faith,5.24349431602503e-05
+Northern Africa,Islam,0.00939780535967237
+Northern Africa,Judaism,4.903142360951043e-06
+Northern Africa,Other religious group,5.522259008522988e-05
+Northern America,Buddhism,0.0001964623845806162
+Northern America,Christianity,0.013104078652689005
+Northern America,Hinduism,0.00011494748923028749
+Northern America,I do not identify with any religious group or faith,0.002898887382012358
+Northern America,Islam,0.00017245072495281007
+Northern America,Judaism,1.673177977135326e-05
+Northern America,Other religious group,0.00015731441409064898
+Northern Europe,Buddhism,1.6832295295669282e-05
+Northern Europe,Christianity,0.003578764066598356
+Northern Europe,Hinduism,4.365052530902309e-05
+Northern Europe,I do not identify with any religious group or faith,0.000995573582372864
+Northern Europe,Islam,0.0001803277997336833
+Northern Europe,Judaism,7.104899286005447e-07
+Northern Europe,Other religious group,3.769209282236788e-05
+Polynesia,Buddhism,2.506744127196664e-08
+Polynesia,Christianity,3.166558502951331e-05
+Polynesia,Hinduism,1.8923460568053247e-08
+Polynesia,I do not identify with any religious group or faith,9.523170091065757e-07
+Polynesia,Islam,1.671162751464443e-08
+Polynesia,Judaism,1.646586828648789e-08
+Polynesia,Other religious group,2.5042865349150986e-07
+South America,Buddhism,1.6722440920683313e-05
+South America,Christianity,0.01728153579196259
+South America,Hinduism,2.4030583088374214e-05
+South America,I do not identify with any religious group or faith,0.0015396294634443268
+South America,Islam,3.8386116882681934e-05
+South America,Judaism,1.896081597073304e-05
+South America,Other religious group,0.00038789334048318363
+South-eastern Asia,Buddhism,0.004964704556085799
+South-eastern Asia,Christianity,0.006030918187963065
+South-eastern Asia,Hinduism,0.0003054185095876755
+South-eastern Asia,I do not identify with any religious group or faith,0.0013510149082964335
+South-eastern Asia,Islam,0.011667460152763405
+South-eastern Asia,Judaism,1.3242736009214925e-05
+South-eastern Asia,Other religious group,0.00216674115022666
+Southern Africa,Buddhism,5.086724504383976e-06
+Southern Africa,Christianity,0.0022844957013609516
+Southern Africa,Hinduism,2.7509550722158137e-05
+Southern Africa,I do not identify with any religious group or faith,0.00039292083701358187
+Southern Africa,Islam,4.267240358096008e-05
+Southern Africa,Judaism,2.6227424828865488e-06
+Southern Africa,Other religious group,2.4208512769559543e-05
+Southern Asia,Buddhism,0.00141404477754174
+Southern Asia,Christianity,0.0017471972160268807
+Southern Asia,Hinduism,0.050018257993730046
+Southern Asia,I do not identify with any religious group or faith,4.738016735552667e-05
+Southern Asia,Islam,0.028796243804946844
+Southern Asia,Judaism,4.1880813107067874e-05
+Southern Asia,Other religious group,0.0017943876572582703
+Southern Europe,Buddhism,1.0970446185679597e-05
+Southern Europe,Christianity,0.005955854472351845
+Southern Europe,Hinduism,5.723240905309403e-06
+Southern Europe,I do not identify with any religious group or faith,0.0009023305651364489
+Southern Europe,Islam,0.0003453071983913065
+Southern Europe,Judaism,4.795254059790324e-06
+Southern Europe,Other religious group,1.1621708140294417e-05
+Western Africa,Buddhism,6.942698195422133e-06
+Western Africa,Christianity,0.0056177718579906565
+Western Africa,Hinduism,6.942698195422133e-06
+Western Africa,I do not identify with any religious group or faith,0.00016297621518891926
+Western Africa,Islam,0.007582136673570342
+Western Africa,Judaism,6.942698195422133e-06
+Western Africa,Other religious group,0.0005173814202065807
+Western Asia,Buddhism,2.692538103683005e-05
+Western Asia,Christianity,0.0006696245926242196
+Western Asia,Hinduism,8.685917552582073e-05
+Western Asia,I do not identify with any religious group or faith,7.787667573669934e-05
+Western Asia,Islam,0.009040076015334665
+Western Asia,Judaism,0.0002809770170698235
+Western Asia,Other religious group,2.817457519354972e-05
+Western Europe,Buddhism,3.259774978191105e-05
+Western Europe,Christianity,0.006133246923864428
+Western Europe,Hinduism,9.637693891386704e-06
+Western Europe,I do not identify with any religious group or faith,0.0024671631289466846
+Western Europe,Islam,0.0005897921649498506
+Western Europe,Judaism,3.166214440031912e-05
+Western Europe,Other religious group,2.7358654556070022e-05

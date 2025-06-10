@@ -1,0 +1,45 @@
+region,environment,population_proportion
+Australia and New Zealand,Rural,0.00016063835113030647
+Australia and New Zealand,Urban,0.000994869632231725
+Caribbean,Rural,0.0004954581502454726
+Caribbean,Urban,0.0012318738271864047
+Central America,Rural,0.0017772378979219216
+Central America,Urban,0.0052532733293249425
+Central Asia,Rural,0.001457448587801404
+Central Asia,Urban,0.001355288232915902
+Eastern Africa,Rural,0.010693449223622403
+Eastern Africa,Urban,0.003967344540415595
+Eastern Asia,Rural,0.023452220717564157
+Eastern Asia,Urban,0.039038524669827324
+Eastern Europe,Rural,0.0033631501963494624
+Eastern Europe,Urban,0.007648600945253362
+Melanesia,Rural,0.00033180587293655167
+Melanesia,Urban,7.98103308856469e-05
+Micronesia,Rural,3.2879194675793725e-06
+Micronesia,Urban,1.3386529260858872e-05
+Middle Africa,Rural,0.003326983082206089
+Middle Africa,Urban,0.0032617726794324318
+Northern Africa,Rural,0.004467695427964014
+Northern Africa,Urban,0.004839660888683142
+Northern America,Rural,0.0002691788354588493
+Northern America,Urban,0.0011820853323916314
+Northern Europe,Rural,0.0007259647900618407
+Northern Europe,Urban,0.0033662032644265006
+Polynesia,Rural,1.5030488994648559e-05
+Polynesia,Urban,1.2055704714457698e-05
+South America,Rural,0.0023735647204049183
+South America,Urban,0.012682014231133146
+South-eastern Asia,Rural,0.01070221700886928
+South-eastern Asia,Urban,0.011183779785174387
+Southern Africa,Rural,0.0008980717174302513
+Southern Africa,Urban,0.0016298295084587794
+Southern Asia,Rural,0.04675828558641472
+Southern Asia,Urban,0.024066670239017263
+Southern Europe,Rural,0.001658677087596946
+Southern Europe,Urban,0.004203761606893922
+Western Africa,Rural,0.008015830236263238
+Western Africa,Urban,0.0069355138397728736
+Western Asia,Rural,0.003023594227525045
+Western Asia,Urban,0.007634588145617726
+Western Europe,Rural,0.0015299393836818442
+Western Europe,Urban,0.006066446269074483
