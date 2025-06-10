@@ -13,7 +13,7 @@ import shutil
 from unittest.mock import patch, MagicMock
 
 from gri.config import GRIConfig
-from scripts.process_data_config import (
+from scripts.process_data import (
     process_all_configured_benchmarks,
     create_regional_benchmark,
     create_single_dimension_benchmark,

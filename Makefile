@@ -35,7 +35,7 @@ help:
 	@echo "  $(GREEN)make health-check$(RESET)         - Check system health (venv, data)"
 	@echo ""
 	@echo "$(BLUE)Data Processing Commands:$(RESET)"
-	@echo "  $(GREEN)make process-data$(RESET)         - Process raw benchmark data (UN & Pew Research)"
+	@echo "  $(GREEN)make process-data$(RESET)         - Process raw benchmark data using configuration"
 	@echo "  $(GREEN)make validate-data$(RESET)        - Validate processed benchmark data"
 	@echo "  $(GREEN)make show-benchmarks$(RESET)      - Display benchmark data summary"
 	@echo ""
@@ -56,10 +56,10 @@ help:
 	@echo "  • Pew Research Global Religious Landscape 2010 (Religion by Country)"
 	@echo "  • UN World Urbanization Prospects 2018 (Urban/Rural by Country)"
 	@echo ""
-	@echo "$(BLUE)GRI Scorecard Dimensions:$(RESET)"
-	@echo "  • Country × Gender × Age"
-	@echo "  • Country × Religion"
-	@echo "  • Country × Environment (Urban/Rural)"
+	@echo "$(BLUE)GRI Processing:$(RESET)"
+	@echo "  • Configuration-driven processing follows config/dimensions.yaml"
+	@echo "  • Supports 13 dimensions including regional and single-dimension analysis"
+	@echo "  • All data processing uses YAML configuration as source of truth"
 
 # Setup commands
 setup: venv install process-data health-check
@@ -110,9 +110,9 @@ data-check:
 
 # Data processing commands
 process-data: venv-check data-check
-	@echo "$(BLUE)Processing benchmark data...$(RESET)"
+	@echo "$(BLUE)Processing benchmark data using configuration...$(RESET)"
 	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/process_data.py
-	@echo "$(GREEN)Data processing completed$(RESET)"
+	@echo "$(GREEN)Configuration-driven data processing completed$(RESET)"
 
 validate-data: venv-check
 	@echo "$(BLUE)Validating processed benchmark data...$(RESET)"

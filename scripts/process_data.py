@@ -1,316 +1,307 @@
 #!/usr/bin/env python3
 """
-Data processing script for GRI benchmark data.
+Configuration-Driven Data Processing Script for GRI
 
-This script processes raw benchmark demographic data files and creates
-standardized benchmark files for GRI calculations across three dimensions:
-- Country x Gender x Age
-- Country x Religion  
-- Country x Environment (Urban/Rural)
-
-Each output file contains strata columns and a 'population_proportion' column
-where the sum of proportions equals 1.0.
+This script processes raw benchmark data according to the dimensions defined in 
+config/dimensions.yaml, creating all necessary benchmark files for the complete
+GRI scorecard.
 """
 
 import pandas as pd
 import numpy as np
 import os
-from typing import Dict, List
+from pathlib import Path
+import sys
+
+# Add the gri module to the path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from gri.config import GRIConfig
+from gri.utils import aggregate_data
+
+# Import the core data processing functions
+from scripts.process_data_core import (
+    load_raw_data,
+    process_country_gender_age,
+    process_country_religion,
+    process_country_environment
+)
 
 
-def load_raw_data() -> Dict[str, pd.DataFrame]:
-    """Load all raw benchmark data files."""
-    base_path = "data/raw/benchmark_data"
-    
-    data = {}
-    
-    # Load UN population data (male and female)
-    data['male_pop'] = pd.read_csv(f"{base_path}/WPP_2023_Male_Population.csv")
-    data['female_pop'] = pd.read_csv(f"{base_path}/WPP_2023_Female_Population.csv")
-    
-    # Load religious composition data
-    data['religion'] = pd.read_csv(f"{base_path}/GLS_2010_Religious_Composition.csv")
-    
-    # Load urban/rural data
-    data['urban_rural'] = pd.read_csv(f"{base_path}/WUP_2018_Urban_Rural.csv")
-    
-    return data
-
-
-def process_country_gender_age(male_df: pd.DataFrame, female_df: pd.DataFrame) -> pd.DataFrame:
+def create_regional_benchmark(country_benchmark: pd.DataFrame, config: GRIConfig,
+                            columns: list, target_geo_level: str) -> pd.DataFrame:
     """
-    Process UN population data to create Country x Gender x Age benchmark.
+    Create regional or continental benchmark by aggregating country data.
     
     Args:
-        male_df: Male population data from UN WPP
-        female_df: Female population data from UN WPP
+        country_benchmark: Country-level benchmark data
+        config: GRI configuration
+        columns: Target columns for the benchmark
+        target_geo_level: 'region' or 'continent'
         
     Returns:
-        DataFrame with columns: country, gender, age_group, population_proportion
+        Aggregated benchmark DataFrame
     """
-    # Filter to get only country-level data (Type == 'Country' or Type == 'Country/Area')
-    male_countries = male_df[male_df['Type'].isin(['Country', 'Country/Area'])].copy()
-    female_countries = female_df[female_df['Type'].isin(['Country', 'Country/Area'])].copy()
+    if target_geo_level not in ['region', 'continent']:
+        raise ValueError("target_geo_level must be 'region' or 'continent'")
     
-    # Define age groups that match Global Dialogues segmentation
-    age_columns = ['0-4', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34', '35-39', 
-                   '40-44', '45-49', '50-54', '55-59', '60-64', '65-69', '70-74', 
-                   '75-79', '80-84', '85-89', '90-94', '95-99', '100+']
+    # Get geographic mappings
+    if target_geo_level == 'region':
+        geo_mapping = config.get_country_to_region_mapping()
+    else:  # continent
+        geo_mapping = config.get_country_to_continent_mapping()
     
-    # Group into broader age categories to match survey data
-    age_mapping = {
-        '18-25': ['15-19', '20-24'],  # Include 15-19 for approximate 18-25
-        '26-35': ['25-29', '30-34'],
-        '36-45': ['35-39', '40-44'],
-        '46-55': ['45-49', '50-54'],
-        '56-65': ['55-59', '60-64'],
-        '65+': ['65-69', '70-74', '75-79', '80-84', '85-89', '90-94', '95-99', '100+']
+    # Add geographic column to benchmark data
+    country_benchmark_with_geo = country_benchmark.copy()
+    country_benchmark_with_geo[target_geo_level] = country_benchmark_with_geo['country'].map(geo_mapping)
+    
+    # Filter out countries not in mapping
+    country_benchmark_with_geo = country_benchmark_with_geo.dropna(subset=[target_geo_level])
+    
+    # Create grouping columns (replace 'country' with target geographic level)
+    group_columns = [col if col != 'country' else target_geo_level for col in columns]
+    
+    # Aggregate by the new geographic level
+    aggregated = country_benchmark_with_geo.groupby(group_columns)['population_proportion'].sum().reset_index()
+    
+    return aggregated
+
+
+def create_single_dimension_benchmark(base_benchmark: pd.DataFrame, 
+                                    target_column: str) -> pd.DataFrame:
+    """
+    Create single-dimension benchmark by aggregating across other dimensions.
+    
+    Args:
+        base_benchmark: Multi-dimensional benchmark data
+        target_column: The single column to keep
+        
+    Returns:
+        Single-dimension benchmark DataFrame
+    """
+    if target_column not in base_benchmark.columns:
+        raise ValueError(f"Column '{target_column}' not found in benchmark data")
+    
+    # Aggregate by the target column only
+    single_dim = base_benchmark.groupby(target_column)['population_proportion'].sum().reset_index()
+    
+    return single_dim
+
+
+def process_all_configured_benchmarks(config: GRIConfig) -> dict:
+    """
+    Process all benchmark files according to the dimensions configuration.
+    
+    Args:
+        config: GRI configuration object
+        
+    Returns:
+        Dictionary mapping dimension names to processed benchmark DataFrames
+    """
+    print("Loading raw benchmark data...")
+    raw_data = load_raw_data()
+    
+    print("Processing base benchmark data...")
+    
+    # Create the three foundational benchmarks (these are always needed)
+    base_benchmarks = {
+        'country_gender_age': process_country_gender_age(raw_data['male_pop'], raw_data['female_pop']),
+        'country_religion': process_country_religion(raw_data['religion']),
+        'country_environment': process_country_environment(raw_data['urban_rural'])
     }
     
-    result_rows = []
+    print(f"  ✓ Country × Gender × Age: {len(base_benchmarks['country_gender_age'])} strata")
+    print(f"  ✓ Country × Religion: {len(base_benchmarks['country_religion'])} strata")
+    print(f"  ✓ Country × Environment: {len(base_benchmarks['country_environment'])} strata")
     
-    for _, male_row in male_countries.iterrows():
-        country = male_row['Region, subregion, country or area *']
-        iso3 = male_row.get('ISO3 Alpha-code', '')
+    # Get all dimensions from configuration
+    all_dimensions = config.get_all_dimensions()
+    processed_benchmarks = {}
+    
+    print("\\nProcessing configured dimensions...")
+    
+    for dimension in all_dimensions:
+        dim_name = dimension['name']
+        dim_columns = dimension['columns']
         
-        # Find matching female row
-        female_row = female_countries[
-            female_countries['Region, subregion, country or area *'] == country
-        ]
+        print(f"  Processing: {dim_name}")
         
-        if len(female_row) == 0:
-            continue
-        female_row = female_row.iloc[0]
-        
-        # Process each age group
-        for age_group, age_cols in age_mapping.items():
-            # Sum male population across age columns (handle string formatting with commas/spaces)
-            male_pop = 0
-            for col in age_cols:
-                if col in male_row and pd.notna(male_row[col]):
-                    # Convert string numbers with spaces/commas to int
-                    val_str = str(male_row[col]).replace(' ', '').replace(',', '')
-                    try:
-                        male_pop += int(val_str)
-                    except (ValueError, TypeError):
-                        pass
-            
-            # Sum female population across age columns
-            female_pop = 0
-            for col in age_cols:
-                if col in female_row and pd.notna(female_row[col]):
-                    # Convert string numbers with spaces/commas to int
-                    val_str = str(female_row[col]).replace(' ', '').replace(',', '')
-                    try:
-                        female_pop += int(val_str)
-                    except (ValueError, TypeError):
-                        pass
-            
-            # Add rows for male and female
-            if male_pop > 0:
-                result_rows.append({
-                    'country': country,
-                    'gender': 'Male',
-                    'age_group': age_group,
-                    'population': male_pop,
-                    'iso3': iso3
-                })
-            
-            if female_pop > 0:
-                result_rows.append({
-                    'country': country,
-                    'gender': 'Female', 
-                    'age_group': age_group,
-                    'population': female_pop,
-                    'iso3': iso3
-                })
-    
-    # Convert to DataFrame and calculate proportions
-    df = pd.DataFrame(result_rows)
-    if len(df) > 0:
-        total_population = df['population'].sum()
-        df['population_proportion'] = df['population'] / total_population
-        
-        # Keep only the required columns
-        df = df[['country', 'gender', 'age_group', 'population_proportion']]
-    
-    return df
-
-
-def process_country_religion(religion_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Process Pew religious composition data to create Country x Religion benchmark.
-    
-    Args:
-        religion_df: Religious composition data from Pew Research
-        
-    Returns:
-        DataFrame with columns: country, religion, population_proportion
-    """
-    # Map religious categories
-    religion_mapping = {
-        'Christianity': 'PERCENT CHRISTIAN',
-        'Islam': 'PERCENT MUSLIM', 
-        'Hinduism': 'PERCENT HINDU',
-        'Buddhism': 'PERCENT BUDDHIST',
-        'Judaism': 'PERCENT JEWISH',
-        'I do not identify with any religious group or faith': 'PERCENT UNAFFIL.',
-        'Other religious group': ['PERCENT FOLK RELIGION', 'PERCENT OTHER RELIGION']
-    }
-    
-    result_rows = []
-    
-    for _, row in religion_df.iterrows():
-        country = row['COUNTRY']
-        pop_str = str(row['2010 COUNTRY POPULATION']).replace(',', '')
-        
-        # Handle special cases like '<10,000'
-        if '<' in pop_str:
-            country_pop = int(pop_str.replace('<', ''))
-        else:
-            try:
-                country_pop = int(pop_str)
-            except ValueError:
-                continue  # Skip rows with invalid population data
-        
-        for religion, col_names in religion_mapping.items():
-            if isinstance(col_names, list):
-                # Sum multiple columns for "Other religious group"
-                percent = 0
-                for col in col_names:
-                    val = row[col]
-                    if isinstance(val, str) and '<' in val:
-                        percent += 0.05  # Assume <0.1 means 0.05%
-                    else:
-                        try:
-                            percent += float(val)
-                        except (ValueError, TypeError):
-                            pass
-            else:
-                val = row[col_names]
-                if isinstance(val, str) and '<' in val:
-                    percent = 0.05  # Assume <0.1 means 0.05%
-                else:
-                    try:
-                        percent = float(val)
-                    except (ValueError, TypeError):
-                        percent = 0
-            
-            if percent > 0:
-                population = country_pop * (percent / 100)
-                result_rows.append({
-                    'country': country,
-                    'religion': religion,
-                    'population': population
-                })
-    
-    # Convert to DataFrame and calculate proportions
-    df = pd.DataFrame(result_rows)
-    if len(df) > 0:
-        total_population = df['population'].sum()
-        df['population_proportion'] = df['population'] / total_population
-        
-        # Keep only the required columns
-        df = df[['country', 'religion', 'population_proportion']]
-    
-    return df
-
-
-def process_country_environment(urban_rural_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Process UN urban/rural data to create Country x Environment benchmark.
-    
-    Args:
-        urban_rural_df: Urban/rural data from UN WUP
-        
-    Returns:
-        DataFrame with columns: country, environment, population_proportion
-    """
-    # Filter to get only country-level data (exclude regions and aggregates)
-    countries = urban_rural_df[
-        ~urban_rural_df['Region, subregion, country or area'].str.contains(
-            'region|WORLD|developed|income|countries', case=False, na=False
-        )
-    ].copy()
-    
-    result_rows = []
-    
-    for _, row in countries.iterrows():
-        country = row['Region, subregion, country or area']
-        
-        # Get urban and rural populations (in thousands)
         try:
-            urban_pop = float(str(row['Urban (thousands)']).replace(',', '').replace(' ', '')) * 1000
-            rural_pop = float(str(row['Rural (thousands)']).replace(',', '').replace(' ', '')) * 1000
-        except (ValueError, TypeError):
+            benchmark_df = None
+            
+            # Determine processing approach based on dimension structure
+            if 'region' in dim_columns:
+                # Choose appropriate base data for regional dimensions
+                if 'religion' in dim_columns:
+                    base_data = base_benchmarks['country_religion']
+                elif 'environment' in dim_columns:
+                    base_data = base_benchmarks['country_environment']
+                else:
+                    base_data = base_benchmarks['country_gender_age']
+                    
+                # Create regional benchmark
+                benchmark_df = create_regional_benchmark(base_data, config, dim_columns, 'region')
+                
+            elif 'continent' in dim_columns:
+                # Use country_gender_age as base for continental aggregation
+                base_data = base_benchmarks['country_gender_age']
+                benchmark_df = create_regional_benchmark(base_data, config, dim_columns, 'continent')
+                
+            elif len(dim_columns) == 1:
+                # Single dimension - need to choose appropriate base and aggregate
+                single_col = dim_columns[0]
+                if single_col == 'religion':
+                    base_data = base_benchmarks['country_religion']
+                elif single_col == 'environment':
+                    base_data = base_benchmarks['country_environment']
+                else:
+                    base_data = base_benchmarks['country_gender_age']
+                
+                benchmark_df = create_single_dimension_benchmark(base_data, single_col)
+                
+            elif set(dim_columns) == {'country', 'gender', 'age_group'}:
+                benchmark_df = base_benchmarks['country_gender_age']
+                
+            elif set(dim_columns) == {'country', 'religion'}:
+                benchmark_df = base_benchmarks['country_religion']
+                
+            elif set(dim_columns) == {'country', 'environment'}:
+                benchmark_df = base_benchmarks['country_environment']
+                
+            elif set(dim_columns) == {'country'}:
+                # Aggregate country-level data from country_gender_age
+                benchmark_df = create_single_dimension_benchmark(base_benchmarks['country_gender_age'], 'country')
+                
+            else:
+                print(f"    ⚠️  Skipping: Unsupported dimension combination {dim_columns}")
+                continue
+            
+            if benchmark_df is None:
+                print(f"    ❌ Failed to create benchmark for {dim_name}")
+                continue
+            
+            # Verify proportions sum to approximately 1.0
+            prop_sum = benchmark_df['population_proportion'].sum()
+            if abs(prop_sum - 1.0) > 0.01:
+                print(f"    ⚠️  Warning: Proportions sum to {prop_sum:.4f}, expected ~1.0")
+            
+            processed_benchmarks[dim_name] = benchmark_df
+            print(f"    ✓ Created benchmark with {len(benchmark_df)} strata (sum={prop_sum:.4f})")
+            
+        except Exception as e:
+            print(f"    ❌ Error processing {dim_name}: {e}")
             continue
-            
-        if urban_pop > 0:
-            result_rows.append({
-                'country': country,
-                'environment': 'Urban',
-                'population': urban_pop
-            })
-            
-        if rural_pop > 0:
-            result_rows.append({
-                'country': country,
-                'environment': 'Rural', 
-                'population': rural_pop
-            })
     
-    # Convert to DataFrame and calculate proportions
-    df = pd.DataFrame(result_rows)
-    if len(df) > 0:
-        total_population = df['population'].sum()
-        df['population_proportion'] = df['population'] / total_population
+    return processed_benchmarks
+
+
+def save_processed_benchmarks(benchmarks: dict, output_dir: str = "data/processed"):
+    """
+    Save all processed benchmarks to files.
+    
+    Args:
+        benchmarks: Dictionary of dimension name -> benchmark DataFrame
+        output_dir: Output directory for files
+    """
+    os.makedirs(output_dir, exist_ok=True)
+    
+    print(f"\\nSaving {len(benchmarks)} benchmark files to {output_dir}/...")
+    
+    # Save the core benchmarks with original names for backwards compatibility
+    core_mappings = {
+        'Country × Gender × Age': 'benchmark_country_gender_age.csv',
+        'Country × Religion': 'benchmark_country_religion.csv', 
+        'Country × Environment': 'benchmark_country_environment.csv'
+    }
+    
+    # Save all benchmarks
+    for dim_name, benchmark_df in benchmarks.items():
+        # Use core mapping if available, otherwise create filename from dimension name
+        if dim_name in core_mappings:
+            filename = core_mappings[dim_name]
+        else:
+            # Create safe filename from dimension name
+            safe_name = dim_name.lower().replace(' × ', '_').replace(' ', '_').replace('×', '')
+            filename = f"benchmark_{safe_name}.csv"
         
-        # Keep only the required columns
-        df = df[['country', 'environment', 'population_proportion']]
+        filepath = os.path.join(output_dir, filename)
+        benchmark_df.to_csv(filepath, index=False)
+        
+        prop_sum = benchmark_df['population_proportion'].sum()
+        print(f"  ✓ {filename}: {len(benchmark_df)} strata (sum={prop_sum:.4f})")
+
+
+def validate_configuration_coverage(config: GRIConfig, benchmarks: dict):
+    """
+    Validate that all configured dimensions have corresponding benchmarks.
     
-    return df
+    Args:
+        config: GRI configuration
+        benchmarks: Processed benchmarks dictionary
+    """
+    print("\\nValidating configuration coverage...")
+    
+    all_dimensions = config.get_all_dimensions()
+    configured_names = {dim['name'] for dim in all_dimensions}
+    processed_names = set(benchmarks.keys())
+    
+    missing = configured_names - processed_names
+    extra = processed_names - configured_names
+    
+    if missing:
+        print(f"  ⚠️  Missing benchmarks for: {missing}")
+    
+    if extra:
+        print(f"  ℹ️  Extra benchmarks created: {extra}")
+    
+    coverage_pct = len(processed_names & configured_names) / len(configured_names) * 100
+    print(f"  📊 Configuration coverage: {coverage_pct:.1f}% ({len(processed_names & configured_names)}/{len(configured_names)} dimensions)")
+    
+    return coverage_pct >= 80  # At least 80% coverage required
 
 
 def main():
     """Main processing function."""
-    print("Loading raw benchmark data...")
-    raw_data = load_raw_data()
+    print("Configuration-Driven GRI Data Processing")
+    print("=" * 50)
     
-    # Ensure output directory exists
-    os.makedirs("data/processed", exist_ok=True)
+    # Load configuration
+    try:
+        config = GRIConfig()
+        print("✓ Configuration loaded successfully")
+    except Exception as e:
+        print(f"❌ Error loading configuration: {e}")
+        return False
     
-    print("Processing Country x Gender x Age benchmark...")
-    country_gender_age = process_country_gender_age(
-        raw_data['male_pop'], 
-        raw_data['female_pop']
-    )
+    # Process all configured benchmarks
+    try:
+        benchmarks = process_all_configured_benchmarks(config)
+        print(f"\\n✓ Processed {len(benchmarks)} benchmark dimensions")
+    except Exception as e:
+        print(f"❌ Error processing benchmarks: {e}")
+        return False
     
-    print("Processing Country x Religion benchmark...")
-    country_religion = process_country_religion(raw_data['religion'])
+    # Save benchmarks
+    try:
+        save_processed_benchmarks(benchmarks)
+        print("✓ All benchmarks saved successfully")
+    except Exception as e:
+        print(f"❌ Error saving benchmarks: {e}")
+        return False
     
-    print("Processing Country x Environment benchmark...")
-    country_environment = process_country_environment(raw_data['urban_rural'])
+    # Validate coverage
+    if validate_configuration_coverage(config, benchmarks):
+        print("✓ Configuration coverage validation passed")
+    else:
+        print("⚠️  Configuration coverage validation failed")
     
-    # Save processed files
-    print("Saving processed benchmark files...")
+    print("\\n" + "=" * 50)
+    print("Configuration-driven processing complete!")
+    print(f"Created {len(benchmarks)} benchmark files according to dimensions.yaml")
     
-    country_gender_age.to_csv("data/processed/benchmark_country_gender_age.csv", index=False)
-    print(f"  - benchmark_country_gender_age.csv: {len(country_gender_age)} strata")
-    
-    country_religion.to_csv("data/processed/benchmark_country_religion.csv", index=False) 
-    print(f"  - benchmark_country_religion.csv: {len(country_religion)} strata")
-    
-    country_environment.to_csv("data/processed/benchmark_country_environment.csv", index=False)
-    print(f"  - benchmark_country_environment.csv: {len(country_environment)} strata")
-    
-    # Verify proportions sum to 1.0
-    print("\nVerifying proportion sums:")
-    print(f"  - Country x Gender x Age: {country_gender_age['population_proportion'].sum():.6f}")
-    print(f"  - Country x Religion: {country_religion['population_proportion'].sum():.6f}")
-    print(f"  - Country x Environment: {country_environment['population_proportion'].sum():.6f}")
-    
-    print("\nProcessing complete!")
+    return True
 
 
 if __name__ == "__main__":
-    main()
+    success = main()
+    sys.exit(0 if success else 1)
