@@ -1,0 +1,15 @@
+{
+  "survey_name": "GD3",
+  "survey_participants": 970,
+  "dynamic_threshold": 0.0005154639175257732,
+  "gri_country_gender_age": 0.37457024022255125,
+  "gri_country_religion": 0.516503286497891,
+  "gri_country_environment": 0.38724603552864956,
+  "average_gri": 0.4261065207496973,
+  "diversity_country_gender_age": 0.35833333333333334,
+  "diversity_country_religion": 0.36666666666666664,
+  "diversity_country_environment": 0.3602150537634409,
+  "average_diversity": 0.3617383512544803,
+  "assessment": "Moderate representativeness",
+  "coverage_assessment": "Poor diversity coverage"
+}

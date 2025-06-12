@@ -1,12 +1,12 @@
 {
   "survey_count": 3,
   "total_participants": 3352,
-  "average_gri_across_surveys": 0.24613690452225223,
-  "average_diversity_across_surveys": 0.36483591943813237,
+  "average_gri_across_surveys": 0.41269950520064214,
+  "average_diversity_across_surveys": 0.37696283980013273,
   "best_gri_survey": "GD3",
-  "best_gri_score": 0.24969070296295134,
+  "best_gri_score": 0.4261065207496973,
   "best_diversity_survey": "GD1",
-  "best_diversity_score": 0.37649450023912007,
-  "gri_improvement_gd1_to_gd3": 0.001245108622939417,
-  "diversity_improvement_gd1_to_gd3": -0.029211987266447415
+  "best_diversity_score": 0.38530560652734835,
+  "gri_improvement_gd1_to_gd3": 0.013308736552202938,
+  "diversity_improvement_gd1_to_gd3": -0.02356725527286807
 }
