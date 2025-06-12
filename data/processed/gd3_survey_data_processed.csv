@@ -1,0 +1,987 @@
+age_group,gender,country,religion,environment,region,continent
+36-45,Female,United States,Christianity,Urban,Northern America,North America
+36-45,Male,Denmark,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+46-55,Male,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+46-55,Male,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Female,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Female,United States,Christianity,Rural,Northern America,North America
+46-55,Female,Italy,Christianity,Urban,Southern Europe,Europe
+18-25,Male,United States,Christianity,Urban,Northern America,North America
+46-55,Male,United Kingdom,I do not identify with any religious group or faith,Rural,Northern Europe,Europe
+46-55,Female,United States,Christianity,Rural,Northern America,North America
+26-35,Female,United States,Christianity,Urban,Northern America,North America
+18-25,Male,United States,Other religious group,Urban,Northern America,North America
+18-25,Female,Mexico,I do not identify with any religious group or faith,Urban,Central America,North America
+36-45,Female,United States,Christianity,Urban,Northern America,North America
+46-55,Female,United Kingdom,Christianity,Urban,Northern Europe,Europe
+26-35,Female,Netherlands,I do not identify with any religious group or faith,Rural,Western Europe,Europe
+46-55,Male,United Kingdom,Christianity,Urban,Northern Europe,Europe
+36-45,Male,South Africa,Christianity,Urban,Southern Africa,Africa
+46-55,Female,United States,I do not identify with any religious group or faith,Rural,Northern America,North America
+26-35,Female,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+26-35,Male,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+26-35,Female,United States,Christianity,Urban,Northern America,North America
+26-35,Male,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+46-55,Female,United Kingdom,Christianity,Urban,Northern Europe,Europe
+26-35,Female,United Kingdom,I do not identify with any religious group or faith,Rural,Northern Europe,Europe
+26-35,Male,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+36-45,Male,Germany,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Female,South Africa,Christianity,Urban,Southern Africa,Africa
+36-45,Female,United Kingdom,Christianity,Urban,Northern Europe,Europe
+26-35,Female,United States,Christianity,Urban,Northern America,North America
+18-25,Male,United States,Christianity,Urban,Northern America,North America
+26-35,Female,Poland,Christianity,Urban,Eastern Europe,Europe
+26-35,Male,Mexico,I do not identify with any religious group or faith,Rural,Central America,North America
+36-45,Male,United States,Christianity,Urban,Northern America,North America
+26-35,Female,China,Buddhism,Urban,Eastern Asia,Asia
+36-45,Male,United States,Christianity,Urban,Northern America,North America
+46-55,Female,United States,Christianity,Urban,Northern America,North America
+46-55,Female,United States,I do not identify with any religious group or faith,Rural,Northern America,North America
+46-55,Male,United States,Christianity,Urban,Northern America,North America
+26-35,Female,South Africa,Christianity,Urban,Southern Africa,Africa
+26-35,Female,South Africa,Christianity,Urban,Southern Africa,Africa
+46-55,Male,United States,Christianity,Urban,Northern America,North America
+36-45,Male,Pakistan,Islam,Rural,Southern Asia,Asia
+26-35,Female,United States,Christianity,Urban,Northern America,North America
+65+,Female,United States,Christianity,Urban,Northern America,North America
+18-25,Male,United States,Christianity,Urban,Northern America,North America
+65+,Female,South Africa,Christianity,Urban,Southern Africa,Africa
+26-35,Female,United States,Christianity,Urban,Northern America,North America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+65+,Male,United States,Christianity,Urban,Northern America,North America
+46-55,Female,India,Other religious group,Urban,Southern Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+46-55,Female,Hungary,Hinduism,Rural,Eastern Europe,Europe
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+36-45,Male,Chile,Buddhism,Urban,South America,South America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+56-65,Male,United States,Christianity,Urban,Northern America,North America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,United States,Christianity,Urban,Northern America,North America
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+56-65,Female,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+18-25,Female,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Female,Kenya,Other religious group,Urban,Eastern Africa,Africa
+18-25,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Female,Chile,Christianity,Urban,South America,South America
+26-35,Female,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Brazil,Christianity,Urban,South America,South America
+18-25,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+36-45,Male,United States,Christianity,Rural,Northern America,North America
+26-35,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+36-45,Male,India,Islam,Rural,Southern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+18-25,Female,Türkiye,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,Portugal,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Female,United States,Christianity,Urban,Northern America,North America
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Female,South Africa,Christianity,Urban,Southern Africa,Africa
+36-45,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Non-binary,Mexico,Buddhism,Urban,Central America,North America
+18-25,Male,United States,Christianity,Urban,Northern America,North America
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Kenya,Islam,Urban,Eastern Africa,Africa
+36-45,Male,Argentina,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Mexico,I do not identify with any religious group or faith,Urban,Central America,North America
+36-45,Female,Brazil,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Male,Singapore,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+18-25,Male,Chile,Other religious group,Urban,South America,South America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Germany,Other religious group,Urban,Western Europe,Europe
+26-35,Male,Chile,Christianity,Urban,South America,South America
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Female,Brazil,Christianity,Urban,South America,South America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Morocco,Islam,Urban,Northern Africa,Africa
+56-65,Male,France,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Female,Spain,I do not identify with any religious group or faith,Rural,Southern Europe,Europe
+36-45,Male,France,I do not identify with any religious group or faith,Rural,Western Europe,Europe
+26-35,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Female,Italy,Christianity,Urban,Southern Europe,Europe
+36-45,Male,Poland,Christianity,Rural,Eastern Europe,Europe
+36-45,Male,Chile,Christianity,Urban,South America,South America
+36-45,Female,Türkiye,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Male,Spain,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Other / prefer not to say,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+36-45,Male,Brazil,Christianity,Urban,South America,South America
+36-45,Male,Türkiye,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+46-55,Male,Germany,Christianity,Urban,Western Europe,Europe
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Mexico,Christianity,Urban,Central America,North America
+18-25,Female,Algeria,Islam,Urban,Northern Africa,Africa
+18-25,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+36-45,Male,United States,Christianity,Urban,Northern America,North America
+36-45,Male,Mexico,Christianity,Urban,Central America,North America
+26-35,Female,Brazil,Christianity,Urban,South America,South America
+36-45,Male,Brazil,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Russian Federation,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+56-65,Female,Brazil,Christianity,Urban,South America,South America
+36-45,Female,Türkiye,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+18-25,Male,Bangladesh,Other religious group,Urban,Southern Asia,Asia
+65+,Female,South Africa,Christianity,Rural,Southern Africa,Africa
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Female,Mexico,Christianity,Urban,Central America,North America
+18-25,Male,Brazil,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,India,Other religious group,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Canada,Christianity,Urban,Northern America,North America
+36-45,Male,Mexico,I do not identify with any religious group or faith,Urban,Central America,North America
+18-25,Female,Poland,Christianity,Rural,Eastern Europe,Europe
+26-35,Female,Germany,I do not identify with any religious group or faith,Rural,Western Europe,Europe
+36-45,Female,India,Islam,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,India,Islam,Urban,Southern Asia,Asia
+36-45,Female,Ukraine,Christianity,Urban,Eastern Europe,Europe
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Brazil,Other religious group,Urban,South America,South America
+36-45,Male,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Male,Italy,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+46-55,Male,Australia,Christianity,Urban,Australia and New Zealand,Oceania
+46-55,Male,Germany,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Male,Slovakia,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Female,Mexico,I do not identify with any religious group or faith,Urban,Central America,North America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Brazil,Christianity,Urban,South America,South America
+18-25,Female,Germany,I do not identify with any religious group or faith,Rural,Western Europe,Europe
+36-45,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+36-45,Male,Italy,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Brazil,Christianity,Urban,South America,South America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Croatia,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Non-binary,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Male,France,I do not identify with any religious group or faith,Rural,Western Europe,Europe
+46-55,Male,United States,Christianity,Urban,Northern America,North America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+56-65,Female,Brazil,Buddhism,Urban,South America,South America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,Canada,Christianity,Urban,Northern America,North America
+18-25,Male,Germany,Christianity,Urban,Western Europe,Europe
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Mexico,Other religious group,Urban,Central America,North America
+18-25,Male,United States,Christianity,Urban,Northern America,North America
+26-35,Female,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Male,Italy,Christianity,Urban,Southern Europe,Europe
+46-55,Male,Norway,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+36-45,Male,Greece,Christianity,Urban,Southern Europe,Europe
+26-35,Female,Türkiye,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+26-35,Male,Italy,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Female,Mexico,Other religious group,Urban,Central America,North America
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Male,Poland,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Non-binary,Spain,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Morocco,Islam,Urban,Northern Africa,Africa
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+26-35,Male,Mexico,Christianity,Urban,Central America,North America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Austria,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Mexico,I do not identify with any religious group or faith,Urban,Central America,North America
+26-35,Male,Mexico,I do not identify with any religious group or faith,Urban,Central America,North America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Netherlands,Christianity,Rural,Western Europe,Europe
+36-45,Male,India,Islam,Urban,Southern Asia,Asia
+26-35,Female,Brazil,Other religious group,Urban,South America,South America
+18-25,Male,South Africa,Christianity,Urban,Southern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+56-65,Male,Brazil,Christianity,Urban,South America,South America
+26-35,Male,Spain,I do not identify with any religious group or faith,Rural,Southern Europe,Europe
+36-45,Female,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+26-35,Male,Germany,Christianity,Urban,Western Europe,Europe
+36-45,Female,Malawi,Christianity,Urban,Eastern Africa,Africa
+26-35,Non-binary,United States,Other religious group,Rural,Northern America,North America
+26-35,Male,Brazil,Christianity,Urban,South America,South America
+26-35,Female,Algeria,Islam,Urban,Northern Africa,Africa
+26-35,Male,Germany,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+56-65,Male,Ireland {Republic},Christianity,Urban,,
+56-65,Female,Chile,Christianity,Urban,South America,South America
+46-55,Female,Canada,Christianity,Urban,Northern America,North America
+36-45,Female,Israel,Judaism,Urban,Western Asia,Asia
+18-25,Female,India,Islam,Rural,Southern Asia,Asia
+36-45,Female,Armenia,Christianity,Urban,Western Asia,Asia
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+56-65,Female,United States,Christianity,Urban,Northern America,North America
+18-25,Male,Bangladesh,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Male,Slovakia,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Male,Brazil,Christianity,Urban,South America,South America
+36-45,Male,Poland,Christianity,Urban,Eastern Europe,Europe
+18-25,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+36-45,Male,Switzerland,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+56-65,Male,United States,Christianity,Urban,Northern America,North America
+18-25,Female,Canada,Islam,Urban,Northern America,North America
+26-35,Male,Israel,Christianity,Urban,Western Asia,Asia
+18-25,Male,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Chile,Christianity,Urban,South America,South America
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,France,Christianity,Urban,Western Europe,Europe
+26-35,Male,Australia,I do not identify with any religious group or faith,Urban,Australia and New Zealand,Oceania
+46-55,Male,United States,Christianity,Urban,Northern America,North America
+18-25,Male,Brazil,I do not identify with any religious group or faith,Urban,South America,South America
+36-45,Male,Mexico,I do not identify with any religious group or faith,Urban,Central America,North America
+18-25,Male,France,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+36-45,Male,Portugal,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Male,Brazil,Christianity,Urban,South America,South America
+18-25,Male,Vietnam,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+18-25,Male,France,Other religious group,Urban,Western Europe,Europe
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,India,Hinduism,Rural,Southern Asia,Asia
+56-65,Male,Brazil,Christianity,Urban,South America,South America
+18-25,Female,Canada,Islam,Urban,Northern America,North America
+36-45,Female,France,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Female,New Zealand,I do not identify with any religious group or faith,Rural,Australia and New Zealand,Oceania
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Slovakia,Christianity,Urban,Eastern Europe,Europe
+18-25,Female,Poland,I do not identify with any religious group or faith,Rural,Eastern Europe,Europe
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Brazil,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Male,India,Islam,Urban,Southern Asia,Asia
+26-35,Female,Australia,I do not identify with any religious group or faith,Urban,Australia and New Zealand,Oceania
+46-55,Male,Brazil,Christianity,Urban,South America,South America
+36-45,Female,Australia,I do not identify with any religious group or faith,Urban,Australia and New Zealand,Oceania
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Chile,Christianity,Urban,South America,South America
+56-65,Female,United States,Christianity,Rural,Northern America,North America
+26-35,Female,Indonesia,Islam,Rural,South-eastern Asia,Asia
+46-55,Female,Brazil,Christianity,Urban,South America,South America
+26-35,Female,Chile,Buddhism,Urban,South America,South America
+26-35,Male,Israel,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+26-35,Male,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Male,Belgium,Christianity,Urban,Western Europe,Europe
+26-35,Female,Brazil,Other religious group,Urban,South America,South America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Korea South,Buddhism,Urban,,
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Female,Brazil,Christianity,Urban,South America,South America
+36-45,Male,Sweden,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+18-25,Male,Morocco,Islam,Urban,Northern Africa,Africa
+18-25,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Male,Türkiye,Islam,Urban,Western Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Italy,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Chile,Christianity,Urban,South America,South America
+36-45,Female,Brazil,Christianity,Urban,South America,South America
+26-35,Female,Hungary,Islam,Urban,Eastern Europe,Europe
+36-45,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,France,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Male,Chile,Christianity,Urban,South America,South America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,Israel,Judaism,Urban,Western Asia,Asia
+26-35,Female,Morocco,Islam,Urban,Northern Africa,Africa
+46-55,Female,Canada,Christianity,Urban,Northern America,North America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Kenya,Other religious group,Urban,Eastern Africa,Africa
+18-25,Female,China,Buddhism,Urban,Eastern Asia,Asia
+18-25,Female,India,Islam,Urban,Southern Asia,Asia
+46-55,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,Russian Federation,Christianity,Urban,Eastern Europe,Europe
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Russian Federation,Christianity,Urban,Eastern Europe,Europe
+18-25,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Male,Egypt,Islam,Urban,Northern Africa,Africa
+46-55,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,India,Islam,Urban,Southern Asia,Asia
+18-25,Male,Finland,I do not identify with any religious group or faith,Rural,Northern Europe,Europe
+18-25,Male,Mexico,Christianity,Urban,Central America,North America
+36-45,Male,United Arab Emirates,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+18-25,Female,India,Christianity,Urban,Southern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Palestine,Islam,Urban,,
+46-55,Male,Spain,Christianity,Urban,Southern Europe,Europe
+46-55,Male,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Male,Brazil,I do not identify with any religious group or faith,Urban,South America,South America
+18-25,Female,Türkiye,Islam,Urban,Western Asia,Asia
+46-55,Female,United States,Christianity,Urban,Northern America,North America
+26-35,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,Germany,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+18-25,Female,Morocco,Islam,Urban,Northern Africa,Africa
+36-45,Male,India,Hinduism,Rural,Southern Asia,Asia
+46-55,Female,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Male,Brazil,Christianity,Urban,South America,South America
+36-45,Male,Slovakia,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+46-55,Female,Russian Federation,I do not identify with any religious group or faith,Rural,Eastern Europe,Europe
+46-55,Female,Chile,Christianity,Urban,South America,South America
+18-25,Female,France,I do not identify with any religious group or faith,Rural,Western Europe,Europe
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Chile,Christianity,Urban,South America,South America
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Chile,Christianity,Urban,South America,South America
+36-45,Male,Australia,I do not identify with any religious group or faith,Urban,Australia and New Zealand,Oceania
+26-35,Male,France,Christianity,Urban,Western Europe,Europe
+26-35,Female,United States,Hinduism,Urban,Northern America,North America
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+46-55,Male,Türkiye,Islam,Urban,Western Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Netherlands,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+18-25,Male,India,Christianity,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+26-35,Female,Spain,Christianity,Urban,Southern Europe,Europe
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,United Kingdom,Islam,Urban,Northern Europe,Europe
+65+,Female,Cuba,I do not identify with any religious group or faith,Urban,Caribbean,North America
+18-25,Female,Kenya,Christianity,Rural,Eastern Africa,Africa
+36-45,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+65+,Male,United States,Christianity,Urban,Northern America,North America
+18-25,Male,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Female,Australia,Christianity,Urban,Australia and New Zealand,Oceania
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Female,Türkiye,Islam,Urban,Western Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Australia,I do not identify with any religious group or faith,Rural,Australia and New Zealand,Oceania
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Poland,Christianity,Urban,Eastern Europe,Europe
+26-35,Female,Chile,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Female,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Female,India,Islam,Urban,Southern Asia,Asia
+46-55,Male,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+36-45,Male,Pakistan,Islam,Rural,Southern Asia,Asia
+18-25,Male,Israel,Judaism,Urban,Western Asia,Asia
+18-25,Male,Kenya,Christianity,Rural,Eastern Africa,Africa
+36-45,Female,Russian Federation,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Indonesia,Islam,Rural,South-eastern Asia,Asia
+26-35,Female,Brazil,Christianity,Urban,South America,South America
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Chile,Christianity,Urban,South America,South America
+36-45,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Male,Brazil,I do not identify with any religious group or faith,Urban,South America,South America
+26-35,Male,Kenya,I do not identify with any religious group or faith,Urban,Eastern Africa,Africa
+26-35,Female,Pakistan,Islam,Rural,Southern Asia,Asia
+26-35,Male,China,Buddhism,Urban,Eastern Asia,Asia
+18-25,Male,Spain,I do not identify with any religious group or faith,Rural,Southern Europe,Europe
+26-35,Male,India,Islam,Urban,Southern Asia,Asia
+46-55,Male,Brazil,Christianity,Urban,South America,South America
+46-55,Female,Russian Federation,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+36-45,Female,Slovakia,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+36-45,Female,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Slovakia,I do not identify with any religious group or faith,Rural,Eastern Europe,Europe
+18-25,Male,Israel,Judaism,Urban,Western Asia,Asia
+26-35,Female,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+18-25,Female,Saudi Arabia,Islam,Urban,Western Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Algeria,Islam,Urban,Northern Africa,Africa
+46-55,Male,France,Christianity,Urban,Western Europe,Europe
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Islam,Urban,Eastern Africa,Africa
+26-35,Male,Slovakia,Christianity,Urban,Eastern Europe,Europe
+18-25,Female,Morocco,Islam,Urban,Northern Africa,Africa
+18-25,Male,Canada,Christianity,Urban,Northern America,North America
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Indonesia,Islam,Rural,South-eastern Asia,Asia
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Non-binary,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,Saudi Arabia,Islam,Urban,Western Asia,Asia
+18-25,Male,Israel,Islam,Urban,Western Asia,Asia
+36-45,Male,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Female,Vietnam,Buddhism,Urban,South-eastern Asia,Asia
+36-45,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Canada,Islam,Urban,Northern America,North America
+46-55,Male,Spain,Christianity,Urban,Southern Europe,Europe
+26-35,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Female,Philippines,Christianity,Rural,South-eastern Asia,Asia
+18-25,Female,Israel,Judaism,Rural,Western Asia,Asia
+18-25,Male,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Indonesia,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+26-35,Male,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Kenya,Christianity,Rural,Eastern Africa,Africa
+36-45,Male,Malaysia,Islam,Urban,South-eastern Asia,Asia
+36-45,Male,Indonesia,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,Indonesia,Islam,Rural,South-eastern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,United Kingdom,Christianity,Urban,Northern Europe,Europe
+36-45,Female,Indonesia,Christianity,Urban,South-eastern Asia,Asia
+26-35,Male,Vietnam,Buddhism,Urban,South-eastern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Vietnam,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+18-25,Female,Tunisia,Islam,Urban,Northern Africa,Africa
+26-35,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Female,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Female,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Male,Hungary,Islam,Urban,Eastern Europe,Europe
+46-55,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Male,Ukraine,Christianity,Urban,Eastern Europe,Europe
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Kenya,Islam,Urban,Eastern Africa,Africa
+18-25,Male,Vietnam,Christianity,Urban,South-eastern Asia,Asia
+46-55,Female,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Female,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Male,Belgium,Islam,Urban,Western Europe,Europe
+36-45,Male,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+46-55,Female,United Kingdom,Islam,Rural,Northern Europe,Europe
+18-25,Male,Morocco,Islam,Urban,Northern Africa,Africa
+18-25,Female,India,Islam,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,India,Hinduism,Rural,Southern Asia,Asia
+26-35,Female,India,Islam,Urban,Southern Asia,Asia
+18-25,Female,Kazakhstan,Islam,Urban,Central Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Male,Malaysia,Islam,Urban,South-eastern Asia,Asia
+26-35,Female,Indonesia,Islam,Rural,South-eastern Asia,Asia
+36-45,Male,India,Islam,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Australia,Christianity,Urban,Australia and New Zealand,Oceania
+18-25,Female,Philippines,Christianity,Rural,South-eastern Asia,Asia
+26-35,Male,Canada,Islam,Urban,Northern America,North America
+18-25,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+18-25,Female,United Kingdom,Islam,Urban,Northern Europe,Europe
+36-45,Male,Italy,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Israel,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+18-25,Female,Egypt,I do not identify with any religious group or faith,Urban,Northern Africa,Africa
+18-25,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,Belgium,Islam,Rural,Western Europe,Europe
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Korea South,I do not identify with any religious group or faith,Urban,,
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Morocco,Islam,Urban,Northern Africa,Africa
+46-55,Male,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Male,India,Islam,Urban,Southern Asia,Asia
+26-35,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Female,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+26-35,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Morocco,Islam,Urban,Northern Africa,Africa
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Sudan,Islam,Urban,Northern Africa,Africa
+36-45,Male,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Male,Saudi Arabia,Islam,Urban,Western Asia,Asia
+26-35,Female,Malawi,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,India,Islam,Urban,Southern Asia,Asia
+36-45,Male,Bangladesh,Other religious group,Urban,Southern Asia,Asia
+26-35,Female,Morocco,Islam,Rural,Northern Africa,Africa
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+46-55,Female,India,Hinduism,Rural,Southern Asia,Asia
+18-25,Male,Indonesia,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,Singapore,Islam,Urban,South-eastern Asia,Asia
+26-35,Female,Algeria,Islam,Urban,Northern Africa,Africa
+18-25,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Female,Saudi Arabia,Islam,Urban,Western Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,Vietnam,Christianity,Urban,South-eastern Asia,Asia
+46-55,Female,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+36-45,Female,Malaysia,Christianity,Urban,South-eastern Asia,Asia
+36-45,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+56-65,Male,Japan,Buddhism,Urban,Eastern Asia,Asia
+65+,Female,Canada,Christianity,Urban,Northern America,North America
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Singapore,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Singapore,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+56-65,Male,India,Christianity,Urban,Southern Asia,Asia
+56-65,Male,Japan,I do not identify with any religious group or faith,Rural,Eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+46-55,Male,India,Christianity,Rural,Southern Asia,Asia
+26-35,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+18-25,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+36-45,Female,India,Sikhism,Urban,Southern Asia,Asia
+18-25,Male,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Other / prefer not to say,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Female,India,Hinduism,Rural,Southern Asia,Asia
+46-55,Male,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Female,United Arab Emirates,Islam,Urban,Western Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,India,Islam,Urban,Southern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Vietnam,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,India,Buddhism,Urban,Southern Asia,Asia
+18-25,Male,Vietnam,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+18-25,Male,Kenya,Islam,Urban,Eastern Africa,Africa
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Christianity,Rural,Southern Asia,Asia
+18-25,Male,Vietnam,Buddhism,Urban,South-eastern Asia,Asia
+46-55,Male,India,Christianity,Rural,Southern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Kenya,I do not identify with any religious group or faith,Rural,Eastern Africa,Africa
+36-45,Female,Malaysia,Islam,Urban,South-eastern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Indonesia,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,India,Christianity,Urban,Southern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Rural,Southern Asia,Asia
+26-35,Female,India,Christianity,Urban,Southern Asia,Asia
+18-25,Male,Vietnam,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+46-55,Female,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Male,Canada,Islam,Urban,Northern America,North America
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Female,Korea South,I do not identify with any religious group or faith,Urban,,
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Kenya,Christianity,Rural,Eastern Africa,Africa
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Canada,Islam,Urban,Northern America,North America
+36-45,Female,Russian Federation,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+36-45,Female,India,Christianity,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,India,Sikhism,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Rural,Southern Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Female,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+36-45,Male,Israel,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Male,India,Other religious group,Urban,Southern Asia,Asia
+18-25,Non-binary,Morocco,Islam,Urban,Northern Africa,Africa
+26-35,Female,India,Hinduism,Rural,Southern Asia,Asia
+36-45,Female,United States,Hinduism,Urban,Northern America,North America
+18-25,Male,Kenya,Christianity,Rural,Eastern Africa,Africa
+18-25,Male,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Female,India,Hinduism,Rural,Southern Asia,Asia
+18-25,Male,India,Christianity,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Rural,Southern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Female,India,Christianity,Rural,Southern Asia,Asia
+26-35,Male,France,Buddhism,Urban,Western Europe,Europe
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+18-25,Male,Kenya,Islam,Urban,Eastern Africa,Africa
+36-45,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Male,India,Sikhism,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,India,Islam,Urban,Southern Asia,Asia
+36-45,Non-binary,Israel,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Malaysia,Islam,Urban,South-eastern Asia,Asia
+36-45,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+36-45,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Rural,Eastern Africa,Africa
+36-45,Female,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+56-65,Male,India,Christianity,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Male,Singapore,Christianity,Urban,South-eastern Asia,Asia
+36-45,Female,Kazakhstan,Christianity,Urban,Central Asia,Asia
+36-45,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Female,Kazakhstan,Christianity,Urban,Central Asia,Asia
+18-25,Male,Slovakia,Christianity,Urban,Eastern Europe,Europe
+26-35,Female,Iceland,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+18-25,Male,Israel,Judaism,Urban,Western Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+56-65,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+26-35,Female,Kenya,Christianity,Rural,Eastern Africa,Africa
+46-55,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Israel,Judaism,Urban,Western Asia,Asia
+18-25,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Indonesia,Islam,Rural,South-eastern Asia,Asia
+18-25,Male,India,Islam,Urban,Southern Asia,Asia
+26-35,Female,Kazakhstan,Christianity,Urban,Central Asia,Asia
+46-55,Male,India,Islam,Urban,Southern Asia,Asia
+56-65,Female,Russian Federation,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Indonesia,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+36-45,Male,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Male,Egypt,Islam,Urban,Northern Africa,Africa
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Kazakhstan,Christianity,Urban,Central Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,India,Sikhism,Urban,Southern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kenya,Christianity,Rural,Eastern Africa,Africa
+18-25,Female,Vietnam,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Islam,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Israel,Judaism,Urban,Western Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Male,Romania,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Male,Kenya,Christianity,Rural,Eastern Africa,Africa
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Kazakhstan,Islam,Urban,Central Asia,Asia
+36-45,Male,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+18-25,Male,Slovakia,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,Israel,Judaism,Urban,Western Asia,Asia
+26-35,Male,Singapore,Christianity,Urban,South-eastern Asia,Asia
+36-45,Male,Slovakia,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+36-45,Female,Sweden,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Female,Israel,Judaism,Urban,Western Asia,Asia
+18-25,Female,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Israel,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+36-45,Female,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+18-25,Female,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,India,Buddhism,Urban,Southern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,Indonesia,Christianity,Urban,South-eastern Asia,Asia
+26-35,Male,Israel,I do not identify with any religious group or faith,Rural,Western Asia,Asia
+18-25,Female,Malawi,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Israel,Judaism,Urban,Western Asia,Asia
+26-35,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,Spain,Islam,Urban,Southern Europe,Europe
+36-45,Female,Finland,Christianity,Urban,Northern Europe,Europe
+18-25,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+18-25,Male,Israel,Judaism,Urban,Western Asia,Asia
+36-45,Female,Germany,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+36-45,Male,Kazakhstan,Christianity,Urban,Central Asia,Asia
+26-35,Female,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Female,Russian Federation,I do not identify with any religious group or faith,Urban,Eastern Europe,Europe
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+36-45,Female,Saint Vincent & the Grenadines,Christianity,Urban,,
+26-35,Other / prefer not to say,Israel,I do not identify with any religious group or faith,Urban,Western Asia,Asia
+18-25,Male,Indonesia,Islam,Rural,South-eastern Asia,Asia
+26-35,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Female,Malawi,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Male,Malaysia,Islam,Urban,South-eastern Asia,Asia
+18-25,Male,Indonesia,Buddhism,Rural,South-eastern Asia,Asia
+36-45,Male,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+36-45,Female,Spain,Christianity,Urban,Southern Europe,Europe
+18-25,Male,Indonesia,Islam,Urban,South-eastern Asia,Asia
+26-35,Other / prefer not to say,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,Hungary,Islam,Rural,Eastern Europe,Europe
+26-35,Male,Malaysia,Buddhism,Urban,South-eastern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Female,India,Christianity,Rural,Southern Asia,Asia
+36-45,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+46-55,Male,Israel,Judaism,Urban,Western Asia,Asia
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+46-55,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,India,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Female,Malawi,Christianity,Urban,Eastern Africa,Africa
+36-45,Male,Egypt,Islam,Urban,Northern Africa,Africa
+18-25,Male,India,Hinduism,Urban,Southern Asia,Asia
+36-45,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+46-55,Male,Canada,Islam,Urban,Northern America,North America
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,Morocco,Islam,Urban,Northern Africa,Africa
+26-35,Female,Finland,Buddhism,Urban,Northern Europe,Europe
+36-45,Male,Malaysia,I do not identify with any religious group or faith,Urban,South-eastern Asia,Asia
+26-35,Female,Canada,I do not identify with any religious group or faith,Urban,Northern America,North America
+18-25,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Male,Algeria,Islam,Urban,Northern Africa,Africa
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+56-65,Male,Egypt,Islam,Urban,Northern Africa,Africa
+26-35,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+18-25,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Male,Kazakhstan,Islam,Urban,Central Asia,Asia
+26-35,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+36-45,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+26-35,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+18-25,Female,Zimbabwe,I do not identify with any religious group or faith,Urban,Eastern Africa,Africa
+26-35,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Türkiye,Islam,Urban,Western Asia,Asia
+18-25,Male,Malaysia,Islam,Rural,South-eastern Asia,Asia
+26-35,Female,Kenya,Islam,Urban,Eastern Africa,Africa
+36-45,Male,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+56-65,Female,Japan,Buddhism,Urban,Eastern Asia,Asia
+26-35,Female,China,Buddhism,Urban,Eastern Asia,Asia
+26-35,Female,United Kingdom,Christianity,Rural,Northern Europe,Europe
+18-25,Male,Japan,Judaism,Urban,Eastern Asia,Asia
+26-35,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Female,Korea South,I do not identify with any religious group or faith,Urban,,
+36-45,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+46-55,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,Japan,Buddhism,Rural,Eastern Asia,Asia
+18-25,Female,Australia,I do not identify with any religious group or faith,Urban,Australia and New Zealand,Oceania
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Female,Algeria,Islam,Urban,Northern Africa,Africa
+65+,Male,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Female,Kazakhstan,I do not identify with any religious group or faith,Urban,Central Asia,Asia
+36-45,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+18-25,Female,China,Buddhism,Urban,Eastern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,New Zealand,I do not identify with any religious group or faith,Urban,Australia and New Zealand,Oceania
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Morocco,Islam,Urban,Northern Africa,Africa
+56-65,Female,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+18-25,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,Philippines,Christianity,Urban,South-eastern Asia,Asia
+26-35,Male,Pakistan,Islam,Urban,Southern Asia,Asia
+26-35,Male,Pakistan,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+18-25,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Female,Indonesia,Christianity,Rural,South-eastern Asia,Asia
+18-25,Female,China,Buddhism,Urban,Eastern Asia,Asia
+36-45,Male,Spain,Christianity,Urban,Southern Europe,Europe
+46-55,Male,Libya,Other religious group,Urban,Northern Africa,Africa
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Male,Vietnam,Buddhism,Urban,South-eastern Asia,Asia
+46-55,Female,Indonesia,Islam,Urban,South-eastern Asia,Asia
+18-25,Female,Kenya,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Malawi,Christianity,Urban,Eastern Africa,Africa
+26-35,Female,Malawi,Christianity,Urban,Eastern Africa,Africa
+46-55,Male,Japan,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+46-55,Male,India,Hinduism,Urban,Southern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Other / prefer not to say,United States,Buddhism,Urban,Northern America,North America
+26-35,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Female,Philippines,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+26-35,Male,Sweden,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+46-55,Female,Singapore,Buddhism,Urban,South-eastern Asia,Asia
+36-45,Female,United Kingdom,Islam,Urban,Northern Europe,Europe
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+36-45,Female,China,Christianity,Urban,Eastern Asia,Asia
+18-25,Male,Korea South,I do not identify with any religious group or faith,Urban,,
+36-45,Male,Bangladesh,I do not identify with any religious group or faith,Urban,Southern Asia,Asia
+36-45,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Female,Netherlands,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Female,China,Buddhism,Urban,Eastern Asia,Asia
+36-45,Male,China,Buddhism,Urban,Eastern Asia,Asia
+26-35,Male,United Kingdom,Christianity,Urban,Northern Europe,Europe
+26-35,Female,Malaysia,Buddhism,Urban,South-eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,France,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+36-45,Female,Malaysia,Christianity,Urban,South-eastern Asia,Asia
+18-25,Male,Bangladesh,Islam,Urban,Southern Asia,Asia
+26-35,Female,Singapore,Christianity,Urban,South-eastern Asia,Asia
+26-35,Female,Switzerland,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+18-25,Female,Malaysia,Buddhism,Urban,South-eastern Asia,Asia
+26-35,Male,Malaysia,Christianity,Urban,South-eastern Asia,Asia
+18-25,Other / prefer not to say,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Female,Canada,Buddhism,Urban,Northern America,North America
+46-55,Female,Pakistan,Islam,Rural,Southern Asia,Asia
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+18-25,Female,Bangladesh,Islam,Urban,Southern Asia,Asia
+18-25,Female,China,Buddhism,Urban,Eastern Asia,Asia
+26-35,Female,Korea South,I do not identify with any religious group or faith,Urban,,
+18-25,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+36-45,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Korea South,I do not identify with any religious group or faith,Urban,,
+18-25,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Panama,Christianity,Rural,Central America,North America
+18-25,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,China,Other religious group,Urban,Eastern Asia,Asia
+26-35,Female,Netherlands,I do not identify with any religious group or faith,Urban,Western Europe,Europe
+26-35,Female,Italy,I do not identify with any religious group or faith,Urban,Southern Europe,Europe
+26-35,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+36-45,Male,United Kingdom,Christianity,Urban,Northern Europe,Europe
+26-35,Female,United States,Christianity,Urban,Northern America,North America
+36-45,Female,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+46-55,Female,Korea South,Christianity,Urban,,
+26-35,Female,United Kingdom,Islam,Urban,Northern Europe,Europe
+26-35,Non-binary,Poland,Other religious group,Urban,Eastern Europe,Europe
+26-35,Male,China,I do not identify with any religious group or faith,Rural,Eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,United Kingdom,I do not identify with any religious group or faith,Rural,Northern Europe,Europe
+18-25,Female,China,Christianity,Urban,Eastern Asia,Asia
+18-25,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+18-25,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+36-45,Female,United States,I do not identify with any religious group or faith,Rural,Northern America,North America
+26-35,Female,Canada,Christianity,Urban,Northern America,North America
+36-45,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,United States,I do not identify with any religious group or faith,Urban,Northern America,North America
+18-25,Male,United Kingdom,Christianity,Rural,Northern Europe,Europe
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Female,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+18-25,Female,Japan,Buddhism,Urban,Eastern Asia,Asia
+36-45,Female,China,I do not identify with any religious group or faith,Rural,Eastern Asia,Asia
+36-45,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Other / prefer not to say,Austria,Islam,Urban,Western Europe,Europe
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Female,United Kingdom,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+26-35,Male,Denmark,I do not identify with any religious group or faith,Urban,Northern Europe,Europe
+26-35,Male,China,Christianity,Urban,Eastern Asia,Asia
+26-35,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,Pakistan,Islam,Urban,Southern Asia,Asia
+18-25,Female,Australia,I do not identify with any religious group or faith,Urban,Australia and New Zealand,Oceania
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+18-25,Male,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
+26-35,Female,China,I do not identify with any religious group or faith,Urban,Eastern Asia,Asia
