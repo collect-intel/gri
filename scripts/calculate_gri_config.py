@@ -55,6 +55,11 @@ def load_gd_data(gd_number=None):
         # Load the CSV with proper handling of quotes and commas
         df = pd.read_csv(participants_file, encoding='utf-8')
         
+        # Handle cases where the first row might be empty (like GD4)
+        if len(df.columns) == 1 and ('Unnamed:' in df.columns[0] or df.columns[0] in ['', '""']):
+            print(f"Detected empty/malformed first line in {gd_name}, attempting to reload with skiprows=1...")
+            df = pd.read_csv(participants_file, encoding='utf-8', skiprows=1)
+        
         # Map column names to our standard format
         column_mapping = {
             'How old are you?': 'age_group',
