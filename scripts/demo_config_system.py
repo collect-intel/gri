@@ -12,7 +12,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pandas as pd
 import numpy as np
-from gri import calculate_gri_scorecard, get_config, load_data
+from gri import calculate_gri_scorecard, load_data
+from gri.config import GRIConfig
 
 
 def main():
@@ -22,7 +23,7 @@ def main():
     print("=" * 60)
     
     # Load configuration
-    config = get_config()
+    config = GRIConfig()
     
     print("\n1. CONFIGURATION OVERVIEW")
     print("-" * 30)
@@ -84,12 +85,22 @@ def main():
             'environment': np.random.choice(['Urban', 'Rural'], 200)
         })
         
-        # Load benchmark data
-        benchmark_data = {
-            'age_gender': load_data('data/processed/benchmark_country_gender_age.csv'),
-            'religion': load_data('data/processed/benchmark_country_religion.csv'),
-            'environment': load_data('data/processed/benchmark_country_environment.csv')
-        }
+        # Load benchmark data using configuration
+        config = GRIConfig()
+        standard_dimensions = config.get_standard_scorecard()
+        
+        benchmark_data = {}
+        for dimension in standard_dimensions:
+            # Convert dimension name to filename and key
+            filename = f"benchmark_{dimension['name'].lower().replace(' × ', '_').replace(' ', '_')}.csv"
+            filepath = f'data/processed/{filename}'
+            key = dimension['name'].lower().replace(' × ', '_').replace(' ', '_')
+            
+            try:
+                benchmark_data[key] = load_data(filepath)
+            except Exception as e:
+                print(f"Warning: Could not load {filepath}: {e}")
+                continue
         
         print(f"Sample survey: {len(sample_survey)} participants")
         print(f"Countries represented: {sample_survey['country'].nunique()}")

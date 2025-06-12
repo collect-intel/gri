@@ -115,48 +115,12 @@ process-data: venv-check data-check
 	@echo "$(GREEN)Configuration-driven data processing completed$(RESET)"
 
 validate-data: venv-check
-	@echo "$(BLUE)Validating processed benchmark data...$(RESET)"
-	@if [ ! -d "$(PROCESSED_DIR)" ]; then \
-		echo "$(RED)Error: Processed data directory not found$(RESET)"; \
-		echo "$(YELLOW)Run: make process-data$(RESET)"; \
-		exit 1; \
-	fi
-	@for file in benchmark_country_gender_age.csv benchmark_country_religion.csv benchmark_country_environment.csv; do \
-		if [ ! -f "$(PROCESSED_DIR)/$$file" ]; then \
-			echo "$(RED)Error: Missing processed file $$file$(RESET)"; \
-			exit 1; \
-		fi; \
-	done
-	@$(VENV_ACTIVATE) $(PYTHON) -c "\
-import pandas as pd; \
-files = ['$(PROCESSED_DIR)/benchmark_country_gender_age.csv', '$(PROCESSED_DIR)/benchmark_country_religion.csv', '$(PROCESSED_DIR)/benchmark_country_environment.csv']; \
-[print(f'✓ {f.split(\"/\")[-1]}: {len(pd.read_csv(f))} strata, sum={pd.read_csv(f)[\"population_proportion\"].sum():.6f}') for f in files]"
-	@echo "$(GREEN)Data validation completed$(RESET)"
+	@echo "$(BLUE)Validating processed benchmark data using configuration...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/validate_data_config.py
+	@echo "$(GREEN)Configuration-driven data validation completed$(RESET)"
 
 show-benchmarks: venv-check validate-data
-	@echo "$(BLUE)Benchmark Data Summary:$(RESET)"
-	@$(VENV_ACTIVATE) $(PYTHON) -c "\
-import pandas as pd; \
-age_gender = pd.read_csv('$(PROCESSED_DIR)/benchmark_country_gender_age.csv'); \
-religion = pd.read_csv('$(PROCESSED_DIR)/benchmark_country_religion.csv'); \
-environment = pd.read_csv('$(PROCESSED_DIR)/benchmark_country_environment.csv'); \
-print('$(CYAN)Country × Gender × Age:$(RESET)'); \
-print(f'  Strata: {len(age_gender):,}'); \
-print(f'  Countries: {age_gender[\"country\"].nunique()}'); \
-print(f'  Age groups: {sorted(age_gender[\"age_group\"].unique())}'); \
-print(f'  Proportion sum: {age_gender[\"population_proportion\"].sum():.6f}'); \
-print(); \
-print('$(CYAN)Country × Religion:$(RESET)'); \
-print(f'  Strata: {len(religion):,}'); \
-print(f'  Countries: {religion[\"country\"].nunique()}'); \
-print(f'  Religions: {sorted(religion[\"religion\"].unique())}'); \
-print(f'  Proportion sum: {religion[\"population_proportion\"].sum():.6f}'); \
-print(); \
-print('$(CYAN)Country × Environment:$(RESET)'); \
-print(f'  Strata: {len(environment):,}'); \
-print(f'  Countries: {environment[\"country\"].nunique()}'); \
-print(f'  Environments: {sorted(environment[\"environment\"].unique())}'); \
-print(f'  Proportion sum: {environment[\"population_proportion\"].sum():.6f}');"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/show_benchmarks_config.py
 
 # Analysis commands  
 demo-config: venv-check validate-data
@@ -165,44 +129,9 @@ demo-config: venv-check validate-data
 	@echo "$(GREEN)Configuration demo completed$(RESET)"
 
 calculate-gri: venv-check validate-data
-	@echo "$(BLUE)Running GRI calculation demo...$(RESET)"
-	@$(VENV_ACTIVATE) $(PYTHON) -c "\
-import sys; sys.path.append('.'); \
-from gri import calculate_gri, calculate_diversity_score, load_data; \
-import pandas as pd; import numpy as np; \
-print('$(CYAN)Creating sample survey data...$(RESET)'); \
-np.random.seed(42); \
-sample_countries = ['United States', 'India', 'Brazil', 'Germany', 'Nigeria', 'Japan']; \
-sample_data = pd.DataFrame({ \
-    'country': np.random.choice(sample_countries, 500), \
-    'age_group': np.random.choice(['18-25', '26-35', '36-45', '46-55', '56-65', '65+'], 500), \
-    'gender': np.random.choice(['Male', 'Female'], 500), \
-    'religion': np.random.choice(['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism', 'I do not identify with any religious group or faith', 'Other religious group'], 500), \
-    'environment': np.random.choice(['Urban', 'Rural'], 500) \
-}); \
-print(f'Sample survey: {len(sample_data)} participants from {sample_data[\"country\"].nunique()} countries'); \
-print(); \
-benchmark_age_gender = load_data('$(PROCESSED_DIR)/benchmark_country_gender_age.csv'); \
-benchmark_religion = load_data('$(PROCESSED_DIR)/benchmark_country_religion.csv'); \
-benchmark_environment = load_data('$(PROCESSED_DIR)/benchmark_country_environment.csv'); \
-gri_age = calculate_gri(sample_data, benchmark_age_gender, ['country', 'gender', 'age_group']); \
-gri_religion = calculate_gri(sample_data, benchmark_religion, ['country', 'religion']); \
-gri_env = calculate_gri(sample_data, benchmark_environment, ['country', 'environment']); \
-div_age = calculate_diversity_score(sample_data, benchmark_age_gender, ['country', 'gender', 'age_group']); \
-div_religion = calculate_diversity_score(sample_data, benchmark_religion, ['country', 'religion']); \
-div_env = calculate_diversity_score(sample_data, benchmark_environment, ['country', 'environment']); \
-avg_gri = np.mean([gri_age, gri_religion, gri_env]); \
-avg_div = np.mean([div_age, div_religion, div_env]); \
-print('$(CYAN)GRI Scorecard Results:$(RESET)'); \
-print(f'  Country × Gender × Age:  GRI={gri_age:.4f}, Diversity={div_age:.4f}'); \
-print(f'  Country × Religion:      GRI={gri_religion:.4f}, Diversity={div_religion:.4f}'); \
-print(f'  Country × Environment:   GRI={gri_env:.4f}, Diversity={div_env:.4f}'); \
-print(); \
-print(f'$(YELLOW)Average GRI: {avg_gri:.4f}$(RESET)'); \
-print(f'$(YELLOW)Average Diversity: {avg_div:.4f}$(RESET)'); \
-interpretation = 'Excellent' if avg_gri >= 0.8 else 'Good' if avg_gri >= 0.6 else 'Moderate' if avg_gri >= 0.4 else 'Poor'; \
-print(f'$(YELLOW)Assessment: {interpretation} representativeness$(RESET)');"
-	@echo "$(GREEN)GRI calculation completed$(RESET)"
+	@echo "$(BLUE)Running configuration-driven GRI calculation demo...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/calculate_gri_config.py
+	@echo "$(GREEN)Configuration-driven GRI calculation completed$(RESET)"
 
 run-notebooks: venv-check validate-data
 	@echo "$(BLUE)Executing Jupyter notebooks...$(RESET)"

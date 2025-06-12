@@ -100,25 +100,29 @@ def analyze_top_contributing_segments(survey_file: str, top_n: int = 20,
     """
     # Load data
     survey_data = load_data(survey_file)
-    benchmark_age_gender = load_data('data/processed/benchmark_country_gender_age.csv')
-    benchmark_religion = load_data('data/processed/benchmark_country_religion.csv')
-    benchmark_environment = load_data('data/processed/benchmark_country_environment.csv')
     
-    # Define dimensions
-    dimensions = {
-        'Country × Gender × Age': {
-            'benchmark': benchmark_age_gender,
-            'strata_cols': ['country', 'gender', 'age_group']
-        },
-        'Country × Religion': {
-            'benchmark': benchmark_religion,
-            'strata_cols': ['country', 'religion']
-        },
-        'Country × Environment': {
-            'benchmark': benchmark_environment,
-            'strata_cols': ['country', 'environment']
-        }
-    }
+    # Load dimensions from configuration
+    from gri.config import GRIConfig
+    config = GRIConfig()
+    standard_dimensions = config.get_standard_scorecard()
+    
+    # Define dimensions dynamically from config
+    dimensions = {}
+    for dimension in standard_dimensions:
+        # Convert dimension name to filename
+        filename = f"benchmark_{dimension['name'].lower().replace(' × ', '_').replace(' ', '_')}.csv"
+        filepath = f'data/processed/{filename}'
+        
+        # Only include if file exists and can be loaded
+        try:
+            benchmark_data = load_data(filepath)
+            dimensions[dimension['name']] = {
+                'benchmark': benchmark_data,
+                'strata_cols': dimension['columns']
+            }
+        except Exception as e:
+            print(f"Warning: Could not load {filepath}: {e}")
+            continue
     
     results = {}
     all_segments = []
