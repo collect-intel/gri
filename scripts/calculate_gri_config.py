@@ -95,6 +95,28 @@ def load_gd_data(gd_number=None):
             }
             gd_survey['environment'] = gd_survey['environment'].map(env_mapping)
         
+        # Apply geographic hierarchies from configuration
+        from gri.config import GRIConfig
+        config = GRIConfig()
+        
+        # Add region column if country data exists
+        if 'country' in gd_survey.columns:
+            country_to_region = config.get_country_to_region_mapping()
+            gd_survey['region'] = gd_survey['country'].map(country_to_region)
+            
+            # Add continent column if region data exists
+            region_to_continent = config.get_region_to_continent_mapping()
+            gd_survey['continent'] = gd_survey['region'].map(region_to_continent)
+            
+            # Report coverage
+            regions_found = gd_survey['region'].notna().sum()
+            continents_found = gd_survey['continent'].notna().sum()
+            total_participants = len(gd_survey)
+            
+            print(f"Geographic mapping coverage:")
+            print(f"  Regions: {regions_found}/{total_participants} ({regions_found/total_participants*100:.1f}%)")
+            print(f"  Continents: {continents_found}/{total_participants} ({continents_found/total_participants*100:.1f}%)")
+        
         print(f"Loaded {gd_name}: {len(gd_survey)} participants from {gd_survey['country'].nunique() if 'country' in gd_survey.columns else 'N/A'} countries")
         print(f"Available dimensions: {list(gd_survey.columns)}")
         
