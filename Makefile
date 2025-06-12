@@ -42,7 +42,6 @@ help:
 	@echo "$(BLUE)Analysis Commands:$(RESET)"
 	@echo "  $(GREEN)make calculate-gri$(RESET)        - Run GRI calculation on Global Dialogues data"
 	@echo "  $(GREEN)make calculate-gri GD=<N>$(RESET) - Run GRI calculation on specific GD dataset (e.g., GD=3)"
-	@echo "  $(GREEN)make demo-config$(RESET)          - Demonstrate configuration system capabilities"
 	@echo "  $(GREEN)make run-notebooks$(RESET)        - Execute all Jupyter notebooks"
 	@echo "  $(GREEN)make demo$(RESET)                 - Run complete demo workflow"
 	@echo ""
@@ -123,11 +122,7 @@ validate-data: venv-check
 show-benchmarks: venv-check validate-data
 	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/show_benchmarks_config.py
 
-# Analysis commands  
-demo-config: venv-check validate-data
-	@echo "$(BLUE)Demonstrating GRI configuration system...$(RESET)"
-	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/demo_config_system.py
-	@echo "$(GREEN)Configuration demo completed$(RESET)"
+# Analysis commands
 
 calculate-gri: venv-check validate-data
 	@echo "$(BLUE)Running configuration-driven GRI calculation demo...$(RESET)"
