@@ -7,6 +7,10 @@ the global population across demographic dimensions.
 The GRI is calculated using Total Variation Distance and provides scores from
 0.0 (complete mismatch) to 1.0 (perfect representativeness).
 
+Two ways to use this library:
+1. **Functional API**: Direct functions for specific calculations
+2. **GRIAnalysis class**: Convenience wrapper for complete analysis workflows
+
 Main components:
 - calculator: Core GRI and diversity score calculations
 - calculator_config: Configuration-based calculations
@@ -19,23 +23,26 @@ Main components:
 - utils: General utilities
 
 Example usage:
-    from gri import GRIAnalysis
-    
-    # Simple analysis
-    analysis = GRIAnalysis.from_survey_file('data/gd3_participants.csv')
-    scorecard = analysis.calculate_scorecard(include_max_possible=True)
-    analysis.plot_scorecard(save_to='results/scorecard.png')
-    
-    # Generate report
-    from gri.reports import generate_text_report
-    report = generate_text_report(scorecard, "Global Dialogues 3")
-    print(report)
-    
-    # Traditional API still available
+
+Quick calculation using functions:
     from gri import calculate_gri, load_data
+    
     survey = load_data('survey.csv')
     benchmark = load_data('benchmark.csv')
     gri_score = calculate_gri(survey, benchmark, ['country', 'gender'])
+    print(f"GRI Score: {gri_score:.4f}")
+
+Full analysis workflow using GRIAnalysis class:
+    from gri import GRIAnalysis
+    
+    # Load and analyze survey data
+    analysis = GRIAnalysis.from_survey_file('data/gd3_participants.csv')
+    scorecard = analysis.calculate_scorecard(include_max_possible=True)
+    
+    # Generate visualizations and reports
+    analysis.plot_scorecard(save_to='results/scorecard.png')
+    analysis.plot_top_deviations('Country × Gender × Age')
+    print(analysis.generate_report())
 """
 
 # Core calculation functions
@@ -89,12 +96,8 @@ from .reports import (
 # Configuration
 from .config import get_config, GRIConfig
 
-# High-level API class
-try:
-    from .api import GRIAnalysis
-except ImportError:
-    # API module not yet available
-    GRIAnalysis = None
+# High-level analysis class
+from .analyzer import GRIAnalysis
 
 __version__ = "2.0.0"
 __author__ = "GRI Project Contributors"
@@ -146,6 +149,6 @@ __all__ = [
     "get_config",
     "GRIConfig",
     
-    # High-level API (when available)
-    # "GRIAnalysis"  # Uncomment when api.py is ready
+    # High-level analysis class
+    "GRIAnalysis"
 ]
