@@ -35,21 +35,24 @@ benchmark_mappings:
     "Rural": ["Rural"]
     
   country:
-    # Handle country name variations -> GRI standard
-    "United States": ["United States of America", "USA", "US", "United States"]
+    # Handle country name variations -> GRI standard (using exact benchmark names)
+    "United States of America": ["United States of America", "USA", "US", "United States"]
     "United Kingdom": ["United Kingdom", "UK", "Great Britain", "Britain"]
-    "South Korea": ["Republic of Korea", "Korea, Republic of"]
-    "North Korea": ["Democratic People's Republic of Korea", "Korea, Democratic People's Republic of"]
-    "Russia": ["Russian Federation", "Russia"]
-    "Iran": ["Iran (Islamic Republic of)", "Iran, Islamic Republic of"]
-    "Venezuela": ["Venezuela (Bolivarian Republic of)", "Venezuela, Bolivarian Republic of"]
-    "Syria": ["Syrian Arab Republic"]
-    "Tanzania": ["United Republic of Tanzania", "Tanzania, United Republic of"]
-    "Moldova": ["Republic of Moldova", "Moldova, Republic of"]
-    "Bolivia": ["Bolivia (Plurinational State of)", "Bolivia, Plurinational State of"]
-    "Laos": ["Lao People's Democratic Republic", "Lao PDR"]
-    "Vietnam": ["Viet Nam"]
-    "Palestine": ["State of Palestine", "Palestinian Territory", "Palestine, State of"]
+    "Republic of Korea": ["Republic of Korea", "Korea, Republic of", "Korea South", "South Korea"]
+    "Dem. People's Republic of Korea": ["Democratic People's Republic of Korea", "Korea, Democratic People's Republic of", "Korea North", "North Korea"]
+    "Russian Federation": ["Russian Federation", "Russia"]
+    "Iran": ["Iran (Islamic Republic of)", "Iran, Islamic Republic of", "Iran"]
+    "Venezuela": ["Venezuela (Bolivarian Republic of)", "Venezuela, Bolivarian Republic of", "Venezuela"]
+    "Syria": ["Syrian Arab Republic", "Syria"]
+    "Tanzania": ["United Republic of Tanzania", "Tanzania, United Republic of", "Tanzania"]
+    "Moldova": ["Republic of Moldova", "Moldova, Republic of", "Moldova"]
+    "Bolivia": ["Bolivia (Plurinational State of)", "Bolivia, Plurinational State of", "Bolivia"]
+    "Laos": ["Lao People's Democratic Republic", "Lao PDR", "Laos"]
+    "Viet Nam": ["Viet Nam", "Vietnam"]
+    "State of Palestine": ["State of Palestine", "Palestinian Territory", "Palestine, State of", "Palestine"]
+    "Türkiye": ["Türkiye", "Turkey", "Turkiye"]
+    "Saint Vincent and the Grenadines": ["Saint Vincent and the Grenadines", "Saint Vincent & the Grenadines", "St. Vincent and the Gren."]
+    "Ireland": ["Ireland", "Ireland {Republic}", "Republic of Ireland"]
 
 # Survey data mappings (Survey sources -> GRI standard)
 survey_mappings:
@@ -75,7 +78,7 @@ survey_mappings:
       "Buddhism": ["Buddhism"]
       "Judaism": ["Judaism"]
       "I do not identify with any religious group or faith": ["I do not identify with any religious group or faith"]
-      "Other religious group": ["Other religious group"]
+      "Other religious group": ["Other religious group", "Sikhism"]
       
     environment:
       "Urban": ["Urban"]
