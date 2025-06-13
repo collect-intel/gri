@@ -7,9 +7,10 @@ the configuration system for flexible dimension and segment management.
 
 import pandas as pd
 import numpy as np
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Union
 from .calculator import calculate_gri, calculate_diversity_score
 from .config import get_config, GRIConfig
+from .simulation import monte_carlo_max_scores
 
 
 def standardize_survey_data(
@@ -189,7 +190,11 @@ def calculate_gri_scorecard(
     benchmark_data: Dict[str, pd.DataFrame],
     survey_source: str = "global_dialogues",
     use_extended_dimensions: bool = False,
-    config: Optional[GRIConfig] = None
+    config: Optional[GRIConfig] = None,
+    dimensions: Optional[Union[str, List[str]]] = None,
+    include_max_possible: bool = False,
+    n_simulations: int = 1000,
+    random_seed: Optional[int] = 42
 ) -> pd.DataFrame:
     """
     Calculate a complete GRI scorecard using configuration-defined dimensions.
@@ -201,6 +206,11 @@ def calculate_gri_scorecard(
         survey_source: Survey source identifier for segment mapping
         use_extended_dimensions: Whether to include extended dimensions
         config: Configuration instance (uses global if None)
+        dimensions: Specific dimensions to calculate. If 'all', calculates all available.
+                   If None, uses standard scorecard.
+        include_max_possible: Whether to include maximum possible scores
+        n_simulations: Number of Monte Carlo simulations for max scores
+        random_seed: Random seed for reproducibility
         
     Returns:
         DataFrame with GRI scorecard results
@@ -212,15 +222,27 @@ def calculate_gri_scorecard(
     standardized_survey = standardize_survey_data(survey_df, survey_source, config)
     
     # Get dimensions to calculate
-    if use_extended_dimensions:
-        dimensions = config.get_all_dimensions()
+    if dimensions == 'all':
+        dimensions_list = config.get_all_dimensions()
+    elif dimensions is not None:
+        # Handle specific dimension names
+        all_dims = config.get_all_dimensions()
+        dim_map = {d['name']: d for d in all_dims}
+        if isinstance(dimensions, str):
+            dimensions = [dimensions]
+        dimensions_list = [dim_map[name] for name in dimensions if name in dim_map]
+    elif use_extended_dimensions:
+        dimensions_list = config.get_all_dimensions()
     else:
-        dimensions = config.get_standard_scorecard()
+        dimensions_list = config.get_standard_scorecard()
     
     # Calculate scores for each dimension
     results = []
     
-    for dimension in dimensions:
+    # Get sample size for max calculations
+    sample_size = len(standardized_survey)
+    
+    for dimension in dimensions_list:
         try:
             # Determine which benchmark data to use
             columns = dimension["columns"]
@@ -245,12 +267,36 @@ def calculate_gri_scorecard(
                 standardized_survey, benchmark_df, dimension, config
             )
             
-            results.append({
-                'Dimension': dimension['name'],
-                'GRI Score': gri_score,
-                'Diversity Score': diversity_score,
-                'Description': dimension.get('description', '')
-            })
+            result_row = {
+                'dimension': dimension['name'],
+                'gri_score': gri_score,
+                'diversity_score': diversity_score,
+                'dimension_columns': columns,
+                'sample_size': sample_size,
+                'description': dimension.get('description', '')
+            }
+            
+            # Calculate max possible scores if requested
+            if include_max_possible:
+                # Prepare benchmark for this specific dimension
+                agg_benchmark = aggregate_benchmark_for_dimension(benchmark_df, columns, config)
+                
+                # Run Monte Carlo simulation
+                max_results = monte_carlo_max_scores(
+                    agg_benchmark,
+                    sample_size,
+                    columns,
+                    n_simulations,
+                    random_seed
+                )
+                
+                # Add max scores to results
+                result_row['max_possible_score'] = max_results['max_gri']['mean']
+                result_row['max_possible_diversity'] = max_results['max_diversity']['mean']
+                result_row['efficiency_ratio'] = gri_score / max_results['max_gri']['mean'] if max_results['max_gri']['mean'] > 0 else 0
+                result_row['diversity_efficiency'] = diversity_score / max_results['max_diversity']['mean'] if max_results['max_diversity']['mean'] > 0 else 0
+            
+            results.append(result_row)
             
         except Exception as e:
             print(f"Warning: Failed to calculate scores for dimension '{dimension['name']}': {str(e)}")
@@ -258,14 +304,5 @@ def calculate_gri_scorecard(
     
     scorecard_df = pd.DataFrame(results)
     
-    # Add average row if we have results
-    if len(scorecard_df) > 0:
-        avg_row = {
-            'Dimension': 'AVERAGE',
-            'GRI Score': scorecard_df['GRI Score'].mean(),
-            'Diversity Score': scorecard_df['Diversity Score'].mean(),
-            'Description': 'Average across all dimensions'
-        }
-        scorecard_df = pd.concat([scorecard_df, pd.DataFrame([avg_row])], ignore_index=True)
-    
+    # No need to add average row - let calling code handle that if needed
     return scorecard_df
