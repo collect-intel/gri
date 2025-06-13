@@ -73,7 +73,13 @@ class GRIAnalysis:
         
         # Load benchmarks if not provided
         if benchmarks is None:
-            self.benchmarks = load_benchmark_suite()
+            try:
+                self.benchmarks = load_benchmark_suite()
+            except Exception as e:
+                raise ValueError(
+                    f"Failed to load benchmark data. Make sure benchmark files exist in 'data/processed/'. "
+                    f"Run 'python scripts/process_data.py' to generate them. Error: {e}"
+                )
         else:
             self.benchmarks = benchmarks
         

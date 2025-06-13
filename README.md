@@ -98,6 +98,29 @@ This will:
 4. Run a demonstration with sample survey data
 5. Show you a complete GRI Scorecard
 
+### Installation Options
+
+#### Option 1: Install as Python Package (Recommended)
+```bash
+# Clone and install the GRI module
+git clone https://github.com/your-org/gri.git
+cd gri
+pip install -e .
+
+# Process benchmark data (required first time)
+python scripts/process_data.py
+```
+
+#### Option 2: Use with Make Commands
+```bash
+# Clone the repository
+git clone https://github.com/your-org/gri.git
+cd gri
+
+# Setup with Make
+make setup
+```
+
 ### Prerequisites
 
 - **Python 3.8+** 
@@ -108,11 +131,14 @@ This will:
 
 #### 1. Environment Setup
 ```bash
-# Create virtual environment
+# Option A: Using Make
 make venv
-
-# Install dependencies
 make install
+
+# Option B: Using pip directly
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -e .
 
 # Verify setup
 make health-check
@@ -122,6 +148,8 @@ make health-check
 ```bash
 # Process UN and Pew Research data into GRI format
 make process-data
+# OR
+python scripts/process_data.py
 
 # Verify data processing
 make validate-data
@@ -149,7 +177,7 @@ Assessment: Moderate representativeness
 
 ### Using GRI with Your Data
 
-#### Basic Usage
+#### Basic Usage - Functional API
 
 ```python
 from gri import calculate_gri, calculate_diversity_score, load_data
@@ -169,6 +197,28 @@ gri_score = calculate_gri(
 )
 
 print(f"GRI Score: {gri_score:.4f}")
+```
+
+#### Basic Usage - GRIAnalysis Class (Recommended for Full Workflow)
+
+```python
+from gri import GRIAnalysis
+
+# Create analysis from your survey file
+analysis = GRIAnalysis.from_survey_file('your_survey.csv')
+
+# Calculate comprehensive scorecard
+scorecard = analysis.calculate_scorecard(include_max_possible=True)
+
+# Generate visualizations
+analysis.plot_scorecard(save_to='gri_scorecard.png')
+
+# Generate text report
+report = analysis.generate_report()
+print(report)
+
+# Export results
+analysis.export_results(format='excel', filepath='gri_results.xlsx')
 ```
 
 #### Required Data Format
@@ -258,8 +308,10 @@ The advanced notebook (`3-advanced-analysis.ipynb`) shows you how to:
 
 ### Getting Help
 
-- **Examples**: Check the `notebooks/` directory for detailed examples
-- **API Reference**: See function docstrings in `gri/calculator.py` and `gri/utils.py`
+- **Module Documentation**: See `gri/README.md` for comprehensive module usage guide
+- **Function Reference**: See `FUNCTION_REFERENCE.md` for complete function and class documentation
+- **Examples**: Check the `notebooks/` directory for detailed examples, plus `examples/` for Python scripts
+- **Function Docstrings**: See inline documentation in `gri/` module files
 - **Issues**: Report bugs or request features on GitHub
 - **Makefile Commands**: Run `make help` for all available commands
 
