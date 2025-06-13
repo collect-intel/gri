@@ -1,85 +1,193 @@
 MAXIMUM POSSIBLE GRI AND DIVERSITY SCORES ANALYSIS
 ============================================================
 
-Analysis completed with 50 Monte Carlo simulations per calculation
+Analysis completed with 1,000 Monte Carlo simulations per calculation
 Methodology: Semi-stochastic sampling with hybrid deterministic/probabilistic allocation
 
 Country × Gender × Age:
 ----------------------
+\nSample Size: 100
+Dynamic Threshold: 0.5000% population
+Total Strata: 2,699
+Relevant Strata: 25
+\nMaximum GRI Score:
+  Mean: 0.430457 ± 0.013418
+  Range: [0.371513, 0.462706]
+  Median: 0.432306
+\nMaximum Diversity Score:
+  Mean: 0.979280 ± 0.033602
+  Range: [0.840000, 1.000000]
+  Median: 1.000000
+\nSample Size: 250
+Dynamic Threshold: 0.2000% population
+Total Strata: 2,699
+Relevant Strata: 76
+\nMaximum GRI Score:
+  Mean: 0.580665 ± 0.010336
+  Range: [0.541511, 0.602788]
+  Median: 0.581941
+\nMaximum Diversity Score:
+  Mean: 0.957921 ± 0.034864
+  Range: [0.828947, 1.000000]
+  Median: 0.960526
 \nSample Size: 500
 Dynamic Threshold: 0.1000% population
 Total Strata: 2,699
 Relevant Strata: 167
 \nMaximum GRI Score:
-  Mean: 0.691085 ± 0.006998
-  Range: [0.672235, 0.701889]
-  Median: 0.691460
+  Mean: 0.690514 ± 0.007915
+  Range: [0.663847, 0.709556]
+  Median: 0.690819
 \nMaximum Diversity Score:
-  Mean: 0.948263 ± 0.024711
-  Range: [0.880240, 0.988024]
-  Median: 0.952096
+  Mean: 0.945659 ± 0.025673
+  Range: [0.856287, 1.000000]
+  Median: 0.946108
 \nSample Size: 1,000
 Dynamic Threshold: 0.0500% population
 Total Strata: 2,699
 Relevant Strata: 376
 \nMaximum GRI Score:
-  Mean: 0.792133 ± 0.004194
-  Range: [0.779726, 0.800696]
-  Median: 0.792207
+  Mean: 0.792117 ± 0.004901
+  Range: [0.777267, 0.806038]
+  Median: 0.792349
 \nMaximum Diversity Score:
-  Mean: 0.926011 ± 0.015893
-  Range: [0.890957, 0.965426]
+  Mean: 0.924747 ± 0.015925
+  Range: [0.877660, 0.976064]
   Median: 0.925532
+\nSample Size: 2,000
+Dynamic Threshold: 0.0250% population
+Total Strata: 2,699
+Relevant Strata: 617
+\nMaximum GRI Score:
+  Mean: 0.872872 ± 0.003060
+  Range: [0.863219, 0.881982]
+  Median: 0.872863
+\nMaximum Diversity Score:
+  Mean: 0.959974 ± 0.010355
+  Range: [0.927066, 0.988655]
+  Median: 0.959481
 \n========================================\nCountry × Religion:
 ------------------
+\nSample Size: 100
+Dynamic Threshold: 0.5000% population
+Total Strata: 1,607
+Relevant Strata: 37
+\nMaximum GRI Score:
+  Mean: 0.721168 ± 0.017532
+  Range: [0.659888, 0.760546]
+  Median: 0.722726
+\nMaximum Diversity Score:
+  Mean: 0.931243 ± 0.052727
+  Range: [0.729730, 1.000000]
+  Median: 0.945946
+\nSample Size: 250
+Dynamic Threshold: 0.2000% population
+Total Strata: 1,607
+Relevant Strata: 80
+\nMaximum GRI Score:
+  Mean: 0.839154 ± 0.009096
+  Range: [0.803741, 0.857012]
+  Median: 0.840090
+\nMaximum Diversity Score:
+  Mean: 0.961950 ± 0.029395
+  Range: [0.850000, 1.000000]
+  Median: 0.962500
 \nSample Size: 500
 Dynamic Threshold: 0.1000% population
-Total Strata: 1,654
-Relevant Strata: 84
+Total Strata: 1,607
+Relevant Strata: 118
 \nMaximum GRI Score:
-  Mean: 0.923790 ± 0.005010
-  Range: [0.910439, 0.930892]
-  Median: 0.923737
+  Mean: 0.897705 ± 0.005461
+  Range: [0.877300, 0.911768]
+  Median: 0.897887
 \nMaximum Diversity Score:
-  Mean: 0.965952 ± 0.027460
-  Range: [0.869048, 1.000000]
-  Median: 0.964286
+  Mean: 0.962593 ± 0.021544
+  Range: [0.872881, 1.000000]
+  Median: 0.966102
 \nSample Size: 1,000
 Dynamic Threshold: 0.0500% population
-Total Strata: 1,654
-Relevant Strata: 119
+Total Strata: 1,607
+Relevant Strata: 182
 \nMaximum GRI Score:
-  Mean: 0.949814 ± 0.002591
-  Range: [0.940233, 0.954429]
-  Median: 0.950083
+  Mean: 0.938117 ± 0.003287
+  Range: [0.927633, 0.946600]
+  Median: 0.938232
 \nMaximum Diversity Score:
-  Mean: 0.974286 ± 0.016673
+  Mean: 0.970044 ± 0.015574
+  Range: [0.912088, 1.000000]
+  Median: 0.972527
+\nSample Size: 2,000
+Dynamic Threshold: 0.0250% population
+Total Strata: 1,607
+Relevant Strata: 238
+\nMaximum GRI Score:
+  Mean: 0.965046 ± 0.001608
+  Range: [0.959788, 0.968002]
+  Median: 0.965150
+\nMaximum Diversity Score:
+  Mean: 0.989429 ± 0.009644
   Range: [0.932773, 1.000000]
-  Median: 0.974790
+  Median: 0.991597
 \n========================================\nCountry × Environment:
 ---------------------
+\nSample Size: 100
+Dynamic Threshold: 0.5000% population
+Total Strata: 449
+Relevant Strata: 35
+\nMaximum GRI Score:
+  Mean: 0.713753 ± 0.016262
+  Range: [0.656391, 0.747713]
+  Median: 0.716627
+\nMaximum Diversity Score:
+  Mean: 0.933400 ± 0.054746
+  Range: [0.742857, 1.000000]
+  Median: 0.942857
+\nSample Size: 250
+Dynamic Threshold: 0.2000% population
+Total Strata: 449
+Relevant Strata: 83
+\nMaximum GRI Score:
+  Mean: 0.843995 ± 0.008901
+  Range: [0.806813, 0.860710]
+  Median: 0.844442
+\nMaximum Diversity Score:
+  Mean: 0.958843 ± 0.029307
+  Range: [0.855422, 1.000000]
+  Median: 0.963855
 \nSample Size: 500
 Dynamic Threshold: 0.1000% population
-Total Strata: 509
-Relevant Strata: 101
+Total Strata: 449
+Relevant Strata: 144
 \nMaximum GRI Score:
-  Mean: 0.916461 ± 0.004337
-  Range: [0.906587, 0.924572]
-  Median: 0.916771
+  Mean: 0.905609 ± 0.005047
+  Range: [0.885683, 0.920312]
+  Median: 0.905784
 \nMaximum Diversity Score:
-  Mean: 0.973069 ± 0.019806
-  Range: [0.920792, 1.000000]
-  Median: 0.975248
+  Mean: 0.943049 ± 0.020418
+  Range: [0.875000, 0.993056]
+  Median: 0.944444
 \nSample Size: 1,000
 Dynamic Threshold: 0.0500% population
-Total Strata: 509
-Relevant Strata: 141
+Total Strata: 449
+Relevant Strata: 192
 \nMaximum GRI Score:
-  Mean: 0.948915 ± 0.002742
-  Range: [0.942796, 0.954661]
-  Median: 0.949151
+  Mean: 0.950312 ± 0.002518
+  Range: [0.941929, 0.956342]
+  Median: 0.950307
 \nMaximum Diversity Score:
-  Mean: 0.974326 ± 0.018705
-  Range: [0.914894, 1.000000]
-  Median: 0.978723
+  Mean: 0.976521 ± 0.013223
+  Range: [0.921875, 1.000000]
+  Median: 0.979167
+\nSample Size: 2,000
+Dynamic Threshold: 0.0250% population
+Total Strata: 449
+Relevant Strata: 243
+\nMaximum GRI Score:
+  Mean: 0.975817 ± 0.001140
+  Range: [0.972338, 0.978067]
+  Median: 0.975862
+\nMaximum Diversity Score:
+  Mean: 0.992160 ± 0.006717
+  Range: [0.967078, 1.000000]
+  Median: 0.991770
 \n========================================\n
