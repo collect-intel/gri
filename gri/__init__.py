@@ -53,7 +53,8 @@ from .calculator_config import calculate_gri_scorecard, standardize_survey_data
 from .utils import load_data, aggregate_data
 from .data_loader import (
     load_benchmark_suite, 
-    load_gd_survey, 
+    load_gd_survey,
+    load_wvs_survey,
     apply_segment_mappings,
     validate_survey_data
 )
@@ -115,6 +116,7 @@ __all__ = [
     "aggregate_data",
     "load_benchmark_suite",
     "load_gd_survey",
+    "load_wvs_survey",
     "apply_segment_mappings",
     "validate_survey_data",
     

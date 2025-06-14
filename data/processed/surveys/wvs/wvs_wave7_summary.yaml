@@ -1,0 +1,99 @@
+age_distribution:
+  18-25: 9618
+  26-35: 12811
+  36-45: 11610
+  46-55: 10536
+  56-65: 9234
+  66+: 8442
+  Under 18: 386
+countries: 71
+country_distribution:
+  Algeria: 13
+  Andorra: 277
+  Argentina: 1029
+  Armenia: 1156
+  Australia: 1300
+  Austria: 12
+  Bangladesh: 1218
+  Belarus: 19
+  Brazil: 1785
+  Bulgaria: 17
+  Canada: 3329
+  Chile: 993
+  China: 1189
+  Colombia: 1521
+  Croatia: 27
+  Cyprus: 785
+  Czechia: 1180
+  Egypt: 1218
+  Estonia: 2
+  Ethiopia: 1233
+  France: 97
+  Georgia: 41
+  Germany: 1400
+  Greece: 1096
+  Hungary: 16
+  India: 1873
+  Iran: 1514
+  Iraq: 1209
+  Italy: 47
+  Japan: 1345
+  Kazakhstan: 1260
+  Kenya: 1262
+  Kyrgyzstan: 1141
+  Latvia: 5
+  Lithuania: 8
+  Mexico: 1790
+  Montenegro: 16
+  Netherlands: 1803
+  New Zealand: 850
+  Nigeria: 1250
+  North Macedonia: 12
+  Norway: 2
+  Peru: 1418
+  Philippines: 1265
+  Poland: 85
+  Portugal: 163
+  Puerto Rico: 1051
+  Qatar: 1
+  Romania: 1293
+  Russia: 1909
+  Rwanda: 1
+  Saudi Arabia: 2
+  Serbia: 969
+  Slovakia: 1225
+  Slovenia: 3
+  South Africa: 24
+  South Korea: 1252
+  Spain: 385
+  Sweden: 5
+  Thailand: 1506
+  Turkey: 2643
+  Ukraine: 1276
+  United Arab Emirates: 5
+  United Kingdom: 3013
+  United States: 2418
+  Uruguay: 985
+  Venezuela: 1241
+  Vietnam: 1229
+  Yemen: 2
+  Zambia: 2
+  Zimbabwe: 1216
+environment_distribution:
+  Rural: 19039
+  Urban: 43864
+gender_distribution:
+  Female: 33391
+  Male: 29536
+religion_distribution:
+  Buddhist: 2557
+  Hindu: 1674
+  Jew: 218
+  Muslim: 11653
+  No answer: 951
+  No religious denomination: 16112
+  Orthodox: 7502
+  Other: 1712
+  Protestant: 5551
+  Roman Catholic: 14006
+total_participants: 62927

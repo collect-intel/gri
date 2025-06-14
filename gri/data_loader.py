@@ -11,9 +11,13 @@ from pathlib import Path
 from typing import Dict, Optional, Union, List, Tuple
 import yaml
 import warnings
+import logging
 
 from .config import GRIConfig
 from .utils import load_data
+
+# Set up logger
+logger = logging.getLogger(__name__)
 
 
 def load_benchmark_suite(
@@ -324,9 +328,36 @@ def load_wvs_survey(
     WVS uses numeric codes for many variables which need to be mapped
     to text values for GRI analysis.
     """
-    # Placeholder for WVS implementation
-    # This will be implemented when WVS data is available
-    raise NotImplementedError("WVS data loading will be implemented in Phase 4")
+    filepath = Path(filepath)
+    
+    # Try to detect wave from filename if not provided
+    if wave is None:
+        if 'wave7' in str(filepath).lower() or 'wave_7' in str(filepath).lower():
+            wave = 7
+        elif 'wave6' in str(filepath).lower() or 'wave_6' in str(filepath).lower():
+            wave = 6
+        else:
+            raise ValueError("Could not detect WVS wave from filename. Please specify wave parameter.")
+    
+    # Check if this is already processed data
+    if 'processed' in str(filepath) or 'wvs_wave' in str(filepath):
+        # Already in standard format
+        df = pd.read_csv(filepath)
+        logger.info(f"Loaded processed WVS Wave {wave} data: {len(df)} responses")
+        
+        # Apply standard segment mappings if config provided
+        if config:
+            df = apply_segment_mappings(df, config, survey_type='world_values_survey')
+        
+        return df
+    
+    # For raw WVS data, provide helpful error
+    logger.error("Raw WVS data processing not available in module")
+    raise NotImplementedError(
+        "Raw WVS data requires preprocessing. Please either:\n"
+        "1. Use pre-processed files from data/processed/surveys/wvs/\n"
+        "2. Run: python scripts/process_wvs_survey.py"
+    )
 
 
 def validate_survey_data(
