@@ -9,11 +9,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from typing import Dict, List, Optional, Tuple, Union, Any
-import seaborn as sns
 from pathlib import Path
 
 # Set default style
-plt.style.use('seaborn-v0_8-darkgrid')
+try:
+    plt.style.use('seaborn-v0_8-darkgrid')
+except:
+    plt.style.use('ggplot')  # Fallback if seaborn style not available
 
 
 def plot_gri_scorecard(
@@ -315,8 +317,9 @@ def plot_segment_deviations(
     plt.Figure
         The matplotlib figure object
     """
-    # Get top deviations
-    top_devs = deviations.nlargest(top_n, 'abs_deviation')
+    # Get top deviations - handle both column names for backward compatibility
+    deviation_col = 'abs_deviation' if 'abs_deviation' in deviations.columns else 'absolute_deviation'
+    top_devs = deviations.nlargest(top_n, deviation_col)
     
     # Create figure
     fig, ax = plt.subplots(figsize=figsize)
@@ -337,7 +340,7 @@ def plot_segment_deviations(
         label_parts = []
         for col in top_devs.columns:
             if col not in ['sample_proportion', 'benchmark_proportion', 'deviation', 
-                          'abs_deviation', 'normalized_deviation', 'tvd_contribution',
+                          'abs_deviation', 'absolute_deviation', 'normalized_deviation', 'tvd_contribution',
                           'representation', 'cumulative_tvd', 'segment_name']:
                 if pd.notna(row[col]):
                     label_parts.append(str(row[col]))

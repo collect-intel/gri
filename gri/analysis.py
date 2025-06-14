@@ -114,6 +114,10 @@ def calculate_segment_deviations(
     # Aggregate survey data
     survey_agg = aggregate_data(survey_df, dimension_columns)
     
+    # Calculate proportions from counts
+    total_count = survey_agg['count'].sum()
+    survey_agg['proportion'] = survey_agg['count'] / total_count
+    
     # Merge with benchmark
     merged = pd.merge(
         survey_agg,
@@ -123,20 +127,25 @@ def calculate_segment_deviations(
         suffixes=('_sample', '_benchmark')
     )
     
-    # Fill missing values
-    merged['proportion_sample'] = merged['proportion_sample'].fillna(0)
-    merged['proportion_benchmark'] = merged['proportion_benchmark'].fillna(0)
+    # Handle column names - benchmark might have 'population_proportion' instead of 'proportion'
+    if 'proportion' in merged.columns and 'population_proportion' in merged.columns:
+        merged['sample_proportion'] = merged['proportion'].fillna(0)
+        merged['benchmark_proportion'] = merged['population_proportion'].fillna(0)
+    else:
+        # If suffixes were applied
+        merged['sample_proportion'] = merged.get('proportion_sample', 0).fillna(0)
+        merged['benchmark_proportion'] = merged.get('proportion_benchmark', 0).fillna(0)
     
     # Calculate deviations
-    merged['deviation'] = merged['proportion_sample'] - merged['proportion_benchmark']
+    merged['deviation'] = merged['sample_proportion'] - merged['benchmark_proportion']
     merged['abs_deviation'] = merged['deviation'].abs()
     
     if normalize:
         # Normalized deviation (percentage of benchmark)
         merged['normalized_deviation'] = np.where(
-            merged['proportion_benchmark'] > 0,
-            merged['deviation'] / merged['proportion_benchmark'],
-            np.inf if merged['proportion_sample'].sum() > 0 else 0
+            merged['benchmark_proportion'] > 0,
+            merged['deviation'] / merged['benchmark_proportion'],
+            np.inf if merged['sample_proportion'].sum() > 0 else 0
         )
     
     # Calculate contribution to total variation distance
@@ -145,11 +154,7 @@ def calculate_segment_deviations(
     # Sort by absolute deviation
     merged = merged.sort_values('abs_deviation', ascending=False)
     
-    # Rename columns for clarity
-    merged = merged.rename(columns={
-        'proportion_sample': 'sample_proportion',
-        'proportion_benchmark': 'benchmark_proportion'
-    })
+    # Columns are already named correctly, no rename needed
     
     return merged
 

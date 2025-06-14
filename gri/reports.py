@@ -240,6 +240,8 @@ def export_results(
                 meta_path = Path(filepath).with_suffix('.meta.json')
                 with open(meta_path, 'w') as f:
                     json.dump(metadata, f, indent=2)
+            
+            return Path(filepath)
         else:
             return df.to_csv(index=False)
     
@@ -256,6 +258,7 @@ def export_results(
         if filepath:
             with open(filepath, 'w') as f:
                 json.dump(data, f, indent=2)
+            return Path(filepath)
         else:
             return data
     
@@ -274,6 +277,8 @@ def export_results(
                     for k, v in metadata.items()
                 ])
                 meta_df.to_excel(writer, sheet_name='Metadata', index=False)
+        
+        return Path(filepath)
     
     else:
         raise ValueError(f"Unsupported format: {format}")
@@ -338,11 +343,14 @@ def create_summary_statistics(
             survey_df, benchmark_df, dimension_columns
         )
         
+        # Handle both column names for backward compatibility
+        abs_dev_col = 'abs_deviation' if 'abs_deviation' in deviations.columns else 'absolute_deviation'
+        
         stats['segment_statistics'] = {
             'total_segments': len(deviations),
             'represented_segments': (deviations['sample_proportion'] > 0).sum(),
-            'mean_absolute_deviation': float(deviations['abs_deviation'].mean()),
-            'max_absolute_deviation': float(deviations['abs_deviation'].max()),
+            'mean_absolute_deviation': float(deviations[abs_dev_col].mean()),
+            'max_absolute_deviation': float(deviations[abs_dev_col].max()),
             'over_represented': (deviations['deviation'] > 0.001).sum(),
             'under_represented': (deviations['deviation'] < -0.001).sum(),
             'well_balanced': ((deviations['deviation'].abs() <= 0.001)).sum()

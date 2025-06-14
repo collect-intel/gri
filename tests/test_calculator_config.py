@@ -200,18 +200,18 @@ def test_calculate_gri_scorecard(sample_config, sample_survey_data):
     )
     
     # Check structure
-    assert 'Dimension' in scorecard.columns
-    assert 'GRI Score' in scorecard.columns
-    assert 'Diversity Score' in scorecard.columns
+    assert 'dimension' in scorecard.columns
+    assert 'gri_score' in scorecard.columns
+    assert 'diversity_score' in scorecard.columns
     
     # Should have results for standard dimensions that can be calculated
     assert len(scorecard) > 0
     
     # Check that scores are valid
     for _, row in scorecard.iterrows():
-        if row['Dimension'] != 'AVERAGE':
-            assert 0.0 <= row['GRI Score'] <= 1.0
-            assert 0.0 <= row['Diversity Score'] <= 1.0
+        if row['dimension'] != 'AVERAGE':
+            assert 0.0 <= row['gri_score'] <= 1.0
+            assert 0.0 <= row['diversity_score'] <= 1.0
 
 
 def test_standardize_survey_data_with_exclusions(sample_config):
@@ -253,7 +253,7 @@ def test_calculate_scorecard_with_extended_dimensions(sample_config, sample_surv
     )
     
     # Should have more dimensions than standard scorecard
-    dimension_names = scorecard['Dimension'].tolist()
+    dimension_names = scorecard['dimension'].tolist()
     assert 'Country' in dimension_names  # Extended dimension
     
     # Regional dimension should be skipped due to missing mapping validation
