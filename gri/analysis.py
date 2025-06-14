@@ -294,7 +294,8 @@ def generate_alignment_report(
         alignment = check_category_alignment(survey_df, benchmark_df, columns)
         
         # Calculate overall metrics
-        total_coverage = np.mean([stats['coverage'] for stats in alignment.values()])
+        coverage_values = [stats['coverage'] for stats in alignment.values()]
+        total_coverage = np.mean(coverage_values) if coverage_values else 0.0
         
         # Identify issues
         issues = []
