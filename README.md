@@ -121,12 +121,6 @@ cd gri
 make setup
 ```
 
-### Prerequisites
-
-- **Python 3.8+** 
-- **Git** (for cloning the repository)
-- **10 GB disk space** (for benchmark data processing)
-
 ### Step-by-Step Setup
 
 #### 1. Environment Setup
