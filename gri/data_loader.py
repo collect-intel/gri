@@ -71,12 +71,18 @@ def load_benchmark_suite(
     
     benchmarks = {}
     
+    # Check if files are in root or in 'benchmarks' subdirectory
+    if (data_path / 'benchmarks').exists():
+        benchmark_path = data_path / 'benchmarks'
+    else:
+        benchmark_path = data_path
+    
     for filename, dimension_name in file_mapping.items():
         # Skip if specific dimensions requested and this isn't one
         if dimensions and dimension_name not in dimensions:
             continue
             
-        filepath = data_path / filename
+        filepath = benchmark_path / filename
         if filepath.exists():
             try:
                 df = load_data(str(filepath))
