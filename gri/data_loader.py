@@ -48,9 +48,29 @@ def load_benchmark_suite(
     >>> # Load only specific dimensions
     >>> benchmarks = load_benchmark_suite(dimensions=['Country', 'Gender'])
     """
+    # Handle path resolution - check multiple possible locations
     data_path = Path(data_dir)
+    
+    # Try different path resolutions
     if not data_path.exists():
-        raise ValueError(f"Data directory not found: {data_dir}")
+        # Try relative to the package directory
+        package_dir = Path(__file__).parent.parent
+        data_path = package_dir / data_dir
+        
+    if not data_path.exists():
+        # Try relative to current working directory
+        cwd_path = Path.cwd() / data_dir
+        if cwd_path.exists():
+            data_path = cwd_path
+            
+    if not data_path.exists():
+        raise ValueError(
+            f"Data directory not found. Searched in:\n"
+            f"  - {Path(data_dir).absolute()}\n"
+            f"  - {(Path(__file__).parent.parent / data_dir).absolute()}\n"
+            f"  - {(Path.cwd() / data_dir).absolute()}\n"
+            f"Please run 'python scripts/process_data.py' to generate benchmark data."
+        )
     
     # Map file names to dimension names
     file_mapping = {
