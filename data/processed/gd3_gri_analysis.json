@@ -1,0 +1,137 @@
+{
+  "timestamp": "2025-06-18T20:51:37.246172",
+  "results": [
+    {
+      "dimension": "Country \u00d7 Gender \u00d7 Age",
+      "gri_score": 0.07321598223583192,
+      "diversity_score": 0.07407407407407407,
+      "dimension_columns": [
+        "country",
+        "gender",
+        "age_group"
+      ],
+      "sample_size": 123,
+      "description": "Fine-grained demographic representativeness",
+      "max_possible_score": 0.4528036979236503,
+      "max_possible_diversity": 0.9887777777777778,
+      "efficiency_ratio": 0.1616947533148841,
+      "diversity_efficiency": 0.0749147844327078
+    },
+    {
+      "dimension": "Country \u00d7 Religion",
+      "gri_score": 0.009306549005730358,
+      "diversity_score": 0.02127659574468085,
+      "dimension_columns": [
+        "country",
+        "religion"
+      ],
+      "sample_size": 123,
+      "description": "Religious representativeness by country",
+      "max_possible_score": 0.7486526095109208,
+      "max_possible_diversity": 0.9612553191489362,
+      "efficiency_ratio": 0.012431064672051477,
+      "diversity_efficiency": 0.022134177383297548
+    },
+    {
+      "dimension": "Country \u00d7 Environment",
+      "gri_score": 0.08130631887676965,
+      "diversity_score": 0.15555555555555556,
+      "dimension_columns": [
+        "country",
+        "environment"
+      ],
+      "sample_size": 123,
+      "description": "Urban/rural representativeness by country",
+      "max_possible_score": 0.750755141696809,
+      "max_possible_diversity": 0.9454000000000001,
+      "efficiency_ratio": 0.10829938332890572,
+      "diversity_efficiency": 0.1645394071880215
+    },
+    {
+      "dimension": "Country",
+      "gri_score": 0.10850603161084638,
+      "diversity_score": 0.14285714285714285,
+      "dimension_columns": [
+        "country"
+      ],
+      "sample_size": 123,
+      "description": "Country-level representativeness",
+      "max_possible_score": 0.8283937018023557,
+      "max_possible_diversity": 0.9547619047619048,
+      "efficiency_ratio": 0.13098365110063878,
+      "diversity_efficiency": 0.14962593516209474
+    },
+    {
+      "dimension": "Region \u00d7 Gender \u00d7 Age",
+      "gri_score": 0.23034261993497074,
+      "diversity_score": 0.34328358208955223,
+      "dimension_columns": [
+        "region",
+        "gender",
+        "age_group"
+      ],
+      "sample_size": 123,
+      "description": "Regional demographic representativeness",
+      "max_possible_score": 0.7153354421730582,
+      "max_possible_diversity": 0.9289701492537312,
+      "efficiency_ratio": 0.32200644111136445,
+      "diversity_efficiency": 0.3695313378641089
+    },
+    {
+      "dimension": "Region",
+      "gri_score": 0.36763856997460476,
+      "diversity_score": 0.3684210526315789,
+      "dimension_columns": [
+        "region"
+      ],
+      "sample_size": 123,
+      "description": "Regional representativeness",
+      "max_possible_score": 0.9753033468795915,
+      "max_possible_diversity": 0.986578947368421,
+      "efficiency_ratio": 0.37694792204993066,
+      "diversity_efficiency": 0.37343291544411844
+    },
+    {
+      "dimension": "Continent",
+      "gri_score": 0.4927015177639512,
+      "diversity_score": 0.5,
+      "dimension_columns": [
+        "continent"
+      ],
+      "sample_size": 123,
+      "description": "Continental representativeness",
+      "max_possible_score": 0.9920488688354105,
+      "max_possible_diversity": 0.9721666666666667,
+      "efficiency_ratio": 0.49665045063994184,
+      "diversity_efficiency": 0.5143151037202125
+    },
+    {
+      "dimension": "Age Group",
+      "gri_score": 0.8289987674135519,
+      "diversity_score": 1.0,
+      "dimension_columns": [
+        "age_group"
+      ],
+      "sample_size": 123,
+      "description": "Global age representativeness",
+      "max_possible_score": 0.9898159589541922,
+      "max_possible_diversity": 1.0,
+      "efficiency_ratio": 0.8375281888659842,
+      "diversity_efficiency": 1.0
+    },
+    {
+      "dimension": "Gender",
+      "gri_score": 0.9482060558768339,
+      "diversity_score": 1.0,
+      "dimension_columns": [
+        "gender"
+      ],
+      "sample_size": 123,
+      "description": "Global gender representativeness",
+      "max_possible_score": 0.9969865436817122,
+      "max_possible_diversity": 1.0,
+      "efficiency_ratio": 0.9510720700153688,
+      "diversity_efficiency": 1.0
+    }
+  ]
+}
