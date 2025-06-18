@@ -74,7 +74,15 @@ class GRIAnalysis:
         # Load benchmarks if not provided
         if benchmarks is None:
             try:
-                self.benchmarks = load_benchmark_suite()
+                loaded_benchmarks = load_benchmark_suite()
+                # Map to expected keys for calculate_gri_scorecard
+                self.benchmarks = {
+                    'age_gender': loaded_benchmarks.get('Country × Gender × Age'),
+                    'religion': loaded_benchmarks.get('Country × Religion'),
+                    'environment': loaded_benchmarks.get('Country × Environment')
+                }
+                # Also keep the original benchmarks for other uses
+                self.benchmarks.update(loaded_benchmarks)
             except Exception as e:
                 raise ValueError(
                     f"Failed to load benchmark data. Make sure benchmark files exist in 'data/processed/'. "
@@ -157,44 +165,12 @@ class GRIAnalysis:
         scorecard = calculate_gri_scorecard(
             self.survey_data,
             self.benchmarks,
-            dimensions=dimensions
+            survey_source='global_dialogues',
+            dimensions=dimensions,
+            include_max_possible=include_max_possible,
+            n_simulations=n_simulations,
+            random_seed=random_seed
         )
-        
-        # Add max possible scores if requested
-        if include_max_possible:
-            sample_size = len(self.survey_data)
-            
-            for idx, row in scorecard.iterrows():
-                dimension = row['dimension']
-                dim_cols = row.get('dimension_columns', [])
-                
-                # Get appropriate benchmark
-                benchmark_key = self._get_benchmark_key(dimension)
-                if benchmark_key in self.benchmarks:
-                    benchmark_df = self.benchmarks[benchmark_key]
-                    
-                    # Calculate max scores
-                    if dimension not in self._max_scores:
-                        max_results = monte_carlo_max_scores(
-                            benchmark_df,
-                            sample_size,
-                            dim_cols,
-                            n_simulations,
-                            random_seed
-                        )
-                        self._max_scores[dimension] = max_results
-                    else:
-                        max_results = self._max_scores[dimension]
-                    
-                    # Add to scorecard
-                    scorecard.at[idx, 'max_possible_score'] = max_results['max_gri']['mean']
-                    scorecard.at[idx, 'max_possible_diversity'] = max_results['max_diversity']['mean']
-                    scorecard.at[idx, 'efficiency_ratio'] = (
-                        row['gri_score'] / max_results['max_gri']['mean']
-                    )
-                    scorecard.at[idx, 'diversity_efficiency'] = (
-                        row['diversity_score'] / max_results['max_diversity']['mean']
-                    )
         
         self._scorecard = scorecard
         return scorecard
