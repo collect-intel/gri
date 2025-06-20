@@ -21,7 +21,7 @@ Should be able to calcuate GRI scores of a survey and *also* get the "Max possib
 
 This should be demonstrated in a notebook and also when one runs `make calculate-gri`. Again, this should work as a module with easy-to-call functions and NOT repeating similar code in multiple places.
 
-## 3. Add WVS survey data to @5-survey-comparison.ipynb
+## 3. Add WVS survey data to @6-survey-comparison.ipynb
 
 Add a comparison of both WVS survey datasets scores compared to GD.
 

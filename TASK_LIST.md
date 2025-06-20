@@ -154,7 +154,7 @@ Implemented analyze_top_segments.py script that identifies segments causing larg
 **Priority**: Low
 **Dependencies**: Task 6 completed
 
-Created 5-survey-comparison.ipynb to compare GRI performance across GD1, GD2, GD3 surveys. Provides comprehensive trend analysis showing evolution of representativeness over time. Includes visualizations for dimension comparisons, efficiency analysis, and best practice identification. Generates detailed comparison data and summary statistics for tracking survey methodology improvements over the Global Dialogues series.
+Created 6-survey-comparison.ipynb to compare GRI performance across GD1, GD2, GD3 surveys. Provides comprehensive trend analysis showing evolution of representativeness over time. Includes visualizations for dimension comparisons, efficiency analysis, and best practice identification. Generates detailed comparison data and summary statistics for tracking survey methodology improvements over the Global Dialogues series.
 
 8. Task: Add a script to calculate the 'Max possible GRI and Diveristy Scores' for the given dimensions.
 

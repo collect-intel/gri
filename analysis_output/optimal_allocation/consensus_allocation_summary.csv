@@ -1,0 +1,1841 @@
+survey,dimension,stratum,variance,consensus_score,consensus_category
+GD1,Country × Gender × Age,United States × Female × 26-35,0.048479170006947785,0.9515208299930522,High
+GD1,Country × Gender × Age,India × Male × 18-25,0.030187074829931975,0.969812925170068,High
+GD1,Country × Gender × Age,Canada × Male × 26-35,0.0724851394604481,0.9275148605395519,High
+GD1,Country × Gender × Age,India × Female × 18-25,0.07600215880725898,0.923997841192741,High
+GD1,Country × Gender × Age,Kenya × Female × 26-35,0.02089620484682213,0.9791037951531779,High
+GD1,Country × Gender × Age,Kenya × Male × 26-35,0.023922983638496258,0.9760770163615038,High
+GD1,Country × Gender × Age,Kenya × Female × 18-25,0.02189313601350638,0.9781068639864936,High
+GD1,Country × Gender × Age,India × Female × 36-45,0.02479945726725115,0.9752005427327488,High
+GD1,Country × Gender × Age,Kenya × Male × 18-25,0.026178407727639887,0.9738215922723601,High
+GD1,Country × Gender × Age,Chile × Male × 18-25,0.03664421997755331,0.9633557800224467,High
+GD1,Country × Gender × Age,India × Female × 26-35,0.02375901588565866,0.9762409841143413,High
+GD1,Country × Gender × Age,China × Male × 36-45,0.07222222222222223,0.9277777777777778,High
+GD1,Country × Gender × Age,Kenya × Female × 36-45,0.07352010129787909,0.9264798987021209,High
+GD1,Country × Gender × Age,Kenya × Male × 36-45,0.0515546410608139,0.9484453589391861,High
+GD1,Country × Gender × Age,Israel × Female × 26-35,0.09867969821673525,0.9013203017832647,High
+GD1,Country × Gender × Age,Pakistan × Male × 18-25,0.07142857142857142,0.9285714285714286,High
+GD1,Country × Gender × Age,India × Female × 56-65,0.10625,0.89375,High
+GD1,Country × Gender × Age,Mexico × Male × 18-25,0.02700617283950617,0.9729938271604939,High
+GD1,Country × Gender × Age,Mexico × Male × 26-35,0.15123456790123455,0.8487654320987654,High
+GD1,Country × Gender × Age,Mexico × Female × 26-35,0.04063051146384479,0.9593694885361552,High
+GD1,Country × Gender × Age,Chile × Female × 18-25,0.06898515579071135,0.9310148442092887,High
+GD1,Country × Gender × Age,South Africa × Male × 26-35,0.045524691358024685,0.9544753086419753,High
+GD1,Country × Gender × Age,Morocco × Male × 26-35,0.048525377229080936,0.9514746227709191,High
+GD1,Country × Gender × Age,India × Male × 26-35,0.014269166285627192,0.9857308337143728,High
+GD1,Country × Gender × Age,Chile × Male × 26-35,0.04854252400548697,0.951457475994513,High
+GD1,Country × Gender × Age,China × Female × 26-35,0.03451809393167418,0.9654819060683258,High
+GD1,Country × Gender × Age,Germany × Male × 46-55,0.08641975308641976,0.9135802469135802,High
+GD1,Country × Gender × Age,Morocco × Male × 18-25,0.06232853223593965,0.9376714677640603,High
+GD1,Country × Gender × Age,Germany × Male × 36-45,0.05263157894736842,0.9473684210526316,High
+GD1,Country × Gender × Age,Germany × Male × 18-25,0.08024691358024692,0.9197530864197531,High
+GD1,Country × Gender × Age,Germany × Male × 26-35,0.048445767195767195,0.9515542328042328,High
+GD1,Country × Gender × Age,Chile × Female × 26-35,0.06632373113854596,0.933676268861454,High
+GD1,Country × Gender × Age,Turkey × Male × 26-35,0.050308641975308634,0.9496913580246914,High
+GD1,Country × Gender × Age,United States × Female × 46-55,0.05303497942386831,0.9469650205761317,High
+GD1,Country × Gender × Age,Germany × Female × 26-35,0.04938271604938271,0.9506172839506173,High
+GD1,Country × Gender × Age,United Kingdom × Female × 18-25,0.09135802469135802,0.908641975308642,High
+GD1,Country × Gender × Age,United Kingdom × Female × 46-55,0.07407407407407407,0.9259259259259259,High
+GD1,Country × Gender × Age,South Africa × Female × 26-35,0.028439153439153438,0.9715608465608465,High
+GD1,Country × Gender × Age,Israel × Male × 18-25,0.07294238683127573,0.9270576131687243,High
+GD1,Country × Gender × Age,United Kingdom × Male × 26-35,0.03622378992749363,0.9637762100725064,High
+GD1,Country × Gender × Age,Brazil × Female × 26-35,0.0837962962962963,0.9162037037037037,High
+GD1,Country × Gender × Age,Russian Federation × Female × 46-55,0.15,0.85,High
+GD1,Country × Gender × Age,Spain × Male × 18-25,0.025,0.975,High
+GD1,Country × Gender × Age,Canada × Female × 18-25,0.06790123456790124,0.9320987654320988,High
+GD1,Country × Gender × Age,South Africa × Female × 18-25,0.06769547325102881,0.9323045267489711,High
+GD1,Country × Gender × Age,Spain × Male × 26-35,0.08823529411764706,0.9117647058823529,High
+GD1,Country × Gender × Age,France × Male × 18-25,0.09523809523809523,0.9047619047619048,High
+GD1,Country × Gender × Age,United States × Male × 36-45,0.05677090399312622,0.9432290960068738,High
+GD1,Country × Gender × Age,United States × Male × 18-25,0.051920438957475994,0.948079561042524,High
+GD1,Country × Gender × Age,South Africa × Male × 18-25,0.10185185185185185,0.8981481481481481,High
+GD1,Country × Gender × Age,Canada × Female × 26-35,0.06659544159544159,0.9334045584045584,High
+GD1,Country × Gender × Age,Poland × Male × 18-25,0.05169753086419753,0.9483024691358025,High
+GD1,Country × Gender × Age,Italy × Male × 18-25,0.04938271604938272,0.9506172839506173,High
+GD1,Country × Gender × Age,Spain × Female × 26-35,0.07894736842105263,0.9210526315789473,High
+GD1,Country × Gender × Age,Canada × Male × 56-65,0.03125,0.96875,High
+GD1,Country × Gender × Age,United Kingdom × Female × 26-35,0.05073107619403916,0.9492689238059608,High
+GD1,Country × Gender × Age,Italy × Male × 36-45,0.1419753086419753,0.8580246913580247,High
+GD1,Country × Gender × Age,Brazil × Male × 26-35,0.04461279461279461,0.9553872053872053,High
+GD1,Country × Gender × Age,India × Female × 46-55,0.05388986870468351,0.9461101312953165,High
+GD1,Country × Gender × Age,Canada × Male × 18-25,0.0763031550068587,0.9236968449931413,High
+GD1,Country × Gender × Age,United States × Female × 18-25,0.07407407407407407,0.9259259259259259,High
+GD1,Country × Gender × Age,United States × Female × 56-65,0.08641975308641976,0.9135802469135802,High
+GD1,Country × Gender × Age,United States × Male × 26-35,0.06734726179170623,0.9326527382082938,High
+GD1,Country × Gender × Age,Israel × Male × 46-55,0.047619047619047616,0.9523809523809523,High
+GD1,Country × Gender × Age,United States × Non-binary × 18-25,0.09659090909090909,0.9034090909090909,High
+GD1,Country × Gender × Age,Australia × Female × 26-35,0.10370370370370373,0.8962962962962963,High
+GD1,Country × Gender × Age,Indonesia × Female × 18-25,0.04629629629629631,0.9537037037037037,High
+GD1,Country × Gender × Age,United States × Female × 36-45,0.048167367611812055,0.9518326323881879,High
+GD1,Country × Gender × Age,Pakistan × Male × 26-35,0.031732967535436675,0.9682670324645634,High
+GD1,Country × Gender × Age,Turkey × Female × 26-35,0.06111111111111112,0.9388888888888889,High
+GD1,Country × Gender × Age,Australia × Male × 26-35,0.08552631578947369,0.9144736842105263,High
+GD1,Country × Gender × Age,United Kingdom × Male × 36-45,0.0544238683127572,0.9455761316872427,High
+GD1,Country × Gender × Age,Indonesia × Male × 18-25,0.029760568649457537,0.9702394313505425,High
+GD1,Country × Gender × Age,Slovakia × Male × 26-35,0.1111111111111111,0.8888888888888888,High
+GD1,Country × Gender × Age,Brazil × Male × 18-25,0.041049382716049396,0.9589506172839506,High
+GD1,Country × Gender × Age,Palestine × Female × 18-25,0.09375,0.90625,High
+GD1,Country × Gender × Age,Israel × Female × 18-25,0.07208994708994709,0.9279100529100529,High
+GD1,Country × Gender × Age,Chile × Male × 36-45,0.023809523809523808,0.9761904761904762,High
+GD1,Country × Gender × Age,Sweden × Male × 26-35,0.09558823529411764,0.9044117647058824,High
+GD1,Country × Gender × Age,Slovakia × Female × 18-25,0.08333333333333333,0.9166666666666666,High
+GD1,Country × Gender × Age,Chile × Male × 56-65,0.23076923076923078,0.7692307692307692,Medium
+GD1,Country × Gender × Age,China × Male × 26-35,0.03628056160735899,0.963719438392641,High
+GD1,Country × Gender × Age,Brazil × Female × 46-55,0.12037037037037036,0.8796296296296297,High
+GD1,Country × Gender × Age,United States × Male × 65+,0.10119047619047619,0.8988095238095238,High
+GD1,Country × Gender × Age,United States × Male × 46-55,0.03679698216735255,0.9632030178326475,High
+GD1,Country × Gender × Age,Bangladesh × Male × 18-25,0.04852537722908093,0.9514746227709191,High
+GD1,Country × Gender × Age,Israel × Male × 26-35,0.06189986282578875,0.9381001371742113,High
+GD1,Country × Gender × Age,Brazil × Female × 18-25,0.08477366255144034,0.9152263374485596,High
+GD1,Country × Gender × Age,Malaysia × Male × 18-25,0.21323529411764705,0.7867647058823529,Medium
+GD1,Country × Gender × Age,Israel × Male × 36-45,0.08641975308641976,0.9135802469135802,High
+GD1,Country × Gender × Age,Canada × Female × 36-45,0.03009259259259259,0.9699074074074074,High
+GD1,Country × Gender × Age,Pakistan × Female × 26-35,0.02757936507936508,0.9724206349206349,High
+GD1,Country × Gender × Age,Canada × Female × 46-55,0.27205882352941174,0.7279411764705883,Medium
+GD1,Country × Gender × Age,Brazil × Male × 36-45,0.046296296296296294,0.9537037037037037,High
+GD1,Country × Gender × Age,Algeria × Female × 26-35,0.03125,0.96875,High
+GD1,Country × Gender × Age,India × Male × 36-45,0.03860351753870272,0.9613964824612973,High
+GD1,Country × Gender × Age,Bangladesh × Male × 36-45,0.08125,0.91875,High
+GD1,Country × Gender × Age,Australia × Female × 36-45,0.047619047619047616,0.9523809523809523,High
+GD1,Country × Gender × Age,Russian Federation × Female × 26-35,0.04891304347826087,0.9510869565217391,High
+GD1,Country × Gender × Age,Vietnam × Male × 18-25,0.035493827160493825,0.9645061728395061,High
+GD1,Country × Gender × Age,Pakistan × Female × 18-25,0.08024691358024692,0.9197530864197531,High
+GD1,Country × Gender × Age,Philippines × Female × 26-35,0.05648148148148149,0.9435185185185185,High
+GD1,Country × Gender × Age,Bangladesh × Female × 18-25,0.09567901234567902,0.904320987654321,High
+GD1,Country × Gender × Age,United Kingdom × Male × 18-25,0.05921052631578947,0.9407894736842105,High
+GD1,Country × Gender × Age,Italy × Female × 46-55,0.07386363636363637,0.9261363636363636,High
+GD1,Country × Gender × Age,Mexico × Female × 18-25,0.05921052631578947,0.9407894736842105,High
+GD1,Country × Gender × Age,Italy × Male × 26-35,0.029320987654320986,0.970679012345679,High
+GD1,Country × Gender × Age,United Kingdom × Female × 36-45,0.09876543209876544,0.9012345679012346,High
+GD1,Country × Gender × Age,Norway × Female × 18-25,0.0,1.0,High
+GD1,Country × Gender × Age,Netherlands × Female × 26-35,0.05625,0.94375,High
+GD1,Country × Gender × Age,Japan × Female × 26-35,0.05246913580246915,0.9475308641975309,High
+GD1,Country × Gender × Age,Slovakia × Male × 18-25,0.08333333333333336,0.9166666666666666,High
+GD1,Country × Gender × Age,Bangladesh × Female × 26-35,0.058823529411764705,0.9411764705882353,High
+GD1,Country × Gender × Age,Singapore × Male × 26-35,0.034722222222222224,0.9652777777777778,High
+GD1,Country × Gender × Age,Japan × Male × 26-35,0.2604166666666667,0.7395833333333333,Medium
+GD1,Country × Gender × Age,Korea South × Male × 18-25,0.11333333333333334,0.8866666666666667,High
+GD1,Country × Gender × Age,Japan × Female × 18-25,0.04938271604938272,0.9506172839506173,High
+GD1,Country × Gender × Age,Philippines × Male × 18-25,0.045267489711934165,0.9547325102880658,High
+GD1,Country × Gender × Age,Morocco × Female × 18-25,0.049805261610817164,0.9501947383891829,High
+GD1,Country × Gender × Age,United States × Male × 56-65,0.2426470588235294,0.7573529411764706,Medium
+GD1,Country × Gender × Age,Philippines × Male × 26-35,0.04861111111111111,0.9513888888888888,High
+GD1,Country × Gender × Age,Saudi Arabia × Female × 18-25,0.12345679012345681,0.8765432098765432,High
+GD1,Country × Gender × Age,Japan × Male × 36-45,0.29464285714285715,0.7053571428571428,Medium
+GD1,Country × Gender × Age,Algeria × Female × 18-25,0.07407407407407407,0.9259259259259259,High
+GD1,Country × Gender × Age,Morocco × Female × 26-35,0.034722222222222224,0.9652777777777778,High
+GD1,Country × Gender × Age,Indonesia × Female × 36-45,0.04475308641975308,0.9552469135802469,High
+GD1,Country × Gender × Age,Brazil × Female × 36-45,0.10185185185185183,0.8981481481481481,High
+GD1,Country × Gender × Age,Kazakhstan × Female × 36-45,0.04929698216735253,0.9507030178326474,High
+GD1,Country × Gender × Age,Algeria × Male × 18-25,0.07098765432098766,0.9290123456790124,High
+GD1,Country × Gender × Age,Kazakhstan × Female × 26-35,0.06481481481481481,0.9351851851851852,High
+GD1,Country × Gender × Age,Indonesia × Female × 26-35,0.05901348879743942,0.9409865112025606,High
+GD1,Country × Gender × Age,Egypt × Male × 26-35,0.09259259259259259,0.9074074074074074,High
+GD1,Country × Gender × Age,Canada × Male × 36-45,0.1080246913580247,0.8919753086419753,High
+GD1,Country × Gender × Age,Vietnam × Female × 18-25,0.0625,0.9375,High
+GD1,Country × Gender × Age,Israel × Female × 46-55,0.05357142857142857,0.9464285714285714,High
+GD1,Country × Gender × Age,China × Female × 36-45,0.043792866941015085,0.956207133058985,High
+GD1,Country × Gender × Age,Vietnam × Male × 26-35,0.085,0.915,High
+GD1,Country × Gender × Age,India × Male × 46-55,0.040307172251616695,0.9596928277483833,High
+GD1,Country × Gender × Age,Indonesia × Male × 36-45,0.07030178326474623,0.9296982167352538,High
+GD1,Country × Gender × Age,Philippines × Female × 18-25,0.04938271604938272,0.9506172839506173,High
+GD1,Country × Gender × Age,Korea South × Female × 26-35,0.12955555555555556,0.8704444444444445,High
+GD1,Country × Gender × Age,China × Male × 18-25,0.03651372632854114,0.9634862736714589,High
+GD1,Country × Gender × Age,Indonesia × Male × 46-55,0.03125,0.96875,High
+GD1,Country × Gender × Age,Kazakhstan × Female × 18-25,0.04814814814814815,0.9518518518518518,High
+GD1,Country × Gender × Age,Egypt × Male × 18-25,0.12654320987654322,0.8734567901234568,High
+GD1,Country × Gender × Age,Australia × Female × 18-25,0.09259259259259259,0.9074074074074074,High
+GD1,Country × Gender × Age,Indonesia × Male × 26-35,0.030864197530864196,0.9691358024691358,High
+GD1,Country × Gender × Age,Singapore × Female × 26-35,0.08333333333333333,0.9166666666666666,High
+GD1,Country × Gender × Age,Malaysia × Female × 36-45,0.0,1.0,High
+GD1,Country × Gender × Age,Malaysia × Female × 18-25,0.05,0.95,High
+GD1,Country × Gender × Age,Malaysia × Male × 36-45,0.0625,0.9375,High
+GD1,Country × Gender × Age,Korea South × Male × 26-35,0.12211111111111111,0.8778888888888889,High
+GD1,Country × Gender × Age,Kazakhstan × Male × 36-45,0.047619047619047616,0.9523809523809523,High
+GD1,Country × Gender × Age,Kenya × Female × 46-55,0.12345679012345678,0.8765432098765432,High
+GD1,Country × Gender × Age,Bangladesh × Male × 26-35,0.05,0.95,High
+GD1,Country × Gender × Age,Korea South × Female × 18-25,0.07386363636363637,0.9261363636363636,High
+GD1,Country × Gender × Age,Russian Federation × Male × 26-35,0.0625,0.9375,High
+GD1,Country × Gender × Age,India × Male × 56-65,0.05015432098765432,0.9498456790123457,High
+GD1,Country × Gender × Age,China × Female × 18-25,0.022633744855967076,0.977366255144033,High
+GD1,Country × Gender × Age,China × Male × 46-55,0.08641975308641976,0.9135802469135802,High
+GD1,Country × Religion,United States × Christianity,0.05140444569148272,0.9485955543085173,High
+GD1,Country × Religion,India × Islam,0.05324808935920046,0.9467519106407996,High
+GD1,Country × Religion,India × Hinduism,0.028391446415506883,0.9716085535844932,High
+GD1,Country × Religion,Canada × I do not identify with any religious group or faith,0.05419800387871908,0.9458019961212809,High
+GD1,Country × Religion,Kenya × Christianity,0.025261045800123012,0.974738954199877,High
+GD1,Country × Religion,Chile × I do not identify with any religious group or faith,0.04014604272888874,0.9598539572711112,High
+GD1,Country × Religion,China × I do not identify with any religious group or faith,0.03502122200793885,0.9649787779920611,High
+GD1,Country × Religion,Kenya × I do not identify with any religious group or faith,0.03957475994513032,0.9604252400548696,High
+GD1,Country × Religion,Russian Federation × I do not identify with any religious group or faith,0.05531550068587105,0.9446844993141289,High
+GD1,Country × Religion,Israel × Judaism,0.0746716827634702,0.9253283172365298,High
+GD1,Country × Religion,Poland × I do not identify with any religious group or faith,0.08950617283950618,0.9104938271604939,High
+GD1,Country × Religion,Pakistan × Islam,0.036951303155006866,0.9630486968449932,High
+GD1,Country × Religion,India × Christianity,0.059452160493827164,0.9405478395061728,High
+GD1,Country × Religion,Mexico × Christianity,0.07453703703703704,0.9254629629629629,High
+GD1,Country × Religion,Mexico × I do not identify with any religious group or faith,0.044855967078189306,0.9551440329218107,High
+GD1,Country × Religion,Chile × Christianity,0.05566986739826246,0.9443301326017375,High
+GD1,Country × Religion,South Africa × I do not identify with any religious group or faith,0.047619047619047616,0.9523809523809523,High
+GD1,Country × Religion,Morocco × Islam,0.06689679445527398,0.933103205544726,High
+GD1,Country × Religion,Mexico × Other religious group,0.025,0.975,High
+GD1,Country × Religion,Germany × I do not identify with any religious group or faith,0.055106621773288435,0.9448933782267116,High
+GD1,Country × Religion,Netherlands × I do not identify with any religious group or faith,0.0690329218106996,0.9309670781893004,High
+GD1,Country × Religion,Canada × Islam,0.0625,0.9375,High
+GD1,Country × Religion,South Africa × Christianity,0.035191236988622615,0.9648087630113774,High
+GD1,Country × Religion,Turkey × Islam,0.055114638447971785,0.9448853615520282,High
+GD1,Country × Religion,United States × Buddhism,0.054783950617283944,0.9452160493827161,High
+GD1,Country × Religion,United Kingdom × I do not identify with any religious group or faith,0.038908213033727435,0.9610917869662725,High
+GD1,Country × Religion,Turkey × I do not identify with any religious group or faith,0.047530864197530866,0.9524691358024692,High
+GD1,Country × Religion,Ireland {Republic} × Christianity,0.12333333333333334,0.8766666666666667,High
+GD1,Country × Religion,Israel × I do not identify with any religious group or faith,0.07111339734796526,0.9288866026520347,High
+GD1,Country × Religion,United Kingdom × Christianity,0.046913580246913576,0.9530864197530864,High
+GD1,Country × Religion,Ireland {Republic} × I do not identify with any religious group or faith,0.10666666666666667,0.8933333333333333,High
+GD1,Country × Religion,Brazil × Christianity,0.038702239789196305,0.9612977602108037,High
+GD1,Country × Religion,Russian Federation × Christianity,0.08333333333333333,0.9166666666666666,High
+GD1,Country × Religion,Spain × I do not identify with any religious group or faith,0.058504801097393686,0.9414951989026064,High
+GD1,Country × Religion,France × I do not identify with any religious group or faith,0.06882716049382716,0.9311728395061728,High
+GD1,Country × Religion,United States × I do not identify with any religious group or faith,0.04462156013189605,0.955378439868104,High
+GD1,Country × Religion,Italy × I do not identify with any religious group or faith,0.04883401920438959,0.9511659807956104,High
+GD1,Country × Religion,Germany × Christianity,0.12037037037037039,0.8796296296296297,High
+GD1,Country × Religion,Poland × Christianity,0.05246913580246915,0.9475308641975309,High
+GD1,Country × Religion,Spain × Christianity,0.1,0.9,High
+GD1,Country × Religion,Italy × Christianity,0.059781011169900054,0.9402189888300999,High
+GD1,Country × Religion,Brazil × I do not identify with any religious group or faith,0.039852123185456514,0.9601478768145435,High
+GD1,Country × Religion,Slovakia × I do not identify with any religious group or faith,0.061419753086419754,0.9385802469135802,High
+GD1,Country × Religion,Canada × Christianity,0.093278463648834,0.906721536351166,High
+GD1,Country × Religion,Ukraine × I do not identify with any religious group or faith,0.075,0.925,High
+GD1,Country × Religion,Kenya × Islam,0.05099941211052322,0.9490005878894767,High
+GD1,Country × Religion,India × Buddhism,0.06818181818181818,0.9318181818181819,High
+GD1,Country × Religion,Australia × Christianity,0.07283950617283952,0.9271604938271605,High
+GD1,Country × Religion,Indonesia × Islam,0.03800991028659873,0.9619900897134013,High
+GD1,Country × Religion,Ukraine × Christianity,0.1358024691358025,0.8641975308641975,High
+GD1,Country × Religion,Switzerland × I do not identify with any religious group or faith,0.07738095238095238,0.9226190476190477,High
+GD1,Country × Religion,Finland × I do not identify with any religious group or faith,0.04,0.96,High
+GD1,Country × Religion,Germany × Islam,0.05308641975308643,0.9469135802469135,High
+GD1,Country × Religion,Greece × I do not identify with any religious group or faith,0.1388888888888889,0.8611111111111112,High
+GD1,Country × Religion,Palestine × Islam,0.14,0.86,High
+GD1,Country × Religion,Norway × I do not identify with any religious group or faith,0.042438271604938266,0.9575617283950617,High
+GD1,Country × Religion,Austria × I do not identify with any religious group or faith,0.38235294117647056,0.6176470588235294,Medium
+GD1,Country × Religion,United Kingdom × Islam,0.1080246913580247,0.8919753086419753,High
+GD1,Country × Religion,Bangladesh × I do not identify with any religious group or faith,0.09027777777777778,0.9097222222222222,High
+GD1,Country × Religion,Brazil × Buddhism,0.21323529411764705,0.7867647058823529,Medium
+GD1,Country × Religion,Malaysia × Islam,0.06646090534979425,0.9335390946502058,High
+GD1,Country × Religion,France × Christianity,0.33088235294117646,0.6691176470588236,Medium
+GD1,Country × Religion,Saudi Arabia × Islam,0.1087962962962963,0.8912037037037037,High
+GD1,Country × Religion,Algeria × Islam,0.06834215167548502,0.931657848324515,High
+GD1,Country × Religion,Bangladesh × Islam,0.04667880130843093,0.9533211986915691,High
+GD1,Country × Religion,Brazil × Other religious group,0.0617283950617284,0.9382716049382716,High
+GD1,Country × Religion,Vietnam × I do not identify with any religious group or faith,0.07330246913580248,0.9266975308641975,High
+GD1,Country × Religion,Philippines × I do not identify with any religious group or faith,0.0625,0.9375,High
+GD1,Country × Religion,India × Other religious group,0.05555555555555555,0.9444444444444444,High
+GD1,Country × Religion,Hungary × Islam,0.09523809523809523,0.9047619047619048,High
+GD1,Country × Religion,Slovakia × Christianity,0.07407407407407407,0.9259259259259259,High
+GD1,Country × Religion,Japan × I do not identify with any religious group or faith,0.06234567901234569,0.9376543209876543,High
+GD1,Country × Religion,Canada × Buddhism,0.08950617283950618,0.9104938271604939,High
+GD1,Country × Religion,Australia × I do not identify with any religious group or faith,0.07592592592592594,0.924074074074074,High
+GD1,Country × Religion,Singapore × I do not identify with any religious group or faith,0.14705882352941177,0.8529411764705882,High
+GD1,Country × Religion,Japan × Islam,0.0617283950617284,0.9382716049382716,High
+GD1,Country × Religion,Korea South × I do not identify with any religious group or faith,0.06423456790123457,0.9357654320987654,High
+GD1,Country × Religion,Philippines × Christianity,0.03637643491444661,0.9636235650855534,High
+GD1,Country × Religion,Italy × Islam,0.04891304347826087,0.9510869565217391,High
+GD1,Country × Religion,United States × Islam,0.04420438957475995,0.9557956104252401,High
+GD1,Country × Religion,Egypt × Islam,0.06364311842706905,0.936356881572931,High
+GD1,Country × Religion,Vietnam × Christianity,0.24382716049382716,0.7561728395061729,Medium
+GD1,Country × Religion,Japan × Christianity,0.06790123456790124,0.9320987654320988,High
+GD1,Country × Religion,Indonesia × Christianity,0.10263570448755634,0.8973642955124437,High
+GD1,Country × Religion,Kazakhstan × Christianity,0.04790809327846365,0.9520919067215363,High
+GD1,Country × Religion,Kazakhstan × Islam,0.07784636488340191,0.9221536351165981,High
+GD1,Country × Religion,China × Buddhism,0.060333790580704164,0.9396662094192958,High
+GD1,Country × Religion,China × Other religious group,0.037037037037037035,0.962962962962963,High
+GD1,Country × Religion,India × I do not identify with any religious group or faith,0.037168935317083464,0.9628310646829166,High
+GD1,Country × Religion,Australia × Islam,0.05263157894736842,0.9473684210526316,High
+GD1,Country × Religion,Kazakhstan × I do not identify with any religious group or faith,0.07142857142857141,0.9285714285714286,High
+GD1,Country × Religion,New Zealand × I do not identify with any religious group or faith,0.0779320987654321,0.9220679012345679,High
+GD1,Country × Religion,Korea South × Christianity,0.11633333333333333,0.8836666666666667,High
+GD1,Country × Religion,India × Sikhism,0.07403733098177542,0.9259626690182245,High
+GD1,Country × Religion,Singapore × Christianity,0.07142857142857142,0.9285714285714286,High
+GD1,Country × Religion,Malaysia × Christianity,0.0617283950617284,0.9382716049382716,High
+GD1,Country × Religion,Sweden × I do not identify with any religious group or faith,0.02631578947368421,0.9736842105263158,High
+GD1,Country × Religion,Singapore × Buddhism,0.05555555555555555,0.9444444444444444,High
+GD1,Country × Religion,Vietnam × Buddhism,0.09567901234567902,0.904320987654321,High
+GD1,Country × Religion,Ghana × Christianity,0.3416666666666667,0.6583333333333333,Medium
+GD1,Country × Religion,China × Christianity,0.19078947368421054,0.8092105263157895,High
+GD1,Country × Environment,United States × Urban,0.041163698225535526,0.9588363017744644,High
+GD1,Country × Environment,India × Urban,0.037565280183509,0.962434719816491,High
+GD1,Country × Environment,Canada × Urban,0.06774249275702765,0.9322575072429724,High
+GD1,Country × Environment,Kenya × Urban,0.025706232089379315,0.9742937679106207,High
+GD1,Country × Environment,Kenya × Rural,0.0382716049382716,0.9617283950617284,High
+GD1,Country × Environment,Chile × Urban,0.04283578980081038,0.9571642101991896,High
+GD1,Country × Environment,China × Urban,0.031301481911377035,0.968698518088623,High
+GD1,Country × Environment,Russian Federation × Urban,0.06139403292181069,0.9386059670781893,High
+GD1,Country × Environment,Israel × Urban,0.06203129699317063,0.9379687030068293,High
+GD1,Country × Environment,Poland × Urban,0.06095679012345679,0.9390432098765432,High
+GD1,Country × Environment,Pakistan × Urban,0.03353089401801158,0.9664691059819884,High
+GD1,Country × Environment,Mexico × Urban,0.041257370887000516,0.9587426291129995,High
+GD1,Country × Environment,South Africa × Urban,0.0414690275070392,0.9585309724929608,High
+GD1,Country × Environment,Morocco × Urban,0.06689679445527398,0.933103205544726,High
+GD1,Country × Environment,Germany × Urban,0.03686256106658966,0.9631374389334103,High
+GD1,Country × Environment,Netherlands × Rural,0.0770747599451303,0.9229252400548698,High
+GD1,Country × Environment,Turkey × Urban,0.04823699962588851,0.9517630003741115,High
+GD1,Country × Environment,Germany × Rural,0.03125,0.96875,High
+GD1,Country × Environment,United Kingdom × Urban,0.0398585515198505,0.9601414484801495,High
+GD1,Country × Environment,Ireland {Republic} × Urban,0.08855555555555554,0.9114444444444445,High
+GD1,Country × Environment,South Africa × Rural,0.07098765432098766,0.9290123456790124,High
+GD1,Country × Environment,Brazil × Urban,0.042728447821040405,0.9572715521789597,High
+GD1,Country × Environment,Spain × Urban,0.09126984126984126,0.9087301587301587,High
+GD1,Country × Environment,France × Rural,0.09659090909090909,0.9034090909090909,High
+GD1,Country × Environment,United States × Rural,0.07956763743800781,0.9204323625619922,High
+GD1,Country × Environment,France × Urban,0.0918087399568881,0.9081912600431119,High
+GD1,Country × Environment,Italy × Urban,0.03872232020380168,0.9612776797961983,High
+GD1,Country × Environment,Spain × Rural,0.1875,0.8125,High
+GD1,Country × Environment,India × Rural,0.031978181283736834,0.9680218187162631,High
+GD1,Country × Environment,Slovakia × Urban,0.07124485596707819,0.9287551440329218,High
+GD1,Country × Environment,Hungary × Urban,0.08641975308641976,0.9135802469135802,High
+GD1,Country × Environment,Ukraine × Urban,0.11944444444444446,0.8805555555555555,High
+GD1,Country × Environment,Poland × Rural,0.07738095238095238,0.9226190476190477,High
+GD1,Country × Environment,Netherlands × Urban,0.15789473684210525,0.8421052631578947,High
+GD1,Country × Environment,Portugal × Urban,0.19047619047619047,0.8095238095238095,High
+GD1,Country × Environment,Nigeria × Urban,0.14705882352941177,0.8529411764705882,High
+GD1,Country × Environment,Australia × Rural,0.08125,0.91875,High
+GD1,Country × Environment,Indonesia × Urban,0.03767014878125989,0.9623298512187402,High
+GD1,Country × Environment,United Arab Emirates × Urban,0.09523809523809523,0.9047619047619048,High
+GD1,Country × Environment,Switzerland × Rural,0.07738095238095238,0.9226190476190477,High
+GD1,Country × Environment,Finland × Urban,0.04,0.96,High
+GD1,Country × Environment,Belgium × Urban,0.08950617283950618,0.9104938271604939,High
+GD1,Country × Environment,Denmark × Urban,0.07142857142857142,0.9285714285714286,High
+GD1,Country × Environment,Australia × Urban,0.06946938521012595,0.9305306147898741,High
+GD1,Country × Environment,United Kingdom × Rural,0.2623456790123457,0.7376543209876543,Medium
+GD1,Country × Environment,Greece × Urban,0.14583333333333334,0.8541666666666666,High
+GD1,Country × Environment,Palestine × Urban,0.09375,0.90625,High
+GD1,Country × Environment,Israel × Rural,0.075,0.925,High
+GD1,Country × Environment,Norway × Urban,0.08847736625514403,0.911522633744856,High
+GD1,Country × Environment,Austria × Urban,0.38235294117647056,0.6176470588235294,Medium
+GD1,Country × Environment,Sweden × Urban,0.1080246913580247,0.8919753086419753,High
+GD1,Country × Environment,New Zealand × Urban,0.1138888888888889,0.8861111111111111,High
+GD1,Country × Environment,Greece × Rural,0.07386363636363637,0.9261363636363636,High
+GD1,Country × Environment,Bangladesh × Urban,0.049417009602194785,0.9505829903978052,High
+GD1,Country × Environment,Malaysia × Urban,0.054563492063492064,0.9454365079365079,High
+GD1,Country × Environment,Saudi Arabia × Urban,0.1087962962962963,0.8912037037037037,High
+GD1,Country × Environment,Vietnam × Urban,0.0805098308184728,0.9194901691815272,High
+GD1,Country × Environment,Philippines × Urban,0.0397217323143249,0.9602782676856751,High
+GD1,Country × Environment,Algeria × Urban,0.068342151675485,0.931657848324515,High
+GD1,Country × Environment,Singapore × Urban,0.05183225553595924,0.9481677444640407,High
+GD1,Country × Environment,Japan × Urban,0.04150883838383838,0.9584911616161617,High
+GD1,Country × Environment,Korea South × Urban,0.0871712962962963,0.9128287037037037,High
+GD1,Country × Environment,Philippines × Rural,0.05825004899078973,0.9417499510092102,High
+GD1,Country × Environment,Egypt × Urban,0.0664421997755331,0.9335578002244669,High
+GD1,Country × Environment,Kazakhstan × Urban,0.03876936577099976,0.9612306342290002,High
+GD1,Country × Environment,Ghana × Urban,0.1358024691358025,0.8641975308641975,High
+GD1,Country × Environment,Indonesia × Rural,0.08024691358024692,0.9197530864197531,High
+GD1,Country × Environment,Pakistan × Rural,0.06818181818181818,0.9318181818181819,High
+GD1,Country × Environment,China × Rural,0.047619047619047616,0.9523809523809523,High
+GD1,Country × Environment,Brazil × Rural,0.175,0.825,High
+GD1,Country,United States,0.04598427692563494,0.9540157230743651,High
+GD1,Country,India,0.036869788661369224,0.9631302113386307,High
+GD1,Country,Canada,0.06774249275702765,0.9322575072429724,High
+GD1,Country,Kenya,0.02663059110969009,0.9733694088903099,High
+GD1,Country,Chile,0.043207092975611504,0.9567929070243885,High
+GD1,Country,China,0.03190745659016731,0.9680925434098326,High
+GD1,Country,Russian Federation,0.0772119341563786,0.9227880658436214,High
+GD1,Country,Israel,0.0628679250777634,0.9371320749222366,High
+GD1,Country,Poland,0.06450617283950617,0.9354938271604938,High
+GD1,Country,Pakistan,0.03561174422285534,0.9643882557771447,High
+GD1,Country,Mexico,0.041257370887000516,0.9587426291129995,High
+GD1,Country,South Africa,0.04292624310740253,0.9570737568925974,High
+GD1,Country,Morocco,0.06689679445527398,0.933103205544726,High
+GD1,Country,Germany,0.03958945718204977,0.9604105428179502,High
+GD1,Country,Netherlands,0.06820987654320988,0.9317901234567901,High
+GD1,Country,Turkey,0.05450036931518413,0.9454996306848159,High
+GD1,Country,United Kingdom,0.0486583522297808,0.9513416477702192,High
+GD1,Country,Ireland {Republic},0.08855555555555554,0.9114444444444445,High
+GD1,Country,Brazil,0.0434125609995077,0.9565874390004923,High
+GD1,Country,Spain,0.06833561957018747,0.9316643804298126,High
+GD1,Country,France,0.08756287151348881,0.9124371284865112,High
+GD1,Country,Italy,0.04017061042524005,0.9598293895747599,High
+GD1,Country,Slovakia,0.06604938271604939,0.9339506172839506,High
+GD1,Country,Hungary,0.08641975308641976,0.9135802469135802,High
+GD1,Country,Ukraine,0.11944444444444446,0.8805555555555555,High
+GD1,Country,Portugal,0.19047619047619047,0.8095238095238095,High
+GD1,Country,Nigeria,0.14705882352941177,0.8529411764705882,High
+GD1,Country,Australia,0.07332225387780943,0.9266777461221906,High
+GD1,Country,Indonesia,0.040426960706996834,0.9595730392930032,High
+GD1,Country,United Arab Emirates,0.09523809523809523,0.9047619047619048,High
+GD1,Country,Switzerland,0.07738095238095238,0.9226190476190477,High
+GD1,Country,Finland,0.04,0.96,High
+GD1,Country,Belgium,0.08950617283950618,0.9104938271604939,High
+GD1,Country,Denmark,0.07142857142857142,0.9285714285714286,High
+GD1,Country,Greece,0.1111111111111111,0.8888888888888888,High
+GD1,Country,Palestine,0.14,0.86,High
+GD1,Country,Norway,0.08847736625514403,0.911522633744856,High
+GD1,Country,Austria,0.38235294117647056,0.6176470588235294,Medium
+GD1,Country,Sweden,0.1080246913580247,0.8919753086419753,High
+GD1,Country,New Zealand,0.1138888888888889,0.8861111111111111,High
+GD1,Country,Bangladesh,0.049417009602194785,0.9505829903978052,High
+GD1,Country,Malaysia,0.056841563786008235,0.9431584362139918,High
+GD1,Country,Saudi Arabia,0.1087962962962963,0.8912037037037037,High
+GD1,Country,Algeria,0.06200396825396825,0.9379960317460317,High
+GD1,Country,Vietnam,0.0805098308184728,0.9194901691815272,High
+GD1,Country,Philippines,0.03908351593536778,0.9609164840646323,High
+GD1,Country,Japan,0.04254567449011894,0.9574543255098811,High
+GD1,Country,Singapore,0.05183225553595924,0.9481677444640407,High
+GD1,Country,Korea South,0.0871712962962963,0.9128287037037037,High
+GD1,Country,Egypt,0.0664421997755331,0.9335578002244669,High
+GD1,Country,Kazakhstan,0.03876936577099976,0.9612306342290002,High
+GD1,Country,Ghana,0.1358024691358025,0.8641975308641975,High
+GD1,Region × Gender × Age,Northern America × Female × 26-35,0.0589493204689283,0.9410506795310717,High
+GD1,Region × Gender × Age,Southern Asia × Male × 18-25,0.02740340649291267,0.9725965935070874,High
+GD1,Region × Gender × Age,Northern America × Male × 26-35,0.04926885603214105,0.950731143967859,High
+GD1,Region × Gender × Age,Southern Asia × Female × 18-25,0.05985650903073593,0.9401434909692641,High
+GD1,Region × Gender × Age,Eastern Africa × Female × 26-35,0.019403662922181444,0.9805963370778186,High
+GD1,Region × Gender × Age,Eastern Africa × Male × 26-35,0.023922983638496258,0.9760770163615038,High
+GD1,Region × Gender × Age,Eastern Africa × Female × 18-25,0.02189313601350638,0.9781068639864936,High
+GD1,Region × Gender × Age,Southern Asia × Female × 36-45,0.020797720797720798,0.9792022792022792,High
+GD1,Region × Gender × Age,Eastern Africa × Male × 18-25,0.02688682899707878,0.9731131710029213,High
+GD1,Region × Gender × Age,South America × Male × 18-25,0.0399494674412975,0.9600505325587025,High
+GD1,Region × Gender × Age,Southern Asia × Female × 26-35,0.023694777820794082,0.9763052221792059,High
+GD1,Region × Gender × Age,Eastern Asia × Male × 36-45,0.08765432098765433,0.9123456790123456,High
+GD1,Region × Gender × Age,Eastern Europe × Female × 36-45,0.1388888888888889,0.8611111111111112,High
+GD1,Region × Gender × Age,Eastern Africa × Female × 36-45,0.04645457423235201,0.953545425767648,High
+GD1,Region × Gender × Age,Eastern Africa × Male × 36-45,0.0515546410608139,0.9484453589391861,High
+GD1,Region × Gender × Age,Western Asia × Female × 26-35,0.04589620484682212,0.9541037951531779,High
+GD1,Region × Gender × Age,Eastern Europe × Female × 26-35,0.06018518518518518,0.9398148148148148,High
+GD1,Region × Gender × Age,Southern Asia × Female × 56-65,0.10625,0.89375,High
+GD1,Region × Gender × Age,Central America × Male × 18-25,0.02700617283950617,0.9729938271604939,High
+GD1,Region × Gender × Age,Central America × Male × 26-35,0.15123456790123455,0.8487654320987654,High
+GD1,Region × Gender × Age,Central America × Female × 26-35,0.03837448559670782,0.9616255144032921,High
+GD1,Region × Gender × Age,South America × Female × 18-25,0.053695789806900915,0.9463042101930991,High
+GD1,Region × Gender × Age,Southern Africa × Male × 26-35,0.045524691358024685,0.9544753086419753,High
+GD1,Region × Gender × Age,Northern Africa × Male × 26-35,0.057841792409693636,0.9421582075903063,High
+GD1,Region × Gender × Age,Southern Asia × Male × 26-35,0.016455587766503948,0.9835444122334961,High
+GD1,Region × Gender × Age,South America × Male × 26-35,0.04265057309542011,0.9573494269045799,High
+GD1,Region × Gender × Age,Eastern Asia × Female × 26-35,0.036538190296030795,0.9634618097039692,High
+GD1,Region × Gender × Age,Western Europe × Male × 46-55,0.08796296296296297,0.912037037037037,High
+GD1,Region × Gender × Age,Western Europe × Male × 26-35,0.03916059934578452,0.9608394006542155,High
+GD1,Region × Gender × Age,Northern Africa × Male × 18-25,0.036694101508916326,0.9633058984910837,High
+GD1,Region × Gender × Age,Western Europe × Male × 36-45,0.10185185185185185,0.8981481481481481,High
+GD1,Region × Gender × Age,Western Europe × Male × 18-25,0.034019204389574766,0.9659807956104253,High
+GD1,Region × Gender × Age,Eastern Europe × Female × 18-25,0.02623456790123457,0.9737654320987654,High
+GD1,Region × Gender × Age,South America × Female × 26-35,0.052768344183400546,0.9472316558165994,High
+GD1,Region × Gender × Age,Western Asia × Male × 26-35,0.02813390313390313,0.9718660968660968,High
+GD1,Region × Gender × Age,Northern America × Female × 46-55,0.0563973063973064,0.9436026936026936,High
+GD1,Region × Gender × Age,Western Europe × Female × 26-35,0.037037037037037035,0.962962962962963,High
+GD1,Region × Gender × Age,Northern Europe × Female × 18-25,0.049345972957084074,0.9506540270429159,High
+GD1,Region × Gender × Age,Western Asia × Male × 36-45,0.07870370370370372,0.9212962962962963,High
+GD1,Region × Gender × Age,Northern Europe × Female × 46-55,0.07407407407407407,0.9259259259259259,High
+GD1,Region × Gender × Age,Male × 26-35,0.1268253968253968,0.8731746031746032,High
+GD1,Region × Gender × Age,Southern Africa × Female × 26-35,0.028439153439153438,0.9715608465608465,High
+GD1,Region × Gender × Age,Western Asia × Male × 18-25,0.07294238683127573,0.9270576131687243,High
+GD1,Region × Gender × Age,Northern Europe × Male × 26-35,0.03633311674247347,0.9636668832575266,High
+GD1,Region × Gender × Age,Female × 26-35,0.09788359788359788,0.9021164021164021,High
+GD1,Region × Gender × Age,Eastern Europe × Female × 46-55,0.15,0.85,High
+GD1,Region × Gender × Age,Southern Europe × Male × 18-25,0.04614932392710171,0.9538506760728983,High
+GD1,Region × Gender × Age,Northern America × Female × 18-25,0.03497942386831276,0.9650205761316872,High
+GD1,Region × Gender × Age,Southern Africa × Female × 18-25,0.06769547325102881,0.9323045267489711,High
+GD1,Region × Gender × Age,Southern Europe × Male × 26-35,0.0642857142857143,0.9357142857142857,High
+GD1,Region × Gender × Age,Northern America × Male × 36-45,0.049824245541838126,0.9501757544581618,High
+GD1,Region × Gender × Age,Northern America × Male × 18-25,0.05520118884316415,0.9447988111568358,High
+GD1,Region × Gender × Age,Southern Africa × Male × 18-25,0.10185185185185185,0.8981481481481481,High
+GD1,Region × Gender × Age,Southern Europe × Non-binary × 26-35,0.047619047619047616,0.9523809523809523,High
+GD1,Region × Gender × Age,Eastern Europe × Male × 18-25,0.0705761316872428,0.9294238683127571,High
+GD1,Region × Gender × Age,Southern Europe × Male × 46-55,0.03125,0.96875,High
+GD1,Region × Gender × Age,Southern Europe × Female × 26-35,0.06481481481481481,0.9351851851851852,High
+GD1,Region × Gender × Age,Northern America × Male × 56-65,0.0617283950617284,0.9382716049382716,High
+GD1,Region × Gender × Age,Northern Europe × Female × 26-35,0.049960807368214774,0.9500391926317853,High
+GD1,Region × Gender × Age,Southern Europe × Male × 36-45,0.07013031550068587,0.9298696844993142,High
+GD1,Region × Gender × Age,Southern Europe × Female × 18-25,0.08024691358024692,0.9197530864197531,High
+GD1,Region × Gender × Age,Southern Asia × Female × 46-55,0.0378657978966621,0.9621342021033379,High
+GD1,Region × Gender × Age,Western Africa × Male × 26-35,0.09090909090909091,0.9090909090909091,High
+GD1,Region × Gender × Age,Northern America × Female × 56-65,0.04621056241426612,0.9537894375857339,High
+GD1,Region × Gender × Age,Western Asia × Male × 46-55,0.09259259259259259,0.9074074074074074,High
+GD1,Region × Gender × Age,Northern America × Non-binary × 18-25,0.09659090909090909,0.9034090909090909,High
+GD1,Region × Gender × Age,Australia and New Zealand × Female × 26-35,0.07685185185185185,0.9231481481481482,High
+GD1,Region × Gender × Age,South-eastern Asia × Female × 18-25,0.040240366629255515,0.9597596333707444,High
+GD1,Region × Gender × Age,Northern America × Female × 36-45,0.042076844455203204,0.9579231555447968,High
+GD1,Region × Gender × Age,Northern Europe × Male × 46-55,0.041666666666666664,0.9583333333333334,High
+GD1,Region × Gender × Age,Female × 18-25,0.064,0.9359999999999999,High
+GD1,Region × Gender × Age,Australia and New Zealand × Male × 26-35,0.10185185185185185,0.8981481481481481,High
+GD1,Region × Gender × Age,South America × Female × 56-65,0.03289473684210526,0.9671052631578947,High
+GD1,Region × Gender × Age,Northern Europe × Male × 36-45,0.0544238683127572,0.9455761316872427,High
+GD1,Region × Gender × Age,South-eastern Asia × Male × 18-25,0.02968819246597024,0.9703118075340298,High
+GD1,Region × Gender × Age,Eastern Europe × Male × 26-35,0.04031941994904958,0.9596805800509505,High
+GD1,Region × Gender × Age,Western Asia × Female × 18-25,0.0677693362878548,0.9322306637121452,High
+GD1,Region × Gender × Age,South America × Male × 36-45,0.07328042328042327,0.9267195767195767,High
+GD1,Region × Gender × Age,South America × Male × 56-65,0.23076923076923078,0.7692307692307692,Medium
+GD1,Region × Gender × Age,Eastern Asia × Male × 26-35,0.036638449690756386,0.9633615503092436,High
+GD1,Region × Gender × Age,South America × Female × 46-55,0.06095679012345679,0.9390432098765432,High
+GD1,Region × Gender × Age,Northern America × Male × 65+,0.10119047619047619,0.8988095238095238,High
+GD1,Region × Gender × Age,Northern America × Male × 46-55,0.03679698216735255,0.9632030178326475,High
+GD1,Region × Gender × Age,Central Asia × Female × 26-35,0.04861111111111111,0.9513888888888888,High
+GD1,Region × Gender × Age,Northern Africa × Female × 26-35,0.05277777777777778,0.9472222222222222,High
+GD1,Region × Gender × Age,Female × 36-45,0.058823529411764705,0.9411764705882353,High
+GD1,Region × Gender × Age,Southern Asia × Male × 36-45,0.03782027196278404,0.962179728037216,High
+GD1,Region × Gender × Age,Western Africa × Female × 26-35,0.10119047619047619,0.8988095238095238,High
+GD1,Region × Gender × Age,Australia and New Zealand × Female × 36-45,0.047619047619047616,0.9523809523809523,High
+GD1,Region × Gender × Age,Western Europe × Female × 36-45,0.05921052631578947,0.9407894736842105,High
+GD1,Region × Gender × Age,South-eastern Asia × Female × 26-35,0.030493524570321957,0.969506475429678,High
+GD1,Region × Gender × Age,Northern Europe × Male × 18-25,0.07475994513031549,0.9252400548696845,High
+GD1,Region × Gender × Age,Western Europe × Female × 18-25,0.046296296296296294,0.9537037037037037,High
+GD1,Region × Gender × Age,Southern Europe × Female × 46-55,0.07386363636363637,0.9261363636363636,High
+GD1,Region × Gender × Age,Central America × Female × 18-25,0.05921052631578947,0.9407894736842105,High
+GD1,Region × Gender × Age,Northern Europe × Female × 36-45,0.09876543209876544,0.9012345679012346,High
+GD1,Region × Gender × Age,South-eastern Asia × Male × 26-35,0.035376917321361764,0.9646230826786383,High
+GD1,Region × Gender × Age,Male × 18-25,0.11333333333333334,0.8866666666666667,High
+GD1,Region × Gender × Age,Eastern Asia × Female × 18-25,0.02661707291336921,0.9733829270866308,High
+GD1,Region × Gender × Age,Northern Africa × Female × 18-25,0.04272185290703809,0.9572781470929619,High
+GD1,Region × Gender × Age,South America × Female × 36-45,0.10740740740740741,0.8925925925925926,High
+GD1,Region × Gender × Age,South-eastern Asia × Female × 36-45,0.05908289241622574,0.9409171075837742,High
+GD1,Region × Gender × Age,Central Asia × Female × 36-45,0.04929698216735253,0.9507030178326474,High
+GD1,Region × Gender × Age,Western Asia × Female × 46-55,0.05357142857142857,0.9464285714285714,High
+GD1,Region × Gender × Age,Eastern Asia × Female × 36-45,0.043792866941015085,0.956207133058985,High
+GD1,Region × Gender × Age,Southern Asia × Male × 46-55,0.040307172251616695,0.9596928277483833,High
+GD1,Region × Gender × Age,South-eastern Asia × Male × 36-45,0.07330246913580248,0.9266975308641975,High
+GD1,Region × Gender × Age,Eastern Asia × Male × 18-25,0.035944165573795206,0.9640558344262048,High
+GD1,Region × Gender × Age,South-eastern Asia × Male × 46-55,0.08873456790123456,0.9112654320987654,High
+GD1,Region × Gender × Age,Central Asia × Female × 18-25,0.04814814814814815,0.9518518518518518,High
+GD1,Region × Gender × Age,Australia and New Zealand × Male × 36-45,0.05113636363636364,0.9488636363636364,High
+GD1,Region × Gender × Age,Australia and New Zealand × Female × 18-25,0.09259259259259259,0.9074074074074074,High
+GD1,Region × Gender × Age,Eastern Asia × Female × 46-55,0.08823529411764706,0.9117647058823529,High
+GD1,Region × Gender × Age,South-eastern Asia × Female × 46-55,0.050925925925925916,0.9490740740740741,High
+GD1,Region × Gender × Age,Central Asia × Male × 36-45,0.047619047619047616,0.9523809523809523,High
+GD1,Region × Gender × Age,Eastern Africa × Female × 46-55,0.12345679012345678,0.8765432098765432,High
+GD1,Region × Gender × Age,Southern Asia × Male × 56-65,0.05015432098765432,0.9498456790123457,High
+GD1,Region × Gender × Age,Eastern Asia × Male × 46-55,0.08641975308641976,0.9135802469135802,High
+GD1,Region × Religion,Northern America × Christianity,0.051119726063898176,0.9488802739361019,High
+GD1,Region × Religion,Southern Asia × Islam,0.04256803363029692,0.9574319663697031,High
+GD1,Region × Religion,Southern Asia × Hinduism,0.028391446415506883,0.9716085535844932,High
+GD1,Region × Religion,Northern America × I do not identify with any religious group or faith,0.04677938973981592,0.9532206102601841,High
+GD1,Region × Religion,Eastern Africa × Christianity,0.025405794484599613,0.9745942055154004,High
+GD1,Region × Religion,South America × I do not identify with any religious group or faith,0.04015065414436484,0.9598493458556352,High
+GD1,Region × Religion,Eastern Asia × I do not identify with any religious group or faith,0.03531075702930645,0.9646892429706936,High
+GD1,Region × Religion,Eastern Africa × I do not identify with any religious group or faith,0.03957475994513032,0.9604252400548696,High
+GD1,Region × Religion,Eastern Europe × I do not identify with any religious group or faith,0.050868770004572475,0.9491312299954275,High
+GD1,Region × Religion,Western Asia × Judaism,0.0746716827634702,0.9253283172365298,High
+GD1,Region × Religion,Southern Asia × Christianity,0.059452160493827164,0.9405478395061728,High
+GD1,Region × Religion,Central America × Christianity,0.06326017375400092,0.936739826245999,High
+GD1,Region × Religion,Central America × I do not identify with any religious group or faith,0.04111485222596333,0.9588851477740367,High
+GD1,Region × Religion,South America × Christianity,0.055831840823227556,0.9441681591767724,High
+GD1,Region × Religion,Southern Africa × I do not identify with any religious group or faith,0.047619047619047616,0.9523809523809523,High
+GD1,Region × Religion,Northern Africa × Islam,0.042562624352747803,0.9574373756472522,High
+GD1,Region × Religion,Central America × Other religious group,0.025,0.975,High
+GD1,Region × Religion,Western Europe × I do not identify with any religious group or faith,0.03248338081671415,0.9675166191832858,High
+GD1,Region × Religion,Northern America × Islam,0.0631981187536743,0.9368018812463257,High
+GD1,Region × Religion,Southern Africa × Christianity,0.035191236988622615,0.9648087630113774,High
+GD1,Region × Religion,Western Asia × Islam,0.04647555804963213,0.9535244419503679,High
+GD1,Region × Religion,Northern America × Buddhism,0.06902802273172644,0.9309719772682735,High
+GD1,Region × Religion,Northern Europe × I do not identify with any religious group or faith,0.03269936603269936,0.9673006339673006,High
+GD1,Region × Religion,Western Asia × I do not identify with any religious group or faith,0.05358619785362705,0.9464138021463729,High
+GD1,Region × Religion,Christianity,0.07590123456790124,0.9240987654320988,High
+GD1,Region × Religion,Northern Europe × Christianity,0.058335311807534034,0.941664688192466,High
+GD1,Region × Religion,I do not identify with any religious group or faith,0.07128205128205128,0.9287179487179487,High
+GD1,Region × Religion,Eastern Europe × Christianity,0.0692729766803841,0.9307270233196159,High
+GD1,Region × Religion,Southern Europe × I do not identify with any religious group or faith,0.040479000242072134,0.9595209997579278,High
+GD1,Region × Religion,Northern America × Hinduism,0.18382352941176472,0.8161764705882353,High
+GD1,Region × Religion,Western Europe × Christianity,0.04410150891632373,0.9558984910836763,High
+GD1,Region × Religion,Southern Europe × Christianity,0.05120650953984288,0.9487934904601572,High
+GD1,Region × Religion,Western Europe × Buddhism,0.1640625,0.8359375,High
+GD1,Region × Religion,Eastern Africa × Islam,0.057245737801293356,0.9427542621987066,High
+GD1,Region × Religion,Southern Asia × Buddhism,0.06818181818181818,0.9318181818181819,High
+GD1,Region × Religion,Australia and New Zealand × Christianity,0.10537918871252204,0.894620811287478,High
+GD1,Region × Religion,South-eastern Asia × Islam,0.038584863353381876,0.9614151366466182,High
+GD1,Region × Religion,Western Europe × Islam,0.03944370958259847,0.9605562904174015,High
+GD1,Region × Religion,Islam,0.14,0.86,High
+GD1,Region × Religion,Northern Europe × Islam,0.10268632830361225,0.8973136716963878,High
+GD1,Region × Religion,Western Asia × Christianity,0.08125,0.91875,High
+GD1,Region × Religion,Southern Asia × I do not identify with any religious group or faith,0.03351186153473735,0.9664881384652626,High
+GD1,Region × Religion,South America × Buddhism,0.21323529411764705,0.7867647058823529,Medium
+GD1,Region × Religion,Central Asia × Islam,0.10442386831275721,0.8955761316872428,High
+GD1,Region × Religion,Western Africa × Christianity,0.16358024691358025,0.8364197530864197,High
+GD1,Region × Religion,South America × Other religious group,0.042438271604938266,0.9575617283950617,High
+GD1,Region × Religion,South-eastern Asia × I do not identify with any religious group or faith,0.06442901234567901,0.935570987654321,High
+GD1,Region × Religion,Southern Europe × Islam,0.09876543209876544,0.9012345679012346,High
+GD1,Region × Religion,Southern Asia × Other religious group,0.05555555555555555,0.9444444444444444,High
+GD1,Region × Religion,Eastern Europe × Islam,0.09523809523809523,0.9047619047619048,High
+GD1,Region × Religion,Australia and New Zealand × I do not identify with any religious group or faith,0.0757315957933242,0.9242684042066758,High
+GD1,Region × Religion,Eastern Asia × Islam,0.05169753086419753,0.9483024691358025,High
+GD1,Region × Religion,South-eastern Asia × Christianity,0.048331431337967294,0.9516685686620328,High
+GD1,Region × Religion,Eastern Asia × Buddhism,0.0860846115475745,0.9139153884524255,High
+GD1,Region × Religion,Eastern Asia × Christianity,0.06748971193415639,0.9325102880658436,High
+GD1,Region × Religion,Central Asia × Christianity,0.04790809327846365,0.9520919067215363,High
+GD1,Region × Religion,Eastern Asia × Other religious group,0.041666666666666664,0.9583333333333334,High
+GD1,Region × Religion,Australia and New Zealand × Islam,0.05263157894736842,0.9473684210526316,High
+GD1,Region × Religion,Central Asia × I do not identify with any religious group or faith,0.07142857142857141,0.9285714285714286,High
+GD1,Region × Religion,Southern Asia × Sikhism,0.07403733098177542,0.9259626690182245,High
+GD1,Region × Religion,South-eastern Asia × Buddhism,0.04050925925925926,0.9594907407407407,High
+GD1,Region × Religion,Northern Africa × I do not identify with any religious group or faith,0.33088235294117646,0.6691176470588236,Medium
+GD1,Region × Environment,Northern America × Urban,0.04838245748847953,0.9516175425115204,High
+GD1,Region × Environment,Southern Asia × Urban,0.037476683626473155,0.9625233163735268,High
+GD1,Region × Environment,Eastern Africa × Urban,0.029032616846236918,0.9709673831537631,High
+GD1,Region × Environment,Eastern Africa × Rural,0.07745443856554966,0.9225455614344503,High
+GD1,Region × Environment,South America × Urban,0.040052852151424394,0.9599471478485756,High
+GD1,Region × Environment,Eastern Asia × Urban,0.03270554075227797,0.9672944592477221,High
+GD1,Region × Environment,Eastern Europe × Urban,0.04879861940793839,0.9512013805920616,High
+GD1,Region × Environment,Western Asia × Urban,0.03896675985123608,0.9610332401487639,High
+GD1,Region × Environment,Central America × Urban,0.03899705590526846,0.9610029440947315,High
+GD1,Region × Environment,Southern Africa × Urban,0.0414690275070392,0.9585309724929608,High
+GD1,Region × Environment,Northern Africa × Urban,0.03823939398988131,0.9617606060101187,High
+GD1,Region × Environment,Western Europe × Urban,0.0397016071205886,0.9602983928794114,High
+GD1,Region × Environment,Western Europe × Rural,0.037037037037037035,0.962962962962963,High
+GD1,Region × Environment,Northern Europe × Urban,0.03838978841819935,0.9616102115818006,High
+GD1,Region × Environment,Western Asia × Rural,0.08333333333333333,0.9166666666666666,High
+GD1,Region × Environment,Urban,0.08269166666666666,0.9173083333333334,High
+GD1,Region × Environment,Southern Africa × Rural,0.07098765432098766,0.9290123456790124,High
+GD1,Region × Environment,Southern Europe × Urban,0.03982741842824148,0.9601725815717586,High
+GD1,Region × Environment,Northern America × Rural,0.07956763743800781,0.9204323625619922,High
+GD1,Region × Environment,Southern Europe × Rural,0.07829218106995886,0.9217078189300412,High
+GD1,Region × Environment,Southern Asia × Rural,0.03263417352537723,0.9673658264746228,High
+GD1,Region × Environment,Eastern Europe × Rural,0.05787037037037037,0.9421296296296297,High
+GD1,Region × Environment,Western Africa × Urban,0.09475308641975308,0.9052469135802469,High
+GD1,Region × Environment,Australia and New Zealand × Rural,0.08125,0.91875,High
+GD1,Region × Environment,South-eastern Asia × Urban,0.04123300515705579,0.9587669948429443,High
+GD1,Region × Environment,Australia and New Zealand × Urban,0.07351428225611233,0.9264857177438877,High
+GD1,Region × Environment,Northern Europe × Rural,0.2623456790123457,0.7376543209876543,Medium
+GD1,Region × Environment,South America × Rural,0.08405349794238684,0.9159465020576132,High
+GD1,Region × Environment,Central Asia × Urban,0.03824784010781412,0.9617521598921859,High
+GD1,Region × Environment,Rural,0.23863636363636365,0.7613636363636364,Medium
+GD1,Region × Environment,Eastern Asia × Rural,0.07407407407407407,0.9259259259259259,High
+GD1,Region × Environment,South-eastern Asia × Rural,0.06172839506172839,0.9382716049382716,High
+GD1,Region,Northern America,0.0518604727034511,0.9481395272965489,High
+GD1,Region,Southern Asia,0.03426661108206279,0.9657333889179373,High
+GD1,Region,Eastern Africa,0.02729136015693298,0.972708639843067,High
+GD1,Region,South America,0.03941427730282105,0.9605857226971789,High
+GD1,Region,Eastern Asia,0.031171016590514425,0.9688289834094855,High
+GD1,Region,Eastern Europe,0.03820935781720095,0.9617906421827991,High
+GD1,Region,Western Asia,0.037177167217489794,0.9628228327825102,High
+GD1,Region,Central America,0.03899705590526846,0.9610029440947315,High
+GD1,Region,Southern Africa,0.04292624310740253,0.9570737568925974,High
+GD1,Region,Northern Africa,0.03492534557349372,0.9650746544265063,High
+GD1,Region,Western Europe,0.03856233161358053,0.9614376683864194,High
+GD1,Region,Northern Europe,0.046336080263235206,0.9536639197367648,High
+GD1,Region,Southern Europe,0.0409500282092128,0.9590499717907872,High
+GD1,Region,Western Africa,0.09475308641975308,0.9052469135802469,High
+GD1,Region,Australia and New Zealand,0.07739513392534834,0.9226048660746516,High
+GD1,Region,South-eastern Asia,0.045041378374711706,0.9549586216252883,High
+GD1,Region,Central Asia,0.03824784010781412,0.9617521598921859,High
+GD1,Continent,North America,0.05074224672772557,0.9492577532722745,High
+GD1,Continent,Asia,0.03048683716289188,0.9695131628371081,High
+GD1,Continent,Africa,0.025930922217034715,0.9740690777829653,High
+GD1,Continent,South America,0.03941427730282105,0.9605857226971789,High
+GD1,Continent,Europe,0.03409114634490332,0.9659088536550967,High
+GD1,Continent,Oceania,0.0787659735759151,0.9212340264240849,High
+GD1,Religion,Christianity,0.04130930227794445,0.9586906977220555,High
+GD1,Religion,Islam,0.032381626400287154,0.9676183735997128,High
+GD1,Religion,Hinduism,0.029010100222314854,0.9709898997776851,High
+GD1,Religion,I do not identify with any religious group or faith,0.03636947596678715,0.9636305240332128,High
+GD1,Religion,Judaism,0.0746716827634702,0.9253283172365298,High
+GD1,Religion,Other religious group,0.04257052615284797,0.957429473847152,High
+GD1,Religion,Buddhism,0.05224274342930037,0.9477572565706996,High
+GD1,Religion,Sikhism,0.07403733098177542,0.9259626690182245,High
+GD1,Environment,Urban,0.034112835504845916,0.9658871644951541,High
+GD1,Environment,Rural,0.03810106280650489,0.9618989371934951,High
+GD1,Age Group,26-35,0.03107796977557555,0.9689220302244245,High
+GD1,Age Group,18-25,0.03346421940784696,0.9665357805921531,High
+GD1,Age Group,36-45,0.035733507065970234,0.9642664929340298,High
+GD1,Age Group,56-65,0.06458575146846753,0.9354142485315324,High
+GD1,Age Group,46-55,0.047897828674296136,0.9521021713257038,High
+GD1,Age Group,65+,0.08498677248677249,0.9150132275132276,High
+GD1,Age Group,Less than 18,0.2222222222222222,0.7777777777777778,Medium
+GD1,Gender,Female,0.03615911753918728,0.9638408824608127,High
+GD1,Gender,Male,0.032893267370356284,0.9671067326296438,High
+GD1,Gender,Non-binary,0.060322359396433475,0.9396776406035665,High
+GD1,Gender,Other / prefer not to say,0.08864883401920437,0.9113511659807956,High
+GD2,Country × Gender × Age,Canada × Male × 26-35,0.07206790123456791,0.927932098765432,High
+GD2,Country × Gender × Age,United Kingdom × Female × 36-45,0.034920634920634915,0.9650793650793651,High
+GD2,Country × Gender × Age,Canada × Female × 36-45,0.011904761904761906,0.9880952380952381,High
+GD2,Country × Gender × Age,United States × Female × 26-35,0.03558641975308642,0.9644135802469136,High
+GD2,Country × Gender × Age,Canada × Female × 26-35,0.02901785714285714,0.9709821428571429,High
+GD2,Country × Gender × Age,United States × Female × 46-55,0.013888888888888888,0.9861111111111112,High
+GD2,Country × Gender × Age,United States × Female × 18-25,0.028055555555555563,0.9719444444444444,High
+GD2,Country × Gender × Age,United States × Male × 26-35,0.039241622574955906,0.9607583774250441,High
+GD2,Country × Gender × Age,Germany × Male × 26-35,0.046875,0.953125,High
+GD2,Country × Gender × Age,South Africa × Male × 26-35,0.02976190476190476,0.9702380952380952,High
+GD2,Country × Gender × Age,United Kingdom × Male × 46-55,0.06444444444444446,0.9355555555555556,High
+GD2,Country × Gender × Age,United Kingdom × Male × 36-45,0.04027777777777778,0.9597222222222223,High
+GD2,Country × Gender × Age,United Kingdom × Male × 26-35,0.10902777777777777,0.8909722222222223,High
+GD2,Country × Gender × Age,United Kingdom × Female × 26-35,0.03417408209074876,0.9658259179092512,High
+GD2,Country × Gender × Age,South Africa × Male × 18-25,0.02717391304347826,0.9728260869565217,High
+GD2,Country × Gender × Age,United States × Male × 46-55,0.049779541446208116,0.9502204585537919,High
+GD2,Country × Gender × Age,South Africa × Female × 26-35,0.04567901234567902,0.9543209876543209,High
+GD2,Country × Gender × Age,United States × Female × 36-45,0.039713804713804715,0.9602861952861953,High
+GD2,Country × Gender × Age,Mexico × Male × 26-35,0.06715167548500883,0.9328483245149912,High
+GD2,Country × Gender × Age,Egypt × Male × 18-25,0.08333333333333334,0.9166666666666666,High
+GD2,Country × Gender × Age,United States × Female × 56-65,0.05083333333333335,0.9491666666666666,High
+GD2,Country × Gender × Age,Mexico × Female × 26-35,0.07925925925925928,0.9207407407407407,High
+GD2,Country × Gender × Age,South Africa × Female × 18-25,0.027083333333333334,0.9729166666666667,High
+GD2,Country × Gender × Age,Chile × Male × 26-35,0.02593915343915344,0.9740608465608466,High
+GD2,Country × Gender × Age,Algeria × Female × 26-35,0.005208333333333333,0.9947916666666666,High
+GD2,Country × Gender × Age,Morocco × Male × 26-35,0.058333333333333334,0.9416666666666667,High
+GD2,Country × Gender × Age,Pakistan × Male × 26-35,0.1330246913580247,0.8669753086419754,High
+GD2,Country × Gender × Age,Kenya × Male × 26-35,0.015495616389336195,0.9845043836106638,High
+GD2,Country × Gender × Age,Kenya × Male × 36-45,0.03015873015873016,0.9698412698412698,High
+GD2,Country × Gender × Age,Chile × Female × 26-35,0.025671296296296296,0.9743287037037037,High
+GD2,Country × Gender × Age,India × Female × 36-45,0.02263277540360874,0.9773672245963912,High
+GD2,Country × Gender × Age,Mexico × Female × 18-25,0.25555555555555554,0.7444444444444445,Medium
+GD2,Country × Gender × Age,India × Female × 26-35,0.018090455409295988,0.981909544590704,High
+GD2,Country × Gender × Age,Kenya × Female × 26-35,0.0210613890846449,0.9789386109153551,High
+GD2,Country × Gender × Age,India × Female × 18-25,0.018856066411238825,0.9811439335887612,High
+GD2,Country × Gender × Age,Russian Federation × Female × 36-45,0.04583333333333333,0.9541666666666667,High
+GD2,Country × Gender × Age,Indonesia × Female × 26-35,0.025995069745069748,0.9740049302549303,High
+GD2,Country × Gender × Age,Kenya × Female × 18-25,0.0213426818736689,0.978657318126331,High
+GD2,Country × Gender × Age,Morocco × Male × 18-25,0.052777777777777785,0.9472222222222222,High
+GD2,Country × Gender × Age,Algeria × Female × 18-25,0.058333333333333334,0.9416666666666667,High
+GD2,Country × Gender × Age,Mexico × Male × 36-45,0.05,0.95,High
+GD2,Country × Gender × Age,Mexico × Male × 18-25,0.06521739130434782,0.9347826086956522,High
+GD2,Country × Gender × Age,Germany × Female × 36-45,0.041666666666666664,0.9583333333333334,High
+GD2,Country × Gender × Age,Poland × Male × 18-25,0.0625,0.9375,High
+GD2,Country × Gender × Age,India × Male × 26-35,0.013829151732377537,0.9861708482676225,High
+GD2,Country × Gender × Age,Italy × Female × 26-35,0.03676470588235294,0.9632352941176471,High
+GD2,Country × Gender × Age,Spain × Male × 26-35,0.005434782608695652,0.9945652173913043,High
+GD2,Country × Gender × Age,Spain × Female × 36-45,0.06388888888888888,0.9361111111111111,High
+GD2,Country × Gender × Age,France × Female × 18-25,0.06597222222222222,0.9340277777777778,High
+GD2,Country × Gender × Age,Israel × Male × 46-55,0.22727272727272727,0.7727272727272727,Medium
+GD2,Country × Gender × Age,Kenya × Male × 18-25,0.023177715530656708,0.9768222844693433,High
+GD2,Country × Gender × Age,Israel × Female × 46-55,0.08333333333333331,0.9166666666666667,High
+GD2,Country × Gender × Age,Israel × Female × 18-25,0.03611111111111111,0.9638888888888889,High
+GD2,Country × Gender × Age,France × Male × 18-25,0.11388888888888891,0.8861111111111111,High
+GD2,Country × Gender × Age,Australia × Female × 26-35,0.05625,0.94375,High
+GD2,Country × Gender × Age,Brazil × Female × 36-45,0.07894736842105263,0.9210526315789473,High
+GD2,Country × Gender × Age,India × Male × 36-45,0.029120641108945196,0.9708793588910548,High
+GD2,Country × Gender × Age,India × Male × 18-25,0.026815614534912782,0.9731843854650872,High
+GD2,Country × Gender × Age,United Kingdom × Female × 18-25,0.05049603174603175,0.9495039682539682,High
+GD2,Country × Gender × Age,United States × Male × 36-45,0.04591563786008231,0.9540843621399177,High
+GD2,Country × Gender × Age,United States × Male × 18-25,0.041666666666666664,0.9583333333333334,High
+GD2,Country × Gender × Age,Germany × Male × 18-25,0.045,0.955,High
+GD2,Country × Gender × Age,Slovakia × Male × 18-25,0.26666666666666666,0.7333333333333334,Medium
+GD2,Country × Gender × Age,Italy × Male × 18-25,0.06936728395061728,0.9306327160493827,High
+GD2,Country × Gender × Age,Turkey × Male × 26-35,0.18055555555555552,0.8194444444444444,High
+GD2,Country × Gender × Age,Denmark × Male × 36-45,0.25,0.75,Medium
+GD2,Country × Gender × Age,Germany × Female × 26-35,0.041666666666666664,0.9583333333333334,High
+GD2,Country × Gender × Age,Italy × Male × 26-35,0.005952380952380952,0.9940476190476191,High
+GD2,Country × Gender × Age,Brazil × Female × 18-25,0.09166666666666669,0.9083333333333333,High
+GD2,Country × Gender × Age,Slovakia × Male × 26-35,0.05527777777777779,0.9447222222222222,High
+GD2,Country × Gender × Age,Israel × Male × 36-45,0.09854497354497355,0.9014550264550265,High
+GD2,Country × Gender × Age,Turkey × Male × 36-45,0.25,0.75,Medium
+GD2,Country × Gender × Age,Chile × Male × 36-45,0.03125,0.96875,High
+GD2,Country × Gender × Age,Brazil × Male × 26-35,0.03194444444444445,0.9680555555555556,High
+GD2,Country × Gender × Age,Indonesia × Male × 26-35,0.034435626102292775,0.9655643738977072,High
+GD2,Country × Gender × Age,Canada × Female × 46-55,0.14166666666666666,0.8583333333333334,High
+GD2,Country × Gender × Age,Slovakia × Female × 18-25,0.05113636363636364,0.9488636363636364,High
+GD2,Country × Gender × Age,Portugal × Male × 26-35,0.3402777777777778,0.6597222222222222,Medium
+GD2,Country × Gender × Age,Indonesia × Male × 36-45,0.023611111111111107,0.9763888888888889,High
+GD2,Country × Gender × Age,United States × Female × 65+,0.2805555555555556,0.7194444444444443,Medium
+GD2,Country × Gender × Age,Kazakhstan × Female × 26-35,0.21052631578947367,0.7894736842105263,Medium
+GD2,Country × Gender × Age,China × Female × 18-25,0.037098765432098765,0.9629012345679012,High
+GD2,Country × Gender × Age,Israel × Female × 26-35,0.08311728395061728,0.9168827160493828,High
+GD2,Country × Gender × Age,Netherlands × Male × 36-45,0.0,1.0,High
+GD2,Country × Gender × Age,Brazil × Male × 36-45,0.09166666666666669,0.9083333333333333,High
+GD2,Country × Gender × Age,Japan × Female × 18-25,0.05625,0.94375,High
+GD2,Country × Gender × Age,Indonesia × Female × 36-45,0.045,0.955,High
+GD2,Country × Gender × Age,Brazil × Female × 26-35,0.06626984126984127,0.9337301587301587,High
+GD2,Country × Gender × Age,Israel × Male × 26-35,0.09683501683501684,0.9031649831649832,High
+GD2,Country × Gender × Age,Brazil × Male × 18-25,0.07711640211640212,0.9228835978835979,High
+GD2,Country × Gender × Age,Israel × Male × 18-25,0.07175925925925926,0.9282407407407407,High
+GD2,Country × Gender × Age,Turkey × Female × 26-35,0.09166666666666666,0.9083333333333333,High
+GD2,Country × Gender × Age,Brazil × Female × 56-65,0.10000000000000002,0.9,High
+GD2,Country × Gender × Age,Chile × Female × 46-55,0.061111111111111116,0.9388888888888889,High
+GD2,Country × Gender × Age,India × Male × 46-55,0.03368406285072952,0.9663159371492704,High
+GD2,Country × Gender × Age,Canada × Male × 36-45,0.1527777777777778,0.8472222222222222,High
+GD2,Country × Gender × Age,China × Female × 26-35,0.03443732193732194,0.965562678062678,High
+GD2,Country × Gender × Age,Pakistan × Male × 36-45,0.18181818181818182,0.8181818181818181,High
+GD2,Country × Gender × Age,Morocco × Female × 26-35,0.055555555555555566,0.9444444444444444,High
+GD2,Country × Gender × Age,India × Female × 46-55,0.027868900646678428,0.9721310993533215,High
+GD2,Country × Gender × Age,United States × Male × 56-65,0.27884615384615385,0.7211538461538461,Medium
+GD2,Country × Gender × Age,Australia × Female × 56-65,0.15441176470588236,0.8455882352941176,High
+GD2,Country × Gender × Age,Russian Federation × Female × 26-35,0.061111111111111116,0.9388888888888889,High
+GD2,Country × Gender × Age,Pakistan × Male × 18-25,0.04367283950617284,0.9563271604938272,High
+GD2,Country × Gender × Age,United Arab Emirates × Female × 26-35,0.047619047619047616,0.9523809523809523,High
+GD2,Country × Gender × Age,Chile × Female × 18-25,0.02631578947368421,0.9736842105263158,High
+GD2,Country × Gender × Age,Kazakhstan × Female × 36-45,0.022727272727272728,0.9772727272727273,High
+GD2,Country × Gender × Age,Pakistan × Female × 26-35,0.03407407407407407,0.965925925925926,High
+GD2,Country × Gender × Age,Kazakhstan × Male × 36-45,0.12222222222222225,0.8777777777777778,High
+GD2,Country × Gender × Age,Philippines × Male × 18-25,0.04527777777777778,0.9547222222222222,High
+GD2,Country × Gender × Age,Korea South × Female × 26-35,0.10095427059712773,0.8990457294028723,High
+GD2,Country × Gender × Age,Morocco × Female × 18-25,0.03888888888888889,0.9611111111111111,High
+GD2,Country × Gender × Age,Bangladesh × Male × 18-25,0.07777777777777778,0.9222222222222223,High
+GD2,Country × Gender × Age,Netherlands × Female × 26-35,0.0625,0.9375,High
+GD2,Country × Gender × Age,Bangladesh × Female × 46-55,0.05,0.95,High
+GD2,Country × Gender × Age,Australia × Male × 18-25,0.02717391304347826,0.9728260869565217,High
+GD2,Country × Gender × Age,Japan × Male × 18-25,0.23333333333333334,0.7666666666666666,Medium
+GD2,Country × Gender × Age,Ireland {Republic} × Male × 36-45,0.021739130434782608,0.9782608695652174,High
+GD2,Country × Gender × Age,Bangladesh × Female × 26-35,0.045000000000000005,0.955,High
+GD2,Country × Gender × Age,Kenya × Female × 36-45,0.03439153439153439,0.9656084656084656,High
+GD2,Country × Gender × Age,Kazakhstan × Female × 18-25,0.043333333333333335,0.9566666666666667,High
+GD2,Country × Gender × Age,Slovakia × Female × 26-35,0.05,0.95,High
+GD2,Country × Gender × Age,Bangladesh × Male × 36-45,0.03333333333333333,0.9666666666666667,High
+GD2,Country × Gender × Age,Algeria × Male × 18-25,0.02777777777777778,0.9722222222222222,High
+GD2,Country × Gender × Age,Egypt × Female × 26-35,0.02976190476190476,0.9702380952380952,High
+GD2,Country × Gender × Age,China × Male × 36-45,0.02,0.98,High
+GD2,Country × Gender × Age,China × Female × 36-45,0.032962962962962965,0.967037037037037,High
+GD2,Country × Gender × Age,Kenya × Female × 46-55,0.051388888888888894,0.9486111111111111,High
+GD2,Country × Gender × Age,Malaysia × Male × 36-45,0.075,0.925,High
+GD2,Country × Gender × Age,Indonesia × Female × 46-55,0.1277777777777778,0.8722222222222222,High
+GD2,Country × Gender × Age,Canada × Male × 18-25,0.07386363636363637,0.9261363636363636,High
+GD2,Country × Gender × Age,China × Male × 26-35,0.07965534979423869,0.9203446502057613,High
+GD2,Country × Gender × Age,Egypt × Male × 26-35,0.04490740740740741,0.9550925925925926,High
+GD2,Country × Gender × Age,China × Male × 18-25,0.041666666666666664,0.9583333333333334,High
+GD2,Country × Gender × Age,Korea South × Male × 18-25,0.10526315789473684,0.8947368421052632,High
+GD2,Country × Gender × Age,Philippines × Female × 26-35,0.05339506172839506,0.946604938271605,High
+GD2,Country × Gender × Age,Israel × Female × 36-45,0.04891304347826087,0.9510869565217391,High
+GD2,Country × Gender × Age,United Kingdom × Male × 18-25,0.044444444444444446,0.9555555555555556,High
+GD2,Country × Gender × Age,Saudi Arabia × Female × 18-25,0.05113636363636364,0.9488636363636364,High
+GD2,Country × Gender × Age,Malawi × Female × 26-35,0.039166666666666676,0.9608333333333333,High
+GD2,Country × Gender × Age,Indonesia × Male × 46-55,0.0,1.0,High
+GD2,Country × Gender × Age,Indonesia × Male × 18-25,0.07116769547325102,0.928832304526749,High
+GD2,Country × Gender × Age,Japan × Male × 46-55,0.14705882352941177,0.8529411764705882,High
+GD2,Country × Gender × Age,Philippines × Female × 18-25,0.059814814814814814,0.9401851851851852,High
+GD2,Country × Gender × Age,Philippines × Male × 26-35,0.03125,0.96875,High
+GD2,Country × Gender × Age,Japan × Male × 26-35,0.06770833333333333,0.9322916666666666,High
+GD2,Country × Gender × Age,Bangladesh × Female × 18-25,0.05,0.95,High
+GD2,Country × Gender × Age,Malaysia × Female × 36-45,0.09444444444444446,0.9055555555555556,High
+GD2,Country × Gender × Age,Vietnam × Female × 18-25,0.005208333333333333,0.9947916666666666,High
+GD2,Country × Gender × Age,Malawi × Female × 18-25,0.03289473684210526,0.9671052631578947,High
+GD2,Country × Gender × Age,India × Other / prefer not to say × 26-35,0.17857142857142858,0.8214285714285714,High
+GD2,Country × Gender × Age,Korea South × Female × 18-25,0.32954545454545453,0.6704545454545454,Medium
+GD2,Country × Gender × Age,Korea South × Male × 26-35,0.04761904761904762,0.9523809523809523,High
+GD2,Country × Gender × Age,Vietnam × Male × 26-35,0.047619047619047616,0.9523809523809523,High
+GD2,Country × Gender × Age,Vietnam × Male × 18-25,0.041666666666666664,0.9583333333333334,High
+GD2,Country × Gender × Age,Philippines × Female × 36-45,0.11538461538461539,0.8846153846153846,High
+GD2,Country × Gender × Age,Singapore × Male × 18-25,0.02631578947368421,0.9736842105263158,High
+GD2,Country × Gender × Age,Singapore × Female × 26-35,0.07065217391304347,0.9293478260869565,High
+GD2,Country × Gender × Age,Kenya × Male × 46-55,0.08125,0.91875,High
+GD2,Country × Gender × Age,Canada × Male × 46-55,0.028409090909090908,0.9715909090909091,High
+GD2,Country × Gender × Age,Australia × Male × 26-35,0.08552631578947369,0.9144736842105263,High
+GD2,Country × Gender × Age,Kazakhstan × Male × 26-35,0.1027777777777778,0.8972222222222221,High
+GD2,Country × Religion,Canada × Christianity,0.033156966490299825,0.9668430335097001,High
+GD2,Country × Religion,United Kingdom × I do not identify with any religious group or faith,0.03453947368421053,0.9654605263157895,High
+GD2,Country × Religion,United States × I do not identify with any religious group or faith,0.03763158790974883,0.9623684120902511,High
+GD2,Country × Religion,Canada × I do not identify with any religious group or faith,0.03936558568137515,0.9606344143186248,High
+GD2,Country × Religion,United States × Christianity,0.043671614934772826,0.9563283850652272,High
+GD2,Country × Religion,Germany × Christianity,0.059523809523809514,0.9404761904761905,High
+GD2,Country × Religion,Poland × Christianity,0.07152777777777777,0.9284722222222223,High
+GD2,Country × Religion,United Kingdom × Christianity,0.04912317620650954,0.9508768237934905,High
+GD2,Country × Religion,South Africa × Christianity,0.04255892255892255,0.9574410774410774,High
+GD2,Country × Religion,Chile × I do not identify with any religious group or faith,0.024307309203142533,0.9756926907968575,High
+GD2,Country × Religion,Mexico × Christianity,0.07135065937149271,0.9286493406285072,High
+GD2,Country × Religion,Egypt × Islam,0.03956228956228956,0.9604377104377104,High
+GD2,Country × Religion,Mexico × I do not identify with any religious group or faith,0.062345679012345674,0.9376543209876543,High
+GD2,Country × Religion,Denmark × I do not identify with any religious group or faith,0.30833333333333335,0.6916666666666667,Medium
+GD2,Country × Religion,India × Islam,0.02937638493194049,0.9706236150680595,High
+GD2,Country × Religion,Algeria × Islam,0.03571428571428571,0.9642857142857143,High
+GD2,Country × Religion,France × I do not identify with any religious group or faith,0.06540123456790123,0.9345987654320987,High
+GD2,Country × Religion,Morocco × Islam,0.03070987654320988,0.9692901234567901,High
+GD2,Country × Religion,Mexico × Other religious group,0.06095679012345679,0.9390432098765432,High
+GD2,Country × Religion,Pakistan × Islam,0.05778018278018278,0.9422198172198172,High
+GD2,Country × Religion,Kenya × Christianity,0.028789493359001366,0.9712105066409986,High
+GD2,Country × Religion,Kenya × I do not identify with any religious group or faith,0.0400977366255144,0.9599022633744856,High
+GD2,Country × Religion,Poland × I do not identify with any religious group or faith,0.1638888888888889,0.8361111111111111,High
+GD2,Country × Religion,Chile × Christianity,0.029718614718614717,0.9702813852813853,High
+GD2,Country × Religion,India × Hinduism,0.025304240374209676,0.9746957596257904,High
+GD2,Country × Religion,Russian Federation × Christianity,0.06388888888888888,0.9361111111111111,High
+GD2,Country × Religion,Kenya × Islam,0.050694444444444445,0.9493055555555555,High
+GD2,Country × Religion,Indonesia × I do not identify with any religious group or faith,0.043478260869565216,0.9565217391304348,High
+GD2,Country × Religion,Chile × Other religious group,0.044444444444444446,0.9555555555555556,High
+GD2,Country × Religion,India × Other religious group,0.0638888888888889,0.9361111111111111,High
+GD2,Country × Religion,Finland × I do not identify with any religious group or faith,0.09558823529411764,0.9044117647058824,High
+GD2,Country × Religion,Spain × I do not identify with any religious group or faith,0.13043478260869565,0.8695652173913043,High
+GD2,Country × Religion,Ireland {Republic} × I do not identify with any religious group or faith,0.10119047619047619,0.8988095238095238,High
+GD2,Country × Religion,Italy × I do not identify with any religious group or faith,0.04074074074074074,0.9592592592592593,High
+GD2,Country × Religion,Spain × Christianity,0.07527777777777778,0.9247222222222222,High
+GD2,Country × Religion,Israel × Judaism,0.06144316730523627,0.9385568326947638,High
+GD2,Country × Religion,Germany × I do not identify with any religious group or faith,0.040178571428571425,0.9598214285714286,High
+GD2,Country × Religion,France × Christianity,0.06818181818181818,0.9318181818181819,High
+GD2,Country × Religion,Sweden × I do not identify with any religious group or faith,0.05357142857142857,0.9464285714285714,High
+GD2,Country × Religion,Israel × I do not identify with any religious group or faith,0.08966329966329968,0.9103367003367003,High
+GD2,Country × Religion,Australia × Christianity,0.06617283950617284,0.9338271604938272,High
+GD2,Country × Religion,Brazil × Christianity,0.035776014109347436,0.9642239858906526,High
+GD2,Country × Religion,Italy × Christianity,0.1,0.9,High
+GD2,Country × Religion,Slovakia × Christianity,0.07953703703703703,0.9204629629629629,High
+GD2,Country × Religion,Turkey × Islam,0.059938271604938274,0.9400617283950617,High
+GD2,Country × Religion,Denmark × Christianity,0.25,0.75,Medium
+GD2,Country × Religion,Brazil × I do not identify with any religious group or faith,0.07054673721340388,0.9294532627865961,High
+GD2,Country × Religion,Slovakia × I do not identify with any religious group or faith,0.0488888888888889,0.9511111111111111,High
+GD2,Country × Religion,India × Christianity,0.05337132003798671,0.9466286799620133,High
+GD2,Country × Religion,United Kingdom × Islam,0.03464590964590964,0.9653540903540904,High
+GD2,Country × Religion,Indonesia × Islam,0.031191996594295446,0.9688080034057045,High
+GD2,Country × Religion,Ukraine × Christianity,0.11944444444444445,0.8805555555555555,High
+GD2,Country × Religion,Kenya × Other religious group,0.11111111111111112,0.8888888888888888,High
+GD2,Country × Religion,Portugal × I do not identify with any religious group or faith,0.3402777777777778,0.6597222222222222,Medium
+GD2,Country × Religion,France × Islam,0.08333333333333333,0.9166666666666666,High
+GD2,Country × Religion,Indonesia × Christianity,0.061331569664903,0.938668430335097,High
+GD2,Country × Religion,Kazakhstan × Christianity,0.0749559082892416,0.9250440917107584,High
+GD2,Country × Religion,China × I do not identify with any religious group or faith,0.027686366922478035,0.9723136330775219,High
+GD2,Country × Religion,Brazil × Buddhism,0.3125,0.6875,Medium
+GD2,Country × Religion,Netherlands × I do not identify with any religious group or faith,0.06916666666666667,0.9308333333333333,High
+GD2,Country × Religion,Japan × Buddhism,0.06521739130434782,0.9347826086956522,High
+GD2,Country × Religion,Brazil × Other religious group,0.08833333333333335,0.9116666666666666,High
+GD2,Country × Religion,Switzerland × I do not identify with any religious group or faith,0.08,0.92,High
+GD2,Country × Religion,Turkey × I do not identify with any religious group or faith,0.08263888888888887,0.9173611111111111,High
+GD2,Country × Religion,Ukraine × I do not identify with any religious group or faith,0.04891304347826087,0.9510869565217391,High
+GD2,Country × Religion,United Arab Emirates × Islam,0.052777777777777785,0.9472222222222222,High
+GD2,Country × Religion,Philippines × Christianity,0.03848720043572985,0.9615127995642702,High
+GD2,Country × Religion,Bangladesh × I do not identify with any religious group or faith,0.02976190476190476,0.9702380952380952,High
+GD2,Country × Religion,Bangladesh × Islam,0.03526149776149776,0.9647385022385022,High
+GD2,Country × Religion,Australia × Islam,0.033888888888888885,0.9661111111111111,High
+GD2,Country × Religion,Japan × I do not identify with any religious group or faith,0.05020576131687242,0.9497942386831276,High
+GD2,Country × Religion,China × Buddhism,0.0617283950617284,0.9382716049382716,High
+GD2,Country × Religion,Belgium × Islam,0.1118421052631579,0.8881578947368421,High
+GD2,Country × Religion,Kazakhstan × I do not identify with any religious group or faith,0.039732142857142855,0.9602678571428571,High
+GD2,Country × Religion,Russian Federation × I do not identify with any religious group or faith,0.03839506172839506,0.961604938271605,High
+GD2,Country × Religion,China × Christianity,0.0638888888888889,0.9361111111111111,High
+GD2,Country × Religion,India × Sikhism,0.029444444444444443,0.9705555555555555,High
+GD2,Country × Religion,Canada × Buddhism,0.09166666666666669,0.9083333333333333,High
+GD2,Country × Religion,Saudi Arabia × Islam,0.15277777777777776,0.8472222222222222,High
+GD2,Country × Religion,Kazakhstan × Islam,0.08333333333333333,0.9166666666666666,High
+GD2,Country × Religion,Korea South × I do not identify with any religious group or faith,0.110515873015873,0.889484126984127,High
+GD2,Country × Religion,Malaysia × Islam,0.06666666666666668,0.9333333333333333,High
+GD2,Country × Religion,Malawi × Christianity,0.022023809523809522,0.9779761904761904,High
+GD2,Country × Religion,Australia × I do not identify with any religious group or faith,0.07386363636363637,0.9261363636363636,High
+GD2,Country × Religion,India × I do not identify with any religious group or faith,0.0406475468975469,0.9593524531024531,High
+GD2,Country × Religion,Korea South × Christianity,0.052976190476190475,0.9470238095238095,High
+GD2,Country × Religion,Germany × Islam,0.061111111111111116,0.9388888888888889,High
+GD2,Country × Religion,Japan × Christianity,0.05,0.95,High
+GD2,Country × Religion,Malaysia × Christianity,0.022727272727272728,0.9772727272727273,High
+GD2,Country × Religion,Vietnam × I do not identify with any religious group or faith,0.07611111111111112,0.9238888888888889,High
+GD2,Country × Religion,Singapore × I do not identify with any religious group or faith,0.12222222222222225,0.8777777777777778,High
+GD2,Country × Religion,Vietnam × Buddhism,0.08125,0.91875,High
+GD2,Country × Religion,Singapore × Christianity,0.07692307692307693,0.9230769230769231,High
+GD2,Country × Religion,India × Buddhism,0.045454545454545456,0.9545454545454546,High
+GD2,Country × Environment,Canada × Urban,0.029494225408203904,0.9705057745917961,High
+GD2,Country × Environment,United Kingdom × Urban,0.035049833887043184,0.9649501661129568,High
+GD2,Country × Environment,United States × Urban,0.03320654493111665,0.9667934550688834,High
+GD2,Country × Environment,Germany × Urban,0.03831569664902999,0.96168430335097,High
+GD2,Country × Environment,South Africa × Urban,0.031032547699214368,0.9689674523007856,High
+GD2,Country × Environment,United Kingdom × Rural,0.051388888888888894,0.9486111111111111,High
+GD2,Country × Environment,Poland × Rural,0.075,0.925,High
+GD2,Country × Environment,United States × Rural,0.055353815937149276,0.9446461840628507,High
+GD2,Country × Environment,Chile × Urban,0.026004728132387713,0.9739952718676123,High
+GD2,Country × Environment,Egypt × Urban,0.03956228956228956,0.9604377104377104,High
+GD2,Country × Environment,Mexico × Urban,0.060249318582651916,0.9397506814173481,High
+GD2,Country × Environment,Denmark × Urban,0.1173611111111111,0.8826388888888889,High
+GD2,Country × Environment,India × Urban,0.020212001962160296,0.9797879980378397,High
+GD2,Country × Environment,Algeria × Urban,0.037797619047619045,0.962202380952381,High
+GD2,Country × Environment,France × Urban,0.050051440329218114,0.9499485596707818,High
+GD2,Country × Environment,Morocco × Urban,0.03070987654320988,0.9692901234567901,High
+GD2,Country × Environment,Pakistan × Urban,0.06860229276895943,0.9313977072310405,High
+GD2,Country × Environment,Kenya × Urban,0.029162821723881235,0.9708371782761188,High
+GD2,Country × Environment,Poland × Urban,0.051604938271604936,0.948395061728395,High
+GD2,Country × Environment,India × Rural,0.0433922558922559,0.9566077441077441,High
+GD2,Country × Environment,Russian Federation × Urban,0.051234567901234575,0.9487654320987654,High
+GD2,Country × Environment,Indonesia × Urban,0.03193709582598472,0.9680629041740153,High
+GD2,Country × Environment,Kenya × Rural,0.05040123456790124,0.9495987654320988,High
+GD2,Country × Environment,Croatia × Urban,0.125,0.875,High
+GD2,Country × Environment,Italy × Urban,0.03742985409652077,0.9625701459034792,High
+GD2,Country × Environment,Spain × Urban,0.07561728395061729,0.9243827160493827,High
+GD2,Country × Environment,France × Rural,0.11111111111111113,0.8888888888888888,High
+GD2,Country × Environment,Israel × Urban,0.06675728319783197,0.933242716802168,High
+GD2,Country × Environment,Germany × Rural,0.08611111111111111,0.9138888888888889,High
+GD2,Country × Environment,Sweden × Urban,0.08333333333333333,0.9166666666666666,High
+GD2,Country × Environment,Australia × Urban,0.03824555074555074,0.9617544492544493,High
+GD2,Country × Environment,Brazil × Urban,0.030246412538079203,0.9697535874619208,High
+GD2,Country × Environment,Belgium × Urban,0.09444444444444446,0.9055555555555556,High
+GD2,Country × Environment,Slovakia × Rural,0.11944444444444446,0.8805555555555555,High
+GD2,Country × Environment,Turkey × Urban,0.0974022633744856,0.9025977366255145,High
+GD2,Country × Environment,Slovakia × Urban,0.060089285714285706,0.9399107142857143,High
+GD2,Country × Environment,Ukraine × Urban,0.07407407407407408,0.9259259259259259,High
+GD2,Country × Environment,Kazakhstan × Urban,0.044834307992202733,0.9551656920077972,High
+GD2,Country × Environment,China × Urban,0.03336867060297012,0.9666313293970299,High
+GD2,Country × Environment,Netherlands × Urban,0.06916666666666667,0.9308333333333333,High
+GD2,Country × Environment,Japan × Urban,0.0445959595959596,0.9554040404040404,High
+GD2,Country × Environment,Switzerland × Rural,0.057692307692307696,0.9423076923076923,High
+GD2,Country × Environment,United Arab Emirates × Urban,0.05,0.95,High
+GD2,Country × Environment,New Zealand × Urban,0.075,0.925,High
+GD2,Country × Environment,Philippines × Urban,0.03881834215167549,0.9611816578483245,High
+GD2,Country × Environment,Korea South × Urban,0.05853174603174604,0.941468253968254,High
+GD2,Country × Environment,Bangladesh × Urban,0.030104166666666664,0.9698958333333333,High
+GD2,Country × Environment,Ireland {Republic} × Urban,0.021739130434782608,0.9782608695652174,High
+GD2,Country × Environment,Pakistan × Rural,0.1111111111111111,0.8888888888888888,High
+GD2,Country × Environment,Israel × Rural,0.07386363636363637,0.9261363636363636,High
+GD2,Country × Environment,Malaysia × Urban,0.05105820105820105,0.948941798941799,High
+GD2,Country × Environment,Australia × Rural,0.2265625,0.7734375,Medium
+GD2,Country × Environment,Indonesia × Rural,0.03325617283950617,0.9667438271604938,High
+GD2,Country × Environment,Saudi Arabia × Urban,0.15277777777777776,0.8472222222222222,High
+GD2,Country × Environment,Malawi × Urban,0.06904761904761904,0.930952380952381,High
+GD2,Country × Environment,Japan × Rural,0.07500000000000001,0.925,High
+GD2,Country × Environment,Philippines × Rural,0.04575617283950618,0.9542438271604938,High
+GD2,Country × Environment,Vietnam × Urban,0.045585317460317465,0.9544146825396825,High
+GD2,Country × Environment,Singapore × Urban,0.046384479717813044,0.953615520282187,High
+GD2,Country,Canada,0.029494225408203904,0.9705057745917961,High
+GD2,Country,United Kingdom,0.03733832699489499,0.962661673005105,High
+GD2,Country,United States,0.034355228076276584,0.9656447719237234,High
+GD2,Country,Germany,0.04136710239651417,0.9586328976034858,High
+GD2,Country,South Africa,0.03950617283950617,0.9604938271604938,High
+GD2,Country,Poland,0.051719576719576714,0.9482804232804233,High
+GD2,Country,Chile,0.026612161807197266,0.9733878381928027,High
+GD2,Country,Mexico,0.06464280486019618,0.9353571951398039,High
+GD2,Country,Egypt,0.03956228956228956,0.9604377104377104,High
+GD2,Country,Denmark,0.1173611111111111,0.8826388888888889,High
+GD2,Country,India,0.02177872830295903,0.978221271697041,High
+GD2,Country,Algeria,0.037797619047619045,0.962202380952381,High
+GD2,Country,France,0.05227920227920226,0.9477207977207978,High
+GD2,Country,Morocco,0.03070987654320988,0.9692901234567901,High
+GD2,Country,Pakistan,0.07582345191040844,0.9241765480895916,High
+GD2,Country,Kenya,0.030417593824385063,0.969582406175615,High
+GD2,Country,Russian Federation,0.051234567901234575,0.9487654320987654,High
+GD2,Country,Indonesia,0.03473453177257525,0.9652654682274248,High
+GD2,Country,Croatia,0.125,0.875,High
+GD2,Country,Finland,0.09558823529411764,0.9044117647058824,High
+GD2,Country,Spain,0.056299603174603176,0.9437003968253969,High
+GD2,Country,Ireland {Republic},0.11011904761904764,0.8898809523809523,High
+GD2,Country,Italy,0.040743708452041776,0.9592562915479582,High
+GD2,Country,Israel,0.06309626348386038,0.9369037365161397,High
+GD2,Country,Netherlands,0.07833333333333335,0.9216666666666666,High
+GD2,Country,Sweden,0.08333333333333333,0.9166666666666666,High
+GD2,Country,Australia,0.04521901709401709,0.9547809829059829,High
+GD2,Country,Brazil,0.03889868573692103,0.961101314263079,High
+GD2,Country,Belgium,0.09444444444444446,0.9055555555555556,High
+GD2,Country,Slovakia,0.06284511784511784,0.9371548821548822,High
+GD2,Country,Turkey,0.07911522633744858,0.9208847736625514,High
+GD2,Country,Ukraine,0.07407407407407408,0.9259259259259259,High
+GD2,Country,Portugal,0.3402777777777778,0.6597222222222222,Medium
+GD2,Country,Kazakhstan,0.044834307992202733,0.9551656920077972,High
+GD2,Country,China,0.033847474903210335,0.9661525250967896,High
+GD2,Country,Japan,0.040705128205128206,0.9592948717948718,High
+GD2,Country,Switzerland,0.09722222222222224,0.9027777777777778,High
+GD2,Country,United Arab Emirates,0.05,0.95,High
+GD2,Country,New Zealand,0.075,0.925,High
+GD2,Country,Philippines,0.042912064110894516,0.9570879358891055,High
+GD2,Country,Korea South,0.05917366946778711,0.9408263305322129,High
+GD2,Country,Bangladesh,0.030104166666666664,0.9698958333333333,High
+GD2,Country,Malaysia,0.05105820105820105,0.948941798941799,High
+GD2,Country,Saudi Arabia,0.15277777777777776,0.8472222222222222,High
+GD2,Country,Malawi,0.022023809523809522,0.9779761904761904,High
+GD2,Country,Vietnam,0.045585317460317465,0.9544146825396825,High
+GD2,Country,Singapore,0.046384479717813044,0.953615520282187,High
+GD2,Region × Gender × Age,Northern America × Male × 26-35,0.04355218855218855,0.9564478114478114,High
+GD2,Region × Gender × Age,Northern Europe × Female × 36-45,0.034920634920634915,0.9650793650793651,High
+GD2,Region × Gender × Age,Northern America × Female × 36-45,0.022754780924715563,0.9772452190752844,High
+GD2,Region × Gender × Age,Northern America × Female × 26-35,0.025227328105617577,0.9747726718943824,High
+GD2,Region × Gender × Age,Northern America × Female × 46-55,0.03783068783068784,0.9621693121693121,High
+GD2,Region × Gender × Age,Northern America × Female × 18-25,0.037698412698412696,0.9623015873015873,High
+GD2,Region × Gender × Age,Eastern Europe × Female × 36-45,0.06252204585537918,0.9374779541446208,High
+GD2,Region × Gender × Age,Western Europe × Male × 26-35,0.04805555555555556,0.9519444444444445,High
+GD2,Region × Gender × Age,Southern Africa × Male × 26-35,0.02976190476190476,0.9702380952380952,High
+GD2,Region × Gender × Age,Northern Europe × Male × 46-55,0.03820987654320988,0.9617901234567902,High
+GD2,Region × Gender × Age,Eastern Europe × Male × 26-35,0.04226190476190476,0.9577380952380953,High
+GD2,Region × Gender × Age,Northern Europe × Male × 36-45,0.03273809523809524,0.9672619047619048,High
+GD2,Region × Gender × Age,Northern America × Non-binary × 26-35,0.06521739130434782,0.9347826086956522,High
+GD2,Region × Gender × Age,Northern Europe × Male × 26-35,0.146031746031746,0.853968253968254,High
+GD2,Region × Gender × Age,Northern Europe × Female × 26-35,0.03801044634377968,0.9619895536562203,High
+GD2,Region × Gender × Age,Southern Africa × Male × 18-25,0.02717391304347826,0.9728260869565217,High
+GD2,Region × Gender × Age,Northern America × Male × 46-55,0.0400462962962963,0.9599537037037037,High
+GD2,Region × Gender × Age,Southern Africa × Female × 26-35,0.04567901234567902,0.9543209876543209,High
+GD2,Region × Gender × Age,Central America × Male × 26-35,0.06715167548500883,0.9328483245149912,High
+GD2,Region × Gender × Age,Northern Africa × Male × 18-25,0.03356481481481481,0.9664351851851852,High
+GD2,Region × Gender × Age,Eastern Africa × Male × 26-35,0.016039122012083004,0.983960877987917,High
+GD2,Region × Gender × Age,Northern America × Female × 56-65,0.05083333333333335,0.9491666666666666,High
+GD2,Region × Gender × Age,Central America × Female × 26-35,0.07925925925925928,0.9207407407407407,High
+GD2,Region × Gender × Age,Southern Africa × Female × 18-25,0.027083333333333334,0.9729166666666667,High
+GD2,Region × Gender × Age,South America × Male × 26-35,0.017630030300753764,0.9823699696992463,High
+GD2,Region × Gender × Age,Northern Africa × Female × 26-35,0.021825396825396824,0.9781746031746031,High
+GD2,Region × Gender × Age,Northern Africa × Male × 26-35,0.031795634920634926,0.968204365079365,High
+GD2,Region × Gender × Age,Southern Asia × Male × 26-35,0.02118945868945869,0.9788105413105413,High
+GD2,Region × Gender × Age,Eastern Africa × Male × 36-45,0.03015873015873016,0.9698412698412698,High
+GD2,Region × Gender × Age,South America × Female × 26-35,0.029373456790123455,0.9706265432098765,High
+GD2,Region × Gender × Age,Southern Asia × Female × 36-45,0.023854700854700858,0.9761452991452991,High
+GD2,Region × Gender × Age,Central America × Female × 18-25,0.25555555555555554,0.7444444444444445,Medium
+GD2,Region × Gender × Age,Southern Asia × Female × 26-35,0.02437015315916025,0.9756298468408398,High
+GD2,Region × Gender × Age,Eastern Africa × Female × 26-35,0.020561696900982616,0.9794383030990174,High
+GD2,Region × Gender × Age,Southern Asia × Female × 18-25,0.01941427345348914,0.9805857265465109,High
+GD2,Region × Gender × Age,Southern Europe × Male × 18-25,0.060626102292768956,0.939373897707231,High
+GD2,Region × Gender × Age,South-eastern Asia × Female × 26-35,0.028323192943075986,0.971676807056924,High
+GD2,Region × Gender × Age,Eastern Africa × Female × 18-25,0.020867993662111305,0.9791320063378887,High
+GD2,Region × Gender × Age,Northern Africa × Female × 18-25,0.026111111111111116,0.9738888888888889,High
+GD2,Region × Gender × Age,Central America × Male × 36-45,0.05,0.95,High
+GD2,Region × Gender × Age,Central America × Male × 18-25,0.06521739130434782,0.9347826086956522,High
+GD2,Region × Gender × Age,Western Europe × Female × 36-45,0.04000000000000001,0.96,High
+GD2,Region × Gender × Age,Eastern Europe × Male × 18-25,0.06378968253968254,0.9362103174603175,High
+GD2,Region × Gender × Age,Northern Europe × Male × 18-25,0.038888888888888896,0.9611111111111111,High
+GD2,Region × Gender × Age,Southern Europe × Male × 46-55,0.06818181818181818,0.9318181818181819,High
+GD2,Region × Gender × Age,Southern Europe × Female × 26-35,0.03676470588235294,0.9632352941176471,High
+GD2,Region × Gender × Age,Southern Europe × Male × 26-35,0.046208112874779536,0.9537918871252205,High
+GD2,Region × Gender × Age,Southern Europe × Female × 36-45,0.043055555555555555,0.9569444444444445,High
+GD2,Region × Gender × Age,Western Europe × Female × 18-25,0.06175595238095237,0.9382440476190477,High
+GD2,Region × Gender × Age,Western Asia × Male × 46-55,0.21666666666666665,0.7833333333333333,Medium
+GD2,Region × Gender × Age,Eastern Africa × Male × 18-25,0.023733833039388592,0.9762661669606114,High
+GD2,Region × Gender × Age,Western Asia × Female × 46-55,0.08333333333333331,0.9166666666666667,High
+GD2,Region × Gender × Age,Western Asia × Female × 18-25,0.07420634920634919,0.9257936507936508,High
+GD2,Region × Gender × Age,Western Europe × Male × 18-25,0.060277777777777784,0.9397222222222222,High
+GD2,Region × Gender × Age,Australia and New Zealand × Female × 26-35,0.04611111111111111,0.9538888888888889,High
+GD2,Region × Gender × Age,South America × Female × 36-45,0.061111111111111116,0.9388888888888889,High
+GD2,Region × Gender × Age,Southern Asia × Male × 36-45,0.02452319847020934,0.9754768015297907,High
+GD2,Region × Gender × Age,Western Europe × Male × 46-55,0.08125,0.91875,High
+GD2,Region × Gender × Age,Southern Asia × Male × 18-25,0.018955537663267134,0.9810444623367328,High
+GD2,Region × Gender × Age,Northern Europe × Female × 18-25,0.05049603174603175,0.9495039682539682,High
+GD2,Region × Gender × Age,Northern America × Male × 36-45,0.051383801383801386,0.9486161986161986,High
+GD2,Region × Gender × Age,Eastern Europe × Female × 26-35,0.044444444444444446,0.9555555555555556,High
+GD2,Region × Gender × Age,Northern America × Male × 18-25,0.035555555555555556,0.9644444444444444,High
+GD2,Region × Gender × Age,Western Asia × Male × 26-35,0.08732804232804232,0.9126719576719576,High
+GD2,Region × Gender × Age,Western Europe × Female × 26-35,0.03287037037037037,0.9671296296296297,High
+GD2,Region × Gender × Age,South America × Female × 18-25,0.03712962962962964,0.9628703703703704,High
+GD2,Region × Gender × Age,Western Asia × Male × 36-45,0.0822119341563786,0.9177880658436214,High
+GD2,Region × Gender × Age,South America × Male × 36-45,0.07166666666666668,0.9283333333333333,High
+GD2,Region × Gender × Age,South-eastern Asia × Male × 26-35,0.029685746352413018,0.9703142536475869,High
+GD2,Region × Gender × Age,Western Europe × Male × 36-45,0.03395061728395062,0.9660493827160493,High
+GD2,Region × Gender × Age,Eastern Europe × Female × 18-25,0.05972222222222222,0.9402777777777778,High
+GD2,Region × Gender × Age,South-eastern Asia × Male × 36-45,0.029722222222222223,0.9702777777777778,High
+GD2,Region × Gender × Age,Northern America × Female × 65+,0.2805555555555556,0.7194444444444443,Medium
+GD2,Region × Gender × Age,Central Asia × Female × 26-35,0.21052631578947367,0.7894736842105263,Medium
+GD2,Region × Gender × Age,Eastern Asia × Female × 18-25,0.0364337822671156,0.9635662177328844,High
+GD2,Region × Gender × Age,Western Asia × Female × 26-35,0.07533670033670033,0.9246632996632996,High
+GD2,Region × Gender × Age,South-eastern Asia × Female × 36-45,0.04285714285714285,0.9571428571428572,High
+GD2,Region × Gender × Age,South America × Male × 18-25,0.05148809523809524,0.9485119047619047,High
+GD2,Region × Gender × Age,Western Asia × Male × 18-25,0.04833333333333334,0.9516666666666667,High
+GD2,Region × Gender × Age,South America × Female × 56-65,0.10000000000000002,0.9,High
+GD2,Region × Gender × Age,South America × Female × 46-55,0.01597222222222222,0.9840277777777777,High
+GD2,Region × Gender × Age,Eastern Europe × Female × 46-55,0.04891304347826087,0.9510869565217391,High
+GD2,Region × Gender × Age,Southern Asia × Male × 46-55,0.03368406285072952,0.9663159371492704,High
+GD2,Region × Gender × Age,Southern Asia × Other / prefer not to say × 26-35,0.12222222222222223,0.8777777777777778,High
+GD2,Region × Gender × Age,Eastern Asia × Female × 26-35,0.03506172839506173,0.9649382716049383,High
+GD2,Region × Gender × Age,Southern Asia × Female × 46-55,0.02477445394112061,0.9752255460588793,High
+GD2,Region × Gender × Age,Northern America × Male × 56-65,0.27884615384615385,0.7211538461538461,Medium
+GD2,Region × Gender × Age,Australia and New Zealand × Female × 56-65,0.15441176470588236,0.8455882352941176,High
+GD2,Region × Gender × Age,Central Asia × Female × 36-45,0.022727272727272728,0.9772727272727273,High
+GD2,Region × Gender × Age,Central Asia × Male × 36-45,0.12222222222222225,0.8777777777777778,High
+GD2,Region × Gender × Age,Australia and New Zealand × Female × 36-45,0.0625,0.9375,High
+GD2,Region × Gender × Age,South-eastern Asia × Male × 18-25,0.037592592592592594,0.9624074074074074,High
+GD2,Region × Gender × Age,South-eastern Asia × Female × 18-25,0.03482510288065843,0.9651748971193416,High
+GD2,Region × Gender × Age,Female × 26-35,0.10095427059712773,0.8990457294028723,High
+GD2,Region × Gender × Age,Australia and New Zealand × Male × 18-25,0.02717391304347826,0.9728260869565217,High
+GD2,Region × Gender × Age,Eastern Asia × Male × 18-25,0.04462962962962964,0.9553703703703703,High
+GD2,Region × Gender × Age,Male × 36-45,0.021739130434782608,0.9782608695652174,High
+GD2,Region × Gender × Age,Eastern Africa × Female × 36-45,0.03439153439153439,0.9656084656084656,High
+GD2,Region × Gender × Age,Central Asia × Female × 18-25,0.043333333333333335,0.9566666666666667,High
+GD2,Region × Gender × Age,Eastern Asia × Female × 46-55,0.04891304347826087,0.9510869565217391,High
+GD2,Region × Gender × Age,Eastern Asia × Male × 36-45,0.06944444444444445,0.9305555555555556,High
+GD2,Region × Gender × Age,Eastern Asia × Female × 36-45,0.015339506172839506,0.9846604938271605,High
+GD2,Region × Gender × Age,Eastern Africa × Female × 46-55,0.051388888888888894,0.9486111111111111,High
+GD2,Region × Gender × Age,South-eastern Asia × Female × 46-55,0.06512345679012345,0.9348765432098766,High
+GD2,Region × Gender × Age,Eastern Asia × Male × 26-35,0.06893939393939394,0.931060606060606,High
+GD2,Region × Gender × Age,Male × 18-25,0.10526315789473684,0.8947368421052632,High
+GD2,Region × Gender × Age,Western Asia × Female × 36-45,0.04891304347826087,0.9510869565217391,High
+GD2,Region × Gender × Age,Central Asia × Male × 18-25,0.05555555555555555,0.9444444444444444,High
+GD2,Region × Gender × Age,South-eastern Asia × Male × 46-55,0.027083333333333334,0.9729166666666667,High
+GD2,Region × Gender × Age,Eastern Asia × Male × 46-55,0.08333333333333333,0.9166666666666666,High
+GD2,Region × Gender × Age,Eastern Asia × Female × 56-65,0.028409090909090908,0.9715909090909091,High
+GD2,Region × Gender × Age,Female × 18-25,0.27678571428571425,0.7232142857142858,Medium
+GD2,Region × Gender × Age,Male × 26-35,0.04761904761904762,0.9523809523809523,High
+GD2,Region × Gender × Age,Eastern Africa × Male × 46-55,0.08125,0.91875,High
+GD2,Region × Gender × Age,Australia and New Zealand × Male × 26-35,0.08552631578947369,0.9144736842105263,High
+GD2,Region × Gender × Age,Central Asia × Male × 26-35,0.1027777777777778,0.8972222222222221,High
+GD2,Region × Religion,Northern America × Christianity,0.03771311504741457,0.9622868849525854,High
+GD2,Region × Religion,Northern Europe × I do not identify with any religious group or faith,0.04122019098870951,0.9587798090112905,High
+GD2,Region × Religion,Northern America × I do not identify with any religious group or faith,0.03188414210128495,0.968115857898715,High
+GD2,Region × Religion,Eastern Europe × Christianity,0.05383306100217865,0.9461669389978213,High
+GD2,Region × Religion,Western Europe × Christianity,0.03756313131313131,0.9624368686868687,High
+GD2,Region × Religion,Northern Europe × Christianity,0.05612874779541446,0.9438712522045856,High
+GD2,Region × Religion,Southern Africa × Christianity,0.04255892255892255,0.9574410774410774,High
+GD2,Region × Religion,South America × I do not identify with any religious group or faith,0.028989791073124407,0.9710102089268756,High
+GD2,Region × Religion,Central America × Christianity,0.07135065937149271,0.9286493406285072,High
+GD2,Region × Religion,Northern Africa × Islam,0.02255190796857464,0.9774480920314254,High
+GD2,Region × Religion,Eastern Africa × Christianity,0.028856620851961248,0.9711433791480387,High
+GD2,Region × Religion,Central America × I do not identify with any religious group or faith,0.062345679012345674,0.9376543209876543,High
+GD2,Region × Religion,Southern Asia × Islam,0.03644825861447725,0.9635517413855228,High
+GD2,Region × Religion,Western Europe × I do not identify with any religious group or faith,0.037141035963499734,0.9628589640365003,High
+GD2,Region × Religion,Central America × Other religious group,0.06095679012345679,0.9390432098765432,High
+GD2,Region × Religion,Eastern Africa × I do not identify with any religious group or faith,0.0400977366255144,0.9599022633744856,High
+GD2,Region × Religion,Eastern Europe × I do not identify with any religious group or faith,0.035477941176470594,0.9645220588235294,High
+GD2,Region × Religion,South America × Christianity,0.030477910678251684,0.9695220893217483,High
+GD2,Region × Religion,Southern Asia × Hinduism,0.025304240374209676,0.9746957596257904,High
+GD2,Region × Religion,Southern Europe × Christianity,0.04334315375982042,0.9566568462401795,High
+GD2,Region × Religion,Eastern Africa × Islam,0.050694444444444445,0.9493055555555555,High
+GD2,Region × Religion,South-eastern Asia × I do not identify with any religious group or faith,0.03383136924803591,0.9661686307519641,High
+GD2,Region × Religion,South America × Other religious group,0.03675595238095238,0.9632440476190476,High
+GD2,Region × Religion,Southern Asia × Other religious group,0.0638888888888889,0.9361111111111111,High
+GD2,Region × Religion,Southern Europe × I do not identify with any religious group or faith,0.047194163860830536,0.9528058361391695,High
+GD2,Region × Religion,I do not identify with any religious group or faith,0.08229221175649747,0.9177077882435025,High
+GD2,Region × Religion,Western Asia × Judaism,0.06144316730523627,0.9385568326947638,High
+GD2,Region × Religion,Western Asia × I do not identify with any religious group or faith,0.0801273148148148,0.9198726851851852,High
+GD2,Region × Religion,Australia and New Zealand × Christianity,0.06798941798941799,0.932010582010582,High
+GD2,Region × Religion,Western Asia × Islam,0.04315977232643899,0.956840227673561,High
+GD2,Region × Religion,Southern Asia × Christianity,0.055601343101343105,0.9443986568986569,High
+GD2,Region × Religion,South America × Buddhism,0.13611111111111113,0.8638888888888889,High
+GD2,Region × Religion,Northern Europe × Islam,0.03464590964590964,0.9653540903540904,High
+GD2,Region × Religion,South-eastern Asia × Islam,0.02727932924011356,0.9727206707598864,High
+GD2,Region × Religion,Eastern Africa × Other religious group,0.11111111111111112,0.8888888888888888,High
+GD2,Region × Religion,Western Europe × Islam,0.0513668430335097,0.9486331569664903,High
+GD2,Region × Religion,South-eastern Asia × Christianity,0.02977330779054917,0.9702266922094508,High
+GD2,Region × Religion,Central Asia × Christianity,0.0749559082892416,0.9250440917107584,High
+GD2,Region × Religion,Eastern Asia × I do not identify with any religious group or faith,0.029471842011093218,0.9705281579889068,High
+GD2,Region × Religion,Eastern Asia × Buddhism,0.035102513227513225,0.9648974867724868,High
+GD2,Region × Religion,Southern Asia × I do not identify with any religious group or faith,0.0411331569664903,0.9588668430335097,High
+GD2,Region × Religion,Australia and New Zealand × Islam,0.033888888888888885,0.9661111111111111,High
+GD2,Region × Religion,Christianity,0.0394510582010582,0.9605489417989418,High
+GD2,Region × Religion,Central Asia × I do not identify with any religious group or faith,0.039732142857142855,0.9602678571428571,High
+GD2,Region × Religion,Eastern Asia × Christianity,0.03064814814814815,0.9693518518518518,High
+GD2,Region × Religion,Southern Europe × Islam,0.08125,0.91875,High
+GD2,Region × Religion,Southern Asia × Sikhism,0.029444444444444443,0.9705555555555555,High
+GD2,Region × Religion,Northern America × Buddhism,0.040972222222222215,0.9590277777777778,High
+GD2,Region × Religion,Central Asia × Islam,0.08333333333333333,0.9166666666666666,High
+GD2,Region × Religion,Australia and New Zealand × I do not identify with any religious group or faith,0.07500000000000001,0.925,High
+GD2,Region × Religion,South-eastern Asia × Buddhism,0.06148148148148149,0.9385185185185185,High
+GD2,Region × Religion,Southern Asia × Buddhism,0.06388888888888888,0.9361111111111111,High
+GD2,Region × Environment,Northern America × Urban,0.029790408553693578,0.9702095914463065,High
+GD2,Region × Environment,Northern Europe × Urban,0.03549094673481928,0.9645090532651808,High
+GD2,Region × Environment,Eastern Europe × Urban,0.03524691358024691,0.9647530864197531,High
+GD2,Region × Environment,Western Europe × Urban,0.027704637410519765,0.9722953625894802,High
+GD2,Region × Environment,Southern Africa × Urban,0.031032547699214368,0.9689674523007856,High
+GD2,Region × Environment,Northern Europe × Rural,0.049814814814814826,0.9501851851851851,High
+GD2,Region × Environment,Eastern Europe × Rural,0.09203703703703704,0.907962962962963,High
+GD2,Region × Environment,Northern America × Rural,0.055353815937149276,0.9446461840628507,High
+GD2,Region × Environment,South America × Urban,0.027654092949420603,0.9723459070505794,High
+GD2,Region × Environment,Northern Africa × Urban,0.023252954380405363,0.9767470456195947,High
+GD2,Region × Environment,Eastern Africa × Urban,0.028985423773835898,0.971014576226164,High
+GD2,Region × Environment,Central America × Urban,0.060249318582651916,0.9397506814173481,High
+GD2,Region × Environment,Southern Asia × Urban,0.021023099218580314,0.9789769007814196,High
+GD2,Region × Environment,South America × Rural,0.175,0.825,High
+GD2,Region × Environment,Southern Asia × Rural,0.041503866503866504,0.9584961334961335,High
+GD2,Region × Environment,Southern Europe × Urban,0.03555207875860051,0.9644479212413994,High
+GD2,Region × Environment,South-eastern Asia × Urban,0.030064430663513712,0.9699355693364863,High
+GD2,Region × Environment,Eastern Africa × Rural,0.04110449735449735,0.9588955026455026,High
+GD2,Region × Environment,Southern Europe × Rural,0.1527777777777778,0.8472222222222222,High
+GD2,Region × Environment,Rural,0.05921052631578947,0.9407894736842105,High
+GD2,Region × Environment,Western Europe × Rural,0.061064814814814815,0.9389351851851852,High
+GD2,Region × Environment,Western Asia × Urban,0.06157059314954051,0.9384294068504595,High
+GD2,Region × Environment,Australia and New Zealand × Urban,0.03727106227106227,0.9627289377289378,High
+GD2,Region × Environment,Central Asia × Urban,0.04116167153996102,0.958838328460039,High
+GD2,Region × Environment,Eastern Asia × Urban,0.033447333611807295,0.9665526663881927,High
+GD2,Region × Environment,Western Asia × Rural,0.10833333333333335,0.8916666666666666,High
+GD2,Region × Environment,Urban,0.057722431077694245,0.9422775689223057,High
+GD2,Region × Environment,Eastern Asia × Rural,0.05416666666666667,0.9458333333333333,High
+GD2,Region × Environment,Australia and New Zealand × Rural,0.2265625,0.7734375,Medium
+GD2,Region × Environment,South-eastern Asia × Rural,0.031084656084656086,0.968915343915344,High
+GD2,Region,Northern America,0.03266426944744097,0.9673357305525591,High
+GD2,Region,Northern Europe,0.037442419706674085,0.9625575802933259,High
+GD2,Region,Eastern Europe,0.04061654908877131,0.9593834509112287,High
+GD2,Region,Western Europe,0.032036816811526106,0.9679631831884739,High
+GD2,Region,Southern Africa,0.03950617283950617,0.9604938271604938,High
+GD2,Region,South America,0.02852430593253667,0.9714756940674634,High
+GD2,Region,Central America,0.06464280486019618,0.9353571951398039,High
+GD2,Region,Northern Africa,0.023252954380405363,0.9767470456195947,High
+GD2,Region,Eastern Africa,0.0304168238534183,0.9695831761465817,High
+GD2,Region,Southern Asia,0.022485250304067828,0.9775147496959322,High
+GD2,Region,Southern Europe,0.040256410256410254,0.9597435897435898,High
+GD2,Region,South-eastern Asia,0.03135778352350764,0.9686422164764924,High
+GD2,Region,Western Asia,0.055490361477296496,0.9445096385227035,High
+GD2,Region,Australia and New Zealand,0.04293981481481482,0.9570601851851852,High
+GD2,Region,Central Asia,0.04116167153996102,0.958838328460039,High
+GD2,Region,Eastern Asia,0.03135106759765229,0.9686489324023477,High
+GD2,Continent,North America,0.03513165483944136,0.9648683451605586,High
+GD2,Continent,Europe,0.03609300495678591,0.9639069950432141,High
+GD2,Continent,Africa,0.03309763441793674,0.9669023655820632,High
+GD2,Continent,South America,0.02852430593253667,0.9714756940674634,High
+GD2,Continent,Asia,0.02826926970485624,0.9717307302951438,High
+GD2,Continent,Oceania,0.04367343780946722,0.9563265621905328,High
+GD2,Religion,Christianity,0.034349010626852895,0.9656509893731471,High
+GD2,Religion,I do not identify with any religious group or faith,0.033012694990209236,0.9669873050097908,High
+GD2,Religion,Other religious group,0.04066887534559948,0.9593311246544005,High
+GD2,Religion,Islam,0.02266185176257808,0.9773381482374219,High
+GD2,Religion,Hinduism,0.025304240374209676,0.9746957596257904,High
+GD2,Religion,Judaism,0.06587714058144166,0.9341228594185583,High
+GD2,Religion,Buddhism,0.03614250761241501,0.963857492387585,High
+GD2,Religion,Sikhism,0.029444444444444443,0.9705555555555555,High
+GD2,Environment,Urban,0.028845760183208266,0.9711542398167917,High
+GD2,Environment,Rural,0.028836197012114494,0.9711638029878855,High
+GD2,Age Group,26-35,0.02874516441903638,0.9712548355809636,High
+GD2,Age Group,36-45,0.03746742118778193,0.9625325788122181,High
+GD2,Age Group,46-55,0.030216346157536846,0.9697836538424631,High
+GD2,Age Group,18-25,0.026911774110671537,0.9730882258893284,High
+GD2,Age Group,56-65,0.042641104189020854,0.9573588958109791,High
+GD2,Age Group,65+,0.15010141093474427,0.8498985890652557,High
+GD2,Gender,Male,0.028659129117410174,0.9713408708825898,High
+GD2,Gender,Female,0.03021978937543362,0.9697802106245664,High
+GD2,Gender,Non-binary,0.07262500000000001,0.927375,High
+GD2,Gender,Other / prefer not to say,0.06500000000000002,0.9349999999999999,High
+GD3,Country × Gender × Age,United States × Female × 36-45,0.09927398989898989,0.9007260101010102,High
+GD3,Country × Gender × Age,Canada × Male × 46-55,0.08314732142857142,0.9168526785714286,High
+GD3,Country × Gender × Age,United States × Male × 46-55,0.08399621212121214,0.9160037878787879,High
+GD3,Country × Gender × Age,United States × Female × 26-35,0.07630179339459643,0.9236982066054036,High
+GD3,Country × Gender × Age,United States × Male × 18-25,0.05849228896103896,0.941507711038961,High
+GD3,Country × Gender × Age,United Kingdom × Male × 46-55,0.09059343434343436,0.9094065656565656,High
+GD3,Country × Gender × Age,United States × Female × 46-55,0.07026515151515152,0.9297348484848484,High
+GD3,Country × Gender × Age,United Kingdom × Female × 46-55,0.08396464646464648,0.9160353535353535,High
+GD3,Country × Gender × Age,Netherlands × Female × 26-35,0.05673926767676767,0.9432607323232324,High
+GD3,Country × Gender × Age,United Kingdom × Female × 26-35,0.08310185185185186,0.9168981481481482,High
+GD3,Country × Gender × Age,United Kingdom × Male × 26-35,0.05855429292929293,0.9414457070707071,High
+GD3,Country × Gender × Age,Canada × Male × 26-35,0.06660353535353536,0.9333964646464646,High
+GD3,Country × Gender × Age,South Africa × Female × 26-35,0.08783143939393939,0.9121685606060606,High
+GD3,Country × Gender × Age,United Kingdom × Female × 36-45,0.08570075757575757,0.9142992424242424,High
+GD3,Country × Gender × Age,Mexico × Male × 26-35,0.07260101010101011,0.9273989898989898,High
+GD3,Country × Gender × Age,United States × Male × 36-45,0.0949179292929293,0.9050820707070707,High
+GD3,Country × Gender × Age,China × Female × 26-35,0.05391032497793038,0.9460896750220696,High
+GD3,Country × Gender × Age,Pakistan × Male × 36-45,0.09579918032786885,0.9042008196721312,High
+GD3,Country × Gender × Age,South Africa × Female × 65+,0.09979838709677419,0.9002016129032258,High
+GD3,Country × Gender × Age,Kenya × Male × 26-35,0.060824877640653856,0.9391751223593462,High
+GD3,Country × Gender × Age,Kenya × Male × 18-25,0.05092889235046098,0.9490711076495391,High
+GD3,Country × Gender × Age,Chile × Male × 26-35,0.060976717936945216,0.9390232820630547,High
+GD3,Country × Gender × Age,United States × Male × 65+,0.05349576271186441,0.9465042372881356,High
+GD3,Country × Gender × Age,India × Female × 46-55,0.08270389911014912,0.9172961008898509,High
+GD3,Country × Gender × Age,India × Male × 26-35,0.05805733189992449,0.9419426681000755,High
+GD3,Country × Gender × Age,India × Male × 46-55,0.06327584452584455,0.9367241554741554,High
+GD3,Country × Gender × Age,Kenya × Female × 18-25,0.057842791639087926,0.9421572083609121,High
+GD3,Country × Gender × Age,Chile × Male × 36-45,0.10984848484848485,0.8901515151515151,High
+GD3,Country × Gender × Age,India × Female × 36-45,0.056184551614393514,0.9438154483856065,High
+GD3,Country × Gender × Age,Kenya × Female × 36-45,0.07683181016514351,0.9231681898348565,High
+GD3,Country × Gender × Age,United States × Male × 56-65,0.05846774193548387,0.9415322580645161,High
+GD3,Country × Gender × Age,India × Male × 18-25,0.05759434434524813,0.9424056556547519,High
+GD3,Country × Gender × Age,India × Female × 18-25,0.056839043392073685,0.9431609566079263,High
+GD3,Country × Gender × Age,Chile × Male × 18-25,0.07627118644067797,0.923728813559322,High
+GD3,Country × Gender × Age,United States × Female × 56-65,0.11710858585858587,0.8828914141414141,High
+GD3,Country × Gender × Age,Kenya × Female × 26-35,0.05772524091489609,0.9422747590851039,High
+GD3,Country × Gender × Age,Chile × Female × 18-25,0.06650883838383839,0.9334911616161616,High
+GD3,Country × Gender × Age,Chile × Female × 46-55,0.05349576271186441,0.9465042372881356,High
+GD3,Country × Gender × Age,Bangladesh × Female × 26-35,0.052766393442622954,0.9472336065573771,High
+GD3,Country × Gender × Age,Brazil × Female × 26-35,0.07837301587301587,0.9216269841269842,High
+GD3,Country × Gender × Age,Chile × Female × 26-35,0.07215663124754033,0.9278433687524597,High
+GD3,Country × Gender × Age,India × Male × 36-45,0.06671541046863544,0.9332845895313646,High
+GD3,Country × Gender × Age,Türkiye × Female × 18-25,0.0712719298245614,0.9287280701754386,High
+GD3,Country × Gender × Age,Kenya × Male × 36-45,0.05889813311688312,0.9411018668831169,High
+GD3,Country × Gender × Age,India × Female × 26-35,0.059850370827773385,0.9401496291722267,High
+GD3,Country × Gender × Age,Mexico × Male × 36-45,0.05989583333333333,0.9401041666666666,High
+GD3,Country × Gender × Age,Brazil × Female × 36-45,0.10222457627118645,0.8977754237288136,High
+GD3,Country × Gender × Age,Singapore × Male × 26-35,0.037076271186440676,0.9629237288135594,High
+GD3,Country × Gender × Age,Germany × Female × 18-25,0.075,0.925,High
+GD3,Country × Gender × Age,Brazil × Female × 46-55,0.07913306451612903,0.920866935483871,High
+GD3,Country × Gender × Age,Morocco × Male × 18-25,0.10653409090909091,0.8934659090909091,High
+GD3,Country × Gender × Age,Spain × Female × 36-45,0.10101010101010101,0.898989898989899,High
+GD3,Country × Gender × Age,Italy × Female × 26-35,0.06660353535353536,0.9333964646464646,High
+GD3,Country × Gender × Age,Poland × Male × 36-45,0.33088235294117646,0.6691176470588236,Medium
+GD3,Country × Gender × Age,Türkiye × Female × 36-45,0.22321428571428573,0.7767857142857143,Medium
+GD3,Country × Gender × Age,Spain × Male × 26-35,0.08728448275862069,0.9127155172413793,High
+GD3,Country × Gender × Age,Brazil × Male × 36-45,0.0720486111111111,0.9279513888888888,High
+GD3,Country × Gender × Age,Germany × Male × 46-55,0.10104166666666667,0.8989583333333333,High
+GD3,Country × Gender × Age,Algeria × Female × 18-25,0.08333333333333333,0.9166666666666666,High
+GD3,Country × Gender × Age,Russian Federation × Female × 26-35,0.04978813559322034,0.9502118644067796,High
+GD3,Country × Gender × Age,Brazil × Female × 56-65,0.06950431034482758,0.9304956896551724,High
+GD3,Country × Gender × Age,Bangladesh × Male × 18-25,0.07464225589225591,0.9253577441077441,High
+GD3,Country × Gender × Age,Egypt × Male × 26-35,0.05082070707070707,0.9491792929292929,High
+GD3,Country × Gender × Age,Mexico × Female × 26-35,0.0625,0.9375,High
+GD3,Country × Gender × Age,Brazil × Male × 18-25,0.06889204545454546,0.9311079545454546,High
+GD3,Country × Gender × Age,Japan × Male × 18-25,0.07253787878787878,0.9274621212121212,High
+GD3,Country × Gender × Age,Canada × Male × 36-45,0.05429292929292929,0.9457070707070707,High
+GD3,Country × Gender × Age,Poland × Female × 18-25,0.07884615384615384,0.9211538461538462,High
+GD3,Country × Gender × Age,Italy × Male × 26-35,0.11348684210526316,0.8865131578947368,High
+GD3,Country × Gender × Age,Slovakia × Male × 26-35,0.06281565656565657,0.9371843434343434,High
+GD3,Country × Gender × Age,Indonesia × Male × 18-25,0.06007620851370851,0.9399237914862915,High
+GD3,Country × Gender × Age,Italy × Male × 36-45,0.08396464646464646,0.9160353535353536,High
+GD3,Country × Gender × Age,France × Male × 26-35,0.07883522727272728,0.9211647727272727,High
+GD3,Country × Gender × Age,Indonesia × Male × 26-35,0.07236426767676767,0.9276357323232324,High
+GD3,Country × Gender × Age,Canada × Female × 46-55,0.07828282828282829,0.9217171717171717,High
+GD3,Country × Gender × Age,Israel × Female × 26-35,0.10700757575757576,0.8929924242424242,High
+GD3,Country × Gender × Age,Türkiye × Female × 26-35,0.10361842105263158,0.8963815789473684,High
+GD3,Country × Gender × Age,Pakistan × Female × 26-35,0.06207912457912458,0.9379208754208754,High
+GD3,Country × Gender × Age,Poland × Male × 26-35,0.22727272727272727,0.7727272727272727,Medium
+GD3,Country × Gender × Age,Morocco × Male × 26-35,0.09375,0.90625,High
+GD3,Country × Gender × Age,Mexico × Male × 18-25,0.07894736842105263,0.9210526315789473,High
+GD3,Country × Gender × Age,Brazil × Male × 56-65,0.08649553571428571,0.9135044642857143,High
+GD3,Country × Gender × Age,Germany × Male × 26-35,0.06470959595959597,0.935290404040404,High
+GD3,Country × Gender × Age,Brazil × Male × 26-35,0.08049242424242424,0.9195075757575758,High
+GD3,Country × Gender × Age,Algeria × Female × 26-35,0.11145833333333334,0.8885416666666667,High
+GD3,Country × Gender × Age,Israel × Female × 36-45,0.07165404040404041,0.9283459595959596,High
+GD3,Country × Gender × Age,China × Male × 18-25,0.05594636844636845,0.9440536315536315,High
+GD3,Country × Gender × Age,Pakistan × Male × 18-25,0.2125,0.7875,Medium
+GD3,Country × Gender × Age,Canada × Female × 18-25,0.0734375,0.9265625,High
+GD3,Country × Gender × Age,Israel × Male × 26-35,0.07821969696969697,0.921780303030303,High
+GD3,Country × Gender × Age,Egypt × Male × 18-25,0.08664772727272728,0.9133522727272727,High
+GD3,Country × Gender × Age,Australia × Male × 26-35,0.14309210526315788,0.8569078947368421,High
+GD3,Country × Gender × Age,France × Male × 18-25,0.11521464646464646,0.8847853535353536,High
+GD3,Country × Gender × Age,Vietnam × Male × 18-25,0.078861531986532,0.921138468013468,High
+GD3,Country × Gender × Age,New Zealand × Female × 26-35,0.10348360655737705,0.8965163934426229,High
+GD3,Country × Gender × Age,Slovakia × Male × 18-25,0.07496843434343435,0.9250315656565656,High
+GD3,Country × Gender × Age,Pakistan × Male × 26-35,0.05851295695045695,0.941487043049543,High
+GD3,Country × Gender × Age,Australia × Female × 26-35,0.08686440677966102,0.913135593220339,High
+GD3,Country × Gender × Age,Brazil × Male × 46-55,0.1076388888888889,0.8923611111111112,High
+GD3,Country × Gender × Age,Indonesia × Female × 26-35,0.06769745406109043,0.9323025459389096,High
+GD3,Country × Gender × Age,Korea South × Female × 26-35,0.087744140625,0.912255859375,High
+GD3,Country × Gender × Age,Indonesia × Female × 46-55,0.0754419191919192,0.9245580808080808,High
+GD3,Country × Gender × Age,Türkiye × Male × 26-35,0.05635245901639344,0.9436475409836066,High
+GD3,Country × Gender × Age,China × Male × 26-35,0.05703914141414142,0.9429608585858585,High
+GD3,Country × Gender × Age,Morocco × Female × 26-35,0.057459677419354836,0.9425403225806451,High
+GD3,Country × Gender × Age,China × Female × 18-25,0.05134078884078885,0.9486592111592111,High
+GD3,Country × Gender × Age,Russian Federation × Female × 36-45,0.06470959595959595,0.9352904040404041,High
+GD3,Country × Gender × Age,Spain × Male × 46-55,0.10625,0.89375,High
+GD3,Country × Gender × Age,Japan × Male × 46-55,0.053075396825396824,0.9469246031746031,High
+GD3,Country × Gender × Age,Japan × Female × 26-35,0.10266203703703704,0.897337962962963,High
+GD3,Country × Gender × Age,Morocco × Female × 18-25,0.05074179292929293,0.9492582070707071,High
+GD3,Country × Gender × Age,Slovakia × Male × 36-45,0.035416666666666666,0.9645833333333333,High
+GD3,Country × Gender × Age,Russian Federation × Female × 46-55,0.046600877192982455,0.9533991228070176,High
+GD3,Country × Gender × Age,China × Female × 36-45,0.06499368686868687,0.9350063131313131,High
+GD3,Country × Gender × Age,Australia × Male × 36-45,0.19736842105263158,0.8026315789473684,High
+GD3,Country × Gender × Age,Kazakhstan × Female × 18-25,0.10795454545454546,0.8920454545454546,High
+GD3,Country × Gender × Age,Indonesia × Male × 46-55,0.08522727272727272,0.9147727272727273,High
+GD3,Country × Gender × Age,Egypt × Female × 26-35,0.1431818181818182,0.8568181818181818,High
+GD3,Country × Gender × Age,Israel × Male × 18-25,0.08048190235690235,0.9195180976430977,High
+GD3,Country × Gender × Age,Canada × Female × 36-45,0.09722222222222222,0.9027777777777778,High
+GD3,Country × Gender × Age,Kazakhstan × Female × 26-35,0.07455808080808081,0.9254419191919192,High
+GD3,Country × Gender × Age,Saudi Arabia × Female × 18-25,0.09213362068965517,0.9078663793103449,High
+GD3,Country × Gender × Age,Canada × Female × 26-35,0.07958553791887124,0.9204144620811288,High
+GD3,Country × Gender × Age,Philippines × Female × 26-35,0.09564393939393939,0.9043560606060606,High
+GD3,Country × Gender × Age,Israel × Female × 18-25,0.06455176767676767,0.9354482323232324,High
+GD3,Country × Gender × Age,Malaysia × Male × 36-45,0.12247474747474749,0.8775252525252525,High
+GD3,Country × Gender × Age,Indonesia × Male × 36-45,0.07386363636363637,0.9261363636363636,High
+GD3,Country × Gender × Age,Indonesia × Female × 36-45,0.1953125,0.8046875,High
+GD3,Country × Gender × Age,Vietnam × Male × 26-35,0.10716540404040405,0.8928345959595959,High
+GD3,Country × Gender × Age,Philippines × Female × 18-25,0.08173926767676769,0.9182607323232324,High
+GD3,Country × Gender × Age,Korea South × Male × 18-25,0.07647026909722222,0.9235297309027778,High
+GD3,Country × Gender × Age,United Kingdom × Female × 18-25,0.10448232323232325,0.8955176767676768,High
+GD3,Country × Gender × Age,Israel × Male × 36-45,0.09406565656565655,0.9059343434343434,High
+GD3,Country × Gender × Age,Malawi × Female × 26-35,0.054135101010101015,0.945864898989899,High
+GD3,Country × Gender × Age,Korea South × Male × 26-35,0.08854166666666667,0.9114583333333334,High
+GD3,Country × Gender × Age,Bangladesh × Male × 36-45,0.07199074074074074,0.9280092592592593,High
+GD3,Country × Gender × Age,Japan × Female × 46-55,0.08315677966101695,0.916843220338983,High
+GD3,Country × Gender × Age,Singapore × Male × 18-25,0.06354166666666666,0.9364583333333334,High
+GD3,Country × Gender × Age,Malaysia × Female × 36-45,0.07765151515151515,0.9223484848484849,High
+GD3,Country × Gender × Age,Japan × Male × 56-65,0.06350806451612903,0.936491935483871,High
+GD3,Country × Gender × Age,Singapore × Female × 26-35,0.10383064516129033,0.8961693548387096,High
+GD3,Country × Gender × Age,India × Male × 56-65,0.03835227272727273,0.9616477272727273,High
+GD3,Country × Gender × Age,Indonesia × Female × 18-25,0.153125,0.846875,High
+GD3,Country × Gender × Age,Kenya × Female × 46-55,0.09698275862068965,0.9030172413793104,High
+GD3,Country × Gender × Age,Vietnam × Female × 18-25,0.08452868852459017,0.9154713114754098,High
+GD3,Country × Gender × Age,Philippines × Male × 18-25,0.08712121212121213,0.9128787878787878,High
+GD3,Country × Gender × Age,Malaysia × Female × 18-25,0.06359649122807018,0.9364035087719298,High
+GD3,Country × Gender × Age,Philippines × Female × 36-45,0.06299603174603174,0.9370039682539683,High
+GD3,Country × Gender × Age,Bangladesh × Male × 26-35,0.07512626262626264,0.9248737373737373,High
+GD3,Country × Gender × Age,Kazakhstan × Male × 36-45,0.09722222222222221,0.9027777777777778,High
+GD3,Country × Gender × Age,Malawi × Female × 18-25,0.09739583333333333,0.9026041666666667,High
+GD3,Country × Gender × Age,Philippines × Male × 26-35,0.03125,0.96875,High
+GD3,Country × Gender × Age,Malaysia × Male × 18-25,0.0890625,0.9109375,High
+GD3,Country × Gender × Age,Japan × Female × 18-25,0.0796875,0.9203125,High
+GD3,Country × Gender × Age,Malaysia × Male × 26-35,0.10245901639344263,0.8975409836065573,High
+GD3,Country × Gender × Age,China × Male × 36-45,0.058712121212121215,0.9412878787878788,High
+GD3,Country × Gender × Age,Kazakhstan × Male × 26-35,0.0894396551724138,0.9105603448275862,High
+GD3,Country × Gender × Age,Japan × Female × 56-65,0.09170081967213115,0.9082991803278688,High
+GD3,Country × Gender × Age,Australia × Female × 18-25,0.0778688524590164,0.9221311475409836,High
+GD3,Country × Religion,United States × Christianity,0.07101285404320648,0.9289871459567935,High
+GD3,Country × Religion,Denmark × I do not identify with any religious group or faith,0.10044642857142858,0.8995535714285714,High
+GD3,Country × Religion,Canada × I do not identify with any religious group or faith,0.07813169574533212,0.9218683042546679,High
+GD3,Country × Religion,United States × I do not identify with any religious group or faith,0.0690947940947941,0.9309052059052059,High
+GD3,Country × Religion,Italy × Christianity,0.09753787878787878,0.9024621212121212,High
+GD3,Country × Religion,United Kingdom × I do not identify with any religious group or faith,0.07192760942760942,0.9280723905723905,High
+GD3,Country × Religion,United States × Other religious group,0.2028409090909091,0.7971590909090909,Medium
+GD3,Country × Religion,Mexico × I do not identify with any religious group or faith,0.06658098845598845,0.9334190115440115,High
+GD3,Country × Religion,United Kingdom × Christianity,0.0827362580834803,0.9172637419165197,High
+GD3,Country × Religion,Netherlands × I do not identify with any religious group or faith,0.05673926767676767,0.9432607323232324,High
+GD3,Country × Religion,South Africa × Christianity,0.0738260582010582,0.9261739417989419,High
+GD3,Country × Religion,Germany × I do not identify with any religious group or faith,0.0711379669713003,0.9288620330286997,High
+GD3,Country × Religion,Poland × Christianity,0.07503156565656567,0.9249684343434343,High
+GD3,Country × Religion,China × Buddhism,0.06040380658436214,0.9395961934156378,High
+GD3,Country × Religion,Pakistan × Islam,0.06099823997551269,0.9390017600244873,High
+GD3,Country × Religion,Kenya × Christianity,0.06080956808601627,0.9391904319139838,High
+GD3,Country × Religion,Chile × I do not identify with any religious group or faith,0.06413539272358443,0.9358646072764156,High
+GD3,Country × Religion,India × Other religious group,0.08301767676767675,0.9169823232323232,High
+GD3,Country × Religion,India × Hinduism,0.05844676425492633,0.9415532357450737,High
+GD3,Country × Religion,Chile × Buddhism,0.09733606557377049,0.9026639344262295,High
+GD3,Country × Religion,Kenya × Other religious group,0.09752155172413793,0.9024784482758621,High
+GD3,Country × Religion,Chile × Christianity,0.07074054943373125,0.9292594505662688,High
+GD3,Country × Religion,Bangladesh × Islam,0.06478994490358125,0.9352100550964187,High
+GD3,Country × Religion,Brazil × Christianity,0.06812329087225888,0.9318767091277411,High
+GD3,Country × Religion,India × Islam,0.07026870224432145,0.9297312977556785,High
+GD3,Country × Religion,India × I do not identify with any religious group or faith,0.06505331088664422,0.9349466891133558,High
+GD3,Country × Religion,Türkiye × I do not identify with any religious group or faith,0.07388468013468014,0.9261153198653198,High
+GD3,Country × Religion,Portugal × I do not identify with any religious group or faith,0.08870967741935484,0.9112903225806451,High
+GD3,Country × Religion,Kenya × Islam,0.061510942760942766,0.9384890572390572,High
+GD3,Country × Religion,Brazil × I do not identify with any religious group or faith,0.07016594516594517,0.9298340548340548,High
+GD3,Country × Religion,Singapore × I do not identify with any religious group or faith,0.07260101010101011,0.9273989898989898,High
+GD3,Country × Religion,Morocco × Islam,0.07325228783562115,0.9267477121643788,High
+GD3,Country × Religion,France × I do not identify with any religious group or faith,0.05667313011063011,0.9433268698893699,High
+GD3,Country × Religion,Spain × I do not identify with any religious group or faith,0.08980429292929294,0.9101957070707071,High
+GD3,Country × Religion,Germany × Christianity,0.069760101010101,0.930239898989899,High
+GD3,Country × Religion,Mexico × Christianity,0.06518308080808081,0.9348169191919192,High
+GD3,Country × Religion,Algeria × Islam,0.07803030303030302,0.921969696969697,High
+GD3,Country × Religion,Russian Federation × I do not identify with any religious group or faith,0.06850248516915182,0.9314975148308482,High
+GD3,Country × Religion,Bangladesh × Other religious group,0.057889344262295084,0.9421106557377049,High
+GD3,Country × Religion,Egypt × Islam,0.08068373125191307,0.9193162687480869,High
+GD3,Country × Religion,Japan × I do not identify with any religious group or faith,0.06733379637791403,0.932666203622086,High
+GD3,Country × Religion,Canada × Christianity,0.06975108225108226,0.9302489177489177,High
+GD3,Country × Religion,Ukraine × Christianity,0.09989754098360656,0.9001024590163934,High
+GD3,Country × Religion,Brazil × Other religious group,0.0845959595959596,0.9154040404040404,High
+GD3,Country × Religion,Italy × I do not identify with any religious group or faith,0.07474747474747476,0.9252525252525252,High
+GD3,Country × Religion,Australia × Christianity,0.09595959595959595,0.9040404040404041,High
+GD3,Country × Religion,Slovakia × I do not identify with any religious group or faith,0.06177849927849928,0.9382215007215007,High
+GD3,Country × Religion,Indonesia × Islam,0.061801352709074255,0.9381986472909257,High
+GD3,Country × Religion,Mexico × Other religious group,0.09159482758620689,0.9084051724137931,High
+GD3,Country × Religion,Israel × Judaism,0.06936395927565361,0.9306360407243464,High
+GD3,Country × Religion,Poland × I do not identify with any religious group or faith,0.36607142857142855,0.6339285714285714,Medium
+GD3,Country × Religion,Malawi × Christianity,0.07123917748917749,0.9287608225108225,High
+GD3,Country × Religion,China × I do not identify with any religious group or faith,0.053491569926854374,0.9465084300731457,High
+GD3,Country × Religion,Bangladesh × I do not identify with any religious group or faith,0.06653225806451613,0.9334677419354839,High
+GD3,Country × Religion,Switzerland × I do not identify with any religious group or faith,0.10752118644067797,0.892478813559322,High
+GD3,Country × Religion,Canada × Islam,0.05848765432098765,0.9415123456790123,High
+GD3,Country × Religion,France × Christianity,0.07133838383838385,0.9286616161616161,High
+GD3,Country × Religion,Australia × I do not identify with any religious group or faith,0.06784261263427929,0.9321573873657207,High
+GD3,Country × Religion,Vietnam × I do not identify with any religious group or faith,0.06536546015712683,0.9346345398428731,High
+GD3,Country × Religion,New Zealand × I do not identify with any religious group or faith,0.10348360655737705,0.8965163934426229,High
+GD3,Country × Religion,Slovakia × Christianity,0.09359217171717173,0.9064078282828283,High
+GD3,Country × Religion,Israel × I do not identify with any religious group or faith,0.09564293730960398,0.9043570626903961,High
+GD3,Country × Religion,Sweden × I do not identify with any religious group or faith,0.10606060606060609,0.8939393939393939,High
+GD3,Country × Religion,Türkiye × Islam,0.05587121212121213,0.9441287878787878,High
+GD3,Country × Religion,Hungary × Islam,0.08491161616161616,0.9150883838383839,High
+GD3,Country × Religion,Russian Federation × Christianity,0.041666666666666664,0.9583333333333334,High
+GD3,Country × Religion,India × Christianity,0.06570512820512821,0.9342948717948718,High
+GD3,Country × Religion,Spain × Christianity,0.08809974747474748,0.9119002525252525,High
+GD3,Country × Religion,United States × Hinduism,0.07864583333333333,0.9213541666666667,High
+GD3,Country × Religion,Kazakhstan × I do not identify with any religious group or faith,0.0887164051226551,0.9112835948773449,High
+GD3,Country × Religion,United Kingdom × Islam,0.09544928451178451,0.9045507154882155,High
+GD3,Country × Religion,Kenya × I do not identify with any religious group or faith,0.0703125,0.9296875,High
+GD3,Country × Religion,Saudi Arabia × Islam,0.06297348484848485,0.9370265151515151,High
+GD3,Country × Religion,Vietnam × Buddhism,0.07718679854096522,0.9228132014590348,High
+GD3,Country × Religion,Philippines × Christianity,0.06875444112608715,0.9312455588739128,High
+GD3,Country × Religion,Indonesia × I do not identify with any religious group or faith,0.09375,0.90625,High
+GD3,Country × Religion,Malaysia × Islam,0.08336489898989899,0.916635101010101,High
+GD3,Country × Religion,Indonesia × Christianity,0.08229166666666667,0.9177083333333333,High
+GD3,Country × Religion,Vietnam × Christianity,0.07974137931034483,0.9202586206896551,High
+GD3,Country × Religion,Belgium × Islam,0.08114035087719298,0.918859649122807,High
+GD3,Country × Religion,Kazakhstan × Islam,0.10606060606060606,0.8939393939393939,High
+GD3,Country × Religion,Korea South × I do not identify with any religious group or faith,0.07114791494674308,0.9288520850532569,High
+GD3,Country × Religion,Malaysia × Christianity,0.086489898989899,0.913510101010101,High
+GD3,Country × Religion,Japan × Buddhism,0.08309659090909091,0.9169034090909091,High
+GD3,Country × Religion,India × Sikhism,0.08491161616161615,0.9150883838383839,High
+GD3,Country × Religion,India × Buddhism,0.11607142857142858,0.8839285714285714,High
+GD3,Country × Religion,Singapore × Christianity,0.07765151515151517,0.9223484848484849,High
+GD3,Country × Religion,Kazakhstan × Christianity,0.07979797979797981,0.9202020202020202,High
+GD3,Country × Religion,Malaysia × Buddhism,0.07323232323232325,0.9267676767676768,High
+GD3,Country × Religion,China × Christianity,0.1095328282828283,0.8904671717171717,High
+GD3,Country × Environment,United States × Urban,0.06674382101325779,0.9332561789867422,High
+GD3,Country × Environment,Denmark × Urban,0.10044642857142858,0.8995535714285714,High
+GD3,Country × Environment,Canada × Urban,0.06690604333267376,0.9330939566673262,High
+GD3,Country × Environment,United States × Rural,0.09857916967291967,0.9014208303270803,High
+GD3,Country × Environment,Italy × Urban,0.07937184343434343,0.9206281565656566,High
+GD3,Country × Environment,United Kingdom × Rural,0.09270833333333334,0.9072916666666666,High
+GD3,Country × Environment,Mexico × Urban,0.06013535426414215,0.9398646457358578,High
+GD3,Country × Environment,United Kingdom × Urban,0.06946354685110274,0.9305364531488972,High
+GD3,Country × Environment,Netherlands × Rural,0.1003024193548387,0.8996975806451613,High
+GD3,Country × Environment,South Africa × Urban,0.0912147266313933,0.9087852733686067,High
+GD3,Country × Environment,Germany × Urban,0.0760884306023195,0.9239115693976805,High
+GD3,Country × Environment,Poland × Urban,0.12215909090909091,0.8778409090909091,High
+GD3,Country × Environment,China × Urban,0.0541924860303445,0.9458075139696555,High
+GD3,Country × Environment,Pakistan × Rural,0.08230744949494949,0.9176925505050505,High
+GD3,Country × Environment,Kenya × Urban,0.05947718380288196,0.9405228161971181,High
+GD3,Country × Environment,Chile × Urban,0.06509598982186703,0.934904010178133,High
+GD3,Country × Environment,India × Urban,0.0579461448401341,0.942053855159866,High
+GD3,Country × Environment,Hungary × Rural,0.09321120689655173,0.9067887931034483,High
+GD3,Country × Environment,Bangladesh × Urban,0.06676581038560206,0.933234189614398,High
+GD3,Country × Environment,Brazil × Urban,0.06530956857106283,0.9346904314289372,High
+GD3,Country × Environment,India × Rural,0.06910124529609823,0.9308987547039018,High
+GD3,Country × Environment,Türkiye × Urban,0.06567669085030195,0.9343233091496981,High
+GD3,Country × Environment,Portugal × Urban,0.08870967741935484,0.9112903225806451,High
+GD3,Country × Environment,Singapore × Urban,0.05807855339105339,0.9419214466089466,High
+GD3,Country × Environment,Morocco × Urban,0.07347576140189777,0.9265242385981023,High
+GD3,Country × Environment,France × Urban,0.07643414969803858,0.9235658503019615,High
+GD3,Country × Environment,Spain × Rural,0.09880050505050506,0.9011994949494949,High
+GD3,Country × Environment,France × Rural,0.05523989898989899,0.944760101010101,High
+GD3,Country × Environment,Poland × Rural,0.0744949494949495,0.9255050505050505,High
+GD3,Country × Environment,Spain × Urban,0.07704613095238094,0.9229538690476191,High
+GD3,Country × Environment,Pakistan × Urban,0.05699151603756867,0.9430084839624313,High
+GD3,Country × Environment,Algeria × Urban,0.07803030303030302,0.921969696969697,High
+GD3,Country × Environment,Russian Federation × Urban,0.06170522186147186,0.9382947781385281,High
+GD3,Country × Environment,Egypt × Urban,0.07687831598816447,0.9231216840118355,High
+GD3,Country × Environment,Japan × Urban,0.06566985645933014,0.9343301435406699,High
+GD3,Country × Environment,Germany × Rural,0.06357758620689655,0.9364224137931034,High
+GD3,Country × Environment,Ukraine × Urban,0.09989754098360656,0.9001024590163934,High
+GD3,Country × Environment,Australia × Urban,0.07649452527924751,0.9235054747207525,High
+GD3,Country × Environment,Slovakia × Urban,0.05628336105766662,0.9437166389423334,High
+GD3,Country × Environment,Indonesia × Urban,0.06613794645287972,0.9338620535471203,High
+GD3,Country × Environment,Israel × Urban,0.0698131689030877,0.9301868310969124,High
+GD3,Country × Environment,Austria × Urban,0.05493951612903226,0.9450604838709677,High
+GD3,Country × Environment,Malawi × Urban,0.07123917748917749,0.9287608225108225,High
+GD3,Country × Environment,Switzerland × Urban,0.10752118644067797,0.892478813559322,High
+GD3,Country × Environment,Vietnam × Urban,0.06293299153147638,0.9370670084685236,High
+GD3,Country × Environment,Indonesia × Rural,0.0716081115386671,0.9283918884613329,High
+GD3,Country × Environment,Belgium × Urban,0.09765625,0.90234375,High
+GD3,Country × Environment,Korea South × Urban,0.07392586435555185,0.9260741356444482,High
+GD3,Country × Environment,Sweden × Urban,0.10606060606060609,0.8939393939393939,High
+GD3,Country × Environment,Hungary × Urban,0.10416666666666667,0.8958333333333334,High
+GD3,Country × Environment,United Arab Emirates × Urban,0.11168032786885246,0.8883196721311475,High
+GD3,Country × Environment,Netherlands × Urban,0.05271464646464647,0.9472853535353535,High
+GD3,Country × Environment,Kazakhstan × Urban,0.0750655738936989,0.924934426106301,High
+GD3,Country × Environment,Kenya × Rural,0.07263257575757576,0.9273674242424242,High
+GD3,Country × Environment,Saudi Arabia × Urban,0.06297348484848485,0.9370265151515151,High
+GD3,Country × Environment,Philippines × Rural,0.07680084745762712,0.9231991525423728,High
+GD3,Country × Environment,Israel × Rural,0.08234126984126984,0.9176587301587301,High
+GD3,Country × Environment,Malaysia × Urban,0.07327839633710846,0.9267216036628916,High
+GD3,Country × Environment,Philippines × Urban,0.06992187925092336,0.9300781207490767,High
+GD3,Country × Environment,Japan × Rural,0.11774553571428571,0.8822544642857143,High
+GD3,Country × Environment,Finland × Urban,0.08035714285714286,0.9196428571428571,High
+GD3,Country × Environment,China × Rural,0.08709016393442623,0.9129098360655737,High
+GD3,Country,United States,0.073591934801987,0.926408065198013,High
+GD3,Country,Denmark,0.10044642857142858,0.8995535714285714,High
+GD3,Country,Canada,0.06690604333267376,0.9330939566673262,High
+GD3,Country,Italy,0.07937184343434343,0.9206281565656566,High
+GD3,Country,United Kingdom,0.07404674493814374,0.9259532550618562,High
+GD3,Country,Mexico,0.06075918592490562,0.9392408140750944,High
+GD3,Country,Netherlands,0.07566287878787879,0.9243371212121212,High
+GD3,Country,South Africa,0.0738260582010582,0.9261739417989419,High
+GD3,Country,Germany,0.07073931960295597,0.929260680397044,High
+GD3,Country,Poland,0.07791756854256855,0.9220824314574314,High
+GD3,Country,China,0.054139969402571035,0.945860030597429,High
+GD3,Country,Pakistan,0.05938500549522453,0.9406149945047755,High
+GD3,Country,Kenya,0.061182578295724155,0.9388174217042758,High
+GD3,Country,Chile,0.06509598982186703,0.934904010178133,High
+GD3,Country,India,0.05919342662314802,0.940806573376852,High
+GD3,Country,Hungary,0.08246527777777778,0.9175347222222222,High
+GD3,Country,Bangladesh,0.06676581038560206,0.933234189614398,High
+GD3,Country,Brazil,0.06530956857106283,0.9346904314289372,High
+GD3,Country,Türkiye,0.06567669085030195,0.9343233091496981,High
+GD3,Country,Portugal,0.08870967741935484,0.9112903225806451,High
+GD3,Country,Singapore,0.05807855339105339,0.9419214466089466,High
+GD3,Country,Morocco,0.07325228783562115,0.9267477121643788,High
+GD3,Country,France,0.07248782012039588,0.9275121798796041,High
+GD3,Country,Spain,0.07973238882329792,0.9202676111767021,High
+GD3,Country,Algeria,0.07803030303030302,0.921969696969697,High
+GD3,Country,Russian Federation,0.06321022727272728,0.9367897727272727,High
+GD3,Country,Egypt,0.07687831598816447,0.9231216840118355,High
+GD3,Country,Japan,0.06908763769310021,0.9309123623068998,High
+GD3,Country,Ukraine,0.09989754098360656,0.9001024590163934,High
+GD3,Country,Australia,0.07470638928972262,0.9252936107102774,High
+GD3,Country,Slovakia,0.057842312008978686,0.9421576879910213,High
+GD3,Country,Indonesia,0.06820716596758264,0.9317928340324173,High
+GD3,Country,Israel,0.07032335161951421,0.9296766483804858,High
+GD3,Country,Austria,0.05493951612903226,0.9450604838709677,High
+GD3,Country,Malawi,0.07123917748917749,0.9287608225108225,High
+GD3,Country,Switzerland,0.10752118644067797,0.892478813559322,High
+GD3,Country,Vietnam,0.06293299153147638,0.9370670084685236,High
+GD3,Country,New Zealand,0.10348360655737705,0.8965163934426229,High
+GD3,Country,Belgium,0.09027777777777779,0.9097222222222222,High
+GD3,Country,Korea South,0.07392586435555185,0.9260741356444482,High
+GD3,Country,Sweden,0.10606060606060609,0.8939393939393939,High
+GD3,Country,Finland,0.10574494949494952,0.8942550505050505,High
+GD3,Country,United Arab Emirates,0.11168032786885246,0.8883196721311475,High
+GD3,Country,Kazakhstan,0.0750655738936989,0.924934426106301,High
+GD3,Country,Saudi Arabia,0.06297348484848485,0.9370265151515151,High
+GD3,Country,Philippines,0.06875444112608715,0.9312455588739128,High
+GD3,Country,Malaysia,0.07509351969579242,0.9249064803042075,High
+GD3,Region × Gender × Age,Northern America × Female × 36-45,0.09227806337181337,0.9077219366281867,High
+GD3,Region × Gender × Age,Northern Europe × Male × 36-45,0.10353535353535354,0.8964646464646464,High
+GD3,Region × Gender × Age,Northern America × Male × 46-55,0.07913961038961038,0.9208603896103896,High
+GD3,Region × Gender × Age,Northern America × Female × 26-35,0.0726462411785554,0.9273537588214446,High
+GD3,Region × Gender × Age,Northern America × Male × 18-25,0.05581860269360269,0.9441813973063973,High
+GD3,Region × Gender × Age,Northern Europe × Male × 46-55,0.07441603535353535,0.9255839646464646,High
+GD3,Region × Gender × Age,Northern America × Female × 46-55,0.06823254870129869,0.9317674512987013,High
+GD3,Region × Gender × Age,Northern Europe × Female × 46-55,0.08396464646464648,0.9160353535353535,High
+GD3,Region × Gender × Age,Western Europe × Female × 26-35,0.054392135642135644,0.9456078643578644,High
+GD3,Region × Gender × Age,Northern Europe × Female × 26-35,0.09287267516434183,0.9071273248356582,High
+GD3,Region × Gender × Age,Northern Europe × Male × 26-35,0.060467397186147194,0.9395326028138528,High
+GD3,Region × Gender × Age,Northern America × Male × 26-35,0.06660353535353536,0.9333964646464646,High
+GD3,Region × Gender × Age,Western Europe × Male × 36-45,0.08017676767676767,0.9198232323232324,High
+GD3,Region × Gender × Age,Southern Africa × Female × 26-35,0.08783143939393939,0.9121685606060606,High
+GD3,Region × Gender × Age,Northern Europe × Female × 36-45,0.060464015151515144,0.9395359848484849,High
+GD3,Region × Gender × Age,Eastern Europe × Female × 26-35,0.07118055555555555,0.9288194444444444,High
+GD3,Region × Gender × Age,Central America × Male × 26-35,0.07260101010101011,0.9273989898989898,High
+GD3,Region × Gender × Age,Northern America × Male × 36-45,0.07380685158462937,0.9261931484153706,High
+GD3,Region × Gender × Age,Eastern Asia × Female × 26-35,0.05677469693992684,0.9432253030600731,High
+GD3,Region × Gender × Age,Southern Asia × Male × 36-45,0.06636968699824722,0.9336303130017528,High
+GD3,Region × Gender × Age,Northern America × Female × 65+,0.21507352941176472,0.7849264705882353,Medium
+GD3,Region × Gender × Age,Southern Africa × Female × 65+,0.09979838709677419,0.9002016129032258,High
+GD3,Region × Gender × Age,Eastern Africa × Male × 26-35,0.060824877640653856,0.9391751223593462,High
+GD3,Region × Gender × Age,Eastern Africa × Male × 18-25,0.05092889235046098,0.9490711076495391,High
+GD3,Region × Gender × Age,South America × Male × 26-35,0.06404712711530894,0.9359528728846911,High
+GD3,Region × Gender × Age,Northern America × Male × 65+,0.05349576271186441,0.9465042372881356,High
+GD3,Region × Gender × Age,Southern Asia × Female × 46-55,0.08930742611298166,0.9106925738870183,High
+GD3,Region × Gender × Age,Southern Asia × Male × 26-35,0.05640394373947005,0.9435960562605299,High
+GD3,Region × Gender × Age,Eastern Europe × Female × 46-55,0.08996212121212122,0.9100378787878788,High
+GD3,Region × Gender × Age,Southern Asia × Male × 46-55,0.06327584452584455,0.9367241554741554,High
+GD3,Region × Gender × Age,Eastern Africa × Female × 18-25,0.060997312340703144,0.9390026876592968,High
+GD3,Region × Gender × Age,South America × Male × 36-45,0.08696451118326118,0.9130354888167388,High
+GD3,Region × Gender × Age,Southern Asia × Female × 36-45,0.056184551614393514,0.9438154483856065,High
+GD3,Region × Gender × Age,Eastern Africa × Female × 36-45,0.07180998977873979,0.9281900102212602,High
+GD3,Region × Gender × Age,Northern America × Male × 56-65,0.05846774193548387,0.9415322580645161,High
+GD3,Region × Gender × Age,Southern Asia × Male × 18-25,0.055736083508974965,0.944263916491025,High
+GD3,Region × Gender × Age,Southern Asia × Female × 18-25,0.05636760529094192,0.9436323947090581,High
+GD3,Region × Gender × Age,South America × Male × 18-25,0.06568813131313132,0.9343118686868687,High
+GD3,Region × Gender × Age,Northern America × Female × 56-65,0.11710858585858587,0.8828914141414141,High
+GD3,Region × Gender × Age,Northern America × Female × 18-25,0.07291666666666667,0.9270833333333334,High
+GD3,Region × Gender × Age,Eastern Africa × Female × 26-35,0.05581194445944892,0.9441880555405511,High
+GD3,Region × Gender × Age,South America × Female × 18-25,0.06597222222222222,0.9340277777777778,High
+GD3,Region × Gender × Age,South America × Female × 46-55,0.06392045454545454,0.9360795454545454,High
+GD3,Region × Gender × Age,Southern Asia × Female × 26-35,0.058729928654691815,0.9412700713453082,High
+GD3,Region × Gender × Age,South America × Female × 26-35,0.07093323494467285,0.9290667650553271,High
+GD3,Region × Gender × Age,Western Asia × Female × 18-25,0.06052150974025973,0.9394784902597403,High
+GD3,Region × Gender × Age,Eastern Africa × Male × 36-45,0.05889813311688312,0.9411018668831169,High
+GD3,Region × Gender × Age,Southern Europe × Female × 36-45,0.07449494949494949,0.9255050505050505,High
+GD3,Region × Gender × Age,Central America × Male × 36-45,0.05989583333333333,0.9401041666666666,High
+GD3,Region × Gender × Age,South America × Female × 36-45,0.07733585858585859,0.9226641414141414,High
+GD3,Region × Gender × Age,South-eastern Asia × Male × 26-35,0.06098524090948334,0.9390147590905167,High
+GD3,Region × Gender × Age,Western Europe × Female × 18-25,0.07291666666666667,0.9270833333333334,High
+GD3,Region × Gender × Age,Northern Africa × Male × 18-25,0.07902875481000482,0.9209712451899952,High
+GD3,Region × Gender × Age,Southern Europe × Female × 26-35,0.047427398989898985,0.952572601010101,High
+GD3,Region × Gender × Age,Eastern Europe × Male × 36-45,0.05429292929292929,0.9457070707070707,High
+GD3,Region × Gender × Age,Western Asia × Female × 36-45,0.07651164421997757,0.9234883557800224,High
+GD3,Region × Gender × Age,Southern Europe × Male × 26-35,0.07995580808080809,0.920044191919192,High
+GD3,Region × Gender × Age,Southern Asia × Other / prefer not to say × 26-35,0.11441532258064516,0.8855846774193549,High
+GD3,Region × Gender × Age,Western Asia × Male × 36-45,0.08657106782106783,0.9134289321789322,High
+GD3,Region × Gender × Age,Western Europe × Male × 46-55,0.10448232323232325,0.8955176767676768,High
+GD3,Region × Gender × Age,Northern Africa × Female × 18-25,0.07046957671957672,0.9295304232804232,High
+GD3,Region × Gender × Age,South America × Female × 56-65,0.09375,0.90625,High
+GD3,Region × Gender × Age,Northern Africa × Male × 26-35,0.06022727272727272,0.9397727272727273,High
+GD3,Region × Gender × Age,Central America × Female × 26-35,0.07808291245791246,0.9219170875420876,High
+GD3,Region × Gender × Age,Eastern Asia × Male × 18-25,0.06193916913613883,0.9380608308638612,High
+GD3,Region × Gender × Age,Eastern Europe × Female × 18-25,0.07047032828282827,0.9295296717171717,High
+GD3,Region × Gender × Age,Eastern Europe × Female × 36-45,0.07301136363636362,0.9269886363636364,High
+GD3,Region × Gender × Age,Eastern Europe × Male × 26-35,0.05178872053872053,0.9482112794612795,High
+GD3,Region × Gender × Age,South-eastern Asia × Male × 18-25,0.061074514499207644,0.9389254855007924,High
+GD3,Region × Gender × Age,Southern Europe × Male × 36-45,0.06663510101010102,0.9333648989898989,High
+GD3,Region × Gender × Age,Western Europe × Male × 26-35,0.061707685318796425,0.9382923146812036,High
+GD3,Region × Gender × Age,Western Europe × Male × 18-25,0.08892045454545455,0.9110795454545455,High
+GD3,Region × Gender × Age,Western Asia × Female × 26-35,0.07111742424242425,0.9288825757575757,High
+GD3,Region × Gender × Age,Central America × Male × 18-25,0.07894736842105263,0.9210526315789473,High
+GD3,Region × Gender × Age,South America × Male × 56-65,0.08649553571428571,0.9135044642857143,High
+GD3,Region × Gender × Age,Northern Africa × Female × 26-35,0.09261363636363637,0.9073863636363636,High
+GD3,Region × Gender × Age,Male × 56-65,0.08195754716981132,0.9180424528301887,High
+GD3,Region × Gender × Age,Western Asia × Male × 26-35,0.07160143097643099,0.928398569023569,High
+GD3,Region × Gender × Age,Australia and New Zealand × Male × 26-35,0.14309210526315788,0.8569078947368421,High
+GD3,Region × Gender × Age,Western Europe × Female × 36-45,0.08349609375,0.91650390625,High
+GD3,Region × Gender × Age,Australia and New Zealand × Female × 26-35,0.0718118686868687,0.9281881313131313,High
+GD3,Region × Gender × Age,Eastern Europe × Male × 18-25,0.060570987654320986,0.939429012345679,High
+GD3,Region × Gender × Age,South America × Male × 46-55,0.1076388888888889,0.8923611111111112,High
+GD3,Region × Gender × Age,South-eastern Asia × Female × 26-35,0.06829181611627784,0.9317081838837221,High
+GD3,Region × Gender × Age,Female × 26-35,0.087744140625,0.912255859375,High
+GD3,Region × Gender × Age,South-eastern Asia × Female × 46-55,0.062263257575757576,0.9377367424242424,High
+GD3,Region × Gender × Age,Eastern Asia × Male × 26-35,0.05703914141414142,0.9429608585858585,High
+GD3,Region × Gender × Age,Eastern Asia × Female × 18-25,0.052276663782345606,0.9477233362176544,High
+GD3,Region × Gender × Age,Eastern Asia × Female × 46-55,0.09185606060606061,0.9081439393939394,High
+GD3,Region × Gender × Age,Northern Europe × Male × 18-25,0.13697916666666668,0.8630208333333333,High
+GD3,Region × Gender × Age,Female × 18-25,0.10091145833333333,0.8990885416666666,High
+GD3,Region × Gender × Age,Southern Europe × Male × 46-55,0.10625,0.89375,High
+GD3,Region × Gender × Age,Eastern Asia × Male × 46-55,0.06818181818181818,0.9318181818181819,High
+GD3,Region × Gender × Age,Eastern Asia × Female × 36-45,0.06499368686868687,0.9350063131313131,High
+GD3,Region × Gender × Age,Australia and New Zealand × Male × 36-45,0.19736842105263158,0.8026315789473684,High
+GD3,Region × Gender × Age,Western Asia × Male × 46-55,0.08568548387096774,0.9143145161290323,High
+GD3,Region × Gender × Age,Central Asia × Female × 18-25,0.10795454545454546,0.8920454545454546,High
+GD3,Region × Gender × Age,South-eastern Asia × Male × 46-55,0.06950757575757577,0.9304924242424242,High
+GD3,Region × Gender × Age,Western Asia × Male × 18-25,0.08048190235690235,0.9195180976430977,High
+GD3,Region × Gender × Age,Central Asia × Female × 26-35,0.07455808080808081,0.9254419191919192,High
+GD3,Region × Gender × Age,South-eastern Asia × Male × 36-45,0.06613568722943722,0.9338643127705628,High
+GD3,Region × Gender × Age,South-eastern Asia × Female × 36-45,0.0711890732724066,0.9288109267275934,High
+GD3,Region × Gender × Age,South-eastern Asia × Female × 18-25,0.06849009576282303,0.9315099042371769,High
+GD3,Region × Gender × Age,Male × 18-25,0.07647026909722222,0.9235297309027778,High
+GD3,Region × Gender × Age,Northern Europe × Female × 18-25,0.10448232323232325,0.8955176767676768,High
+GD3,Region × Gender × Age,Male × 26-35,0.08854166666666667,0.9114583333333334,High
+GD3,Region × Gender × Age,Eastern Asia × Male × 56-65,0.06350806451612903,0.936491935483871,High
+GD3,Region × Gender × Age,Southern Asia × Male × 56-65,0.03835227272727273,0.9616477272727273,High
+GD3,Region × Gender × Age,Eastern Africa × Female × 46-55,0.09698275862068965,0.9030172413793104,High
+GD3,Region × Gender × Age,Central Asia × Male × 36-45,0.09722222222222221,0.9027777777777778,High
+GD3,Region × Gender × Age,Eastern Asia × Male × 36-45,0.07039141414141414,0.9296085858585859,High
+GD3,Region × Gender × Age,Central Asia × Male × 26-35,0.0894396551724138,0.9105603448275862,High
+GD3,Region × Gender × Age,Eastern Asia × Female × 56-65,0.09170081967213115,0.9082991803278688,High
+GD3,Region × Gender × Age,Australia and New Zealand × Female × 18-25,0.0778688524590164,0.9221311475409836,High
+GD3,Region × Religion,Northern America × Christianity,0.07093910035628853,0.9290608996437115,High
+GD3,Region × Religion,Northern Europe × I do not identify with any religious group or faith,0.07257965111168194,0.927420348888318,High
+GD3,Region × Religion,Northern America × I do not identify with any religious group or faith,0.07228627650776773,0.9277137234922322,High
+GD3,Region × Religion,Southern Europe × Christianity,0.07902462121212121,0.9209753787878788,High
+GD3,Region × Religion,Northern America × Other religious group,0.2028409090909091,0.7971590909090909,Medium
+GD3,Region × Religion,Central America × I do not identify with any religious group or faith,0.06658098845598845,0.9334190115440115,High
+GD3,Region × Religion,Northern Europe × Christianity,0.07821852787130565,0.9217814721286943,High
+GD3,Region × Religion,Western Europe × I do not identify with any religious group or faith,0.0595562178422027,0.9404437821577973,High
+GD3,Region × Religion,Southern Africa × Christianity,0.0738260582010582,0.9261739417989419,High
+GD3,Region × Religion,Eastern Europe × Christianity,0.06397689011325375,0.9360231098867462,High
+GD3,Region × Religion,Eastern Asia × Buddhism,0.06488226279892946,0.9351177372010705,High
+GD3,Region × Religion,Southern Asia × Islam,0.061244853647299986,0.9387551463527,High
+GD3,Region × Religion,Eastern Africa × Christianity,0.06117372239411167,0.9388262776058883,High
+GD3,Region × Religion,South America × I do not identify with any religious group or faith,0.06654267481460649,0.9334573251853935,High
+GD3,Region × Religion,Southern Asia × Other religious group,0.08371212121212122,0.9162878787878788,High
+GD3,Region × Religion,Southern Asia × Hinduism,0.05844676425492633,0.9415532357450737,High
+GD3,Region × Religion,South America × Buddhism,0.09185606060606062,0.9081439393939393,High
+GD3,Region × Religion,Eastern Africa × Other religious group,0.09752155172413793,0.9024784482758621,High
+GD3,Region × Religion,South America × Christianity,0.06851777545899182,0.9314822245410082,High
+GD3,Region × Religion,Southern Asia × I do not identify with any religious group or faith,0.0611609735662766,0.9388390264337234,High
+GD3,Region × Religion,Western Asia × I do not identify with any religious group or faith,0.07680108366661398,0.923198916333386,High
+GD3,Region × Religion,Southern Europe × I do not identify with any religious group or faith,0.06796328671328672,0.9320367132867133,High
+GD3,Region × Religion,Eastern Africa × Islam,0.061510942760942766,0.9384890572390572,High
+GD3,Region × Religion,South-eastern Asia × I do not identify with any religious group or faith,0.07039986353433324,0.9296001364656667,High
+GD3,Region × Religion,South America × Other religious group,0.06841856060606061,0.9315814393939394,High
+GD3,Region × Religion,Western Europe × Other religious group,0.09210526315789473,0.9078947368421053,High
+GD3,Region × Religion,Northern Africa × Islam,0.07008855181151658,0.9299114481884834,High
+GD3,Region × Religion,Western Europe × Christianity,0.05664532227032226,0.9433546777296777,High
+GD3,Region × Religion,Central America × Christianity,0.06442550505050505,0.935574494949495,High
+GD3,Region × Religion,Eastern Europe × I do not identify with any religious group or faith,0.06190651923648247,0.9380934807635175,High
+GD3,Region × Religion,Eastern Asia × I do not identify with any religious group or faith,0.05634178587333907,0.943658214126661,High
+GD3,Region × Religion,Australia and New Zealand × Christianity,0.09595959595959595,0.9040404040404041,High
+GD3,Region × Religion,South-eastern Asia × Islam,0.062233997861900335,0.9377660021380997,High
+GD3,Region × Religion,Central America × Other religious group,0.09159482758620689,0.9084051724137931,High
+GD3,Region × Religion,Western Asia × Judaism,0.06936395927565361,0.9306360407243464,High
+GD3,Region × Religion,Christianity,0.08723958333333334,0.9127604166666666,High
+GD3,Region × Religion,Western Asia × Christianity,0.15405701754385964,0.8459429824561404,High
+GD3,Region × Religion,Northern America × Islam,0.05848765432098765,0.9415123456790123,High
+GD3,Region × Religion,Australia and New Zealand × I do not identify with any religious group or faith,0.06641543577307465,0.9335845642269254,High
+GD3,Region × Religion,Western Asia × Islam,0.06147131488040579,0.9385286851195942,High
+GD3,Region × Religion,Eastern Europe × Islam,0.08491161616161616,0.9150883838383839,High
+GD3,Region × Religion,Southern Asia × Christianity,0.06570512820512821,0.9342948717948718,High
+GD3,Region × Religion,Northern America × Hinduism,0.07864583333333333,0.9213541666666667,High
+GD3,Region × Religion,Central Asia × I do not identify with any religious group or faith,0.0887164051226551,0.9112835948773449,High
+GD3,Region × Religion,Northern Europe × Islam,0.09544928451178451,0.9045507154882155,High
+GD3,Region × Religion,Eastern Africa × I do not identify with any religious group or faith,0.08143939393939395,0.9185606060606061,High
+GD3,Region × Religion,South-eastern Asia × Buddhism,0.06079165497568275,0.9392083450243173,High
+GD3,Region × Religion,South-eastern Asia × Christianity,0.06394034923004005,0.9360596507699599,High
+GD3,Region × Religion,Western Europe × Islam,0.07196969696969698,0.928030303030303,High
+GD3,Region × Religion,Central Asia × Islam,0.10606060606060606,0.8939393939393939,High
+GD3,Region × Religion,I do not identify with any religious group or faith,0.07114791494674308,0.9288520850532569,High
+GD3,Region × Religion,Southern Asia × Sikhism,0.08491161616161615,0.9150883838383839,High
+GD3,Region × Religion,Southern Asia × Buddhism,0.11607142857142858,0.8839285714285714,High
+GD3,Region × Religion,Central Asia × Christianity,0.07979797979797981,0.9202020202020202,High
+GD3,Region × Religion,Northern America × Buddhism,0.09771825396825397,0.902281746031746,High
+GD3,Region × Religion,Eastern Asia × Christianity,0.1095328282828283,0.8904671717171717,High
+GD3,Region × Environment,Northern America × Urban,0.06531629581887884,0.9346837041811211,High
+GD3,Region × Environment,Northern Europe × Urban,0.07035093538074849,0.9296490646192515,High
+GD3,Region × Environment,Northern America × Rural,0.09857916967291967,0.9014208303270803,High
+GD3,Region × Environment,Southern Europe × Urban,0.06988809801309802,0.930111901986902,High
+GD3,Region × Environment,Northern Europe × Rural,0.09159000721500721,0.9084099927849928,High
+GD3,Region × Environment,Central America × Urban,0.06013535426414215,0.9398646457358578,High
+GD3,Region × Environment,Western Europe × Rural,0.07339578823953824,0.9266042117604618,High
+GD3,Region × Environment,Southern Africa × Urban,0.0912147266313933,0.9087852733686067,High
+GD3,Region × Environment,Western Europe × Urban,0.060531045600490045,0.93946895439951,High
+GD3,Region × Environment,Eastern Europe × Urban,0.060763587199556816,0.9392364128004432,High
+GD3,Region × Environment,Central America × Rural,0.10036057692307693,0.8996394230769231,High
+GD3,Region × Environment,Eastern Asia × Urban,0.05660316360980675,0.9433968363901932,High
+GD3,Region × Environment,Southern Asia × Rural,0.07204042099875432,0.9279595790012457,High
+GD3,Region × Environment,Eastern Africa × Urban,0.05988967688426972,0.9401103231157303,High
+GD3,Region × Environment,South America × Urban,0.06539159527358268,0.9346084047264174,High
+GD3,Region × Environment,Southern Asia × Urban,0.057715949026485795,0.9422840509735142,High
+GD3,Region × Environment,Eastern Europe × Rural,0.070179974346641,0.929820025653359,High
+GD3,Region × Environment,Western Asia × Urban,0.06685156905438902,0.933148430945611,High
+GD3,Region × Environment,South-eastern Asia × Urban,0.06421986495252788,0.9357801350474722,High
+GD3,Region × Environment,Northern Africa × Urban,0.0706317356300924,0.9293682643699076,High
+GD3,Region × Environment,Southern Europe × Rural,0.09880050505050506,0.9011994949494949,High
+GD3,Region × Environment,Australia and New Zealand × Urban,0.0734860175832398,0.9265139824167602,High
+GD3,Region × Environment,Urban,0.07673747114976243,0.9232625288502376,High
+GD3,Region × Environment,Australia and New Zealand × Rural,0.3502604166666667,0.6497395833333333,Medium
+GD3,Region × Environment,South-eastern Asia × Rural,0.06590574303642485,0.9340942569635752,High
+GD3,Region × Environment,Central Asia × Urban,0.0750655738936989,0.924934426106301,High
+GD3,Region × Environment,Eastern Africa × Rural,0.07263257575757576,0.9273674242424242,High
+GD3,Region × Environment,Western Asia × Rural,0.08234126984126984,0.9176587301587301,High
+GD3,Region × Environment,Eastern Asia × Rural,0.07517010381593715,0.9248298961840629,High
+GD3,Region,Northern America,0.06963211222428692,0.9303678877757131,High
+GD3,Region,Northern Europe,0.07492558900856026,0.9250744109914397,High
+GD3,Region,Southern Europe,0.0695365000505399,0.9304634999494601,High
+GD3,Region,Central America,0.06101296239163886,0.9389870376083611,High
+GD3,Region,Western Europe,0.061465777550336366,0.9385342224496637,High
+GD3,Region,Southern Africa,0.0738260582010582,0.9261739417989419,High
+GD3,Region,Eastern Europe,0.05969743361041751,0.9403025663895825,High
+GD3,Region,Eastern Asia,0.057274971181036353,0.9427250288189637,High
+GD3,Region,Southern Asia,0.05913083406031502,0.940869165939685,High
+GD3,Region,Eastern Africa,0.06148029191113189,0.9385197080888681,High
+GD3,Region,South America,0.06539159527358268,0.9346084047264174,High
+GD3,Region,Western Asia,0.06691498018950093,0.9330850198104991,High
+GD3,Region,South-eastern Asia,0.06590326180263414,0.9340967381973658,High
+GD3,Region,Northern Africa,0.06868286840971422,0.9313171315902857,High
+GD3,Region,Australia and New Zealand,0.07442878915416794,0.925571210845832,High
+GD3,Region,Central Asia,0.0750655738936989,0.924934426106301,High
+GD3,Continent,North America,0.06955268099010015,0.9304473190098999,High
+GD3,Continent,Europe,0.06466411265664716,0.9353358873433528,High
+GD3,Continent,Africa,0.06242412783896133,0.9375758721610387,High
+GD3,Continent,Asia,0.06232739848543832,0.9376726015145617,High
+GD3,Continent,South America,0.06539159527358268,0.9346084047264174,High
+GD3,Continent,Oceania,0.07442878915416794,0.925571210845832,High
+GD3,Religion,Christianity,0.06845458158429285,0.9315454184157071,High
+GD3,Religion,I do not identify with any religious group or faith,0.06461859581881856,0.9353814041811814,High
+GD3,Religion,Other religious group,0.07610810260287815,0.9238918973971219,High
+GD3,Religion,Buddhism,0.06296570727505096,0.9370342927249491,High
+GD3,Religion,Islam,0.06269739008354269,0.9373026099164573,High
+GD3,Religion,Hinduism,0.05915231477977174,0.9408476852202282,High
+GD3,Religion,Judaism,0.07444111043182251,0.9255588895681774,High
+GD3,Religion,Sikhism,0.08491161616161615,0.9150883838383839,High
+GD3,Environment,Urban,0.06458423636279467,0.9354157636372054,High
+GD3,Environment,Rural,0.06940255589891446,0.9305974441010856,High
+GD3,Age Group,36-45,0.06842781455590123,0.9315721854440988,High
+GD3,Age Group,46-55,0.07210079163339894,0.9278992083666011,High
+GD3,Age Group,26-35,0.06475514803820173,0.9352448519617983,High
+GD3,Age Group,18-25,0.06301851952460016,0.9369814804753999,High
+GD3,Age Group,65+,0.08021810365560367,0.9197818963443963,High
+GD3,Age Group,56-65,0.07694499760740729,0.9230550023925927,High
+GD3,Gender,Female,0.06553709809535219,0.9344629019046478,High
+GD3,Gender,Male,0.06393076892843508,0.9360692310715649,High
+GD3,Gender,Non-binary,0.08646176905105477,0.9135382309489453,High
+GD3,Gender,Other / prefer not to say,0.08742183742183741,0.9125781625781626,High
