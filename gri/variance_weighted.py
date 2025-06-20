@@ -8,13 +8,14 @@ This module implements:
 
 import numpy as np
 import pandas as pd
-from typing import Dict, Tuple, Optional
+from typing import Dict, Tuple, Optional, List
 
 
 def calculate_vwrs(
     sample_proportions: Dict[str, float],
     population_proportions: Dict[str, float],
-    sample_sizes: Dict[str, int]
+    sample_sizes: Dict[str, int],
+    within_stratum_variances: Optional[Dict[str, float]] = None
 ) -> float:
     """
     Calculate Variance-Weighted Representativeness Score (VWRS).
@@ -49,8 +50,16 @@ def calculate_vwrs(
         else:
             se_i = 1.0  # Maximum uncertainty
             
-        # Weight by population size × standard error
-        weight = pi_i * se_i
+        # Optionally incorporate within-stratum variance
+        if within_stratum_variances and stratum in within_stratum_variances:
+            # High internal variance = less reliable estimates
+            internal_var = within_stratum_variances[stratum]
+            reliability_factor = 1 - internal_var  # Convert to reliability
+        else:
+            reliability_factor = 1.0
+            
+        # Weight by population size × standard error × reliability
+        weight = pi_i * se_i * reliability_factor
         
         total_weighted_error += weight * abs(p_i - pi_i)
         total_weight += weight
@@ -184,3 +193,110 @@ def compare_gri_vwrs(
     comparison_df = pd.DataFrame(comparison_data)
     
     return gri, vwrs, comparison_df
+
+
+def calculate_vwrs_from_dataframes(
+    survey_df: pd.DataFrame,
+    benchmark_df: pd.DataFrame,
+    strata_cols: List[str],
+    within_stratum_variances: Optional[Dict[str, float]] = None
+) -> Tuple[float, pd.DataFrame]:
+    """
+    Calculate VWRS using the same interface as calculate_gri.
+    
+    Args:
+        survey_df: DataFrame with survey participant data
+        benchmark_df: DataFrame with population proportions (must have 'population_proportion')
+        strata_cols: List of columns defining the strata
+        within_stratum_variances: Optional dict of internal variances by stratum
+        
+    Returns:
+        Tuple of (VWRS score, detailed breakdown DataFrame)
+    """
+    # Handle empty survey case
+    if len(survey_df) == 0:
+        return 0.0, pd.DataFrame()
+    
+    # Calculate sample proportions
+    sample_counts = survey_df.groupby(strata_cols).size().reset_index(name='count')
+    total_participants = len(survey_df)
+    sample_counts['sample_proportion'] = sample_counts['count'] / total_participants
+    
+    # Prepare benchmark proportions
+    benchmark_props = benchmark_df[strata_cols + ['population_proportion']].copy()
+    
+    # Merge sample and benchmark
+    merged = pd.merge(benchmark_props, sample_counts[strata_cols + ['sample_proportion', 'count']], 
+                     on=strata_cols, how='outer')
+    
+    # Fill NaN values
+    merged['sample_proportion'] = merged['sample_proportion'].fillna(0)
+    merged['population_proportion'] = merged['population_proportion'].fillna(0)
+    merged['count'] = merged['count'].fillna(0).astype(int)
+    
+    # Create stratum identifier
+    if len(strata_cols) == 1:
+        merged['stratum'] = merged[strata_cols[0]]
+    else:
+        merged['stratum'] = merged[strata_cols].apply(
+            lambda x: ' × '.join(x.astype(str)), axis=1
+        )
+    
+    # Convert to dictionaries for VWRS calculation
+    sample_props = dict(zip(merged['stratum'], merged['sample_proportion']))
+    pop_props = dict(zip(merged['stratum'], merged['population_proportion']))
+    sample_sizes = dict(zip(merged['stratum'], merged['count']))
+    
+    # Calculate VWRS
+    vwrs = calculate_vwrs(sample_props, pop_props, sample_sizes, within_stratum_variances)
+    
+    # Add detailed breakdown
+    details = []
+    total_weight = 0
+    
+    for _, row in merged.iterrows():
+        stratum = row['stratum']
+        p_i = row['sample_proportion']
+        pi_i = row['population_proportion']
+        n_i = row['count']
+        
+        # Standard error
+        if n_i > 0:
+            se_i = np.sqrt(p_i * (1 - p_i) / n_i)
+        else:
+            se_i = 1.0
+        
+        # Reliability factor
+        if within_stratum_variances and stratum in within_stratum_variances:
+            reliability = 1 - within_stratum_variances[stratum]
+        else:
+            reliability = 1.0
+        
+        # Weight
+        weight = pi_i * se_i * reliability
+        total_weight += weight
+        
+        details.append({
+            'stratum': stratum,
+            'population_prop': pi_i,
+            'sample_prop': p_i,
+            'sample_count': n_i,
+            'standard_error': se_i,
+            'reliability': reliability,
+            'weight': weight,
+            'deviation': abs(p_i - pi_i),
+            'weighted_contribution': weight * abs(p_i - pi_i)
+        })
+    
+    details_df = pd.DataFrame(details)
+    
+    # Normalize weights
+    if total_weight > 0:
+        details_df['normalized_weight'] = details_df['weight'] / total_weight
+    else:
+        details_df['normalized_weight'] = 0
+    
+    # Sort by population proportion
+    details_df = details_df.sort_values('population_prop', ascending=False)
+    
+    return vwrs, details_df
