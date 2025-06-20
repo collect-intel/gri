@@ -19,7 +19,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 from gri.calculator import calculate_gri
 from gri.variance_weighted import calculate_vwrs_from_dataframes
 from gri.strategic_index import calculate_sri_from_dataframes
-from gri.simulation import calculate_max_possible_gri
+from gri.simulation import monte_carlo_max_scores
 
 
 def load_gd_data(base_path: Path, gd_num: int):
@@ -258,11 +258,12 @@ def main():
     print("-" * 70)
     
     total_sample_size = len(survey_df)
-    max_gri_results = calculate_max_possible_gri(
+    max_gri_results = monte_carlo_max_scores(
         benchmark_df, 
         total_sample_size,
         dimension_columns=['country'],
-        n_simulations=1000
+        n_simulations=1000,
+        include_diversity=False
     )
     
     max_gri_mean = max_gri_results['max_gri']['mean']
@@ -291,7 +292,7 @@ def main():
     
     print(f"\n1. Traditional GRI ({gri:.4f}) measures proportional representation")
     print("   - Penalizes all deviations equally")
-    print("   - Achieves {gri/max_gri_mean*100:.1f}% of the maximum possible GRI for this sample size")
+    print(f"   - Achieves {gri/max_gri_mean*100:.1f}% of the maximum possible GRI for this sample size")
     print("   - Best when you need exact demographic matching")
     
     print(f"\n2. SRI ({sri:.4f}) measures strategic representation") 
@@ -314,7 +315,7 @@ def main():
     
     print(f"\n5. Maximum Possible GRI ({max_gri_mean:.4f}) represents perfect sampling")
     print("   - Even with optimal allocation, perfect GRI=1.0 is impossible with finite samples")
-    print("   - Current survey achieves {gri/max_gri_mean*100:.1f}% of the theoretical maximum")
+    print(f"   - Current survey achieves {gri/max_gri_mean*100:.1f}% of the theoretical maximum")
 
 
 if __name__ == "__main__":
