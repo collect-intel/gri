@@ -191,24 +191,36 @@ def main():
         weight_changes = details_full.copy()
         weight_changes['weight_change'] = details_basic['weight_change']
         
-        print("\nCountries given MORE weight (high internal consensus):")
-        for _, row in weight_changes.nlargest(5, 'weight_change').iterrows():
-            if row['stratum'] != 'Others':
-                # Default variance of 0.25 (maximum for binary outcomes) when no data
-                variance = variance_data.get(row['stratum'], 0.25)
-                consensus = 1 - variance
-                print(f"  {row['stratum']}: {row['weight_change']:+.4f} weight change " +
-                      f"(n={int(row['sample_count'])}, variance={variance:.3f}, consensus={consensus:.0%})")
+        # Separate countries with and without variance data
+        print("\nCountries with NO survey data (using conservative default variance):")
+        no_data_countries = []
+        for _, row in weight_changes.iterrows():
+            if row['stratum'] != 'Others' and row['sample_count'] == 0:
+                # These countries use default variance of 0.25
+                has_variance_data = row['stratum'] in variance_data
+                variance_used = variance_data.get(row['stratum'], 0.25)
+                no_data_countries.append((row, variance_used, has_variance_data))
         
-        print("\nCountries given LESS weight (high internal disagreement):")
-        for _, row in weight_changes.nsmallest(5, 'weight_change').iterrows():
-            if row['stratum'] != 'Others':
-                # Countries with actual data have lower variance (more consensus)
-                # Countries without data get default variance of 0.25
+        # Sort by weight change and show top 5
+        no_data_countries.sort(key=lambda x: x[0]['weight_change'], reverse=True)
+        for row, variance, has_data in no_data_countries[:5]:
+            status = "measured" if has_data else "default"
+            print(f"  {row['stratum']}: {row['weight_change']:+.4f} weight change " +
+                  f"(n=0, {status} variance={variance:.3f})")
+        
+        print("\nCountries WITH survey data (using measured response variance):")
+        with_data_countries = []
+        for _, row in weight_changes.iterrows():
+            if row['stratum'] != 'Others' and row['sample_count'] > 0:
                 variance = variance_data.get(row['stratum'], 0.25)
-                consensus = 1 - variance
-                print(f"  {row['stratum']}: {row['weight_change']:+.4f} weight change " +
-                      f"(n={int(row['sample_count'])}, variance={variance:.3f}, consensus={consensus:.0%})")
+                with_data_countries.append((row, variance))
+        
+        # Sort by weight change (most negative = less weight)
+        with_data_countries.sort(key=lambda x: x[0]['weight_change'])
+        for row, variance in with_data_countries[:5]:
+            agreement_level = "high agreement" if variance < 0.1 else "moderate agreement"
+            print(f"  {row['stratum']}: {row['weight_change']:+.4f} weight change " +
+                  f"(n={int(row['sample_count'])}, measured variance={variance:.3f}, {agreement_level})")
     
     # Show error contributions
     print("\n" + "-" * 70)
@@ -309,9 +321,10 @@ def main():
     
     if variance_data:
         print(f"\n4. With internal variance, VWRS changes by {vwrs_full - vwrs_basic:+.4f}")
-        print("   - Countries WITHOUT survey data get default variance of 0.25 (75% consensus)")
-        print("   - Countries WITH survey data have measured variance (typically lower = higher consensus)")
-        print("   - This explains the counterintuitive consensus labels above")
+        print("   - Variance measures how much survey responses differ within each country")
+        print("   - Countries WITH data: variance measured from actual responses (typically 0.05-0.08)")
+        print("   - Countries WITHOUT data: assigned conservative default variance of 0.25")
+        print("   - Lower variance = more agreement within country = higher weight in VWRS")
     
     print(f"\n5. Maximum Possible GRI ({max_gri_mean:.4f}) represents perfect sampling")
     print("   - Even with optimal allocation, perfect GRI=1.0 is impossible with finite samples")
