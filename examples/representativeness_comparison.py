@@ -16,7 +16,7 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent.parent))
 
-from gri.calculator import calculate_gri
+from gri.calculator import calculate_gri, calculate_diversity_score
 from gri.variance_weighted import calculate_vwrs_from_dataframes
 from gri.strategic_index import calculate_sri_from_dataframes
 from gri.simulation import monte_carlo_max_scores
@@ -147,26 +147,34 @@ def main():
     # Create benchmark
     benchmark_df = create_simple_country_benchmark()
     
-    # Calculate all three metrics
+    # Calculate all metrics for Country dimension
     print("\n" + "=" * 70)
-    print("Country-Level Analysis:")
+    print("Analysis by COUNTRY Dimension:")
     print("=" * 70)
+    print("Note: All metrics below are calculated for country-level representation only.")
+    print("Full GRI would also include other dimensions (age×gender, religion, etc.)")
     
-    # Traditional GRI
+    # Traditional GRI for Country dimension
     gri = calculate_gri(survey_df, benchmark_df, ['country'])
-    print(f"\n1. Traditional GRI: {gri:.4f}")
-    print("   (Perfect score = proportional representation)")
+    print(f"\n1. Traditional GRI (Country): {gri:.4f}")
+    print("   (Perfect score = proportional representation by country)")
+    
+    # Diversity Score for Country dimension
+    diversity = calculate_diversity_score(survey_df, benchmark_df, ['country'])
+    threshold = 1.0 / (2 * len(survey_df))
+    print(f"\n2. Diversity Score (Country): {diversity:.4f}")
+    print(f"   (Coverage of countries with population > {threshold:.5f})")
     
     # Strategic Representativeness Index
     sri, sri_details = calculate_sri_from_dataframes(survey_df, benchmark_df, ['country'])
-    print(f"\n2. Strategic Representativeness Index (SRI): {sri:.4f}")
+    print(f"\n3. Strategic Representativeness Index (SRI): {sri:.4f}")
     print("   (Perfect score = optimal allocation for minimizing uncertainty)")
     
     # Calculate basic VWRS (no variance info)
     vwrs_basic, details_basic = calculate_vwrs_from_dataframes(
         survey_df, benchmark_df, ['country']
     )
-    print(f"\n3. VWRS (basic): {vwrs_basic:.4f}")
+    print(f"\n4. VWRS (basic): {vwrs_basic:.4f}")
     print("   (Accounts for sampling reliability)")
     
     # Load variance data if available
@@ -177,7 +185,7 @@ def main():
         vwrs_full, details_full = calculate_vwrs_from_dataframes(
             survey_df, benchmark_df, ['country'], variance_data
         )
-        print(f"\n4. VWRS (with internal variance): {vwrs_full:.4f}")
+        print(f"\n5. VWRS (with internal variance): {vwrs_full:.4f}")
         print("   (Also accounts for within-group consensus)")
         
         # Show which countries benefit most from VWRS
@@ -264,71 +272,86 @@ def main():
         print(f"{row['stratum']:<20} {row['population_prop']*100:>7.1f}% " +
               f"{row['strategic_target']*100:>9.1f}% {row['boost_factor']:>7.1f}x")
     
-    # Calculate maximum possible GRI for this sample size
+    # Calculate maximum possible scores for this sample size
     print("\n" + "-" * 70)
-    print("Maximum Possible GRI Analysis:")
+    print("Maximum Possible Scores Analysis (Country Dimension):")
     print("-" * 70)
     
     total_sample_size = len(survey_df)
-    max_gri_results = monte_carlo_max_scores(
+    max_results = monte_carlo_max_scores(
         benchmark_df, 
         total_sample_size,
         dimension_columns=['country'],
         n_simulations=1000,
-        include_diversity=False
+        include_diversity=True
     )
     
-    max_gri_mean = max_gri_results['max_gri']['mean']
-    max_gri_std = max_gri_results['max_gri']['std']
+    max_gri_mean = max_results['max_gri']['mean']
+    max_gri_std = max_results['max_gri']['std']
+    max_div_mean = max_results['max_diversity']['mean']
+    max_div_std = max_results['max_diversity']['std']
     
-    print(f"For a sample size of {total_sample_size}:")
+    print(f"For a sample size of {total_sample_size} (Country dimension only):")
     print(f"  Maximum possible GRI: {max_gri_mean:.4f} ± {max_gri_std:.4f}")
-    print(f"  Current GRI achievement: {gri/max_gri_mean*100:.1f}% of maximum")
+    print(f"  Maximum possible Diversity: {max_div_mean:.4f} ± {max_div_std:.4f}")
+    print(f"\nCurrent achievement rates:")
+    print(f"  GRI: {gri/max_gri_mean*100:.1f}% of maximum possible")
+    print(f"  Diversity: {diversity/max_div_mean*100:.1f}% of maximum possible")
     
     # Summary comparison
     print("\n" + "=" * 70)
-    print("Score Summary:")
+    print("Score Summary (Country Dimension):")
     print("=" * 70)
     print(f"\nMetric Comparison:")
-    print(f"  Traditional GRI:  {gri:.4f} ({gri/max_gri_mean*100:.1f}% of max possible)")
-    print(f"  SRI:             {sri:.4f}")
-    print(f"  VWRS (basic):    {vwrs_basic:.4f}")
+    print(f"  Traditional GRI:     {gri:.4f} ({gri/max_gri_mean*100:.1f}% of max)")
+    print(f"  Diversity Score:     {diversity:.4f} ({diversity/max_div_mean*100:.1f}% of max)")
+    print(f"  SRI:                 {sri:.4f}")
+    print(f"  VWRS (basic):        {vwrs_basic:.4f}")
     if variance_data:
-        print(f"  VWRS (full):     {vwrs_full:.4f}")
-    print(f"  Max Possible GRI: {max_gri_mean:.4f} ± {max_gri_std:.4f}")
+        print(f"  VWRS (full):         {vwrs_full:.4f}")
+    print(f"\nMaximum Possible (Country):")
+    print(f"  Max GRI:             {max_gri_mean:.4f} ± {max_gri_std:.4f}")
+    print(f"  Max Diversity:       {max_div_mean:.4f} ± {max_div_std:.4f}")
     
     # Summary insights
     print("\n" + "=" * 70)
     print("Key Insights:")
     print("=" * 70)
     
-    print(f"\n1. Traditional GRI ({gri:.4f}) measures proportional representation")
-    print("   - Penalizes all deviations equally")
-    print(f"   - Achieves {gri/max_gri_mean*100:.1f}% of the maximum possible GRI for this sample size")
+    print(f"\n1. Traditional GRI ({gri:.4f}) measures proportional country representation")
+    print("   - Penalizes all deviations from population proportions equally")
+    print(f"   - Achieves {gri/max_gri_mean*100:.1f}% of the maximum possible for this sample size")
     print("   - Best when you need exact demographic matching")
+    print("   - Note: This is ONLY the country dimension (full GRI includes age×gender, etc.)")
     
-    print(f"\n2. SRI ({sri:.4f}) measures strategic representation") 
+    print(f"\n2. Diversity Score ({diversity:.4f}) measures country coverage")
+    print(f"   - {diversity*100:.1f}% of relevant countries are represented") 
+    print(f"   - Achieves {diversity/max_div_mean*100:.1f}% of maximum possible coverage")
+    print(f"   - Relevant = countries with population > {threshold:.5f}")
+    
+    print(f"\n3. SRI ({sri:.4f}) measures strategic representation") 
     print("   - Targets sqrt(population) allocation")
     print("   - Balances between equal and proportional representation")
     print("   - Small countries get boosted (see table above)")
     print("   - Best for minimizing total survey uncertainty")
     
-    print(f"\n3. VWRS ({vwrs_basic:.4f}) measures reliable representation")
+    print(f"\n4. VWRS ({vwrs_basic:.4f}) measures reliable representation")
     print("   - Weights by statistical reliability")
     print("   - Small/unreliable samples contribute less to score")
     print("   - Closer to 1.0 suggests good coverage of statistically meaningful groups")
     print("   - Perfect VWRS=1.0 would mean perfect match weighted by reliability")
     
     if variance_data:
-        print(f"\n4. With internal variance, VWRS changes by {vwrs_full - vwrs_basic:+.4f}")
+        print(f"\n5. With internal variance, VWRS changes by {vwrs_full - vwrs_basic:+.4f}")
         print("   - Variance measures how much survey responses differ within each country")
         print("   - Countries WITH data: variance measured from actual responses (typically 0.05-0.08)")
         print("   - Countries WITHOUT data: assigned conservative default variance of 0.25")
         print("   - Lower variance = more agreement within country = higher weight in VWRS")
     
-    print(f"\n5. Maximum Possible GRI ({max_gri_mean:.4f}) represents perfect sampling")
-    print("   - Even with optimal allocation, perfect GRI=1.0 is impossible with finite samples")
-    print(f"   - Current survey achieves {gri/max_gri_mean*100:.1f}% of the theoretical maximum")
+    print(f"\n6. Maximum Possible Scores ({max_gri_mean:.4f} GRI, {max_div_mean:.4f} Diversity)")
+    print("   - Even with optimal allocation, perfect scores are impossible with finite samples")
+    print(f"   - Current survey achieves {gri/max_gri_mean*100:.1f}% of max GRI, {diversity/max_div_mean*100:.1f}% of max diversity")
+    print("   - These maxima are for country dimension only")
 
 
 if __name__ == "__main__":
