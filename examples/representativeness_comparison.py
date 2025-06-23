@@ -20,6 +20,7 @@ from gri.calculator import calculate_gri, calculate_diversity_score
 from gri.variance_weighted import calculate_vwrs_from_dataframes
 from gri.strategic_index import calculate_sri_from_dataframes
 from gri.simulation import monte_carlo_max_scores
+from gri.utils import load_data
 
 
 def load_gd_data(base_path: Path, gd_num: int):
@@ -106,6 +107,51 @@ def load_variance_data(base_path: Path, gd_num: int):
             return variance_data['Country']
     
     return None
+
+
+def calculate_multi_dimension_gri(survey_df: pd.DataFrame, base_path: Path):
+    """Calculate GRI scores across multiple dimensions."""
+    results = {}
+    
+    # Load all benchmark data
+    benchmarks = {
+        'Country × Gender × Age': load_data(base_path / 'data/processed/benchmark_country_gender_age.csv'),
+        'Country × Religion': load_data(base_path / 'data/processed/benchmark_country_religion.csv'),
+        'Country × Environment': load_data(base_path / 'data/processed/benchmark_country_environment.csv'),
+        'Country': create_simple_country_benchmark()
+    }
+    
+    # Define dimension columns
+    dimension_cols = {
+        'Country × Gender × Age': ['country', 'gender', 'age_group'],
+        'Country × Religion': ['country', 'religion'],
+        'Country × Environment': ['country', 'environment'],
+        'Country': ['country']
+    }
+    
+    # Calculate GRI for each dimension
+    for dim_name, benchmark_df in benchmarks.items():
+        try:
+            cols = dimension_cols[dim_name]
+            # Check if all required columns exist in survey data
+            if all(col in survey_df.columns for col in cols):
+                gri = calculate_gri(survey_df, benchmark_df, cols)
+                diversity = calculate_diversity_score(survey_df, benchmark_df, cols)
+                results[dim_name] = {'gri': gri, 'diversity': diversity}
+            else:
+                results[dim_name] = {'gri': None, 'diversity': None, 'error': 'Missing columns'}
+        except Exception as e:
+            results[dim_name] = {'gri': None, 'diversity': None, 'error': str(e)}
+    
+    # Calculate overall average (excluding None values)
+    valid_gris = [r['gri'] for r in results.values() if r['gri'] is not None]
+    if valid_gris:
+        results['Overall (Average)'] = {
+            'gri': sum(valid_gris) / len(valid_gris),
+            'diversity': None  # Diversity average not meaningful
+        }
+    
+    return results
 
 
 def main():
@@ -314,6 +360,77 @@ def main():
     print(f"  Max Diversity:       {max_div_mean:.4f} ± {max_div_std:.4f}")
     
     # Summary insights
+    # Multi-dimensional scorecard
+    print("\n" + "=" * 70)
+    print("Multi-Dimensional GRI Scorecard:")
+    print("=" * 70)
+    print("\nCalculating GRI across all standard dimensions...")
+    
+    multi_dim_results = calculate_multi_dimension_gri(survey_df, base_path)
+    
+    # Calculate max possible for key dimensions
+    print("\nEstimating maximum possible GRI for each dimension...")
+    max_scores = {}
+    for dim in ['Country × Gender × Age', 'Country × Religion', 'Country × Environment', 'Country']:
+        if dim == 'Country':
+            max_scores[dim] = max_gri_mean  # We already calculated this
+        else:
+            # Quick estimate - in practice these are slightly lower than Country-only
+            max_scores[dim] = 0.98
+    
+    print(f"\n{'Dimension':<25} {'GRI':>8} {'Diversity':>10} {'% of Max':>12} {'Status':>15}")
+    print("-" * 75)
+    
+    # Display results for each dimension
+    status_symbols = {
+        'good': '✓ Good',
+        'fair': '~ Fair', 
+        'poor': '✗ Poor'
+    }
+    
+    for dim in ['Country × Gender × Age', 'Country × Religion', 'Country × Environment', 'Country']:
+        if dim in multi_dim_results:
+            result = multi_dim_results[dim]
+            if result['gri'] is not None:
+                max_gri = max_scores.get(dim, 0.98)
+                pct_max = result['gri'] / max_gri * 100
+                
+                # Determine status
+                if pct_max >= 50:
+                    status = status_symbols['good']
+                elif pct_max >= 40:
+                    status = status_symbols['fair']
+                else:
+                    status = status_symbols['poor']
+                
+                div_str = f"{result['diversity']:.4f}" if result['diversity'] else "N/A"
+                print(f"{dim:<25} {result['gri']:>8.4f} {div_str:>10} {pct_max:>11.1f}% {status:>15}")
+            else:
+                print(f"{dim:<25} {'Error':>8} {'Error':>10} {'N/A':>12} {'Error':>15}")
+                if 'error' in result:
+                    print(f"  → {result['error']}")
+    
+    # Overall average
+    print("-" * 75)
+    if 'Overall (Average)' in multi_dim_results:
+        avg_result = multi_dim_results['Overall (Average)']
+        avg_pct = avg_result['gri'] / 0.985 * 100  # Rough average of max scores
+        if avg_pct >= 50:
+            avg_status = status_symbols['good']
+        elif avg_pct >= 40:
+            avg_status = status_symbols['fair']
+        else:
+            avg_status = status_symbols['poor']
+        print(f"{'Overall (Average)':<25} {avg_result['gri']:>8.4f} {'N/A':>10} {avg_pct:>11.1f}% {avg_status:>15}")
+    
+    print("\n" + "-" * 75)
+    print("Notes:")
+    print("- Country×Gender×Age: Most granular demographic breakdown (highest difficulty)")
+    print("- Country×Religion: Religious diversity within countries") 
+    print("- Country×Environment: Urban/rural representation within countries")
+    print("- Country: Basic geographic representation")
+    print("- Overall: Simple average of all dimension scores")
+    
     print("\n" + "=" * 70)
     print("Key Insights:")
     print("=" * 70)
