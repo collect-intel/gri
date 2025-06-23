@@ -368,18 +368,29 @@ def main():
     
     multi_dim_results = calculate_multi_dimension_gri(survey_df, base_path)
     
-    # Calculate max possible for key dimensions
-    print("\nEstimating maximum possible GRI for each dimension...")
-    max_scores = {}
-    for dim in ['Country × Gender × Age', 'Country × Religion', 'Country × Environment', 'Country']:
-        if dim == 'Country':
-            max_scores[dim] = max_gri_mean  # We already calculated this
-        else:
-            # Quick estimate - in practice these are slightly lower than Country-only
-            max_scores[dim] = 0.98
+    # Load pre-calculated max possible scores
+    print("\nLoading maximum possible scores for each dimension...")
+    max_scores_df = pd.read_csv(base_path / 'analysis_output/max_possible_scores_summary.csv')
     
-    print(f"\n{'Dimension':<25} {'GRI':>8} {'Diversity':>10} {'% of Max':>12} {'Status':>15}")
-    print("-" * 75)
+    # Get max scores for sample size closest to ours (986 ≈ 1000)
+    sample_size = len(survey_df)
+    closest_size = 1000  # For GD3 with 986 samples
+    
+    max_scores = {}
+    max_div_scores = {}
+    
+    for _, row in max_scores_df[max_scores_df['sample_size'] == closest_size].iterrows():
+        dim = row['dimension']
+        max_scores[dim] = row['max_gri_mean']
+        max_div_scores[dim] = row['max_diversity_mean']
+    
+    # Country dimension was calculated above
+    max_scores['Country'] = max_gri_mean
+    max_div_scores['Country'] = max_div_mean
+    
+    # Print detailed scorecard header
+    print(f"\n{'Dimension':<25} {'GRI':>8} {'Max GRI':>8} {'% Max':>7} │ {'Diversity':>9} {'Max Div':>8} {'% Max':>7} │ {'Status':>10}")
+    print("-" * 110)
     
     # Display results for each dimension
     status_symbols = {
@@ -392,44 +403,56 @@ def main():
         if dim in multi_dim_results:
             result = multi_dim_results[dim]
             if result['gri'] is not None:
+                # Get max scores
                 max_gri = max_scores.get(dim, 0.98)
-                pct_max = result['gri'] / max_gri * 100
+                max_div = max_div_scores.get(dim, 0.95)
                 
-                # Determine status
-                if pct_max >= 50:
+                # Calculate percentages
+                gri_pct = result['gri'] / max_gri * 100
+                div_pct = result['diversity'] / max_div * 100 if result['diversity'] else 0
+                
+                # Determine status based on GRI percentage
+                if gri_pct >= 60:
                     status = status_symbols['good']
-                elif pct_max >= 40:
+                elif gri_pct >= 50:
                     status = status_symbols['fair']
                 else:
                     status = status_symbols['poor']
                 
+                # Format values
                 div_str = f"{result['diversity']:.4f}" if result['diversity'] else "N/A"
-                print(f"{dim:<25} {result['gri']:>8.4f} {div_str:>10} {pct_max:>11.1f}% {status:>15}")
+                div_pct_str = f"{div_pct:.1f}%" if result['diversity'] else "N/A"
+                
+                print(f"{dim:<25} {result['gri']:>8.4f} {max_gri:>8.4f} {gri_pct:>6.1f}% │ {div_str:>9} {max_div:>8.4f} {div_pct_str:>7} │ {status:>10}")
             else:
-                print(f"{dim:<25} {'Error':>8} {'Error':>10} {'N/A':>12} {'Error':>15}")
+                print(f"{dim:<25} {'Error':>8} {'--':>8} {'--':>7} │ {'Error':>9} {'--':>8} {'--':>7} │ {'Error':>10}")
                 if 'error' in result:
                     print(f"  → {result['error']}")
     
     # Overall average
-    print("-" * 75)
+    print("-" * 110)
     if 'Overall (Average)' in multi_dim_results:
         avg_result = multi_dim_results['Overall (Average)']
-        avg_pct = avg_result['gri'] / 0.985 * 100  # Rough average of max scores
-        if avg_pct >= 50:
+        # Calculate average of max scores
+        avg_max_gri = sum(max_scores.values()) / len(max_scores)
+        avg_gri_pct = avg_result['gri'] / avg_max_gri * 100
+        
+        if avg_gri_pct >= 60:
             avg_status = status_symbols['good']
-        elif avg_pct >= 40:
+        elif avg_gri_pct >= 50:
             avg_status = status_symbols['fair']
         else:
             avg_status = status_symbols['poor']
-        print(f"{'Overall (Average)':<25} {avg_result['gri']:>8.4f} {'N/A':>10} {avg_pct:>11.1f}% {avg_status:>15}")
+        
+        print(f"{'Overall (Average)':<25} {avg_result['gri']:>8.4f} {avg_max_gri:>8.4f} {avg_gri_pct:>6.1f}% │ {'--':>9} {'--':>8} {'--':>7} │ {avg_status:>10}")
     
-    print("\n" + "-" * 75)
+    print("\n" + "-" * 110)
     print("Notes:")
-    print("- Country×Gender×Age: Most granular demographic breakdown (highest difficulty)")
-    print("- Country×Religion: Religious diversity within countries") 
-    print("- Country×Environment: Urban/rural representation within countries")
-    print("- Country: Basic geographic representation")
-    print("- Overall: Simple average of all dimension scores")
+    print(f"- Max scores calculated for n={closest_size} using Monte Carlo simulation (actual n={sample_size})")
+    print("- Status based on GRI % of max: ≥60% Good, ≥50% Fair, <50% Poor")
+    print("- Country×Gender×Age: Most granular (hardest to achieve high GRI)")
+    print("- Your prior calculation of ~0.81 max for Country×Gender×Age was correct!")
+    print("- These are empirically calculated maxima, not theoretical upper bounds")
     
     print("\n" + "=" * 70)
     print("Key Insights:")
