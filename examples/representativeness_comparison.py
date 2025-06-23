@@ -208,8 +208,9 @@ def main():
     # Diversity Score for Country dimension
     diversity = calculate_diversity_score(survey_df, benchmark_df, ['country'])
     threshold = 1.0 / (2 * len(survey_df))
+    threshold_pct = threshold * 100
     print(f"\n2. Diversity Score (Country): {diversity:.4f}")
-    print(f"   (Coverage of countries with population > {threshold:.5f})")
+    print(f"   (Coverage of countries with population > {threshold:.5f} = {threshold_pct:.3f}% of world)")
     
     # Strategic Representativeness Index
     sri, sri_details = calculate_sri_from_dataframes(survey_df, benchmark_df, ['country'])
@@ -467,7 +468,8 @@ def main():
     print(f"\n2. Diversity Score ({diversity:.4f}) measures country coverage")
     print(f"   - {diversity*100:.1f}% of relevant countries are represented") 
     print(f"   - Achieves {diversity/max_div_mean*100:.1f}% of maximum possible coverage")
-    print(f"   - Relevant = countries with population > {threshold:.5f}")
+    print(f"   - Relevant = countries with population > {threshold_pct:.3f}% of world")
+    print(f"   - Threshold = 1/(2×{len(survey_df)}) = {threshold:.5f}")
     
     print(f"\n3. SRI ({sri:.4f}) measures strategic representation") 
     print("   - Targets sqrt(population) allocation")
