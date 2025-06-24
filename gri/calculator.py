@@ -60,8 +60,8 @@ def calculate_diversity_score(survey_df: pd.DataFrame, benchmark_df: pd.DataFram
     This score measures the percentage of relevant benchmark strata that are
     represented in the survey sample (i.e., have at least one participant).
     
-    The relevance threshold X is set dynamically as X = 1/(2N) where N is the sample size,
-    representing an expected count of 0.5 participants (rounding up to 1).
+    The relevance threshold X is set dynamically as X = 1/N where N is the sample size,
+    representing an expected count of 1 participant.
 
     Args:
         survey_df (pd.DataFrame): DataFrame with survey participant data.
@@ -80,9 +80,9 @@ def calculate_diversity_score(survey_df: pd.DataFrame, benchmark_df: pd.DataFram
     if N == 0:
         return 0.0
     
-    # Calculate dynamic threshold X = 1/(2N) if not provided
+    # Calculate dynamic threshold X = 1/N if not provided
     if population_threshold is None:
-        population_threshold = 1.0 / (2 * N)
+        population_threshold = 1.0 / N
     
     # 1. Calculate sample proportions to identify represented strata
     sample_counts = survey_df.groupby(strata_cols).size().reset_index(name='count')

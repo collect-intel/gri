@@ -221,8 +221,8 @@ def test_diversity_score_formula_precision():
     })
     
     diversity = calculate_diversity_score(survey_df, benchmark_df, ['segment'])
-    expected = 2.0 / 4.0  # 2 represented / 4 relevant
-    assert diversity == expected
+    expected = 2.0 / 3.0  # 2 represented / 3 relevant (D is at threshold, not above)
+    assert abs(diversity - expected) < 1e-10
 
 
 def test_diversity_score_custom_threshold():

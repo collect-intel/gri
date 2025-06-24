@@ -51,7 +51,7 @@ An **Average GRI** from this scorecard can be used as a standalone metric to des
 In addition to the GRI, which measures the proportional match, the **Diversity Score** measures the breadth of coverage of the sample. It calculates the percentage of relevant strata (with a population proportion $q_i$ above a certain threshold $X$) that are actually represented in the sample (i.e., have at least one participant).
 
 Let:
-* $X$ be a pre-defined threshold for the population proportion $q_i$. Only consider strata $i$ where $q_i > X$ as "relevant" for this diversity score (to avoid penalizing for exceedingly small strata). By default, we choose $X = \frac{1}{2N}$, where $N$ is the sample size, representing an expected count of 0.5 participants (rounding up to 1 participant).
+* $X$ be a pre-defined threshold for the population proportion $q_i$. Only consider strata $i$ where $q_i > X$ as "relevant" for this diversity score (to avoid penalizing for exceedingly small strata). By default, we choose $X = \frac{1}{N}$, where $N$ is the sample size, representing an expected count of 1 participant.
 
 Using indicator functions, where $\mathbf{1}(\text{condition})$ is 1 if the condition is true, and 0 otherwise:
 

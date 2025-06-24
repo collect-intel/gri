@@ -154,7 +154,7 @@ def calculate_max_diversity_score(
     sample_counts : np.ndarray
         Sample counts for each stratum
     threshold : float, optional
-        Relevance threshold. If None, uses 1/(2*N)
+        Relevance threshold. If None, uses 1/N
     sample_size : int, optional
         Total sample size (required if threshold is None)
         
@@ -166,7 +166,7 @@ def calculate_max_diversity_score(
     if threshold is None:
         if sample_size is None:
             sample_size = sample_counts.sum()
-        threshold = 1.0 / (2 * sample_size) if sample_size > 0 else 0
+        threshold = 1.0 / sample_size if sample_size > 0 else 0
     
     # Count relevant strata (above threshold)
     relevant_strata = np.sum(true_proportions > threshold)
@@ -226,7 +226,7 @@ def monte_carlo_max_scores(
         true_proportions = true_proportions / prop_sum
     
     # Dynamic threshold for diversity
-    threshold = 1.0 / (2 * sample_size) if sample_size > 0 else 0
+    threshold = 1.0 / sample_size if sample_size > 0 else 0
     
     # Run simulations
     gri_scores = []
