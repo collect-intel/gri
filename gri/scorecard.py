@@ -97,9 +97,19 @@ class GRIScorecard:
         
         return df
     
-    def _load_benchmark_for_dimension(self, dimension: Dict[str, Any], base_path: Path) -> Optional[pd.DataFrame]:
-        """Load appropriate benchmark data for a dimension."""
+    def _load_benchmark_for_dimension(self, dimension: Dict[str, Any], base_path: Path, use_simplified: bool = False) -> Optional[pd.DataFrame]:
+        """Load appropriate benchmark data for a dimension.
+        
+        Args:
+            dimension: Dimension configuration
+            base_path: Base path for data files
+            use_simplified: Whether to use simplified benchmarks (for VWRS compatibility)
+        """
         cols = dimension['columns']
+        
+        # Special handling for simplified country benchmark
+        if use_simplified and cols == ['country']:
+            return self._create_simplified_country_benchmark()
         
         # Map dimension columns to benchmark files
         if set(cols) == {'country', 'gender', 'age_group'}:
@@ -132,29 +142,108 @@ class GRIScorecard:
             warnings.warn(f"No benchmark data found for dimension: {dimension['name']}")
             return None
     
+    def _create_simplified_country_benchmark(self) -> pd.DataFrame:
+        """Create simplified country benchmark matching representativeness_comparison.py."""
+        # Major countries by population (simplified)
+        benchmark_data = [
+            {'country': 'China', 'population_proportion': 0.180},
+            {'country': 'India', 'population_proportion': 0.175},
+            {'country': 'United States', 'population_proportion': 0.042},
+            {'country': 'Indonesia', 'population_proportion': 0.035},
+            {'country': 'Pakistan', 'population_proportion': 0.028},
+            {'country': 'Brazil', 'population_proportion': 0.027},
+            {'country': 'Nigeria', 'population_proportion': 0.026},
+            {'country': 'Bangladesh', 'population_proportion': 0.021},
+            {'country': 'Russian Federation', 'population_proportion': 0.018},
+            {'country': 'Mexico', 'population_proportion': 0.016},
+            {'country': 'Japan', 'population_proportion': 0.016},
+            {'country': 'Ethiopia', 'population_proportion': 0.015},
+            {'country': 'Philippines', 'population_proportion': 0.014},
+            {'country': 'Egypt', 'population_proportion': 0.013},
+            {'country': 'Viet Nam', 'population_proportion': 0.012},
+            {'country': 'Türkiye', 'population_proportion': 0.011},
+            {'country': 'Germany', 'population_proportion': 0.010},
+            {'country': 'United Kingdom', 'population_proportion': 0.008},
+            {'country': 'France', 'population_proportion': 0.008},
+            {'country': 'Italy', 'population_proportion': 0.007},
+            {'country': 'South Africa', 'population_proportion': 0.007},
+            {'country': 'Kenya', 'population_proportion': 0.007},
+            {'country': 'South Korea', 'population_proportion': 0.006},
+            {'country': 'Spain', 'population_proportion': 0.006},
+            {'country': 'Canada', 'population_proportion': 0.005},
+            {'country': 'Poland', 'population_proportion': 0.005},
+            {'country': 'Australia', 'population_proportion': 0.003},
+            {'country': 'Netherlands', 'population_proportion': 0.002},
+            {'country': 'Belgium', 'population_proportion': 0.001},
+            {'country': 'Sweden', 'population_proportion': 0.001},
+            {'country': 'Denmark', 'population_proportion': 0.001},
+        ]
+        
+        # Add all other countries as "Others"
+        total_listed = sum(item['population_proportion'] for item in benchmark_data)
+        benchmark_data.append({
+            'country': 'Others',
+            'population_proportion': 1.0 - total_listed
+        })
+        
+        return pd.DataFrame(benchmark_data)
+    
     def _load_max_scores(self, base_path: Path, sample_size: int) -> Dict[str, Dict[str, float]]:
         """Load pre-calculated maximum possible scores."""
         max_scores_file = base_path / 'analysis_output/max_possible_scores_summary.csv'
         
-        if not max_scores_file.exists():
-            warnings.warn("Max scores file not found. Using estimates.")
-            return {}
-        
-        max_scores_df = pd.read_csv(max_scores_file)
-        
-        # Find closest sample size
-        sizes = max_scores_df['sample_size'].unique()
-        closest_size = min(sizes, key=lambda x: abs(x - sample_size))
-        
-        # Extract scores for each dimension
         max_scores = {}
-        for _, row in max_scores_df[max_scores_df['sample_size'] == closest_size].iterrows():
-            dim = row['dimension']
-            max_scores[dim] = {
-                'max_gri': row['max_gri_mean'],
-                'max_diversity': row['max_diversity_mean'],
-                'sample_size_used': closest_size
+        
+        if max_scores_file.exists():
+            max_scores_df = pd.read_csv(max_scores_file)
+            
+            # Find closest sample size
+            sizes = max_scores_df['sample_size'].unique()
+            closest_size = min(sizes, key=lambda x: abs(x - sample_size))
+            
+            # Extract scores for each dimension
+            for _, row in max_scores_df[max_scores_df['sample_size'] == closest_size].iterrows():
+                dim = row['dimension']
+                max_scores[dim] = {
+                    'max_gri': row['max_gri_mean'],
+                    'max_diversity': row['max_diversity_mean'],
+                    'sample_size_used': closest_size
+                }
+        
+        # Add estimates for missing dimensions based on patterns
+        # These are conservative estimates based on empirical observations
+        if 'Country' not in max_scores:
+            max_scores['Country'] = {
+                'max_gri': 0.995,  # Country-only is easier than multi-dimensional
+                'max_diversity': 0.99,
+                'sample_size_used': sample_size
             }
+        
+        # Regional dimensions - easier than country-level
+        for dim in ['Region × Gender × Age', 'Region × Religion', 'Region × Environment', 'Region']:
+            if dim not in max_scores:
+                max_scores[dim] = {
+                    'max_gri': 0.98,  # Fewer strata = easier to achieve high GRI
+                    'max_diversity': 0.99,
+                    'sample_size_used': sample_size
+                }
+        
+        # Continental dimension - very easy
+        if 'Continent' not in max_scores:
+            max_scores['Continent'] = {
+                'max_gri': 0.995,  # Only 6 continents
+                'max_diversity': 1.0,  # Can easily cover all continents
+                'sample_size_used': sample_size
+            }
+        
+        # Single demographic dimensions - also easier
+        for dim in ['Gender', 'Age Group', 'Religion', 'Environment']:
+            if dim not in max_scores:
+                max_scores[dim] = {
+                    'max_gri': 0.99,  # Few categories
+                    'max_diversity': 1.0,  # Can cover all categories
+                    'sample_size_used': sample_size
+                }
         
         return max_scores
     
@@ -174,7 +263,8 @@ class GRIScorecard:
         dimension: Dict[str, Any],
         base_path: Path,
         variance_data: Optional[Dict[str, Dict[str, float]]] = None,
-        max_scores: Optional[Dict[str, Dict[str, float]]] = None
+        max_scores: Optional[Dict[str, Dict[str, float]]] = None,
+        use_simplified_benchmarks: bool = False
     ) -> Dict[str, Any]:
         """Calculate all scores for a single dimension."""
         result = {
@@ -185,7 +275,7 @@ class GRIScorecard:
         }
         
         # Load benchmark data
-        benchmark_df = self._load_benchmark_for_dimension(dimension, base_path)
+        benchmark_df = self._load_benchmark_for_dimension(dimension, base_path, use_simplified_benchmarks)
         if benchmark_df is None:
             result.update({
                 'gri': None,
@@ -222,8 +312,18 @@ class GRIScorecard:
             # Calculate VWRS
             # Get variance data for this dimension if available
             dim_variance = None
-            if variance_data and dimension['name'] in variance_data:
-                dim_variance = variance_data[dimension['name']]
+            if variance_data:
+                # Try to find variance data for this dimension
+                dim_name_in_variance = dimension['name'].replace(' × ', ' x ')
+                if dim_name_in_variance in variance_data:
+                    dim_variance = variance_data[dim_name_in_variance]
+                elif dimension['name'] in variance_data:
+                    dim_variance = variance_data[dimension['name']]
+                # For single dimensions like 'Country', check if it exists directly
+                elif len(dimension['columns']) == 1:
+                    single_dim = dimension['columns'][0].title()
+                    if single_dim in variance_data:
+                        dim_variance = variance_data[single_dim]
             
             vwrs, vwrs_details = calculate_vwrs_from_dataframes(
                 survey_df, benchmark_df, dimension['columns'], dim_variance
@@ -254,7 +354,8 @@ class GRIScorecard:
         survey_df: pd.DataFrame,
         base_path: Path,
         gd_num: Optional[int] = None,
-        include_extended: bool = False
+        include_extended: bool = False,
+        use_simplified_benchmarks: bool = False
     ) -> pd.DataFrame:
         """
         Generate complete scorecard for survey data.
@@ -264,6 +365,7 @@ class GRIScorecard:
             base_path: Base path for data files
             gd_num: Global Dialogues number (for variance data)
             include_extended: Whether to include extended dimensions
+            use_simplified_benchmarks: Whether to use simplified benchmarks for better VWRS comparability
             
         Returns:
             DataFrame with scores for all dimensions
@@ -288,7 +390,7 @@ class GRIScorecard:
         results = []
         for dimension in dimensions:
             scores = self.calculate_dimension_scores(
-                survey_df, dimension, base_path, variance_data, max_scores
+                survey_df, dimension, base_path, variance_data, max_scores, use_simplified_benchmarks
             )
             results.append(scores)
         

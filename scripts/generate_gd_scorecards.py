@@ -57,8 +57,17 @@ def load_gd_data(base_path: Path, gd_num: int) -> pd.DataFrame:
     return df
 
 
-def generate_scorecard_for_gd(gd_num: int, base_path: Path, format: str = 'csv') -> str:
-    """Generate scorecard for a specific GD survey."""
+def generate_scorecard_for_gd(gd_num: int, base_path: Path, format: str = 'csv',
+                            use_simplified_benchmarks: bool = False) -> str:
+    """Generate scorecard for a specific GD survey.
+    
+    Args:
+        gd_num: GD survey number
+        base_path: Base path for project
+        format: Output format
+        use_simplified_benchmarks: If True, uses simplified country benchmark
+                                 (31 major countries) for more conservative VWRS
+    """
     print(f"\nGenerating scorecard for GD{gd_num}...")
     
     # Load survey data
@@ -74,11 +83,14 @@ def generate_scorecard_for_gd(gd_num: int, base_path: Path, format: str = 'csv')
     
     # Generate scorecard
     print("  Calculating scores for all dimensions...")
+    if use_simplified_benchmarks:
+        print("  Using simplified benchmarks for country dimension (31 major countries)")
     scorecard_df = scorecard_gen.generate_scorecard(
         survey_df,
         base_path,
         gd_num=gd_num,
-        include_extended=False  # Only standard dimensions
+        include_extended=False,  # Only standard dimensions
+        use_simplified_benchmarks=use_simplified_benchmarks
     )
     
     # Format output
@@ -116,6 +128,11 @@ def main():
         default='analysis_output/scorecards',
         help='Output directory (default: analysis_output/scorecards)'
     )
+    parser.add_argument(
+        '--simplified',
+        action='store_true',
+        help='Use simplified country benchmarks (31 major countries) for more conservative VWRS'
+    )
     
     args = parser.parse_args()
     
@@ -129,7 +146,8 @@ def main():
     
     # Process each GD
     for gd_num in gd_nums:
-        result = generate_scorecard_for_gd(gd_num, base_path, args.format)
+        result = generate_scorecard_for_gd(gd_num, base_path, args.format, 
+                                         use_simplified_benchmarks=args.simplified)
         
         if result is None:
             continue
