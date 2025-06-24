@@ -111,6 +111,7 @@ country_to_region:
     - "Mongolia"
     - "Republic of Korea"
     - "South Korea"
+    - "Korea South"
     
   # South-eastern Asia
   "South-eastern Asia":
@@ -159,6 +160,7 @@ country_to_region:
     - "Saudi Arabia"
     - "State of Palestine"
     - "Palestinian territories"
+    - "Palestine"
     - "Syrian Arab Republic"
     - "Syria"
     - "Turkey"
@@ -195,6 +197,7 @@ country_to_region:
     - "Guernsey"
     - "Iceland"
     - "Ireland"
+    - "Ireland {Republic}"
     - "Isle of Man"
     - "Jersey"
     - "Latvia"
@@ -271,6 +274,7 @@ country_to_region:
     - "Saint Martin (French part)"
     - "Saint Vincent and the Grenadines"
     - "St. Vincent and the Gren."
+    - "Saint Vincent & the Grenadines"
     - "Sint Maarten (Dutch part)"
     - "Trinidad and Tobago"
     - "Turks and Caicos Islands"

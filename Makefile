@@ -19,7 +19,7 @@ CYAN := \033[36m
 RESET := \033[0m
 
 .PHONY: help setup install test test-all lint typecheck format clean \
-        process-data calculate-gri run-notebooks \
+        process-data calculate-gri scorecard run-notebooks \
         venv-check data-check health-check \
         demo validate-data show-benchmarks
 
@@ -42,6 +42,8 @@ help:
 	@echo "$(BLUE)Analysis Commands:$(RESET)"
 	@echo "  $(GREEN)make calculate-gri$(RESET)        - Run GRI calculation on Global Dialogues data"
 	@echo "  $(GREEN)make calculate-gri GD=<N>$(RESET) - Run GRI calculation on specific GD dataset (e.g., GD=3)"
+	@echo "  $(GREEN)make scorecard$(RESET)            - Generate comprehensive scorecards for all GD surveys"
+	@echo "  $(GREEN)make scorecard GD=<N>$(RESET)     - Generate scorecard for specific GD (e.g., GD=3)"
 	@echo "  $(GREEN)make run-notebooks$(RESET)        - Execute all Jupyter notebooks"
 	@echo "  $(GREEN)make demo$(RESET)                 - Run complete demo workflow"
 	@echo ""
@@ -132,6 +134,18 @@ calculate-gri: venv-check validate-data
 		$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/calculate_gri_config.py; \
 	fi
 	@echo "$(GREEN)Configuration-driven GRI calculation completed$(RESET)"
+
+scorecard: venv-check validate-data
+	@echo "$(BLUE)Generating comprehensive GRI scorecards...$(RESET)"
+	@if [ -n "$(GD)" ]; then \
+		echo "  Generating scorecard for GD$(GD)"; \
+		$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py --gd $(GD); \
+	else \
+		echo "  Generating scorecards for all GD surveys"; \
+		$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py; \
+	fi
+	@echo "$(GREEN)Scorecard generation complete!$(RESET)"
+	@echo "  Scorecards saved to: analysis_output/scorecards/"
 
 run-notebooks: venv-check validate-data
 	@echo "$(BLUE)Executing Jupyter notebooks...$(RESET)"
