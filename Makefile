@@ -44,7 +44,7 @@ help:
 	@echo "  $(GREEN)make calculate-gri GD=<N>$(RESET) - Run GRI calculation on specific GD dataset (e.g., GD=3)"
 	@echo "  $(GREEN)make scorecard$(RESET)            - Generate comprehensive scorecards for all GD surveys"
 	@echo "  $(GREEN)make scorecard GD=<N>$(RESET)     - Generate scorecard for specific GD (e.g., GD=3)"
-	@echo "  $(GREEN)make scorecard SIMPLIFIED=1$(RESET) - Use simplified country benchmarks for conservative VWRS"
+	@echo "  $(GREEN)make scorecard MODE=<mode>$(RESET) - Set simplification (none/auto/legacy, default: auto)"
 	@echo "  $(GREEN)make run-notebooks$(RESET)        - Execute all Jupyter notebooks"
 	@echo "  $(GREEN)make demo$(RESET)                 - Run complete demo workflow"
 	@echo ""
@@ -140,18 +140,20 @@ scorecard: venv-check validate-data
 	@echo "$(BLUE)Generating comprehensive GRI scorecards...$(RESET)"
 	@if [ -n "$(GD)" ]; then \
 		echo "  Generating scorecard for GD$(GD)"; \
-		if [ "$(SIMPLIFIED)" = "1" ]; then \
-			echo "  Using simplified country benchmarks (31 major countries)"; \
-			$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py --gd $(GD) --simplified; \
+		if [ -n "$(MODE)" ]; then \
+			echo "  Using simplification mode: $(MODE)"; \
+			$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py --gd $(GD) --mode $(MODE); \
 		else \
+			echo "  Using default mode: auto (formulaic simplification)"; \
 			$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py --gd $(GD); \
 		fi \
 	else \
 		echo "  Generating scorecards for all GD surveys"; \
-		if [ "$(SIMPLIFIED)" = "1" ]; then \
-			echo "  Using simplified country benchmarks (31 major countries)"; \
-			$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py --simplified; \
+		if [ -n "$(MODE)" ]; then \
+			echo "  Using simplification mode: $(MODE)"; \
+			$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py --mode $(MODE); \
 		else \
+			echo "  Using default mode: auto (formulaic simplification)"; \
 			$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py; \
 		fi \
 	fi

@@ -105,6 +105,9 @@ from .analyzer import GRIAnalysis
 # Scorecard functionality
 from .scorecard import GRIScorecard
 
+# Benchmark simplification
+from .benchmark_simplifier import simplify_benchmark, create_adaptive_simplification
+
 __version__ = "2.0.0"
 __author__ = "GRI Project Contributors"
 __email__ = "contact@gri-project.org"
@@ -164,5 +167,9 @@ __all__ = [
     "GRIAnalysis",
     
     # Scorecard
-    "GRIScorecard"
+    "GRIScorecard",
+    
+    # Benchmark simplification
+    "simplify_benchmark",
+    "create_adaptive_simplification"
 ]

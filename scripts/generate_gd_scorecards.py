@@ -58,15 +58,17 @@ def load_gd_data(base_path: Path, gd_num: int) -> pd.DataFrame:
 
 
 def generate_scorecard_for_gd(gd_num: int, base_path: Path, format: str = 'csv',
-                            use_simplified_benchmarks: bool = False) -> str:
+                            simplification_mode: str = 'auto') -> str:
     """Generate scorecard for a specific GD survey.
     
     Args:
         gd_num: GD survey number
         base_path: Base path for project
         format: Output format
-        use_simplified_benchmarks: If True, uses simplified country benchmark
-                                 (31 major countries) for more conservative VWRS
+        simplification_mode: How to handle high-cardinality benchmarks
+                           'none' - Use full benchmarks
+                           'auto' - Formulaic simplification (default)
+                           'legacy' - Use hard-coded 31 countries
     """
     print(f"\nGenerating scorecard for GD{gd_num}...")
     
@@ -79,18 +81,21 @@ def generate_scorecard_for_gd(gd_num: int, base_path: Path, format: str = 'csv',
         return None
     
     # Initialize scorecard generator
-    scorecard_gen = GRIScorecard()
+    scorecard_gen = GRIScorecard(simplification_mode=simplification_mode)
     
     # Generate scorecard
     print("  Calculating scores for all dimensions...")
-    if use_simplified_benchmarks:
-        print("  Using simplified benchmarks for country dimension (31 major countries)")
+    if simplification_mode == 'legacy':
+        print("  Using legacy simplified benchmarks (31 major countries)")
+    elif simplification_mode == 'auto':
+        threshold = max(1.0 / len(survey_df), 0.001)
+        print(f"  Using formulaic simplification (threshold: {threshold*100:.3f}%)")
+    
     scorecard_df = scorecard_gen.generate_scorecard(
         survey_df,
         base_path,
         gd_num=gd_num,
-        include_extended=False,  # Only standard dimensions
-        use_simplified_benchmarks=use_simplified_benchmarks
+        include_extended=False  # Only standard dimensions
     )
     
     # Format output
@@ -129,9 +134,10 @@ def main():
         help='Output directory (default: analysis_output/scorecards)'
     )
     parser.add_argument(
-        '--simplified',
-        action='store_true',
-        help='Use simplified country benchmarks (31 major countries) for more conservative VWRS'
+        '--mode',
+        choices=['none', 'auto', 'legacy'],
+        default='auto',
+        help='Simplification mode: none (full), auto (formulaic), legacy (31 countries)'
     )
     
     args = parser.parse_args()
@@ -147,7 +153,7 @@ def main():
     # Process each GD
     for gd_num in gd_nums:
         result = generate_scorecard_for_gd(gd_num, base_path, args.format, 
-                                         use_simplified_benchmarks=args.simplified)
+                                         simplification_mode=args.mode)
         
         if result is None:
             continue

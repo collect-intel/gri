@@ -25,23 +25,29 @@ from .variance_weighted import calculate_vwrs_from_dataframes
 from .strategic_index import calculate_sri_from_dataframes
 from .simulation import monte_carlo_max_scores
 from .utils import load_data
+from .benchmark_simplifier import simplify_benchmark
 
 
 class GRIScorecard:
     """Generate comprehensive representativeness scorecards."""
     
-    def __init__(self, config_dir: Optional[Path] = None):
+    def __init__(self, config_dir: Optional[Path] = None, simplification_mode: str = 'auto'):
         """
         Initialize scorecard generator with configuration.
         
         Args:
             config_dir: Path to configuration directory containing dimensions.yaml,
                        segments.yaml, and regions.yaml. If None, uses default.
+            simplification_mode: How to simplify high-cardinality benchmarks:
+                'none' - Use full benchmarks as-is
+                'auto' - Formulaic simplification based on sample size
+                'legacy' - Use hard-coded list (deprecated)
         """
         if config_dir is None:
             config_dir = Path(__file__).parent.parent / 'config'
         
         self.config_dir = Path(config_dir)
+        self.simplification_mode = simplification_mode
         self._load_configs()
         self._prepare_mappings()
     
@@ -97,53 +103,158 @@ class GRIScorecard:
         
         return df
     
-    def _load_benchmark_for_dimension(self, dimension: Dict[str, Any], base_path: Path, use_simplified: bool = False) -> Optional[pd.DataFrame]:
+    def _load_benchmark_for_dimension(self, dimension: Dict[str, Any], base_path: Path, 
+                                    sample_size: Optional[int] = None) -> Optional[pd.DataFrame]:
         """Load appropriate benchmark data for a dimension.
         
         Args:
             dimension: Dimension configuration
             base_path: Base path for data files
-            use_simplified: Whether to use simplified benchmarks (for VWRS compatibility)
+            sample_size: Sample size for formulaic simplification (if mode='auto')
+        
+        Returns:
+            Benchmark DataFrame, potentially simplified based on mode
         """
         cols = dimension['columns']
         
-        # Special handling for simplified country benchmark
-        if use_simplified and cols == ['country']:
-            return self._create_simplified_country_benchmark()
-        
         # Map dimension columns to benchmark files
         if set(cols) == {'country', 'gender', 'age_group'}:
-            return load_data(base_path / 'data/processed/benchmark_country_gender_age.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_country_gender_age.csv')
         elif set(cols) == {'country', 'religion'}:
-            return load_data(base_path / 'data/processed/benchmark_country_religion.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_country_religion.csv')
         elif set(cols) == {'country', 'environment'}:
-            return load_data(base_path / 'data/processed/benchmark_country_environment.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_country_environment.csv')
         elif set(cols) == {'region', 'gender', 'age_group'}:
-            return load_data(base_path / 'data/processed/benchmark_region_gender_age.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_region_gender_age.csv')
         elif set(cols) == {'region', 'religion'}:
-            return load_data(base_path / 'data/processed/benchmark_region_religion.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_region_religion.csv')
         elif set(cols) == {'region', 'environment'}:
-            return load_data(base_path / 'data/processed/benchmark_region_environment.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_region_environment.csv')
         elif cols == ['country']:
-            return load_data(base_path / 'data/processed/benchmark_country.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_country.csv')
         elif cols == ['region']:
-            return load_data(base_path / 'data/processed/benchmark_region.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_region.csv')
         elif cols == ['continent']:
-            return load_data(base_path / 'data/processed/benchmark_continent.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_continent.csv')
         elif cols == ['gender']:
-            return load_data(base_path / 'data/processed/benchmark_gender.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_gender.csv')
         elif cols == ['age_group']:
-            return load_data(base_path / 'data/processed/benchmark_age_group.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_age_group.csv')
         elif cols == ['religion']:
-            return load_data(base_path / 'data/processed/benchmark_religion.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_religion.csv')
         elif cols == ['environment']:
-            return load_data(base_path / 'data/processed/benchmark_environment.csv')
+            benchmark_df = load_data(base_path / 'data/processed/benchmark_environment.csv')
         else:
             warnings.warn(f"No benchmark data found for dimension: {dimension['name']}")
             return None
+        
+        # Apply simplification if needed
+        if benchmark_df is not None and self.simplification_mode != 'none':
+            benchmark_df = self._simplify_benchmark_if_needed(
+                benchmark_df, dimension, sample_size
+            )
+        
+        return benchmark_df
     
-    def _create_simplified_country_benchmark(self) -> pd.DataFrame:
-        """Create simplified country benchmark matching representativeness_comparison.py."""
+    def _simplify_benchmark_if_needed(self, benchmark_df: pd.DataFrame, 
+                                     dimension: Dict[str, Any], 
+                                     sample_size: Optional[int]) -> pd.DataFrame:
+        """Apply simplification to benchmark if needed based on mode and dimension.
+        
+        Args:
+            benchmark_df: Original benchmark DataFrame
+            dimension: Dimension configuration
+            sample_size: Sample size for auto mode
+            
+        Returns:
+            Potentially simplified benchmark DataFrame
+        """
+        # Determine if this dimension needs simplification
+        n_strata = len(benchmark_df)
+        cols = dimension['columns']
+        
+        # Thresholds for when to consider simplification
+        # (only high-cardinality dimensions need it)
+        simplification_thresholds = {
+            'country': 50,  # More than 50 countries
+            'region': 50,   # More than 50 regions
+            'language': 20, # If we had languages
+            'occupation': 20  # If we had occupations
+        }
+        
+        # Check if any column suggests high cardinality
+        needs_simplification = False
+        for col in cols:
+            if col in simplification_thresholds:
+                if n_strata > simplification_thresholds[col]:
+                    needs_simplification = True
+                    break
+        
+        # Also check absolute number of strata
+        if n_strata > 100:  # More than 100 strata in any dimension
+            needs_simplification = True
+        
+        if not needs_simplification:
+            return benchmark_df
+        
+        # Apply simplification based on mode
+        if self.simplification_mode == 'legacy':
+            # Use the old hard-coded approach for backward compatibility
+            if cols == ['country']:
+                return self._create_legacy_simplified_country_benchmark()
+            else:
+                # No legacy mode for other dimensions
+                return benchmark_df
+                
+        elif self.simplification_mode == 'auto':
+            if sample_size is None:
+                warnings.warn("Sample size not provided for auto simplification, using full benchmark")
+                return benchmark_df
+            
+            # Calculate threshold using the formula
+            threshold = self._calculate_simplification_threshold(sample_size)
+            
+            # Determine appropriate "Others" label
+            if 'country' in cols:
+                others_label = "Other Countries"
+            elif 'region' in cols:
+                others_label = "Other Regions"
+            elif 'religion' in cols:
+                others_label = "Other Religions"
+            else:
+                others_label = "Others"
+            
+            # Apply simplification
+            return simplify_benchmark(
+                benchmark_df,
+                threshold=threshold,
+                min_coverage=0.8,  # Ensure 80% coverage
+                others_label=others_label
+            )
+        
+        return benchmark_df
+    
+    def _calculate_simplification_threshold(self, sample_size: int, 
+                                          min_threshold: float = 0.001) -> float:
+        """Calculate threshold for benchmark simplification.
+        
+        Formula: Keep strata that would expect >= 1 participant,
+        but never go below min_threshold (default 0.1% of population).
+        
+        Args:
+            sample_size: Size of the sample
+            min_threshold: Minimum threshold (default 0.001 = 0.1%)
+            
+        Returns:
+            Threshold for keeping strata
+        """
+        return max(1.0 / sample_size, min_threshold)
+    
+    def _create_legacy_simplified_country_benchmark(self) -> pd.DataFrame:
+        """Create simplified country benchmark using legacy hard-coded list.
+        
+        Kept for backward compatibility only. New code should use 'auto' mode.
+        """
         # Major countries by population (simplified)
         benchmark_data = [
             {'country': 'China', 'population_proportion': 0.180},
@@ -263,8 +374,7 @@ class GRIScorecard:
         dimension: Dict[str, Any],
         base_path: Path,
         variance_data: Optional[Dict[str, Dict[str, float]]] = None,
-        max_scores: Optional[Dict[str, Dict[str, float]]] = None,
-        use_simplified_benchmarks: bool = False
+        max_scores: Optional[Dict[str, Dict[str, float]]] = None
     ) -> Dict[str, Any]:
         """Calculate all scores for a single dimension."""
         result = {
@@ -275,7 +385,8 @@ class GRIScorecard:
         }
         
         # Load benchmark data
-        benchmark_df = self._load_benchmark_for_dimension(dimension, base_path, use_simplified_benchmarks)
+        sample_size = len(survey_df)
+        benchmark_df = self._load_benchmark_for_dimension(dimension, base_path, sample_size)
         if benchmark_df is None:
             result.update({
                 'gri': None,
@@ -354,8 +465,7 @@ class GRIScorecard:
         survey_df: pd.DataFrame,
         base_path: Path,
         gd_num: Optional[int] = None,
-        include_extended: bool = False,
-        use_simplified_benchmarks: bool = False
+        include_extended: bool = False
     ) -> pd.DataFrame:
         """
         Generate complete scorecard for survey data.
@@ -365,7 +475,6 @@ class GRIScorecard:
             base_path: Base path for data files
             gd_num: Global Dialogues number (for variance data)
             include_extended: Whether to include extended dimensions
-            use_simplified_benchmarks: Whether to use simplified benchmarks for better VWRS comparability
             
         Returns:
             DataFrame with scores for all dimensions
@@ -390,7 +499,7 @@ class GRIScorecard:
         results = []
         for dimension in dimensions:
             scores = self.calculate_dimension_scores(
-                survey_df, dimension, base_path, variance_data, max_scores, use_simplified_benchmarks
+                survey_df, dimension, base_path, variance_data, max_scores
             )
             results.append(scores)
         
