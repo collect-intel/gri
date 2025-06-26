@@ -1,0 +1,82 @@
+{
+  "survey": "GD4",
+  "total_participants": 600,
+  "countries": 57,
+  "scores": {
+    "Country \u00d7 Gender \u00d7 Age": {
+      "gri": 0.00012955255254187836,
+      "diversity": 0.0,
+      "top_over_represented": [
+        "Switzerland - Male - 65+ - 1.0 - 0.0016666666666666668 - 0.0001295525525149"
+      ],
+      "top_under_represented": [
+        "India - Male - 18-25 - nan - nan - 0.0222815556063949",
+        "India - Male - 26-35 - nan - nan - 0.0207776911163869",
+        "India - Female - 18-25 - nan - nan - 0.020223054552503",
+        "India - Female - 26-35 - nan - nan - 0.0190094471171755",
+        "China - Male - 46-55 - nan - nan - 0.0184724468422471",
+        "China - Female - 65+ - nan - nan - 0.0184030554623377",
+        "China - Female - 46-55 - nan - nan - 0.0180503296832258",
+        "China - Male - 36-45 - nan - nan - 0.017999728368185",
+        "India - Male - 36-45 - nan - nan - 0.0177043617344614",
+        "China - Male - 26-35 - nan - nan - 0.0173804803531741"
+      ]
+    },
+    "Country \u00d7 Religion": {
+      "gri": 0.4141532604213106,
+      "diversity": 0.4222222222222222,
+      "top_over_represented": [
+        "Kenya - Christianity - 104.0 - 0.17333333333333334 - 0.0049823498169793",
+        "Chile - I do not identify with any religious group or faith - 25.0 - 0.041666666666666664 - 0.000213414823666",
+        "United States - Christianity - 42.0 - 0.07 - 0.0352477672482437",
+        "Israel - Judaism - 15.0 - 0.025 - 0.0008135829187686",
+        "United Kingdom - I do not identify with any religious group or faith - 12.0 - 0.02 - 0.0019165824797356",
+        "Chile - Christianity - 11.0 - 0.018333333333333333 - 0.0022185215390403",
+        "Canada - I do not identify with any religious group or faith - 9.0 - 0.015 - 0.0011693883866129",
+        "Morocco - Islam - 10.0 - 0.016666666666666666 - 0.0046292695775046",
+        "France - I do not identify with any religious group or faith - 8.0 - 0.013333333333333334 - 0.0025499087286355",
+        "United Kingdom - Islam - 6.0 - 0.01 - 0.0003959137516824"
+      ],
+      "top_under_represented": [
+        "China - I do not identify with any religious group or faith - 14.0 - 0.023333333333333334 - 0.1015513029635914",
+        "China - Other religious group - nan - nan - 0.0439666560723595",
+        "China - Buddhism - 3.0 - 0.005 - 0.0354067761290682",
+        "India - Hinduism - 69.0 - 0.115 - 0.1412020660648092",
+        "Indonesia - Islam - 7.0 - 0.011666666666666667 - 0.0303367142786253",
+        "Russia - Christianity - nan - nan - 0.015198286789464",
+        "Bangladesh - Islam - 4.0 - 0.006666666666666667 - 0.0193657454620284",
+        "Pakistan - Islam - 7.0 - 0.011666666666666667 - 0.0242704516517931",
+        "Nigeria - Christianity - nan - nan - 0.011327473358456",
+        "Nigeria - Islam - nan - nan - 0.0112125902615143"
+      ]
+    },
+    "Country \u00d7 Environment": {
+      "gri": 0.3073398178405621,
+      "diversity": 0.42391304347826086,
+      "top_over_represented": [
+        "Kenya - Urban - 107.0 - 0.17833333333333334 - 0.0018043527192507",
+        "India - Urban - 88.0 - 0.14666666666666667 - 0.0603695647673797",
+        "Chile - Urban - 34.0 - 0.056666666666666664 - 0.0020876093689036",
+        "Israel - Urban - 18.0 - 0.03 - 0.0010234972003185",
+        "United Kingdom - Urban - 18.0 - 0.03 - 0.0072741408165495",
+        "Brazil - Urban - 27.0 - 0.045 - 0.0239164516038588",
+        "Canada - Urban - 13.0 - 0.021666666666666667 - 0.0039414861462343",
+        "Kazakhstan - Urban - 10.0 - 0.016666666666666666 - 0.001384708385838",
+        "Morocco - Urban - 10.0 - 0.016666666666666666 - 0.0029613552507424",
+        "Mexico - Urban - 16.0 - 0.02666666666666667 - 0.0137319207709402"
+      ],
+      "top_under_represented": [
+        "India - Rural - 8.0 - 0.013333333333333334 - 0.1170329481724181",
+        "China - Urban - 17.0 - 0.028333333333333332 - 0.1096632966724287",
+        "China - Rural - 1.0 - 0.0016666666666666668 - 0.0757304077978642",
+        "United States of America - Urban - nan - nan - 0.0352154047596026",
+        "Pakistan - Rural - 1.0 - 0.0016666666666666668 - 0.0166630113195226",
+        "Indonesia - Rural - 1.0 - 0.0016666666666666668 - 0.0156160622504308",
+        "Bangladesh - Rural - nan - nan - 0.0138122335952867",
+        "Nigeria - Urban - nan - nan - 0.012919621405608",
+        "Nigeria - Rural - nan - nan - 0.0127431428176883",
+        "Ethiopia - Rural - nan - nan - 0.0111634825841705"
+      ]
+    }
+  }
+}
