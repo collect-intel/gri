@@ -21,7 +21,8 @@ RESET := \033[0m
 .PHONY: help setup install test test-all lint typecheck format clean \
         process-data calculate-gri scorecard run-notebooks \
         venv-check data-check health-check \
-        demo validate-data show-benchmarks
+        demo validate-data show-benchmarks \
+        submodule-init submodule-update
 
 # Default target
 help:
@@ -33,6 +34,8 @@ help:
 	@echo "  $(GREEN)make venv$(RESET)                 - Create virtual environment"
 	@echo "  $(GREEN)make install$(RESET)              - Install dependencies in venv"
 	@echo "  $(GREEN)make health-check$(RESET)         - Check system health (venv, data)"
+	@echo "  $(GREEN)make submodule-init$(RESET)       - Initialize global-dialogues git submodule"
+	@echo "  $(GREEN)make submodule-update$(RESET)     - Update global-dialogues to latest version"
 	@echo ""
 	@echo "$(BLUE)Data Processing Commands:$(RESET)"
 	@echo "  $(GREEN)make process-data$(RESET)         - Process raw benchmark data using configuration"
@@ -65,7 +68,7 @@ help:
 	@echo "  • All data processing uses YAML configuration as source of truth"
 
 # Setup commands
-setup: venv install process-data health-check
+setup: venv install submodule-init process-data health-check
 	@echo "$(GREEN)GRI setup completed successfully!$(RESET)"
 
 venv:
@@ -204,3 +207,15 @@ clean:
 	@find . -name ".ipynb_checkpoints" -type d -exec rm -rf {} + 2>/dev/null || true
 	@rm -rf build/ dist/ 2>/dev/null || true
 	@echo "$(GREEN)Cleanup complete!$(RESET)"
+
+# Git submodule commands
+submodule-init:
+	@echo "$(BLUE)Initializing global-dialogues submodule...$(RESET)"
+	@git submodule update --init --recursive
+	@echo "$(GREEN)Submodule initialized successfully!$(RESET)"
+
+submodule-update:
+	@echo "$(BLUE)Updating global-dialogues submodule to latest version...$(RESET)"
+	@git submodule update --remote data/raw/survey_data/global-dialogues
+	@echo "$(GREEN)Submodule updated to latest version!$(RESET)"
+	@echo "$(YELLOW)Note: Remember to commit the submodule reference change if needed$(RESET)"
