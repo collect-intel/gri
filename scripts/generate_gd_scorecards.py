@@ -30,7 +30,7 @@ def load_gd_data(base_path: Path, gd_num: int) -> pd.DataFrame:
     file_path = base_path / f'data/raw/survey_data/global-dialogues/Data/GD{gd_num}/GD{gd_num}_participants.csv'
     
     if not file_path.exists():
-        raise FileNotFoundError(f"GD{gd_num} data not found at {file_path}")
+        raise FileNotFoundError(f"GD{gd_num} data not found at {file_path}. Please ensure the data file exists or check if you meant a different GD number.")
     
     df = pd.read_csv(file_path)
     
@@ -118,8 +118,7 @@ def main():
     parser.add_argument(
         '--gd', 
         type=int, 
-        choices=[1, 2, 3],
-        help='GD number. If not specified, generates for all GDs.'
+        help='GD number. If not specified, generates for all available GDs.'
     )
     parser.add_argument(
         '--format',
@@ -148,7 +147,30 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Determine which GDs to process
-    gd_nums = [args.gd] if args.gd else [1, 2, 3]
+    if args.gd:
+        gd_nums = [args.gd]
+    else:
+        # Find all available GD data files
+        gd_data_dir = base_path / 'data/raw/survey_data/global-dialogues/Data'
+        available_gds = []
+        if gd_data_dir.exists():
+            for gd_dir in sorted(gd_data_dir.glob('GD*')):
+                if gd_dir.is_dir():
+                    try:
+                        gd_num = int(gd_dir.name[2:])  # Extract number from "GD1", "GD2", etc.
+                        # Check if participant file exists
+                        participant_file = gd_dir / f'GD{gd_num}_participants.csv'
+                        if participant_file.exists():
+                            available_gds.append(gd_num)
+                    except ValueError:
+                        continue
+        
+        if not available_gds:
+            print("No GD data files found!")
+            return
+            
+        gd_nums = available_gds
+        print(f"Found GD data for: {', '.join(f'GD{n}' for n in gd_nums)}")
     
     # Process each GD
     for gd_num in gd_nums:
