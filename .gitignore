@@ -50,3 +50,7 @@ Thumbs.db
 # Data files (large embeddings)
 *.pkl
 *_embeddings.json
+
+# Quarto
+site/_site/
+.quarto/

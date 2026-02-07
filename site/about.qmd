@@ -1,0 +1,58 @@
+---
+title: "About"
+---
+
+## The Project
+
+The Global Representativeness Index (GRI) was developed to address a gap in survey methodology: while response rates and sample sizes are routinely reported, there has been no standardized, quantitative measure of *how well* a sample represents the global population across multiple demographic dimensions.
+
+As large-scale surveys and public consultations increasingly shape AI policy and governance, the need for transparent representativeness measurement has become critical. The GRI provides researchers, policymakers, and survey practitioners with a rigorous, open-source tool for this purpose.
+
+## Authors
+
+**Evan Hadfield**
+The Collective Intelligence Project
+
+**Andrew Konya**
+Remesh.ai
+
+## Citation
+
+If you use the GRI in your research, please cite:
+
+```bibtex
+@software{hadfield2025gri,
+  author    = {Hadfield, Evan and Konya, Andrew},
+  title     = {The Global Representativeness Index: Measuring Demographic
+               Representativeness in Survey Samples Using Total Variation Distance},
+  year      = {2025},
+  url       = {https://github.com/collect-intel/gri},
+  license   = {MIT}
+}
+```
+
+An arXiv preprint is forthcoming.
+
+## License
+
+This project is released under the [MIT License](https://github.com/collect-intel/gri/blob/main/LICENSE). You are free to use, modify, and distribute the code and methodology with attribution.
+
+## Data Sources
+
+The GRI benchmarks are derived from the following authoritative datasets:
+
+| Dataset | Source | Year | Description |
+|:---|:---|:---:|:---|
+| World Population Prospects | [UN DESA Population Division](https://population.un.org/wpp/) | 2023 | Population by country, gender, and 5-year age group |
+| Global Religious Landscape | [Pew Research Center](https://www.pewresearch.org/religion/2012/12/18/global-religious-landscape-exec/) | 2010 | Religious composition by country |
+| World Urbanization Prospects | [UN DESA Population Division](https://population.un.org/wup/) | 2018 | Urban/rural population distribution by country |
+
+All benchmark data files and full source attribution are available in the repository under [`data/raw/benchmark_data/`](https://github.com/collect-intel/gri/tree/main/data/raw/benchmark_data).
+
+## Contributing
+
+We welcome contributions. Please open an [issue](https://github.com/collect-intel/gri/issues) on GitHub for bug reports, feature requests, or questions about the methodology.
+
+## Contact
+
+For inquiries about the GRI project or the Global Dialogues survey series, please reach out through [GitHub Issues](https://github.com/collect-intel/gri/issues).

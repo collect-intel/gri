@@ -1,0 +1,110 @@
+---
+title: "Methodology"
+---
+
+## Total Variation Distance
+
+The GRI is built on **Total Variation Distance (TVD)**, one of the most fundamental metrics in probability theory. For discrete distributions $P$ and $Q$ over a shared set of categories:
+
+$$
+\text{TVD}(P, Q) = \frac{1}{2} \sum_{i=1}^{k} |p_i - q_i|
+$$
+
+TVD has several properties that make it ideal for representativeness measurement:
+
+- **Bounded**: Always in $[0, 1]$, enabling direct comparison across dimensions and surveys
+- **Metric**: Satisfies non-negativity, symmetry, and the triangle inequality
+- **Interpretable**: Equals the maximum difference in probability assigned to any event
+- **Distribution-free**: No parametric assumptions required
+- **Additive sensitivity**: Every stratum contributes proportionally to the total distance
+
+## GRI Calculation
+
+The GRI is defined as the complement of TVD:
+
+$$
+\text{GRI}(p, q) = 1 - \text{TVD}(p, q) = 1 - \frac{1}{2} \sum_{i=1}^{k} |p_i - q_i|
+$$
+
+This maps to a 0--1 scale where **1.0 = perfect match** and **0.0 = complete mismatch**.
+
+### Calculation Pipeline
+
+![GRI calculation pipeline](images/gri_pipeline.png){.figure width="100%"}
+
+**Inputs:**
+
+1. **Survey data** --- one row per respondent with demographic columns (country, gender, age group, religion, environment type)
+2. **Population benchmarks** --- global demographic proportions from authoritative sources
+
+**Process:**
+
+1. Cross demographic columns to form strata (e.g., "India x Female x 25--34")
+2. Compute sample proportions $p_i$ for each stratum
+3. Look up population proportions $q_i$ from benchmarks
+4. Calculate TVD and convert to GRI
+
+## Diversity Score
+
+The GRI captures *how closely* the sample matches the population, but not *how many* population segments are represented at all. The **Diversity Score** fills this gap:
+
+$$
+\text{Diversity} = \frac{|\{i : p_i > 0 \text{ and } q_i \geq X\}|}{|\{i : q_i \geq X\}|}
+$$
+
+where $X = \frac{1}{2N}$ is a dynamic relevance threshold that scales with sample size. This measures the fraction of meaningfully-sized population strata that appear at least once in the sample.
+
+## Multi-Dimensional Scorecard
+
+The GRI is computed across **13 dimensions** organized in three tiers:
+
+### Primary Dimensions (intersectional)
+These combine geography with demographics, producing the finest-grained assessment:
+
+| Dimension | Strata Count | Benchmark Source |
+|:---|---:|:---|
+| Country x Gender x Age | 2,699 | UN WPP 2023 |
+| Country x Religion | 1,607 | Pew GLS 2010 |
+| Country x Environment | 449 | UN WUP 2018 |
+
+### Regional Dimensions (intermediate)
+Replace countries with 20 world regions, reducing cardinality:
+
+- Region x Gender x Age, Region x Religion, Region x Environment, Region (alone)
+
+### Single-Axis Dimensions (marginal)
+Assess one demographic factor at a time:
+
+- Country, Continent, Religion, Environment, Age Group, Gender
+
+Each dimension tells a different story. A survey might achieve strong continental representation (GRI = 0.88) while poorly representing the Country x Gender x Age intersection (GRI = 0.37)---the scorecard makes these trade-offs transparent.
+
+## Maximum Achievable Scores
+
+With thousands of strata and finite samples, perfect GRI scores are mathematically impossible. We use **Monte Carlo simulation** to estimate the maximum achievable GRI at any sample size by generating optimally-allocated samples.
+
+At $N = 1{,}000$:
+
+| Dimension | Max GRI | Max Diversity |
+|:---|:---:|:---:|
+| Country x Gender x Age | 0.792 | 0.925 |
+| Country x Religion | 0.938 | 0.970 |
+| Country x Environment | 0.950 | 0.977 |
+
+These ceilings enable **efficiency ratios**---the percentage of the theoretical maximum that a real survey achieves---providing a fairer basis for comparison than raw scores alone.
+
+![Sampling efficiency across waves](images/efficiency_ratios.png){.figure width="100%"}
+
+## Benchmark Data Sources
+
+| Dataset | Source | Year | Use |
+|:---|:---|:---:|:---|
+| World Population Prospects | UN DESA Population Division | 2023 | Country x Gender x Age benchmarks |
+| Global Religious Landscape | Pew Research Center | 2010 | Country x Religion benchmarks |
+| World Urbanization Prospects | UN DESA Population Division | 2018 | Country x Environment benchmarks |
+
+All benchmark data is included in the repository under `data/raw/benchmark_data/` with full attribution in `Sources.csv`.
+
+### Limitations of Benchmark Data
+
+The religious composition data from Pew dates to 2010 and may not reflect current demographics in rapidly changing regions. Urban/rural classifications use national-level data that can mask within-country variation. These limitations are inherent to the best available global demographic data and should be considered when interpreting GRI scores.

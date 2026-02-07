@@ -1,0 +1,167 @@
+---
+title: "Python Library"
+---
+
+## Installation
+
+```bash
+pip install gri
+```
+
+Requires Python 3.8+. Dependencies: `pandas`, `numpy`, `matplotlib`, `pyyaml`.
+
+## Quick Start
+
+### Object-Oriented API
+
+```python
+from gri import GRIAnalysis
+
+# Load survey and compute full scorecard
+analysis = GRIAnalysis.from_survey_file("survey_data.csv")
+scorecard = analysis.calculate_scorecard(include_max_possible=True)
+
+# Visualize and report
+analysis.plot_scorecard(save_to="scorecard.png")
+print(analysis.generate_report())
+```
+
+### Functional API
+
+```python
+from gri import calculate_gri, load_benchmark_suite, load_gd_survey
+
+# Load data
+survey = load_gd_survey(3)  # Global Dialogues wave 3
+benchmarks = load_benchmark_suite()
+
+# Calculate GRI for a single dimension
+gri_score = calculate_gri(
+    survey_df=survey,
+    benchmark_df=benchmarks["country_gender_age"],
+    strata_cols=["country", "gender", "age_group"]
+)
+print(f"GRI: {gri_score:.3f}")
+```
+
+## Key Functions
+
+| Function | Description |
+|:---|:---|
+| `calculate_gri()` | Core GRI calculation via TVD |
+| `calculate_diversity_score()` | Strata coverage measurement |
+| `calculate_gri_scorecard()` | Multi-dimensional scorecard |
+| `calculate_vwrs()` | Variance-Weighted Representativeness Score |
+| `calculate_sri()` | Strategic Representativeness Index |
+| `monte_carlo_max_scores()` | Maximum achievable score simulation |
+| `calculate_efficiency_ratio()` | Actual vs. theoretical maximum |
+
+## Key Classes
+
+| Class | Description |
+|:---|:---|
+| `GRIAnalysis` | High-level analysis wrapper (load, calculate, plot, report) |
+| `GRIScorecard` | Configuration-driven scorecard generator |
+| `GRIConfig` | Configuration management |
+
+## Data Format
+
+Survey data should be a CSV with one row per respondent and demographic columns:
+
+```
+country,gender,age_group,religion,environment
+India,Female,25-34,Hindu,Urban
+Brazil,Male,35-44,Christian,Urban
+Nigeria,Female,18-24,Muslim,Rural
+...
+```
+
+**Required columns** depend on which dimensions you calculate:
+
+| Column | Values | Used In |
+|:---|:---|:---|
+| `country` | Country name | All geographic dimensions |
+| `gender` | Male, Female | Gender-related dimensions |
+| `age_group` | 5-year bands (e.g., 18-24) | Age-related dimensions |
+| `religion` | Major religion category | Religion dimensions |
+| `environment` | Urban, Rural | Environment dimensions |
+
+The library includes built-in loaders for Global Dialogues data (`load_gd_survey()`) and World Values Survey data (`load_wvs_survey()`).
+
+## Interpreting Scores
+
+| GRI Range | Interpretation |
+|:---:|:---|
+| 0.90--1.00 | Excellent --- near-perfect demographic match |
+| 0.70--0.89 | Good --- strong representation with minor gaps |
+| 0.50--0.69 | Moderate --- noticeable demographic skew |
+| 0.30--0.49 | Low --- significant underrepresentation in key strata |
+| 0.00--0.29 | Very low --- major demographic mismatch |
+
+Context matters: a GRI of 0.35 on Country x Gender x Age (2,699 strata) is more impressive than 0.35 on Continent (6 strata). Always consider the [maximum achievable score](methodology.qmd#maximum-achievable-scores) for the dimension.
+
+## Advanced Features
+
+### Variance-Weighted Representativeness Score (VWRS)
+
+Weights each stratum's deviation by the variance of responses within that stratum, prioritizing representation in segments where opinions actually differ:
+
+```python
+from gri import calculate_vwrs
+
+vwrs = calculate_vwrs(
+    survey_df=survey,
+    benchmark_df=benchmark,
+    response_col="ai_sentiment",
+    strata_cols=["country", "gender"]
+)
+```
+
+### Strategic Representativeness Index (SRI)
+
+Combines GRI with diversity scores using configurable weights:
+
+```python
+from gri import calculate_sri
+
+sri = calculate_sri(
+    survey_df=survey,
+    benchmark_df=benchmark,
+    strata_cols=["country", "gender", "age_group"],
+    gri_weight=0.7,
+    diversity_weight=0.3
+)
+```
+
+### Visualization
+
+```python
+from gri import plot_gri_scorecard, plot_segment_deviations
+
+# Full scorecard heatmap
+plot_gri_scorecard(scorecard, save_to="heatmap.png")
+
+# Segment-level deviation analysis
+plot_segment_deviations(analysis, dimension="Country × Gender × Age",
+                        top_n=20, save_to="deviations.png")
+```
+
+### Monte Carlo Simulation
+
+Estimate the maximum achievable GRI for a given sample size:
+
+```python
+from gri import monte_carlo_max_scores
+
+max_scores = monte_carlo_max_scores(
+    benchmark_df=benchmark,
+    strata_cols=["country", "gender", "age_group"],
+    sample_size=1000,
+    n_simulations=1000
+)
+print(f"Max GRI at N=1000: {max_scores['max_gri']:.3f}")
+```
+
+## Source Code
+
+The full source code is available on [GitHub](https://github.com/collect-intel/gri). Issues and contributions are welcome.

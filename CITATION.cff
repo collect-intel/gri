@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "Global Representativeness Index (GRI)"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - given-names: Evan
+    family-names: Hadfield
+    affiliation: The Collective Intelligence Project
+  - given-names: Andrew
+    family-names: Konya
+    affiliation: Remesh.ai
+repository-code: https://github.com/collect-intel/gri
+url: https://collect-intel.github.io/gri/
+license: MIT
+version: 0.1.0
+date-released: 2025-01-01
+abstract: >-
+  A Python library and framework for measuring how well survey samples
+  represent the global population across demographic dimensions, using
+  Total Variation Distance.
+keywords:
+  - representativeness
+  - survey methodology
+  - total variation distance
+  - demographics
+  - global surveys
