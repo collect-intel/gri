@@ -16,7 +16,7 @@ Global survey research increasingly informs high-stakes decisions in AI governan
 
 ### 1.1 The Stakes of Non-Representative Data
 
-When the European Union drafted the AI Act, it drew on public opinion research to calibrate risk categories. When UNESCO published its Recommendation on the Ethics of Artificial Intelligence — the first global normative instrument on AI — the consultation process claimed to represent "global perspectives." But whose perspectives? A survey that oversamples urban, English-speaking, highly-educated respondents from a handful of countries does not represent the world, regardless of how many countries appear in its sample frame. The gap between claimed and actual representativeness is not merely an academic concern. It shapes which voices inform regulation, which cultural values get encoded into AI systems, and which populations bear the costs of policies designed without their input.
+When the European Union drafted the AI Act [European Parliament, 2024], it drew on public opinion research to calibrate risk categories. When UNESCO published its Recommendation on the Ethics of Artificial Intelligence — the first global normative instrument on AI [UNESCO, 2021] — the consultation process claimed to represent "global perspectives." But whose perspectives? A survey that oversamples urban, English-speaking, highly-educated respondents from a handful of countries does not represent the world, regardless of how many countries appear in its sample frame. The gap between claimed and actual representativeness is not merely an academic concern. It shapes which voices inform regulation, which cultural values get encoded into AI systems, and which populations bear the costs of policies designed without their input.
 
 This problem extends well beyond AI governance. The World Values Survey, Afrobarometer, Latinobarómetro, and other major cross-national instruments invest heavily in sampling design, yet each faces the fundamental challenge of measuring how closely their achieved samples match the populations they claim to represent. Response rates — once the gold standard of survey quality — have declined precipitously over recent decades and, in any case, measure participation rather than demographic fidelity [Brick and Williams, 2013]. Demographic quotas ensure minimum representation of specified groups but say nothing about whether the joint distribution of characteristics in the sample mirrors the population. Post-stratification weights can adjust for known imbalances, but they correct analysis rather than measuring the underlying problem.
 
@@ -56,7 +56,7 @@ We also note an important distinction between what the GRI measures and what it 
 
 Survey sampling theory, formalized by Neyman [1934] and extended by Kish [1965] and Horvitz and Thompson [1952], provides rigorous frameworks for designing probability samples and producing unbiased estimators. In a well-designed probability sample, every member of the target population has a known, nonzero probability of selection, and design-based inference proceeds by weighting observations inversely to their selection probabilities. This machinery works beautifully when the sampling frame covers the target population, nonresponse is manageable, and the logistical infrastructure for probability sampling exists.
 
-For global surveys, these conditions rarely hold simultaneously. No complete sampling frame exists for the world's population. Multi-country probability sampling requires coordinated fieldwork across dozens of national contexts with vastly different infrastructure, literacy levels, and cooperation norms. Even the most ambitious probability-based global surveys — the World Values Survey, the Gallup World Poll — face coverage gaps, differential nonresponse, and practical constraints that introduce unknown deviations from the theoretical design.
+For global surveys, these conditions rarely hold simultaneously. No complete sampling frame exists for the world's population. Multi-country probability sampling requires coordinated fieldwork across dozens of national contexts with vastly different infrastructure, literacy levels, and cooperation norms. Even the most ambitious probability-based global surveys — the World Values Survey [Haerpfer et al., 2022], the Gallup World Poll [Gallup, 2024] — face coverage gaps, differential nonresponse, and practical constraints that introduce unknown deviations from the theoretical design.
 
 Non-probability approaches — online panels, snowball sampling, convenience samples — are increasingly common in global research precisely because they are feasible at scale. The Global Dialogues survey on AI perceptions, which we use as our primary case study, employs purposive online sampling across 60+ countries. Such designs sacrifice the theoretical guarantees of probability sampling in exchange for breadth and speed. But the question of *how representative the resulting sample actually is* becomes correspondingly more urgent.
 
@@ -632,13 +632,13 @@ The framework is released as open-source software with authoritative population 
 
 [Bender and Friedman, 2018] Bender, E.M. and Friedman, B. (2018). "Data statements for natural language processing: Toward mitigating system bias and enabling better science." *Transactions of the Association for Computational Linguistics*, 6, 587–604.
 
-[CITATION NEEDED: UNESCO AI Ethics Recommendation consultation process documentation]
+[UNESCO, 2021] UNESCO (2021). *Recommendation on the Ethics of Artificial Intelligence*. Adopted by the General Conference at its 41st session, 23 November 2021. Available at: https://unesdoc.unesco.org/ark:/48223/pf0000381137
 
-[CITATION NEEDED: EU AI Act public consultation methodology]
+[European Parliament, 2024] European Parliament and Council of the European Union (2024). Regulation (EU) 2024/1689 Laying Down Harmonised Rules on Artificial Intelligence (AI Act). *Official Journal of the European Union*, L series, 12 July 2024. Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
 
-[CITATION NEEDED: World Values Survey methodology papers, Inglehart et al.]
+[Haerpfer et al., 2022] Haerpfer, C., Inglehart, R., Moreno, A., Welzel, C., Kizilova, K., Diez-Medrano, J., Lagos, M., Norris, P., Ponarin, E., and Puranen, B. (eds.) (2022). *World Values Survey: Round Seven — Country-Pooled Datafile Version 5.0*. Madrid, Spain & Vienna, Austria: JD Systems Institute & WVSA Secretariat. doi:10.14281/18241.24
 
-[CITATION NEEDED: Gallup World Poll methodology]
+[Gallup, 2024] Gallup (2024). *Worldwide Research Methodology and Codebook*. Gallup World Poll technical documentation. Available at: https://www.gallup.com/178667/gallup-world-poll-work.aspx
 
 ---
 
