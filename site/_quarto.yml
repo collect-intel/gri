@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Global Representativeness Index"
-  site-url: https://collect-intel.github.io/gri/
+  site-url: https://gri.cip.org/
   repo-url: https://github.com/collect-intel/gri
   repo-actions: [issue]
   navbar:

@@ -28,6 +28,9 @@ jobs:
       - name: Render site
         run: quarto render site
 
+      - name: Ensure CNAME in build output
+        run: cp site/CNAME site/_site/CNAME
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/_site
