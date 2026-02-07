@@ -51,11 +51,12 @@ class GRIAnalysis:
         survey_data: pd.DataFrame,
         benchmarks: Optional[Dict[str, pd.DataFrame]] = None,
         config: Optional[GRIConfig] = None,
-        survey_name: Optional[str] = None
+        survey_name: Optional[str] = None,
+        survey_source: str = 'global_dialogues'
     ):
         """
         Initialize GRI analysis.
-        
+
         Parameters
         ----------
         survey_data : pd.DataFrame
@@ -66,10 +67,14 @@ class GRIAnalysis:
             Configuration object. If None, uses default configuration.
         survey_name : str, optional
             Name of the survey for reporting
+        survey_source : str, default='global_dialogues'
+            Survey source identifier for segment mapping.
+            Use 'world_values_survey' for WVS data.
         """
         self.survey_data = survey_data
         self.config = config or GRIConfig()
         self.survey_name = survey_name or "Survey"
+        self.survey_source = survey_source
         
         # Load benchmarks if not provided
         if benchmarks is None:
@@ -128,12 +133,16 @@ class GRIAnalysis:
         if survey_type == 'gd':
             survey_data = load_gd_survey(filepath)
             survey_name = kwargs.pop('survey_name', Path(filepath).stem)
+            survey_source = 'global_dialogues'
         elif survey_type == 'wvs':
-            raise NotImplementedError("WVS loading will be implemented in Phase 4")
+            from .data_loader import load_wvs_survey
+            survey_data = load_wvs_survey(filepath)
+            survey_name = kwargs.pop('survey_name', Path(filepath).stem)
+            survey_source = 'world_values_survey'
         else:
             raise ValueError(f"Unknown survey type: {survey_type}")
-        
-        return cls(survey_data, survey_name=survey_name, **kwargs)
+
+        return cls(survey_data, survey_name=survey_name, survey_source=survey_source, **kwargs)
     
     def calculate_scorecard(
         self,
@@ -165,7 +174,7 @@ class GRIAnalysis:
         scorecard = calculate_gri_scorecard(
             self.survey_data,
             self.benchmarks,
-            survey_source='global_dialogues',
+            survey_source=self.survey_source,
             dimensions=dimensions,
             include_max_possible=include_max_possible,
             n_simulations=n_simulations,

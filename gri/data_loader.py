@@ -370,11 +370,17 @@ def load_wvs_survey(
         # Already in standard format
         df = pd.read_csv(filepath)
         logger.info(f"Loaded processed WVS Wave {wave} data: {len(df)} responses")
-        
-        # Apply standard segment mappings if config provided
-        if config:
-            df = apply_segment_mappings(df, config, survey_type='world_values_survey')
-        
+
+        # Load configuration
+        if config is None:
+            config = GRIConfig()
+
+        # Apply country name standardization (non-destructive)
+        _standardize_wvs_country_names(df, config)
+
+        # Add geographic hierarchies (region, continent)
+        df = _add_geographic_hierarchies(df, config)
+
         return df
     
     # For raw WVS data, provide helpful error
@@ -384,6 +390,32 @@ def load_wvs_survey(
         "1. Use pre-processed files from data/processed/surveys/wvs/\n"
         "2. Run: python scripts/process_wvs_survey.py"
     )
+
+
+def _standardize_wvs_country_names(df: pd.DataFrame, config: GRIConfig) -> None:
+    """
+    Apply non-destructive country name standardization to WVS data in-place.
+
+    Maps WVS country names (e.g. "United States", "South Korea") to benchmark
+    names (e.g. "United States of America", "Republic of Korea") while
+    preserving countries that already match.
+    """
+    if 'country' not in df.columns:
+        return
+
+    # Build reverse mapping from benchmark_mappings.country
+    segments_path = Path(config.config_dir) / 'segments.yaml'
+    with open(segments_path, 'r') as f:
+        segments = yaml.safe_load(f)
+
+    country_mappings = segments.get('benchmark_mappings', {}).get('country', {})
+    reverse_map = {}
+    for standard_name, variations in country_mappings.items():
+        for variation in variations:
+            reverse_map[variation] = standard_name
+
+    # Non-destructive: unmapped names pass through as-is
+    df['country'] = df['country'].map(lambda x: reverse_map.get(x, x))
 
 
 def validate_survey_data(

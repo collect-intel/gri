@@ -215,22 +215,24 @@ def test_calculate_gri_scorecard(sample_config, sample_survey_data):
 
 
 def test_standardize_survey_data_with_exclusions(sample_config):
-    """Test that unmapped segments are excluded."""
+    """Test that unmapped segments are excluded (except country which is non-destructive)."""
     survey_data = pd.DataFrame({
         'country': ['USA', 'Brazil'],  # Brazil not in mapping
         'gender': ['M', 'F'],
         'age_group': ['25-35', '35-45']
     })
-    
+
     standardized = standardize_survey_data(
-        survey_data, 
-        'test_survey', 
+        survey_data,
+        'test_survey',
         sample_config
     )
-    
-    # Brazil should be excluded (no mapping)
-    assert 'Brazil' not in standardized['country'].values
-    assert len(standardized) == 1  # Only USA row remains
+
+    # USA should be mapped to "United States"
+    assert 'United States' in standardized['country'].values
+    # Country mapping is non-destructive: unmapped names pass through as-is
+    assert 'Brazil' in standardized['country'].values
+    assert len(standardized) == 2
 
 
 def test_calculate_scorecard_with_extended_dimensions(sample_config, sample_survey_data):

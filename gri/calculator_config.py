@@ -55,10 +55,13 @@ def standardize_survey_data(
                     reverse_mapping[source_value] = standard_value
             
             # Apply mapping
-            df[segment_type] = df[segment_type].map(reverse_mapping)
-            
-            # Remove rows where mapping failed (excluded segments)
-            df = df.dropna(subset=[segment_type])
+            if segment_type == 'country':
+                # Non-destructive for country: unmapped names pass through as-is
+                df[segment_type] = df[segment_type].map(lambda x: reverse_mapping.get(x, x))
+            else:
+                df[segment_type] = df[segment_type].map(reverse_mapping)
+                # Remove rows where mapping failed (excluded segments)
+                df = df.dropna(subset=[segment_type])
     
     return df
 
@@ -247,16 +250,26 @@ def calculate_gri_scorecard(
             # Determine which benchmark data to use
             columns = dimension["columns"]
             
-            # Choose appropriate benchmark dataset
-            if set(["country", "gender", "age_group"]).issubset(set(columns)):
-                benchmark_df = benchmark_data.get("age_gender")
-            elif set(["country", "religion"]).issubset(set(columns)):
-                benchmark_df = benchmark_data.get("religion")
-            elif set(["country", "environment"]).issubset(set(columns)):
-                benchmark_df = benchmark_data.get("environment")
+            # Choose appropriate benchmark dataset based on which demographic columns are needed.
+            # Support both short keys ("age_gender") and full dimension names ("Country × Gender × Age").
+            # Use _get_benchmark to safely handle DataFrame-valued dicts (can't use `or` on DataFrames).
+            def _get_benchmark(*keys):
+                for k in keys:
+                    val = benchmark_data.get(k)
+                    if val is not None:
+                        return val
+                return None
+
+            col_set = set(columns)
+            if 'religion' in col_set:
+                benchmark_df = _get_benchmark("religion", "Country × Religion")
+            elif 'environment' in col_set:
+                benchmark_df = _get_benchmark("environment", "Country × Environment")
+            elif 'gender' in col_set or 'age_group' in col_set:
+                benchmark_df = _get_benchmark("age_gender", "Country × Gender × Age")
             else:
-                # For single dimensions or regional, use the most comprehensive dataset
-                benchmark_df = benchmark_data.get("age_gender")
+                # For country-only, region-only, continent-only, use the most comprehensive dataset
+                benchmark_df = _get_benchmark("age_gender", "Country × Gender × Age")
             
             if benchmark_df is None:
                 print(f"Warning: No suitable benchmark data for dimension '{dimension['name']}'")

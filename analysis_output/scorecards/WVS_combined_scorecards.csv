@@ -1,0 +1,27 @@
+dimension,gri_score,diversity_score,dimension_columns,sample_size,description,survey,n_participants
+Country × Gender × Age,0.3612040949382149,0.3475445223961144,"['country', 'gender', 'age_group']",76151,Fine-grained demographic representativeness,WVS_Wave_6,85219
+Country × Religion,0.28075728344183626,0.2659380692167577,"['country', 'religion']",76151,Religious representativeness by country,WVS_Wave_6,85219
+Country × Environment,0.27952531024908644,0.2618384401114206,"['country', 'environment']",76151,Urban/rural representativeness by country,WVS_Wave_6,85219
+Country,0.3699204095560824,0.27918781725888325,['country'],76151,Country-level representativeness,WVS_Wave_6,85219
+Region × Gender × Age,0.5855734503510033,0.9,"['region', 'gender', 'age_group']",76151,Regional demographic representativeness,WVS_Wave_6,85219
+Region × Religion,0.5535563890755648,0.824,"['region', 'religion']",76151,Regional religious representativeness,WVS_Wave_6,85219
+Region × Environment,0.5318065276038386,0.7727272727272727,"['region', 'environment']",76151,Regional urban/rural representativeness,WVS_Wave_6,85219
+Region,0.5972257263715839,0.8181818181818182,['region'],76151,Regional representativeness,WVS_Wave_6,85219
+Continent,0.8041000569415407,1.0,['continent'],76151,Continental representativeness,WVS_Wave_6,85219
+Religion,0.8472747732798261,1.0,['religion'],76151,Global religious representativeness,WVS_Wave_6,85219
+Environment,0.9208464568600787,1.0,['environment'],76151,Global urban/rural representativeness,WVS_Wave_6,85219
+Age Group,0.9525796937691678,1.0,['age_group'],76151,Global age representativeness,WVS_Wave_6,85219
+Gender,0.9775390894206925,1.0,['gender'],76151,Global gender representativeness,WVS_Wave_6,85219
+Country × Gender × Age,0.36337024382832395,0.36444941307993295,"['country', 'gender', 'age_group']",60379,Fine-grained demographic representativeness,WVS_Wave_7,62927
+Country × Religion,0.2955839002496867,0.32108317214700194,"['country', 'religion']",60379,Religious representativeness by country,WVS_Wave_7,62927
+Country × Environment,0.36198508582743827,0.3445378151260504,"['country', 'environment']",60379,Urban/rural representativeness by country,WVS_Wave_7,62927
+Country,0.37996199399657615,0.3541666666666667,['country'],60379,Country-level representativeness,WVS_Wave_7,62927
+Region × Gender × Age,0.5548766647597749,0.8958333333333334,"['region', 'gender', 'age_group']",60379,Regional demographic representativeness,WVS_Wave_7,62927
+Region × Religion,0.533205287221084,0.8547008547008547,"['region', 'religion']",60379,Regional religious representativeness,WVS_Wave_7,62927
+Region × Environment,0.5533967241973716,0.8181818181818182,"['region', 'environment']",60379,Regional urban/rural representativeness,WVS_Wave_7,62927
+Region,0.5585648913563612,0.8181818181818182,['region'],60379,Regional representativeness,WVS_Wave_7,62927
+Continent,0.6759321344343193,1.0,['continent'],60379,Continental representativeness,WVS_Wave_7,62927
+Religion,0.7654228927764596,1.0,['religion'],60379,Global religious representativeness,WVS_Wave_7,62927
+Environment,0.8570191488927771,1.0,['environment'],60379,Global urban/rural representativeness,WVS_Wave_7,62927
+Age Group,0.9472426188770154,1.0,['age_group'],60379,Global age representativeness,WVS_Wave_7,62927
+Gender,0.9697244672881131,1.0,['gender'],60379,Global gender representativeness,WVS_Wave_7,62927

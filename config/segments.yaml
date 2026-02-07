@@ -88,30 +88,32 @@ survey_mappings:
       # Use benchmark country mapping as base
       inherit_from: "benchmark_mappings.country"
       
-  # World Values Survey mappings (example for future implementation)
+  # World Values Survey mappings (for pre-processed text values from process_wvs_survey.py)
   world_values_survey:
     age_group:
-      # WVS uses different age brackets - map to closest GRI standard
-      "18-25": ["18-24", "18-29"]  # Approximate mapping
-      "26-35": ["25-29", "30-34"]
-      "36-45": ["35-39", "40-44"]
-      "46-55": ["45-49", "50-54"] 
-      "56-65": ["55-59", "60-64"]
-      "65+": ["65+", "65-69", "70+"]
-      
+      "18-25": ["18-25"]
+      "26-35": ["26-35"]
+      "36-45": ["36-45"]
+      "46-55": ["46-55"]
+      "56-65": ["56-65"]
+      "65+": ["65+", "66+"]
+
     gender:
-      "Male": ["1", "Male"]  # WVS uses numeric codes
-      "Female": ["2", "Female"]
-      
+      "Male": ["Male"]
+      "Female": ["Female"]
+
     religion:
-      # WVS religious categories mapped to GRI standard
-      "Christianity": ["1", "2", "3"]  # Roman Catholic, Protestant, Orthodox
-      "Islam": ["5"]
-      "Hinduism": ["6"]
-      "Buddhism": ["7"]
-      "Judaism": ["4"]
-      "I do not identify with any religious group or faith": ["0", "12"]
-      "Other religious group": ["8", "9", "10", "11"]
+      "Christianity": ["Roman Catholic", "Protestant", "Orthodox"]
+      "Islam": ["Muslim"]
+      "Hinduism": ["Hindu"]
+      "Buddhism": ["Buddhist"]
+      "Judaism": ["Jew"]
+      "I do not identify with any religious group or faith": ["No religious denomination"]
+      "Other religious group": ["Other"]
+      # Note: "No answer" is intentionally excluded (dropped during standardization)
+
+    country:
+      inherit_from: "benchmark_mappings.country"
 
 # Metadata
 metadata:
