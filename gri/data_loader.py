@@ -358,10 +358,10 @@ def load_wvs_survey(
     
     # Try to detect wave from filename if not provided
     if wave is None:
-        if 'wave7' in str(filepath).lower() or 'wave_7' in str(filepath).lower():
-            wave = 7
-        elif 'wave6' in str(filepath).lower() or 'wave_6' in str(filepath).lower():
-            wave = 6
+        import re
+        match = re.search(r'wave[_]?(\d+)', str(filepath).lower())
+        if match:
+            wave = int(match.group(1))
         else:
             raise ValueError("Could not detect WVS wave from filename. Please specify wave parameter.")
     

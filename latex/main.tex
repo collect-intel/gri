@@ -61,7 +61,7 @@
 % Abstract
 % ============================================================
 \begin{abstract}
-Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy---yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a $[0, 1]$ scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to six waves of the Global Dialogues survey on AI perceptions ($N = 6{,}500$ across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.29--0.37 on fine-grained demographics---capturing roughly 39\% of the theoretically maximum achievable representativeness at its sample size. We further introduce two complementary metrics---the Strategic Representativeness Index (SRI) for optimal sampling design and the Variance-Weighted Representativeness Score (VWRS) for reliability-adjusted assessment---and release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks.
+Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy---yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a $[0, 1]$ scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to six waves of the Global Dialogues survey on AI perceptions ($N = 6{,}500$ across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.29--0.37 on fine-grained demographics---capturing roughly 39\% of the theoretically maximum achievable representativeness at its sample size. We further introduce the Strategic Representativeness Index (SRI) for optimal sampling design, and show that the GRI connects to classical survey statistics through the design effect: low-GRI samples inflate estimation variance, reducing effective sample size in proportion to the squared coefficient of variation of the post-stratification weights. We release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks.
 \end{abstract}
 
 \noindent\textbf{Keywords:} representativeness, survey methodology, Total Variation Distance, demographic measurement, machine learning dataset auditing, AI governance
@@ -244,9 +244,7 @@ The \textbf{efficiency ratio} separates structural limitations from allocation f
 
 The Monte Carlo maximum assumes an oracle allocator; real surveys face recruitment friction, language barriers, and differential willingness to participate. The max GRI is therefore an upper bound on the upper bound---but low efficiency against even this generous ceiling indicates clear room for improvement.
 
-\subsection{Metric Variants: SRI and VWRS}
-
-\subsubsection{Strategic Representativeness Index (SRI)}
+\subsection{The Strategic Representativeness Index (SRI)}
 
 The SRI replaces the population-proportional target with a square-root-proportional target:
 \begin{equation}\label{eq:sri_target}
@@ -258,13 +256,24 @@ The SRI replaces the population-proportional target with a square-root-proportio
 
 The $\sqrt{q_i}$ target can be derived as the allocation minimizing the maximum relative estimation error across strata when within-stratum variances are proportional to stratum size. It moderately boosts targets for smaller strata while tempering larger ones---useful for prospective survey design.
 
-\subsubsection{Variance-Weighted Representativeness Score (VWRS)}
+\subsection{The Inferential Cost of Low Representativeness}
 
-The VWRS adjusts for statistical reliability:
-\begin{equation}\label{eq:vwrs}
-    \text{VWRS} = 1 - \frac{\sum_{i=1}^K w_i \cdot |p_i - q_i|}{\sum_{i=1}^K w_i}
+A natural objection to the GRI is: if the sample's demographic composition doesn't match the population, can't we simply apply post-stratification weights? The answer is yes---but at a quantifiable cost to statistical precision.
+
+When sample proportions $p_i$ differ from population proportions $q_i$, applying post-stratification weights $w_i = q_i / p_i$ produces unbiased population-level estimates. But the variance of the weighted estimator is inflated by the \textbf{design effect} \citep{kish1965survey}:
+\begin{equation}\label{eq:deff}
+    d_{\text{eff}} = 1 + \text{CV}^2(w)
 \end{equation}
-where $w_i = q_i \cdot \text{SE}_i \cdot r_i$, with $\text{SE}_i = \sqrt{\hat{p}_i(1 - \hat{p}_i) / n_i}$ and reliability factor $r_i$ (default 1). The VWRS is a deliberate hybrid: unlike the pure representativeness metrics GRI and SRI, it incorporates stratum-level statistical reliability. It answers ``how consequential are the distributional gaps for inference?'' rather than ``how closely does the sample mirror the population?''
+where $\text{CV}^2(w) = \text{Var}(w) / \bar{w}^2$ is the squared coefficient of variation of the weights. The \textbf{effective sample size} is:
+\begin{equation}\label{eq:neff}
+    N_{\text{eff}} = \frac{N}{d_{\text{eff}}}
+\end{equation}
+
+A design effect of 3.0 means the weighted estimates have the same precision as a simple random sample one-third the size---two-thirds of the data collection budget has been consumed by the need to reweight.
+
+The connection to the GRI is through the weight distribution: when $p_i \approx q_i$ for all strata, the weights are near 1.0, the CV of weights is small, and the design effect approaches 1.0. As distributional mismatch grows (GRI decreases), some weights become extreme, the CV increases, and precision degrades. Formally, $d_{\text{eff}} = \sum_i q_i^2 / p_i$---driven by a ratio-based divergence (related to $\chi^2$ distance) rather than the $L_1$ distance underlying TVD. We recommend reporting \emph{both} the GRI and the design effect: the GRI measures distributional distance with equal treatment of all probability mass, while the design effect captures the inferential consequence, which is disproportionately driven by strata where the sample is thin relative to the population.
+
+Post-stratification reweighting is not a substitute for representative sampling for four reasons: (1) variance inflation is quadratic---doubling $q_i/p_i$ quadruples that stratum's contribution to the design effect; (2) empty strata ($p_i = 0$) are uncorrectable; (3) extreme weights increase model dependence and sensitivity to outliers; and (4) reweighting treats the symptom (bias) but not the cause (poor allocation), leaving confidence intervals unnecessarily wide.
 
 % ============================================================
 % 4. Empirical Application
@@ -336,28 +345,26 @@ C $\times$ Environ. & 0.950 & 38.8\% & 35.7\% & 40.7\% & 41.0\% & 37.2\% & 36.3\
 \end{tabular}
 \end{table}
 
-\subsection{Metric Variant Comparison}
+\subsection{Metric Comparison: GRI, SRI, and Efficiency}
 
-Table~\ref{tab:variants} compares GRI, SRI, and VWRS for GD5. The gap between GRI (0.30) and VWRS (0.80) on Country $\times$ Gender $\times$ Age quantifies the difference between aspirational and achievable representativeness.
+Table~\ref{tab:variants} compares GRI and SRI for GD5 alongside the efficiency ratio. SRI scores are generally similar to GRI but differ at extremes: for Continent, SRI is higher (0.841 vs.\ 0.773) because the square-root transformation boosts smaller continents; for Religion, SRI is lower (0.745 vs.\ 0.813) because strategic targets boost underrepresented religions.
 
 \begin{table}[h]
 \centering
-\caption{Comparison of GRI, SRI, and VWRS for GD5 ($N = 1{,}057$).}
+\caption{Comparison of GRI, SRI, and efficiency ratio for GD5 ($N = 1{,}057$).}
 \label{tab:variants}
-\begin{tabular}{@{}lccc@{}}
+\begin{tabular}{@{}lcccc@{}}
 \toprule
-Dimension & GRI & SRI & VWRS \\
+Dimension & GRI & SRI & Max GRI & Efficiency \\
 \midrule
-Country $\times$ Gender $\times$ Age & 0.301 & 0.306 & 0.802 \\
-Country $\times$ Religion & 0.484 & 0.424 & 0.969 \\
-Country $\times$ Environment & 0.354 & 0.336 & 0.980 \\
-Country & 0.527 & 0.457 & 0.981 \\
-Region & 0.738 & 0.749 & 0.959 \\
-Continent & 0.773 & 0.841 & 0.869 \\
-Religion & 0.813 & 0.745 & 0.944 \\
-Gender & 0.986 & 0.986 & 0.986 \\
-\midrule
-\textbf{Overall Average} & \textbf{0.619} & \textbf{0.602} & \textbf{0.922} \\
+Country $\times$ Gender $\times$ Age & 0.301 & 0.306 & 0.792 & 38.0\% \\
+Country $\times$ Religion & 0.484 & 0.424 & 0.938 & 51.6\% \\
+Country $\times$ Environment & 0.354 & 0.336 & 0.950 & 37.3\% \\
+Country & 0.527 & 0.457 & --- & --- \\
+Region & 0.738 & 0.749 & --- & --- \\
+Continent & 0.773 & 0.841 & --- & --- \\
+Religion & 0.813 & 0.745 & --- & --- \\
+Gender & 0.986 & 0.986 & --- & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -423,7 +430,7 @@ analysis.plot_scorecard(save_to='scorecard.png')
 
 \textbf{Diversity Score non-monotonicity.} The $1/N$ threshold means that as $N$ increases, more strata become ``relevant.'' The Diversity Score can decrease with larger samples if newly relevant strata go unrepresented---semantically correct but potentially counterintuitive.
 
-\textbf{Benchmark uncertainty.} Population benchmarks are estimates with uncertainty. A fully Bayesian treatment propagating benchmark uncertainty into GRI confidence intervals remains future work.
+\textbf{Benchmark uncertainty.} Population benchmarks are estimates with uncertainty. A fully Bayesian treatment propagating benchmark uncertainty into GRI confidence intervals---treating $q_i$ as random variables reflecting census quality---remains future work.
 
 \textbf{Scalability.} Adding dimensions multiplicatively increases strata. The pairwise scorecard approach captures the most important signals but loses higher-order interaction information.
 
@@ -438,7 +445,7 @@ The GRI transforms a vague question---``How representative is this survey?''---i
 
 Adoption of the GRI enables three changes. First, \textbf{transparency}: standardized, comparable representativeness scores alongside results. Second, \textbf{optimization}: segment-level decomposition identifies which demographic gaps matter most. Third, \textbf{accountability}: funders can set minimum representativeness targets for research claiming global scope.
 
-The complementary SRI and VWRS span the survey lifecycle---design, execution, and evaluation. The framework is released as open-source software with authoritative population benchmarks. We invite the survey methodology and ML dataset quality communities to adopt, critique, and extend it.
+The complementary metrics span the survey lifecycle: the SRI for design, efficiency ratios for contextualizing scores against structural constraints, and the design effect for quantifying inferential cost. The framework is released as open-source software with authoritative population benchmarks. We invite the survey methodology and ML dataset quality communities to adopt, critique, and extend it.
 
 % ============================================================
 % References

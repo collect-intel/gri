@@ -51,6 +51,12 @@ Thumbs.db
 *.pkl
 *_embeddings.json
 
+# WVS raw data (license prohibits redistribution)
+data/raw/survey_data/wvs/WVS_data/
+data/raw/survey_data/wvs/WVS_Time_Series_*.csv
+data/raw/survey_data/wvs/*.zip
+
 # Quarto
 site/_site/
 .quarto/
+/.playwright-mcp
