@@ -1,0 +1,3 @@
+environment,population_proportion,sample_count,sample_proportion,absolute_deviation,signed_deviation,gri_contribution_points,deviation_percentage_points,representation_ratio,over_under_representation_pct,dimension,stratum_id,representation_category
+Rural,0.4471428942016761,75,0.08296460176991151,0.3641782924317646,-0.3641782924317646,18.208914621588228,-36.417829243176456,0.18554382244636936,-81.44561775536306,Environment,environment:Rural,Highly Under-represented
+Urban,0.5528571057983239,829,0.9170353982300885,0.3641782924317646,0.3641782924317646,18.208914621588228,36.417829243176456,1.658720469742163,65.87204697421629,Environment,environment:Urban,Highly Over-represented

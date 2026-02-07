@@ -1,0 +1,160 @@
+Top Contributing Segments Analysis: GD8
+============================================================
+
+Survey: GD8
+Total participants: 904
+Analysis date: 2026-02-06 07:44:58
+
+Country × Gender × Age:
+  Total segments: 2,699
+  Represented segments: 250
+  Missing segments: 2,449
+  Coverage rate: 9.3%
+  Top 10 segments contribute: 11.87 pp to GRI
+
+Country × Religion:
+  Total segments: 1,607
+  Represented segments: 112
+  Missing segments: 1,495
+  Coverage rate: 7.0%
+  Top 10 segments contribute: 19.34 pp to GRI
+
+Country × Environment:
+  Total segments: 449
+  Represented segments: 83
+  Missing segments: 366
+  Coverage rate: 18.5%
+  Top 10 segments contribute: 31.75 pp to GRI
+
+Country:
+  Total segments: 228
+  Represented segments: 61
+  Missing segments: 167
+  Coverage rate: 26.8%
+  Top 10 segments contribute: 23.92 pp to GRI
+
+Region × Gender × Age:
+  Total segments: 264
+  Represented segments: 126
+  Missing segments: 138
+  Coverage rate: 47.7%
+  Top 10 segments contribute: 11.30 pp to GRI
+
+Region × Religion:
+  Total segments: 154
+  Represented segments: 64
+  Missing segments: 90
+  Coverage rate: 41.6%
+  Top 10 segments contribute: 20.24 pp to GRI
+
+Region × Environment:
+  Total segments: 44
+  Represented segments: 31
+  Missing segments: 13
+  Coverage rate: 70.5%
+  Top 10 segments contribute: 36.66 pp to GRI
+
+Region:
+  Total segments: 22
+  Represented segments: 18
+  Missing segments: 4
+  Coverage rate: 81.8%
+  Top 10 segments contribute: 21.44 pp to GRI
+
+Continent:
+  Total segments: 6
+  Represented segments: 6
+  Missing segments: 0
+  Coverage rate: 100.0%
+  Top 10 segments contribute: 14.42 pp to GRI
+
+Religion:
+  Total segments: 7
+  Represented segments: 7
+  Missing segments: 0
+  Coverage rate: 100.0%
+  Top 10 segments contribute: 15.79 pp to GRI
+
+Environment:
+  Total segments: 2
+  Represented segments: 2
+  Missing segments: 0
+  Coverage rate: 100.0%
+  Top 10 segments contribute: 36.42 pp to GRI
+
+Age Group:
+  Total segments: 6
+  Represented segments: 5
+  Missing segments: 1
+  Coverage rate: 83.3%
+  Top 10 segments contribute: 29.57 pp to GRI
+
+Gender:
+  Total segments: 2
+  Represented segments: 2
+  Missing segments: 0
+  Coverage rate: 100.0%
+  Top 10 segments contribute: 0.22 pp to GRI
+
+TOP 10 CONTRIBUTING SEGMENTS (All Dimensions):
+--------------------------------------------------
+ 1. environment:Rural (Environment)
+    GRI Impact: 18.209 pp
+    Deviation: -36.42 pp
+    Representation: -81.4%
+    Category: Highly Under-represented
+
+ 2. environment:Urban (Environment)
+    GRI Impact: 18.209 pp
+    Deviation: +36.42 pp
+    Representation: +65.9%
+    Category: Highly Over-represented
+
+ 3. age_group:26-35 (Age Group)
+    GRI Impact: 10.231 pp
+    Deviation: +20.46 pp
+    Representation: +102.8%
+    Category: Highly Over-represented
+
+ 4. country:China (Country)
+    GRI Impact: 7.843 pp
+    Deviation: -15.69 pp
+    Representation: -80.2%
+    Category: Highly Under-represented
+
+ 5. region:Eastern Asia (Region)
+    GRI Impact: 7.728 pp
+    Deviation: -15.46 pp
+    Representation: -67.3%
+    Category: Highly Under-represented
+
+ 6. continent:Asia (Continent)
+    GRI Impact: 7.212 pp
+    Deviation: -14.42 pp
+    Representation: -23.8%
+    Category: Under-represented
+
+ 7. region:Southern Asia × environment:Urban (Region × Environment)
+    GRI Impact: 7.089 pp
+    Deviation: +14.18 pp
+    Representation: +176.0%
+    Category: Highly Over-represented
+
+ 8. region:Southern Asia × environment:Rural (Region × Environment)
+    GRI Impact: 6.775 pp
+    Deviation: -13.55 pp
+    Representation: -86.6%
+    Category: Highly Under-represented
+
+ 9. country:India × environment:Urban (Country × Environment)
+    GRI Impact: 6.771 pp
+    Deviation: +13.54 pp
+    Representation: +224.3%
+    Category: Highly Over-represented
+
+10. country:Kenya (Country)
+    GRI Impact: 6.739 pp
+    Deviation: +13.48 pp
+    Representation: +2362.3%
+    Category: Highly Over-represented
+

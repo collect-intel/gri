@@ -1,0 +1,3 @@
+gender,population_proportion,sample_count,sample_proportion,absolute_deviation,signed_deviation,gri_contribution_points,deviation_percentage_points,representation_ratio,over_under_representation_pct,dimension,stratum_id,representation_category
+Male,0.4989484156678813,453,0.5011061946902655,0.002157779022384232,0.002157779022384232,0.1078889511192116,0.2157779022384232,1.0043246535205366,0.432465352053657,Gender,gender:Male,Over-represented
+Female,0.5010515843321187,451,0.49889380530973454,0.0021577790223841764,-0.0021577790223841764,0.10788895111920882,-0.21577790223841764,0.9956934992526559,-0.43065007473440664,Gender,gender:Female,Under-represented
