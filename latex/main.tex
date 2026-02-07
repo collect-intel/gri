@@ -1,0 +1,504 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================================
+% Packages
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+% ============================================================
+% Theorem environments
+% ============================================================
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+% ============================================================
+% Listings style for Python
+% ============================================================
+\lstset{
+  language=Python,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red!70!black},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=5pt,
+  frame=single,
+  breaklines=true,
+  captionpos=b,
+}
+
+% ============================================================
+% Title
+% ============================================================
+\title{The Global Representativeness Index:\\A Total Variation Distance Framework for Measuring\\Demographic Fidelity in Survey Research}
+
+\author{GRI Project Contributors\thanks{Correspondence: \texttt{[correspondence email]}}}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+% Abstract
+% ============================================================
+\begin{abstract}
+Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy---yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a $[0, 1]$ scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to six waves of the Global Dialogues survey on AI perceptions ($N = 6{,}500$ across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.29--0.37 on fine-grained demographics---capturing roughly 39\% of the theoretically maximum achievable representativeness at its sample size. We further introduce two complementary metrics---the Strategic Representativeness Index (SRI) for optimal sampling design and the Variance-Weighted Representativeness Score (VWRS) for reliability-adjusted assessment---and release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks.
+\end{abstract}
+
+\noindent\textbf{Keywords:} representativeness, survey methodology, Total Variation Distance, demographic measurement, machine learning dataset auditing, AI governance
+
+% ============================================================
+% 1. Introduction
+% ============================================================
+\section{Introduction}
+
+\subsection{The Stakes of Non-Representative Data}
+
+When the European Union drafted the AI Act, it drew on public opinion research to calibrate risk categories. When UNESCO published its Recommendation on the Ethics of Artificial Intelligence---the first global normative instrument on AI---the consultation process claimed to represent ``global perspectives.'' But whose perspectives? A survey that oversamples urban, English-speaking, highly-educated respondents from a handful of countries does not represent the world, regardless of how many countries appear in its sample frame. The gap between claimed and actual representativeness shapes which voices inform regulation, which cultural values get encoded into AI systems, and which populations bear the costs of policies designed without their input.
+
+This problem extends beyond AI governance. The World Values Survey, Afrobarometer, Latinobar\'{o}metro, and other major cross-national instruments invest heavily in sampling design, yet each faces the fundamental challenge of measuring how closely their achieved samples match the populations they claim to represent. Response rates---once the gold standard of survey quality---have declined precipitously and measure participation rather than demographic fidelity \citep{brick2013explaining}. Demographic quotas ensure minimum representation of specified groups but say nothing about whether the \emph{joint distribution} of characteristics in the sample mirrors the population. Post-stratification weights can adjust for known imbalances, but they correct analysis rather than measuring the underlying problem.
+
+What the field lacks is a formal, reproducible metric that answers a simple question: \emph{How well does this sample's demographic composition match the target population?}
+
+\subsection{The Measurement Gap}
+
+The absence of a standardized representativeness metric creates three practical problems. First, researchers cannot objectively compare the demographic quality of different surveys or different waves of the same survey. Second, survey designers lack quantitative targets for sampling---they can set quotas for individual demographics but cannot optimize for the joint distribution across multiple dimensions. Third, consumers of survey research---policymakers, journalists, the public---have no way to assess claims of ``global'' or ``representative'' sampling beyond trusting the methodology section.
+
+R-indicators \citep{schouten2009indicators} measure the variation in response propensities across population subgroups, requiring auxiliary population data to model these propensities. R-indicators answer a related but distinct question: ``How uniform is the response mechanism?'' rather than ``How closely does the achieved sample match the population distribution?'' The GRI complements R-indicators by directly measuring the distributional outcome regardless of the mechanism that produced it---a distinction that matters particularly for non-probability samples where response propensities are undefined. Balance metrics from the causal inference literature \citep{rubin2001using,stuart2010matching} assess covariate balance between treatment and control groups but are designed for experimental rather than survey contexts.
+
+\subsection{Contributions}
+
+This paper makes four contributions:
+\begin{enumerate}
+    \item \textbf{A formal mathematical framework} for measuring survey representativeness based on Total Variation Distance, producing an interpretable score bounded on $[0, 1]$ with clear properties.
+    \item \textbf{A multi-dimensional approach} that evaluates representativeness across three benchmark dimensions simultaneously---Country $\times$ Gender $\times$ Age, Country $\times$ Religion, and Country $\times$ Urban/Rural Environment---using authoritative population data from the United Nations and Pew Research Center.
+    \item \textbf{Empirical validation} through application to six waves of the Global Dialogues survey ($N \approx 1{,}000$ per wave), including Monte Carlo simulation of maximum achievable scores and efficiency analysis.
+    \item \textbf{An open-source Python library} (\texttt{gri}) implementing the complete framework.
+\end{enumerate}
+
+\subsection{Scope and Normative Commitments}
+
+A representativeness metric necessarily embeds normative choices. The GRI, as formulated with global population benchmarks, adopts a specific normative position: \emph{one person, one unit of representativeness}. A survey is maximally representative when its demographic composition mirrors the world's population, weighting each person equally regardless of nationality, political influence, or institutional context.
+
+This is a defensible default for research claiming to capture ``global perspectives.'' But it is not the only defensible choice. An AI governance survey might reasonably weight countries by their AI capability or regulatory influence; a climate adaptation survey might weight by climate vulnerability. The GRI framework accommodates such choices: researchers can substitute custom population benchmarks that reflect their specific representativeness goals.
+
+We also note an important distinction: the GRI measures \emph{marginal distributional distance}---how closely the sample's demographic composition matches the target population. It does not directly measure inferential quality: a sample with low GRI can produce unbiased estimates if appropriate post-stratification weights are applied, and a sample with high GRI can still produce biased estimates if respondents within each demographic cell are non-randomly selected. The GRI measures the \emph{input} to inference---the demographic composition of the raw sample---not the quality of the estimates that emerge after weighting and adjustment.
+
+% ============================================================
+% 2. Related Work
+% ============================================================
+\section{Beyond Response Rates: The Case for Distributional Metrics}
+
+\subsection{Classical Foundations and Their Limits}
+
+Survey sampling theory, formalized by \citet{neyman1934two} and extended by \citet{kish1965survey} and \citet{horvitz1952generalization}, provides rigorous frameworks for designing probability samples and producing unbiased estimators. For global surveys, the conditions for probability sampling rarely hold simultaneously: no complete sampling frame exists for the world's population, and multi-country probability sampling requires coordinated fieldwork across vastly different national contexts.
+
+Non-probability approaches---online panels, snowball sampling, convenience samples---are increasingly common precisely because they are feasible at scale. Such designs sacrifice the theoretical guarantees of probability sampling in exchange for breadth and speed. The question of \emph{how representative the resulting sample actually is} becomes correspondingly more urgent.
+
+\subsection{Representativeness Metrics in Current Practice}
+
+Response rates bear little systematic relationship to nonresponse bias \citep{groves2006nonresponse}, a finding reinforced by meta-analyses across survey contexts \citep{groves2008impact}. R-indicators \citep{schouten2009indicators} measure how much response propensities vary across population subgroups. Like the GRI, R-indicators require auxiliary population data. The key conceptual difference is that R-indicators measure \emph{mechanism} (variation in response propensities) while the GRI measures \emph{outcome} (distance between achieved and target distributions). R-indicators are well-suited to probability surveys where response propensities are meaningful; the GRI applies equally to probability and non-probability samples.
+
+\subsection{Total Variation Distance as a Foundation}
+
+Total Variation Distance (TVD) is the natural metric for comparing discrete probability distributions. For two distributions $P$ and $Q$ defined over the same finite set:
+\begin{equation}\label{eq:tvd}
+    \text{TVD}(P, Q) = \frac{1}{2} \sum_{i} |p_i - q_i|
+\end{equation}
+
+TVD has several desirable properties: it is bounded ($0 \leq \text{TVD} \leq 1$), symmetric, interpretable (the fraction of probability mass that must be moved to transform one distribution into the other), non-parametric, and decomposable (each stratum's contribution is identifiable).
+
+Alternative metrics have drawbacks for this application. KL divergence is asymmetric, undefined when $q_i = 0$, and unbounded. The Hellinger distance, $H(P,Q) = \frac{1}{\sqrt{2}}\sqrt{\sum_i (\sqrt{p_i} - \sqrt{q_i})^2}$, is symmetric and bounded but less directly interpretable. The chi-squared distance is sensitive to small expected counts---precisely the scenario that arises frequently in global benchmarks.
+
+We opt for a TVD + Diversity Score decomposition over a single Hellinger-based index for three reasons: (1) \textbf{interpretability}---a TVD of 0.3 means ``30\% of mass is misallocated,'' while Hellinger 0.3 has no simple prose interpretation; (2) \textbf{decomposability}---TVD decomposes additively into per-stratum contributions, enabling segment-level diagnostics; and (3) \textbf{separation of concerns}---distributional fidelity and coverage are conceptually distinct aspects that practitioners need to evaluate independently. TVD and Hellinger are formally related: $H^2(P,Q) \leq \text{TVD}(P,Q) \leq H(P,Q)\sqrt{2}$, so the choice is one of transparency, not mathematical necessity.
+
+% ============================================================
+% 3. Methodology
+% ============================================================
+\section{Methodology}
+
+\subsection{The Global Representativeness Index}
+
+\subsubsection{Formal Definition}
+
+\begin{definition}
+Let $\mathcal{S} = \{s_1, s_2, \ldots, s_K\}$ denote the set of $K$ demographic strata. For a survey sample of size $N$ and a reference population, define $p_i$ as the sample proportion in stratum $i$ and $q_i$ as the population proportion. The \textbf{Global Representativeness Index} is:
+\begin{equation}\label{eq:gri}
+    \text{GRI} = 1 - \frac{1}{2} \sum_{i=1}^{K} |p_i - q_i|
+\end{equation}
+Equivalently, $\text{GRI} = 1 - \text{TVD}(P, Q)$.
+\end{definition}
+
+\subsubsection{Properties}
+
+\begin{theorem}[Boundedness]\label{thm:bounds}
+For any two discrete probability distributions $P$ and $Q$ over $K$ categories, $0 \leq \text{GRI}(P, Q) \leq 1$.
+\end{theorem}
+\begin{proof}
+Since $\text{GRI} = 1 - \text{TVD}$, it suffices to show $0 \leq \text{TVD} \leq 1$. The lower bound follows from non-negativity of absolute values. For the upper bound: $\sum_i |p_i - q_i| \leq \sum_i (p_i + q_i) = 2$, so $\text{TVD} \leq 1$. Equality holds when $P$ and $Q$ have disjoint support.
+\end{proof}
+
+\begin{theorem}[Monotonicity]\label{thm:mono}
+Let $P$ be a sample distribution and $Q$ the target. Transferring mass $\delta > 0$ from an over-represented stratum $j$ ($p_j > q_j$) to an under-represented stratum $k$ ($p_k < q_k$), with $\delta \leq \min(p_j - q_j, q_k - p_k)$, strictly increases the GRI.
+\end{theorem}
+\begin{proof}
+The change in TVD is $\Delta\text{TVD} = \frac{1}{2}(|p_j - \delta - q_j| + |q_k - p_k - \delta| - |p_j - q_j| - |q_k - p_k|) = -\delta < 0$.
+\end{proof}
+
+\subsubsection{Interpretation Scale}
+
+We propose interpretation guidelines calibrated against Monte Carlo simulations of achievable scores (Table~\ref{tab:interpretation}).
+
+\begin{table}[h]
+\centering
+\caption{GRI interpretation guidelines.}
+\label{tab:interpretation}
+\begin{tabular}{@{}lll@{}}
+\toprule
+GRI Score & Interpretation & Meaning \\
+\midrule
+$0.8$--$1.0$ & Excellent & $<20\%$ of mass misallocated \\
+$0.6$--$0.8$ & Good & $20$--$40\%$ misallocation \\
+$0.4$--$0.6$ & Moderate & $40$--$60\%$ misallocation \\
+$0.0$--$0.4$ & Poor & $>60\%$ misallocation \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The Diversity Score}
+
+The GRI measures distributional fidelity; the Diversity Score captures \emph{coverage}---how many population strata the sample reaches at all.
+
+\begin{definition}
+Let $N$ be the sample size and $X = 1/N$ the relevance threshold. A stratum is \textbf{relevant} if $q_i > X$ and \textbf{represented} if $p_i > 0$. The Diversity Score is:
+\begin{equation}\label{eq:diversity}
+    \text{DiversityScore} = \frac{|\{i : p_i > 0 \text{ and } q_i > X\}|}{|\{i : q_i > X\}|}
+\end{equation}
+\end{definition}
+
+The threshold $X = 1/N$ identifies strata where we would expect at least one observation in a perfectly proportional sample. Under the Poisson approximation, the probability of observing at least one member is $1 - e^{-1} \approx 0.632$ for relevant strata.
+
+\subsection{Multi-Dimensional Scorecard}
+
+Three primary dimensions define the cross-classified strata (Table~\ref{tab:benchmarks}). The choice reflects three criteria: (1) availability of authoritative, country-level data covering virtually all nations; (2) established relevance to opinion formation in social science; and (3) respondent observability.
+
+\begin{table}[h]
+\centering
+\caption{Benchmark data sources.}
+\label{tab:benchmarks}
+\begin{tabular}{@{}lllrl@{}}
+\toprule
+Source & Variables & Coverage & Year & Strata \\
+\midrule
+UN World Population Prospects & Country, Gender, Age & 237 areas & 2023 & 2,699 \\
+Pew Global Religious Landscape & Country, Religion & 232 countries & 2010 & 1,607 \\
+UN World Urbanization Prospects & Country, Urban/Rural & 233 countries & 2018 & 449 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The scorecard also evaluates representativeness at coarser resolutions---Region (22 UN sub-regions) and Continent (6)---crossed with demographic variables, plus marginal distributions. This produces 13 dimensions ranging from Country $\times$ Gender $\times$ Age (most demanding) to Gender (least).
+
+\subsection{Maximum Possible Scores and Efficiency Ratios}
+
+Perfect representativeness (GRI = 1.0) is mathematically impossible at realistic sample sizes when the number of strata is large. We estimate the \textbf{maximum achievable GRI} through Monte Carlo simulation: for each dimension and sample size, we draw 1,000 optimal sample allocations and report the mean maximum GRI (Table~\ref{tab:max_gri}).
+
+\begin{table}[h]
+\centering
+\caption{Maximum achievable GRI by sample size (Monte Carlo, 1,000 simulations).}
+\label{tab:max_gri}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Dimension & $N=100$ & $N=250$ & $N=500$ & $N=1{,}000$ & $N=2{,}000$ \\
+\midrule
+Country $\times$ Gender $\times$ Age & 0.430 & 0.581 & 0.691 & 0.792 & 0.873 \\
+Country $\times$ Religion & 0.721 & 0.839 & 0.898 & 0.938 & 0.965 \\
+Country $\times$ Environment & 0.714 & 0.844 & 0.906 & 0.950 & 0.976 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The \textbf{efficiency ratio} separates structural limitations from allocation failures:
+\begin{equation}\label{eq:efficiency}
+    \text{Efficiency} = \frac{\text{GRI}_{\text{actual}}}{\text{GRI}_{\text{max}}}
+\end{equation}
+
+The Monte Carlo maximum assumes an oracle allocator; real surveys face recruitment friction, language barriers, and differential willingness to participate. The max GRI is therefore an upper bound on the upper bound---but low efficiency against even this generous ceiling indicates clear room for improvement.
+
+\subsection{Metric Variants: SRI and VWRS}
+
+\subsubsection{Strategic Representativeness Index (SRI)}
+
+The SRI replaces the population-proportional target with a square-root-proportional target:
+\begin{equation}\label{eq:sri_target}
+    s_i^* = \frac{\sqrt{q_i}}{\sum_j \sqrt{q_j}}
+\end{equation}
+\begin{equation}\label{eq:sri}
+    \text{SRI} = 1 - \frac{1}{2} \sum_{i=1}^{K} |p_i - s_i^*|
+\end{equation}
+
+The $\sqrt{q_i}$ target can be derived as the allocation minimizing the maximum relative estimation error across strata when within-stratum variances are proportional to stratum size. It moderately boosts targets for smaller strata while tempering larger ones---useful for prospective survey design.
+
+\subsubsection{Variance-Weighted Representativeness Score (VWRS)}
+
+The VWRS adjusts for statistical reliability:
+\begin{equation}\label{eq:vwrs}
+    \text{VWRS} = 1 - \frac{\sum_{i=1}^K w_i \cdot |p_i - q_i|}{\sum_{i=1}^K w_i}
+\end{equation}
+where $w_i = q_i \cdot \text{SE}_i \cdot r_i$, with $\text{SE}_i = \sqrt{\hat{p}_i(1 - \hat{p}_i) / n_i}$ and reliability factor $r_i$ (default 1). The VWRS is a deliberate hybrid: unlike the pure representativeness metrics GRI and SRI, it incorporates stratum-level statistical reliability. It answers ``how consequential are the distributional gaps for inference?'' rather than ``how closely does the sample mirror the population?''
+
+% ============================================================
+% 4. Empirical Application
+% ============================================================
+\section{Empirical Application: The Global Dialogues Case Study}
+
+\subsection{The Global Dialogues Survey}
+
+The Global Dialogues (GD) is a longitudinal survey of public perceptions of AI, recruiting approximately 1,000 participants per wave through online purposive sampling across 50--70 countries (Table~\ref{tab:gd_waves}).
+
+\begin{table}[h]
+\centering
+\caption{Global Dialogues survey waves.}
+\label{tab:gd_waves}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Wave & $N$ & Countries \\
+\midrule
+GD1 & 1,280 & $\sim$60 \\
+GD2 & 1,105 & $\sim$55 \\
+GD3 & 971 & 63 \\
+GD4 & 1,050 & 57 \\
+GD5 & 1,057 & $\sim$60 \\
+GD6 & 1,037 & $\sim$60 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{GRI Scores Across Six Waves}
+
+Table~\ref{tab:gri_scores} presents GRI scores for primary and selected auxiliary dimensions. Gender balance is essentially perfect (GRI $> 0.97$). Continental representativeness is good (GRI $\approx 0.83$). The picture deteriorates sharply at finer granularity: Country $\times$ Gender $\times$ Age averages only 0.31, indicating roughly 69\% of the joint demographic weight is misallocated.
+
+\begin{table}[h]
+\centering
+\caption{GRI scores across Global Dialogues waves GD1--GD6.}
+\label{tab:gri_scores}
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+Dimension & GD1 & GD2 & GD3 & GD4 & GD5 & GD6 & Mean & Range \\
+\midrule
+Country $\times$ Gender $\times$ Age & 0.293 & 0.282 & 0.374 & 0.319 & 0.301 & 0.292 & 0.310 & 0.09 \\
+Country $\times$ Religion & 0.471 & 0.474 & 0.515 & 0.518 & 0.484 & 0.481 & 0.490 & 0.05 \\
+Country $\times$ Environment & 0.369 & 0.339 & 0.387 & 0.390 & 0.354 & 0.345 & 0.364 & 0.05 \\
+Country & 0.516 & 0.502 & 0.539 & 0.571 & 0.527 & 0.519 & 0.529 & 0.07 \\
+Region & 0.745 & 0.739 & 0.791 & 0.799 & 0.738 & 0.734 & 0.758 & 0.07 \\
+Continent & 0.832 & 0.830 & 0.886 & 0.883 & 0.773 & 0.802 & 0.834 & 0.11 \\
+Religion & 0.817 & 0.819 & 0.833 & 0.826 & 0.813 & 0.806 & 0.819 & 0.03 \\
+Gender & 0.989 & 0.990 & 0.996 & 0.979 & 0.986 & 0.995 & 0.989 & 0.02 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Efficiency Analysis}
+
+Table~\ref{tab:efficiency} shows efficiency ratios---actual GRI divided by Monte Carlo maximum. The GD achieves approximately 39\% efficiency on Country $\times$ Gender $\times$ Age and 52\% on Country $\times$ Religion, indicating substantial room for improvement through better sampling design.
+
+\begin{table}[h]
+\centering
+\caption{Efficiency ratios (actual GRI / max GRI) for primary dimensions.}
+\label{tab:efficiency}
+\begin{tabular}{@{}lcccccccl@{}}
+\toprule
+Dimension & Max & GD1 & GD2 & GD3 & GD4 & GD5 & GD6 & Mean \\
+\midrule
+C $\times$ G $\times$ A & 0.792 & 37.0\% & 35.6\% & 47.3\% & 40.3\% & 38.0\% & 36.9\% & 39.2\% \\
+C $\times$ Religion & 0.938 & 50.2\% & 50.6\% & 54.9\% & 55.2\% & 51.6\% & 51.3\% & 52.3\% \\
+C $\times$ Environ. & 0.950 & 38.8\% & 35.7\% & 40.7\% & 41.0\% & 37.2\% & 36.3\% & 38.3\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Metric Variant Comparison}
+
+Table~\ref{tab:variants} compares GRI, SRI, and VWRS for GD5. The gap between GRI (0.30) and VWRS (0.80) on Country $\times$ Gender $\times$ Age quantifies the difference between aspirational and achievable representativeness.
+
+\begin{table}[h]
+\centering
+\caption{Comparison of GRI, SRI, and VWRS for GD5 ($N = 1{,}057$).}
+\label{tab:variants}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Dimension & GRI & SRI & VWRS \\
+\midrule
+Country $\times$ Gender $\times$ Age & 0.301 & 0.306 & 0.802 \\
+Country $\times$ Religion & 0.484 & 0.424 & 0.969 \\
+Country $\times$ Environment & 0.354 & 0.336 & 0.980 \\
+Country & 0.527 & 0.457 & 0.981 \\
+Region & 0.738 & 0.749 & 0.959 \\
+Continent & 0.773 & 0.841 & 0.869 \\
+Religion & 0.813 & 0.745 & 0.944 \\
+Gender & 0.986 & 0.986 & 0.986 \\
+\midrule
+\textbf{Overall Average} & \textbf{0.619} & \textbf{0.602} & \textbf{0.922} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% 5. Discussion
+% ============================================================
+\section{What Counts as Representative?}
+
+\subsection{The Interpretation Challenge}
+
+A GRI of 0.31 for Country $\times$ Gender $\times$ Age sounds alarming. Three considerations moderate this. First, high GRI on fine-grained dimensions is \emph{mathematically constrained} at moderate sample sizes---even a perfectly allocated sample of 1,000 can achieve at most 0.792. Second, the GRI measures distributional fidelity, not fitness for purpose: a survey designed to compare AI attitudes between specific countries might intentionally oversample them. Third, the efficiency ratio is more informative than the raw score---39\% efficiency directly suggests room for improvement.
+
+\subsection{Why Religion Scores Higher Than Demographics}
+
+Country $\times$ Religion GRI (mean: 0.49) exceeds Country $\times$ Gender $\times$ Age (mean: 0.31) for three reasons: fewer strata (1,607 vs.\ 2,699), larger stratum proportions (major religions cover $>85\%$ of the population), and geographic correlation (covering many countries naturally captures religious diversity). Country $\times$ Environment (mean: 0.36), despite having the fewest strata (449), scores lower due to systematic urban bias in online surveys.
+
+\subsection{Beyond Surveys: ML Dataset Auditing}
+
+The GRI framework applies to any dataset with categorical demographic attributes and a reference population. Training datasets with demographic skews produce models that perform differently across groups \citep{buolamwini2018gender}. Current documentation practices---Datasheets for Datasets \citep{gebru2021datasheets}, Model Cards \citep{mitchell2019model}---advocate qualitative demographic description. The GRI provides the quantitative counterpart: a standardized score enabling comparison across datasets and tracking over time.
+
+% ============================================================
+% 6. Implementation
+% ============================================================
+\section{Practical Implementation}
+
+\subsection{The \texttt{gri} Python Library}
+
+The framework is implemented as an open-source Python library comprising 16 modules organized into calculation, analysis, data, and presentation layers. It exposes two API surfaces:
+
+\begin{lstlisting}[caption={Functional API for scripted pipelines.},label={lst:functional}]
+from gri import calculate_gri, load_benchmark_suite
+
+benchmarks = load_benchmark_suite()
+gri_score = calculate_gri(
+    survey_df, benchmarks['country_gender_age'],
+    strata_cols=['country', 'gender', 'age_group']
+)
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Object-oriented API for interactive analysis.},label={lst:oo}]
+from gri import GRIAnalysis
+
+analysis = GRIAnalysis.from_survey_file('survey.csv')
+scorecard = analysis.calculate_scorecard(
+    include_max_possible=True, n_simulations=1000
+)
+analysis.plot_scorecard(save_to='scorecard.png')
+\end{lstlisting}
+
+% ============================================================
+% 7. Limitations
+% ============================================================
+\section{Limitations and Future Work}
+
+\textbf{Benchmark staleness.} The religious composition data dates to 2010. While religious demographics shift slowly in most regions, rapid secularization in several countries means the benchmark may overstate affiliated populations. We recommend reporting benchmark vintage alongside scores and updating on a 5-year cycle.
+
+\textbf{Equal weighting.} The framework reports separate dimension scores without prescribing aggregation weights. A health survey might weight age/gender higher; a governance study might weight country higher. We deliberately leave this to researchers.
+
+\textbf{Continuous variables.} Age is discretized into 6 brackets, losing within-bracket distributional information. Extension to continuous demographics would require kernel-density-based distance metrics.
+
+\textbf{Intersectionality.} The GRI evaluates pre-specified dimension crosses but cannot capture intersectionalities not encoded in the strata. The framework is extensible---any categorical variable with a benchmark can be added---but dimension selection has equity implications.
+
+\textbf{Diversity Score non-monotonicity.} The $1/N$ threshold means that as $N$ increases, more strata become ``relevant.'' The Diversity Score can decrease with larger samples if newly relevant strata go unrepresented---semantically correct but potentially counterintuitive.
+
+\textbf{Benchmark uncertainty.} Population benchmarks are estimates with uncertainty. A fully Bayesian treatment propagating benchmark uncertainty into GRI confidence intervals remains future work.
+
+\textbf{Scalability.} Adding dimensions multiplicatively increases strata. The pairwise scorecard approach captures the most important signals but loses higher-order interaction information.
+
+\textbf{Subnational variation.} The current library ships only with global benchmarks. Integrating subnational data from national censuses would substantially broaden practical utility.
+
+% ============================================================
+% 8. Conclusion
+% ============================================================
+\section{Conclusion}
+
+The GRI transforms a vague question---``How representative is this survey?''---into a precise, measurable quantity. Application to six waves of the Global Dialogues survey reveals that a purposive online survey spanning 60+ countries achieves Country $\times$ Gender $\times$ Age GRI scores of only 0.29--0.37, capturing less than 40\% of the theoretically achievable representativeness. The primary drivers are geographic concentration and structural urban bias.
+
+Adoption of the GRI enables three changes. First, \textbf{transparency}: standardized, comparable representativeness scores alongside results. Second, \textbf{optimization}: segment-level decomposition identifies which demographic gaps matter most. Third, \textbf{accountability}: funders can set minimum representativeness targets for research claiming global scope.
+
+The complementary SRI and VWRS span the survey lifecycle---design, execution, and evaluation. The framework is released as open-source software with authoritative population benchmarks. We invite the survey methodology and ML dataset quality communities to adopt, critique, and extend it.
+
+% ============================================================
+% References
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+% ============================================================
+% Appendices
+% ============================================================
+\appendix
+
+\section{Mathematical Proofs}\label{app:proofs}
+
+\subsection{Proof of GRI Bounds}
+
+See Theorem~\ref{thm:bounds}. The lower bound TVD $= 0$ is achieved when $P = Q$. The upper bound TVD $= 1$ is achieved when $P$ and $Q$ have disjoint support. $\square$
+
+\subsection{Relationship Between TVD and Other Distances}
+
+TVD relates to the Hellinger distance $H$ and KL divergence $D_{\text{KL}}$:
+\begin{align}
+    H^2(P,Q) &\leq \text{TVD}(P,Q) \leq H(P,Q)\sqrt{2} \label{eq:hellinger_bound} \\
+    \text{TVD}(P,Q) &\leq \sqrt{\tfrac{1}{2} D_{\text{KL}}(P \| Q)} \label{eq:pinsker}
+\end{align}
+Equation~\eqref{eq:pinsker} is Pinsker's inequality \citep{lecam1986asymptotic,tsybakov2009introduction}.
+
+\section{Pseudocode}\label{app:pseudocode}
+
+\begin{algorithm}
+\caption{GRI Calculation}\label{alg:gri}
+\begin{algorithmic}[1]
+\Require Survey data $S$, benchmark $B$, strata columns $C$
+\State $\mathbf{p} \gets \text{GroupAndCount}(S, C) / |S|$
+\State $\mathbf{q} \gets \text{Normalize}(B.\text{proportion})$
+\State $M \gets \text{OuterJoin}(\mathbf{p}, \mathbf{q}, C)$; fill missing with 0
+\State $\text{TVD} \gets 0.5 \times \sum_i |M.p_i - M.q_i|$
+\State \Return $1.0 - \text{TVD}$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Monte Carlo Maximum GRI}\label{alg:mc}
+\begin{algorithmic}[1]
+\Require Benchmark proportions $\mathbf{q}$, sample size $N$, iterations $T$
+\For{$t = 1$ to $T$}
+    \State $\mathbf{n}^* \gets \text{round}(\mathbf{q} \times N)$ for large strata; Bernoulli for small
+    \State Adjust total to $N$
+    \State $\text{GRI}_t \gets 1 - 0.5 \times \sum_i |n^*_i/N - q_i|$
+\EndFor
+\State \Return $\text{mean}(\{\text{GRI}_t\})$, $\text{std}(\{\text{GRI}_t\})$
+\end{algorithmic}
+\end{algorithm}
+
+\section{Extended Scorecard Tables}\label{app:tables}
+
+% NOTE: Extended tables with all 13 dimensions × 6 waves are available in the
+% supplementary materials and repository at analysis_output/scorecards/.
+% See Figure~\ref{fig:scorecard} for a visual summary.
+
+Complete GRI and Diversity Score tables for all 13 dimensions across GD1--GD6 are provided in the supplementary materials and the project repository.
+
+\end{document}
