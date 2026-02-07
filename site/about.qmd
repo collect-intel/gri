@@ -10,7 +10,7 @@ As large-scale surveys and public consultations increasingly shape AI policy and
 
 ## Authors
 
-**Evan Hadfield**
+**[Evan Hadfield](https://www.evanh.is)**
 The Collective Intelligence Project
 
 **Andrew Konya**
