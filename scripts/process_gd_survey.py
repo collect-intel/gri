@@ -205,15 +205,20 @@ def standardize_demographics(df: pd.DataFrame) -> pd.DataFrame:
     
     df['religion'] = df['religion'].map(religion_mapping)
     
-    # Clean up country names - basic standardization
+    # Standardize country names to match UN benchmark naming
     country_mapping = {
-        'United States': 'United States',
-        'USA': 'United States',
-        'US': 'United States',
-        'United States of America': 'United States',
+        'United States': 'United States of America',
+        'USA': 'United States of America',
+        'US': 'United States of America',
         'UK': 'United Kingdom',
         'Britain': 'United Kingdom',
-        'Great Britain': 'United Kingdom'
+        'Great Britain': 'United Kingdom',
+        'Czech Republic': 'Czechia',
+        'Ireland {Republic}': 'Ireland',
+        'Korea South': 'Republic of Korea',
+        'Saint Vincent & the Grenadines': 'Saint Vincent and the Grenadines',
+        'Syria': 'Syrian Arab Republic',
+        'Vietnam': 'Viet Nam',
     }
     
     # Apply country mapping where available, otherwise keep original

@@ -45,15 +45,34 @@ def load_gd_data(base_path: Path, gd_num: int) -> pd.DataFrame:
     
     df = df.rename(columns=column_mapping)
     
+    # Standardize country names to match UN benchmark naming
+    if 'country' in df.columns:
+        country_mapping = {
+            'United States': 'United States of America',
+            'USA': 'United States of America',
+            'US': 'United States of America',
+            'UK': 'United Kingdom',
+            'Britain': 'United Kingdom',
+            'Great Britain': 'United Kingdom',
+            'Czech Republic': 'Czechia',
+            'Ireland {Republic}': 'Ireland',
+            'Korea South': 'Republic of Korea',
+            'Saint Vincent & the Grenadines': 'Saint Vincent and the Grenadines',
+            'Syria': 'Syrian Arab Republic',
+            'Vietnam': 'Viet Nam',
+            'Türkiye': 'Türkiye',
+        }
+        df['country'] = df['country'].replace(country_mapping)
+
     # Standardize environment values (merge Suburban into Urban)
     if 'environment' in df.columns:
         df['environment'] = df['environment'].replace({'Suburban': 'Urban'})
-    
+
     # Filter out non-standard gender values for GRI calculation
     # (as benchmark data only has Male/Female)
     if 'gender' in df.columns:
         df = df[df['gender'].isin(['Male', 'Female'])]
-    
+
     return df
 
 
