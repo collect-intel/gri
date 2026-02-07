@@ -1,5 +1,5 @@
 """
-Utility to create simplified benchmarks for any dimension to avoid VWRS paradox.
+Utility to create simplified benchmarks for any dimension by grouping minor strata.
 
 This module provides a general approach to simplifying benchmarks by:
 1. Keeping major strata that exceed a threshold

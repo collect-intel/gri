@@ -48,8 +48,8 @@ Full analysis workflow using GRIAnalysis class:
 # Core calculation functions
 from .calculator import calculate_gri, calculate_diversity_score
 from .calculator_config import calculate_gri_scorecard, standardize_survey_data
-from .variance_weighted import calculate_vwrs, calculate_vwrs_from_dataframes
 from .strategic_index import calculate_sri, calculate_sri_from_dataframes
+from .design_effect import calculate_design_effect
 
 # Data loading
 from .utils import load_data, aggregate_data
@@ -118,10 +118,9 @@ __all__ = [
     "calculate_diversity_score",
     "calculate_gri_scorecard",
     "standardize_survey_data",
-    "calculate_vwrs",
-    "calculate_vwrs_from_dataframes",
     "calculate_sri",
     "calculate_sri_from_dataframes",
+    "calculate_design_effect",
     
     # Data loading
     "load_data",

@@ -3,10 +3,10 @@ Comprehensive GRI Scorecard Generator
 
 This module provides functionality to generate complete scorecards including:
 - Traditional GRI scores
-- Diversity scores  
+- Diversity scores
 - Strategic Representativeness Index (SRI)
-- Variance-Weighted Representativeness Score (VWRS)
 - Maximum possible scores for GRI and Diversity
+- Efficiency ratios (GRI / Max GRI)
 
 Supports all dimensions defined in config/dimensions.yaml with proper
 handling of regional and continental mappings.
@@ -15,14 +15,13 @@ handling of regional and continental mappings.
 import pandas as pd
 import numpy as np
 import yaml
-import json
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Any
 import warnings
 
 from .calculator import calculate_gri, calculate_diversity_score
-from .variance_weighted import calculate_vwrs_from_dataframes
 from .strategic_index import calculate_sri_from_dataframes
+from .design_effect import calculate_design_effect
 from .simulation import monte_carlo_max_scores
 from .utils import load_data
 from .benchmark_simplifier import simplify_benchmark
@@ -358,22 +357,11 @@ class GRIScorecard:
         
         return max_scores
     
-    def _load_variance_data(self, base_path: Path, gd_num: int) -> Optional[Dict[str, Dict[str, float]]]:
-        """Load variance data for VWRS calculations."""
-        variance_file = base_path / f'analysis_output/demographic_variance/GD{gd_num}_variance_lookup.json'
-        
-        if variance_file.exists():
-            with open(variance_file, 'r') as f:
-                return json.load(f)
-        
-        return None
-    
     def calculate_dimension_scores(
         self,
         survey_df: pd.DataFrame,
         dimension: Dict[str, Any],
         base_path: Path,
-        variance_data: Optional[Dict[str, Dict[str, float]]] = None,
         max_scores: Optional[Dict[str, Dict[str, float]]] = None
     ) -> Dict[str, Any]:
         """Calculate all scores for a single dimension."""
@@ -392,11 +380,12 @@ class GRIScorecard:
                 'gri': None,
                 'diversity': None,
                 'sri': None,
-                'vwrs': None,
+                'design_effect': None,
+                'effective_n': None,
                 'error': 'No benchmark data available'
             })
             return result
-        
+
         # Check if all required columns exist
         missing_cols = [col for col in dimension['columns'] if col not in survey_df.columns]
         if missing_cols:
@@ -404,43 +393,30 @@ class GRIScorecard:
                 'gri': None,
                 'diversity': None,
                 'sri': None,
-                'vwrs': None,
+                'design_effect': None,
+                'effective_n': None,
                 'error': f'Missing columns: {missing_cols}'
             })
             return result
-        
+
         try:
             # Calculate GRI
             result['gri'] = calculate_gri(survey_df, benchmark_df, dimension['columns'])
-            
+
             # Calculate Diversity Score
             result['diversity'] = calculate_diversity_score(survey_df, benchmark_df, dimension['columns'])
-            
+
             # Calculate SRI
             sri, sri_details = calculate_sri_from_dataframes(survey_df, benchmark_df, dimension['columns'])
             result['sri'] = sri
-            
-            # Calculate VWRS
-            # Get variance data for this dimension if available
-            dim_variance = None
-            if variance_data:
-                # Try to find variance data for this dimension
-                dim_name_in_variance = dimension['name'].replace(' × ', ' x ')
-                if dim_name_in_variance in variance_data:
-                    dim_variance = variance_data[dim_name_in_variance]
-                elif dimension['name'] in variance_data:
-                    dim_variance = variance_data[dimension['name']]
-                # For single dimensions like 'Country', check if it exists directly
-                elif len(dimension['columns']) == 1:
-                    single_dim = dimension['columns'][0].title()
-                    if single_dim in variance_data:
-                        dim_variance = variance_data[single_dim]
-            
-            vwrs, vwrs_details = calculate_vwrs_from_dataframes(
-                survey_df, benchmark_df, dimension['columns'], dim_variance
-            )
-            result['vwrs'] = vwrs
-            
+
+            # Calculate design effect
+            deff_result = calculate_design_effect(survey_df, benchmark_df, dimension['columns'])
+            result['design_effect'] = deff_result['design_effect']
+            result['effective_n'] = deff_result['effective_n']
+            result['precision_retention'] = deff_result['precision_retention']
+            result['uncovered_population'] = deff_result['uncovered_population']
+
             # Add max scores if available
             if max_scores and dimension['name'] in max_scores:
                 max_info = max_scores[dimension['name']]
@@ -454,7 +430,8 @@ class GRIScorecard:
                 'gri': None,
                 'diversity': None,
                 'sri': None,
-                'vwrs': None,
+                'design_effect': None,
+                'effective_n': None,
                 'error': str(e)
             })
         
@@ -473,7 +450,7 @@ class GRIScorecard:
         Args:
             survey_df: Survey data with participant responses
             base_path: Base path for data files
-            gd_num: Global Dialogues number (for variance data)
+            gd_num: Deprecated, no longer used
             include_extended: Whether to include extended dimensions
             
         Returns:
@@ -484,22 +461,17 @@ class GRIScorecard:
         
         # Load max scores
         max_scores = self._load_max_scores(base_path, len(survey_df))
-        
-        # Load variance data if GD number provided
-        variance_data = None
-        if gd_num:
-            variance_data = self._load_variance_data(base_path, gd_num)
-        
+
         # Get dimensions to calculate
         dimensions = self.dimensions_config['standard_scorecard'].copy()
         if include_extended and 'extended_dimensions' in self.dimensions_config:
             dimensions.extend(self.dimensions_config['extended_dimensions'])
-        
+
         # Calculate scores for each dimension
         results = []
         for dimension in dimensions:
             scores = self.calculate_dimension_scores(
-                survey_df, dimension, base_path, variance_data, max_scores
+                survey_df, dimension, base_path, max_scores
             )
             results.append(scores)
         
@@ -507,7 +479,7 @@ class GRIScorecard:
         scorecard_df = pd.DataFrame(results)
         
         # Add overall average row
-        numeric_cols = ['gri', 'diversity', 'sri', 'vwrs']
+        numeric_cols = ['gri', 'diversity', 'sri']
         avg_row = {'dimension': 'Overall (Average)'}
         for col in numeric_cols:
             valid_values = scorecard_df[col].dropna()
@@ -535,42 +507,44 @@ class GRIScorecard:
         elif format == 'markdown':
             # Create markdown table
             lines = ['# GRI Scorecard\n']
-            lines.append('| Dimension | GRI | Diversity | SRI | VWRS | GRI % Max | Div % Max |')
-            lines.append('|-----------|-----|-----------|-----|------|-----------|-----------|')
-            
+            lines.append('| Dimension | GRI | Diversity | SRI | Max GRI | Efficiency | Deff | N_eff |')
+            lines.append('|-----------|-----|-----------|-----|---------|------------|------|-------|')
+
             for _, row in scorecard_df.iterrows():
                 gri = f"{row['gri']:.4f}" if pd.notna(row.get('gri')) else 'N/A'
                 div = f"{row['diversity']:.4f}" if pd.notna(row.get('diversity')) else 'N/A'
                 sri = f"{row['sri']:.4f}" if pd.notna(row.get('sri')) else 'N/A'
-                vwrs = f"{row['vwrs']:.4f}" if pd.notna(row.get('vwrs')) else 'N/A'
+                max_gri = f"{row['max_gri']:.4f}" if pd.notna(row.get('max_gri')) else 'N/A'
                 gri_pct = f"{row['gri_pct_of_max']:.1f}%" if pd.notna(row.get('gri_pct_of_max')) else 'N/A'
-                div_pct = f"{row['diversity_pct_of_max']:.1f}%" if pd.notna(row.get('diversity_pct_of_max')) else 'N/A'
-                
-                lines.append(f"| {row['dimension']} | {gri} | {div} | {sri} | {vwrs} | {gri_pct} | {div_pct} |")
-            
+                deff = f"{row['design_effect']:.2f}" if pd.notna(row.get('design_effect')) and row.get('design_effect') != float('inf') else 'N/A'
+                neff = f"{row['effective_n']:.0f}" if pd.notna(row.get('effective_n')) else 'N/A'
+
+                lines.append(f"| {row['dimension']} | {gri} | {div} | {sri} | {max_gri} | {gri_pct} | {deff} | {neff} |")
+
             return '\n'.join(lines)
         
         else:  # text format
             lines = ['GRI SCORECARD']
-            lines.append('=' * 120)
-            lines.append(f"{'Dimension':<30} {'GRI':>8} {'Diversity':>10} {'SRI':>8} {'VWRS':>8} {'Max GRI':>8} {'Max Div':>8} {'GRI %':>8} {'Div %':>8}")
-            lines.append('-' * 120)
-            
+            lines.append('=' * 140)
+            lines.append(f"{'Dimension':<30} {'GRI':>8} {'Diversity':>10} {'SRI':>8} {'Max GRI':>8} {'Effic.':>8} {'Deff':>8} {'N_eff':>8} {'Precis.':>8}")
+            lines.append('-' * 140)
+
             for _, row in scorecard_df.iterrows():
                 dim = row['dimension'][:30]
                 gri = f"{row['gri']:.4f}" if pd.notna(row.get('gri')) else 'Error'
                 div = f"{row['diversity']:.4f}" if pd.notna(row.get('diversity')) else 'Error'
                 sri = f"{row['sri']:.4f}" if pd.notna(row.get('sri')) else 'Error'
-                vwrs = f"{row['vwrs']:.4f}" if pd.notna(row.get('vwrs')) else 'Error'
                 max_gri = f"{row['max_gri']:.4f}" if pd.notna(row.get('max_gri')) else '--'
-                max_div = f"{row['max_diversity']:.4f}" if pd.notna(row.get('max_diversity')) else '--'
                 gri_pct = f"{row['gri_pct_of_max']:.1f}%" if pd.notna(row.get('gri_pct_of_max')) else '--'
-                div_pct = f"{row['diversity_pct_of_max']:.1f}%" if pd.notna(row.get('diversity_pct_of_max')) else '--'
-                
-                lines.append(f"{dim:<30} {gri:>8} {div:>10} {sri:>8} {vwrs:>8} {max_gri:>8} {max_div:>8} {gri_pct:>8} {div_pct:>8}")
-                
+                deff_val = row.get('design_effect')
+                deff = f"{deff_val:.2f}" if pd.notna(deff_val) and deff_val != float('inf') else '--'
+                neff = f"{row['effective_n']:.0f}" if pd.notna(row.get('effective_n')) else '--'
+                prec = f"{row['precision_retention']:.1%}" if pd.notna(row.get('precision_retention')) else '--'
+
+                lines.append(f"{dim:<30} {gri:>8} {div:>10} {sri:>8} {max_gri:>8} {gri_pct:>8} {deff:>8} {neff:>8} {prec:>8}")
+
                 if pd.notna(row.get('error')):
                     lines.append(f"  → Error: {row['error']}")
-            
-            lines.append('=' * 120)
+
+            lines.append('=' * 140)
             return '\n'.join(lines)

@@ -1,9 +1,12 @@
 """
-Variance-Weighted Representativeness Score (VWRS) and Optimal Sample Allocation
+Optimal Sample Allocation and Deprecated VWRS
 
 This module implements:
-1. VWRS: A modified GRI that accounts for sampling variance in each stratum
-2. Optimal allocation: Neyman allocation to minimize overall sampling error
+1. Optimal allocation: Neyman allocation to minimize overall sampling error
+2. VWRS (DEPRECATED): A modified GRI that accounts for sampling variance in each stratum.
+   The VWRS has been deprecated in favor of reporting the design effect and effective
+   sample size alongside the GRI. See docs/precision_cost_of_low_representativeness.md
+   for the rationale. Use calculate_design_effect() from gri.design_effect instead.
 """
 
 import numpy as np
@@ -18,20 +21,33 @@ def calculate_vwrs(
     within_stratum_variances: Optional[Dict[str, float]] = None
 ) -> float:
     """
-    Calculate Variance-Weighted Representativeness Score (VWRS).
-    
+    DEPRECATED: Calculate Variance-Weighted Representativeness Score (VWRS).
+
+    This function is deprecated. Use gri.design_effect.calculate_design_effect()
+    instead, which provides a more principled measure of the inferential cost
+    of distributional mismatch grounded in standard survey statistics.
+
+    See docs/precision_cost_of_low_representativeness.md for rationale.
+
     VWRS = 1 - Σ(w_i × |p_i - π_i|)
-    
+
     Where weights w_i account for the sampling variance in each stratum.
-    
+
     Args:
         sample_proportions: Dict mapping stratum name to sample proportion
         population_proportions: Dict mapping stratum name to population proportion
         sample_sizes: Dict mapping stratum name to number of samples
-        
+
     Returns:
         VWRS score between 0 and 1 (1 = perfect representation)
     """
+    import warnings
+    warnings.warn(
+        "calculate_vwrs() is deprecated. Use gri.design_effect.calculate_design_effect() instead. "
+        "See docs/precision_cost_of_low_representativeness.md for rationale.",
+        DeprecationWarning,
+        stacklevel=2
+    )
     total_weighted_error = 0.0
     total_weight = 0.0
     
@@ -202,17 +218,26 @@ def calculate_vwrs_from_dataframes(
     within_stratum_variances: Optional[Dict[str, float]] = None
 ) -> Tuple[float, pd.DataFrame]:
     """
-    Calculate VWRS using the same interface as calculate_gri.
-    
+    DEPRECATED: Calculate VWRS using the same interface as calculate_gri.
+
+    This function is deprecated. Use gri.design_effect.calculate_design_effect() instead.
+    See docs/precision_cost_of_low_representativeness.md for rationale.
+
     Args:
         survey_df: DataFrame with survey participant data
         benchmark_df: DataFrame with population proportions (must have 'population_proportion')
         strata_cols: List of columns defining the strata
         within_stratum_variances: Optional dict of internal variances by stratum
-        
+
     Returns:
         Tuple of (VWRS score, detailed breakdown DataFrame)
     """
+    import warnings
+    warnings.warn(
+        "calculate_vwrs_from_dataframes() is deprecated. Use gri.design_effect.calculate_design_effect() instead.",
+        DeprecationWarning,
+        stacklevel=2
+    )
     # Handle empty survey case
     if len(survey_df) == 0:
         return 0.0, pd.DataFrame()

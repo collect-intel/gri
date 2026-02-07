@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy — yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a [0, 1] scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to six waves of the Global Dialogues survey on AI perceptions (N = 6,500 across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.29–0.37 on fine-grained demographics — capturing roughly 39% of the theoretically maximum achievable representativeness at its sample size. We further introduce two complementary metrics — the Strategic Representativeness Index (SRI) for optimal sampling design and the Variance-Weighted Representativeness Score (VWRS) for reliability-adjusted assessment — and release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks. It provides researchers, funders, and policymakers with a rigorous, reproducible tool for evaluating, comparing, and improving the demographic quality of any dataset with categorical demographic attributes.
+Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy — yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a [0, 1] scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to six waves of the Global Dialogues survey on AI perceptions (N = 6,500 across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.29–0.37 on fine-grained demographics — capturing roughly 39% of the theoretically maximum achievable representativeness at its sample size. We further introduce the Strategic Representativeness Index (SRI) for optimal sampling design, and show that the GRI connects to classical survey statistics through the design effect: low-GRI samples inflate estimation variance, reducing effective sample size in proportion to the squared coefficient of variation of the post-stratification weights. This connection provides the inferential justification for caring about distributional fidelity beyond its face-value interpretation. We release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks. It provides researchers, funders, and policymakers with a rigorous, reproducible tool for evaluating, comparing, and improving the demographic quality of any dataset with categorical demographic attributes.
 
 ---
 
@@ -38,7 +38,7 @@ This paper makes four contributions:
 
 3. **Empirical validation** through application to six waves of the Global Dialogues survey (N ≈ 1,000 per wave), including Monte Carlo simulation of maximum achievable scores and efficiency analysis that separates sampling limitations from sampling failures.
 
-4. **An open-source Python library** (`gri`) implementing the complete framework — core GRI calculation, a multi-dimensional scorecard, Monte Carlo simulation for maximum possible scores, two metric variants (SRI and VWRS), and publication-quality visualization — enabling any researcher to evaluate their survey's representativeness against global benchmarks.
+4. **An open-source Python library** (`gri`) implementing the complete framework — core GRI calculation, a multi-dimensional scorecard, Monte Carlo simulation for maximum possible scores, the SRI metric variant, efficiency analysis, and publication-quality visualization — enabling any researcher to evaluate their survey's representativeness against global benchmarks.
 
 ### 1.4 Scope and Normative Commitments
 
@@ -214,11 +214,11 @@ Monte Carlo simulations across sample sizes reveal the scaling behavior:
 | 1,000 | 0.792 | 0.938 | 0.950 |
 | 2,000 | 0.873 | 0.965 | 0.976 |
 
-### 3.5 Metric Variants: SRI and VWRS
+### 3.5 The Strategic Representativeness Index (SRI)
 
-The core GRI treats all deviations from population proportions equally. Two scenarios motivate alternative weighting schemes.
+The core GRI treats all deviations from population proportions equally. An alternative weighting scheme is useful for survey design.
 
-#### 3.5.1 Strategic Representativeness Index (SRI)
+#### 3.5.1 Definition and Motivation
 
 Proportional allocation — the target implicit in the GRI — allocates sample in proportion to population size. But proportional allocation is not statistically optimal for minimizing estimation error across all strata. Neyman allocation [Neyman, 1934] allocates more sample to strata with higher variance, which for small strata means substantially more than their population share.
 
@@ -232,23 +232,64 @@ The square-root transformation has a formal connection to optimal allocation the
 
 The SRI is particularly useful for **prospective survey design**: it defines a sampling target that optimizes statistical power across the full demographic distribution rather than merely mirroring population proportions.
 
-#### 3.5.2 Variance-Weighted Representativeness Score (VWRS)
+### 3.6 The Inferential Cost of Low Representativeness
 
-The GRI penalizes a 5-percentage-point deviation equally whether it occurs in a stratum with 500 respondents (where the sample proportion is precisely estimated) or in a stratum with 2 respondents (where it is highly uncertain). The **Variance-Weighted Representativeness Score** adjusts for this by weighting each stratum's deviation by its statistical importance:
+A natural objection to the GRI is: "If the sample's demographic composition doesn't match the population, can't we simply apply post-stratification weights to correct the estimates?" The answer is yes — but at a quantifiable cost to statistical precision. This section establishes the formal connection between distributional mismatch (as measured by the GRI) and inferential quality (as measured by classical survey statistics).
 
-$$\text{VWRS} = 1 - \frac{\sum_{i=1}^K w_i \cdot |p_i - q_i|}{\sum_{i=1}^K w_i}$$
+#### 3.6.1 Post-Stratification Weights and Variance Inflation
 
-where the importance weight for stratum $i$ is:
+When a survey sample has demographic proportions $p_i$ that differ from population proportions $q_i$, the standard correction is to apply post-stratification weights $w_i = q_i / p_i$ to each respondent in stratum $i$. Under these weights, the weighted mean is an unbiased estimator of the population mean — for any outcome variable — regardless of how distorted the sample demographics are (assuming all strata are represented and responses within strata are unbiased).
 
-$$w_i = q_i \cdot \text{SE}_i \cdot r_i$$
+But reweighting does not come for free. The variance of the weighted estimator is inflated relative to what would be achieved by a simple random sample of the same size. The **design effect** quantifies this inflation:
 
-Here $\text{SE}_i = \sqrt{\hat{p}_i(1 - \hat{p}_i) / n_i}$ is the standard error of a proportion estimate within stratum $i$, $n_i$ is the stratum sample size, and $r_i$ is an optional reliability factor (defaulting to 1). When no opinion data is available, $\hat{p}_i = 0.5$ (maximum uncertainty) is used, making the standard error purely a function of sample size: $\text{SE}_i = 1/(2\sqrt{n_i})$ for strata with $n_i > 0$ and $\text{SE}_i = 1$ for empty strata.
+$$d_{\text{eff}} = 1 + \text{CV}^2(w)$$
 
-We acknowledge that this formulation introduces a conceptual hybrid: the GRI and SRI are pure representativeness metrics (depending only on sample and population proportions), while the VWRS incorporates information about the *statistical reliability* of each stratum's contribution. This is deliberate. The VWRS answers a different question than the GRI: not "how closely does the sample mirror the population?" but "how much does the sample's distributional mismatch affect the reliability of population-level inferences?" A large deviation in a stratum with 2 respondents contributes minimally to inference bias (because it will be heavily downweighted or excluded in any competent analysis), while the same deviation in a stratum with 200 respondents represents a genuine inferential concern. The VWRS captures this distinction.
+where $\text{CV}^2(w) = \text{Var}(w) / \bar{w}^2$ is the squared coefficient of variation of the weights. This is the Kish [1965] approximation for unequal weighting effects.
 
-In practice, the VWRS yields substantially higher scores than the GRI because it does not penalize the inevitable inability to perfectly represent thousands of tiny population strata. For the Global Dialogues data, GRI scores in the range 0.29–0.37 on Country × Gender × Age correspond to VWRS scores around 0.80 — reflecting that the *statistically informative* portions of the sample are reasonably well-allocated.
+The design effect has a direct interpretation: a design effect of 3.0 means the weighted estimates have the same precision as a simple random sample one-third the size. The **effective sample size** makes this concrete:
 
-The VWRS is most useful for **post-hoc assessment** of existing surveys, where the relevant question is not "did we achieve proportional perfection?" but "given our achieved sample, how consequential are the distributional gaps?" Researchers should report GRI alongside VWRS: the GRI as an aspirational benchmark of demographic fidelity, the VWRS as a pragmatic assessment of inferential reliability.
+$$N_{\text{eff}} = \frac{N}{d_{\text{eff}}}$$
+
+A survey with 1,000 respondents and a design effect of 3.0 has an effective sample size of only 333 — two-thirds of the data collection budget has been consumed by the need to reweight.
+
+#### 3.6.2 Connection to Distributional Mismatch
+
+The connection between the GRI and the design effect is through the weight distribution. When sample proportions $p_i$ closely match population proportions $q_i$, the weights $w_i = q_i / p_i$ are all near 1.0, the coefficient of variation of weights is small, and the design effect approaches 1.0 (no precision loss). As sample proportions diverge from population proportions, some weights become very large (underrepresented strata) and others very small (overrepresented strata), the CV of weights increases, and precision degrades.
+
+Formally, the design effect is driven by the chi-squared divergence between sample and population distributions:
+
+$$d_{\text{eff}} = 1 + \text{CV}^2(w) = \sum_i \frac{q_i^2}{p_i}$$
+
+While the GRI is based on TVD (the $L_1$ distance between distributions), the design effect is driven by a ratio-based divergence (related to the $\chi^2$ distance). These two measures are related but not identical: TVD treats a 5-percentage-point deviation equally regardless of the base rate, while the design effect penalizes deviations in small strata much more severely (because $q_i / p_i$ diverges when $p_i$ is small relative to $q_i$).
+
+This distinction is precisely why we recommend reporting *both* the GRI and the design effect rather than replacing one with the other. The GRI measures what it should measure — the overall distributional distance, with equal treatment of all probability mass — and the design effect captures the inferential consequence, which is disproportionately driven by strata where the sample is thin relative to the population.
+
+#### 3.6.3 Why Not "Just Reweight"?
+
+The design effect framework reveals four reasons why post-stratification reweighting is not a substitute for representative sampling:
+
+1. **Variance inflation is quadratic, not linear.** Doubling the ratio $q_i / p_i$ in a stratum quadruples that stratum's contribution to the design effect. Severe distributional mismatch destroys precision.
+
+2. **Empty strata are uncorrectable.** If $p_i = 0$ for some stratum (no respondents), the weight $q_i / p_i$ is undefined. No amount of reweighting can impute a missing voice. The Diversity Score captures this complementary failure mode.
+
+3. **Extreme weights increase model dependence.** When some weights are very large, the weighted estimates become sensitive to the specific responses of a handful of highly-weighted individuals, increasing the influence of outliers and model assumptions.
+
+4. **Reweighting treats the symptom, not the cause.** A low-GRI sample that is reweighted produces unbiased point estimates but with wide confidence intervals. Improving the GRI through better sampling reduces both bias *and* variance simultaneously — a strictly superior outcome.
+
+#### 3.6.4 The Complete Reporting Framework
+
+Based on this analysis, we recommend that surveys report six complementary metrics, each capturing a distinct aspect of sample quality:
+
+| Metric | What It Measures | Primary Audience |
+|--------|-----------------|-----------------|
+| **GRI** | Distributional fidelity (TVD from target) | Researchers, reviewers |
+| **Max GRI** | Structural ceiling at given N | Survey designers |
+| **Efficiency Ratio** | GRI / Max GRI — allocation quality | Survey designers |
+| **Design Effect** | Variance inflation from reweighting | Statisticians, analysts |
+| **Effective N** | N / d_eff — precision budget | All stakeholders |
+| **Diversity Score** | Strata coverage fraction | Researchers, funders |
+
+The GRI and Diversity Score describe the *state* of the sample. The Max GRI and Efficiency Ratio contextualize that state against structural constraints. The Design Effect and Effective N translate the state into *inferential consequences*. Together, these six numbers provide a complete picture of sample quality that no single metric can capture.
 
 ---
 
@@ -334,29 +375,26 @@ This decomposition identifies two structural patterns in the GD sampling. First,
 
 Second, **urban bias**: urban segments are systematically overrepresented across countries, while rural segments are underrepresented. India's urban population constitutes 6% of the world but 14.7% of the GD4 sample, while India's rural population — 11.7% of the world — constitutes only 1.3% of the sample. This 23:1 urban-to-rural oversampling ratio reflects the inherent bias of online surveys toward connected, urban populations.
 
-### 4.6 Metric Variant Comparison
+### 4.6 Metric Comparison: GRI, SRI, and Efficiency Ratio
 
-**Table 4: Comparison of GRI, SRI, and VWRS for GD5 (N = 1,057)**
+**Table 4: Comparison of GRI and SRI for GD5 (N = 1,057)**
 
-| Dimension | GRI | SRI | VWRS |
-|-----------|-----|-----|------|
-| Country × Gender × Age | 0.301 | 0.306 | 0.802 |
-| Country × Religion | 0.484 | 0.424 | 0.969 |
-| Country × Environment | 0.354 | 0.336 | 0.980 |
-| Country | 0.527 | 0.457 | 0.981 |
-| Region | 0.738 | 0.749 | 0.959 |
-| Continent | 0.773 | 0.841 | 0.869 |
-| Religion | 0.813 | 0.745 | 0.944 |
-| Gender | 0.986 | 0.986 | 0.986 |
-| **Overall Average** | **0.619** | **0.602** | **0.922** |
+| Dimension | GRI | SRI | Max GRI | Efficiency |
+|-----------|-----|-----|---------|-----------|
+| Country × Gender × Age | 0.301 | 0.306 | 0.792 | 38.0% |
+| Country × Religion | 0.484 | 0.424 | 0.938 | 51.6% |
+| Country × Environment | 0.354 | 0.336 | 0.950 | 37.3% |
+| Country | 0.527 | 0.457 | — | — |
+| Region | 0.738 | 0.749 | — | — |
+| Continent | 0.773 | 0.841 | — | — |
+| Religion | 0.813 | 0.745 | — | — |
+| Gender | 0.986 | 0.986 | — | — |
 
-The three metrics tell coherent but distinct stories. **GRI** provides the strictest assessment: the GD5 sample achieves only 0.301 on Country × Gender × Age, meaning the sample is far from a proportional mirror of the world.
+The two metrics tell coherent but distinct stories. **GRI** provides the strictest assessment: the GD5 sample achieves only 0.301 on Country × Gender × Age, meaning the sample is far from a proportional mirror of the world.
 
 **SRI** scores are generally similar to GRI but differ at extremes. For Continent, SRI is higher (0.841 vs. 0.773), because the square-root transformation increases the target allocation for smaller continents (Oceania, South America), which the GD happens to cover relatively well. For Religion, SRI is lower (0.745 vs. 0.813), because the strategic target boosts smaller religions (Judaism, Sikhism) that the sample underrepresents.
 
-**VWRS** scores are dramatically higher across the board — an overall average of 0.922 vs. 0.619 for GRI. This does not mean the sample is highly representative by any standard; rather, it reflects that VWRS heavily downweights deviations in strata where the sample is too small to be statistically informative. The VWRS essentially asks: "Among the strata where we have reliable data, how well does the allocation match the population?" For the many Country × Gender × Age strata with 0 or 1 sample members, the deviation is large but the weight is minimal because the standard error is maximal and the population proportion is tiny.
-
-The gap between GRI (0.30) and VWRS (0.80) on Country × Gender × Age quantifies the difference between *aspirational* and *achievable* representativeness at this sample size. The GRI penalizes every missing stratum; the VWRS acknowledges that with 1,000 respondents spread across 2,699 strata, many will inevitably be empty.
+The **efficiency ratio** contextualizes raw GRI scores against structural constraints. Country × Religion has the highest efficiency (51.6%), indicating that about half the gap between the GD5 score and perfect representativeness is due to the structural impossibility of perfectly allocating ~1,000 people across 1,607 strata, while the other half reflects actual sampling imbalances. Country × Gender × Age and Country × Environment have lower efficiencies (~38%), suggesting more room for improvement through better sampling strategy on those dimensions.
 
 ### 4.7 Cross-Wave Trends
 
@@ -417,8 +455,7 @@ The GRI framework is implemented as an open-source Python library (`gri`) compri
 **Calculation Layer**: Core metric computation
 - `calculator.py`: GRI and Diversity Score
 - `strategic_index.py`: SRI computation
-- `variance_weighted.py`: VWRS computation
-- `simulation.py`: Monte Carlo maximum possible scores
+- `simulation.py`: Monte Carlo maximum possible scores and efficiency ratios
 
 **Analysis Layer**: Diagnostic tools
 - `analysis.py`: Segment deviations, alignment checking, impact analysis
@@ -522,7 +559,7 @@ impact = calculate_dimension_impact(
 # Returns: segments where additional recruitment would most improve GRI
 ```
 
-**Post-hoc reporting.** Generate a complete representativeness scorecard alongside survey results. Use VWRS for realistic assessment and GRI for aspirational benchmarking:
+**Post-hoc reporting.** Generate a complete representativeness scorecard alongside survey results. Report GRI for distributional fidelity and the efficiency ratio to contextualize scores against structural constraints:
 
 ```python
 from gri import GRIScorecard
@@ -530,10 +567,10 @@ from gri import GRIScorecard
 scorecard_gen = GRIScorecard()
 scorecard = scorecard_gen.generate_scorecard(
     survey_df,
-    base_path='data/',
-    gd_num=3
+    base_path='data/'
 )
 print(scorecard_gen.format_scorecard(scorecard, format='markdown'))
+# Scorecard includes GRI, Max GRI, Efficiency Ratio, Diversity Score, and SRI
 ```
 
 ---
@@ -568,7 +605,7 @@ An important consequence of the $1/N$ threshold is that the Diversity Score is *
 
 ### 7.6 Population Benchmark Uncertainty
 
-The GRI treats population benchmarks as ground truth, but they are themselves estimates with uncertainty — particularly for countries with limited census infrastructure. The VWRS partially addresses this by weighting strata by statistical reliability, but a fully Bayesian treatment that propagates benchmark uncertainty into GRI confidence intervals remains future work.
+The GRI treats population benchmarks as ground truth, but they are themselves estimates with uncertainty — particularly for countries with limited census infrastructure. A fully Bayesian treatment that propagates benchmark uncertainty into GRI confidence intervals — treating $q_i$ as random variables with distributions reflecting census quality — remains an important direction for future work.
 
 ### 7.7 Scalability with Many Dimensions
 
@@ -592,7 +629,7 @@ The empirical application to six waves of the Global Dialogues survey reveals a 
 
 What changes if researchers adopt the GRI? Three things. First, **transparency**: every survey can report a standardized, comparable representativeness score alongside its results, enabling consumers of research to calibrate their confidence in "global" findings. Second, **optimization**: the segment-level decomposition and efficiency analysis identify exactly which demographic gaps matter most, guiding recruitment strategy. Third, **accountability**: funders and policymakers can set minimum representativeness targets for research that claims to represent global populations, just as they set minimum sample size requirements.
 
-The complementary SRI and VWRS metrics extend this toolkit: SRI for designing surveys that maximize statistical power across populations, VWRS for honestly assessing what existing data can tell us. Together, the three metrics span the lifecycle of survey research — design, execution, and evaluation.
+The complementary metrics extend this toolkit: the SRI for designing surveys that maximize statistical power across populations, the efficiency ratio for contextualizing scores against structural constraints, and the design effect for quantifying the inferential cost of distributional mismatch. Together, these metrics span the lifecycle of survey research — design (SRI, Monte Carlo max scores), execution (real-time GRI monitoring, segment deviation analysis), and evaluation (GRI, efficiency ratio, design effect, effective sample size).
 
 The framework is released as open-source software with authoritative population benchmarks from the United Nations and Pew Research Center. We invite the survey methodology community to adopt, critique, and extend it.
 

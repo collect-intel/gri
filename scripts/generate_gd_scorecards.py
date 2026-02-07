@@ -2,7 +2,7 @@
 """
 Generate comprehensive GRI scorecards for Global Dialogues surveys.
 
-This script produces scorecards with GRI, Diversity, SRI, VWRS scores
+This script produces scorecards with GRI, Diversity, SRI, efficiency ratios,
 and maximum possible scores for all dimensions defined in config/dimensions.yaml.
 
 Usage:
