@@ -18,7 +18,7 @@ import sys
 import warnings
 import yaml
 
-sys.path.append(str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from gri import GRIScorecard
 
@@ -62,6 +62,11 @@ def load_wvs_data(base_path: Path, wave: int) -> pd.DataFrame:
             for v in variations:
                 rev_religion[v] = standard_val
         df["religion"] = df["religion"].map(lambda x: rev_religion.get(x, x))
+
+    # Drop invalid religion values (e.g. "No answer" from W6-7 processing)
+    if "religion" in df.columns:
+        invalid_religion = {"No answer"}
+        df.loc[df["religion"].isin(invalid_religion), "religion"] = np.nan
 
     # Filter to Male/Female only (benchmark data only has these)
     if "gender" in df.columns:

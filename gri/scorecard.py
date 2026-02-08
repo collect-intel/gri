@@ -346,11 +346,16 @@ class GRIScorecard:
                 'sample_size_used': sample_size
             }
         
-        # Single demographic dimensions - also easier
+        # Single demographic dimensions - few categories, max scales with N
+        # For k categories and N respondents, max GRI ≈ 1 - k/(2N)
+        dim_categories = {'Gender': 2, 'Age Group': 7, 'Religion': 7, 'Environment': 2}
         for dim in ['Gender', 'Age Group', 'Religion', 'Environment']:
             if dim not in max_scores:
+                k = dim_categories.get(dim, 7)
+                max_gri = min(1.0 - k / (2 * sample_size), 0.999) if sample_size > 0 else 0.99
+                max_gri = max(max_gri, 0.99)  # Floor at 0.99
                 max_scores[dim] = {
-                    'max_gri': 0.99,  # Few categories
+                    'max_gri': max_gri,
                     'max_diversity': 1.0,  # Can cover all categories
                     'sample_size_used': sample_size
                 }

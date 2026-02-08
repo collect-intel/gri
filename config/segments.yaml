@@ -41,16 +41,18 @@ benchmark_mappings:
     "Republic of Korea": ["Republic of Korea", "Korea, Republic of", "Korea South", "South Korea"]
     "Dem. People's Republic of Korea": ["Democratic People's Republic of Korea", "Korea, Democratic People's Republic of", "Korea North", "North Korea"]
     "Russian Federation": ["Russian Federation", "Russia"]
-    "Iran": ["Iran (Islamic Republic of)", "Iran, Islamic Republic of", "Iran"]
-    "Venezuela": ["Venezuela (Bolivarian Republic of)", "Venezuela, Bolivarian Republic of", "Venezuela"]
-    "Syria": ["Syrian Arab Republic", "Syria"]
-    "Tanzania": ["United Republic of Tanzania", "Tanzania, United Republic of", "Tanzania"]
-    "Moldova": ["Republic of Moldova", "Moldova, Republic of", "Moldova"]
-    "Bolivia": ["Bolivia (Plurinational State of)", "Bolivia, Plurinational State of", "Bolivia"]
-    "Laos": ["Lao People's Democratic Republic", "Lao PDR", "Laos"]
+    "Iran (Islamic Republic of)": ["Iran (Islamic Republic of)", "Iran, Islamic Republic of", "Iran"]
+    "Venezuela (Bolivarian Republic of)": ["Venezuela (Bolivarian Republic of)", "Venezuela, Bolivarian Republic of", "Venezuela"]
+    "Syrian Arab Republic": ["Syrian Arab Republic", "Syria"]
+    "United Republic of Tanzania": ["United Republic of Tanzania", "Tanzania, United Republic of", "Tanzania"]
+    "Republic of Moldova": ["Republic of Moldova", "Moldova, Republic of", "Moldova"]
+    "Bolivia (Plurinational State of)": ["Bolivia (Plurinational State of)", "Bolivia, Plurinational State of", "Bolivia"]
+    "Lao People's Democratic Republic": ["Lao People's Democratic Republic", "Lao PDR", "Laos"]
     "Viet Nam": ["Viet Nam", "Vietnam"]
     "State of Palestine": ["State of Palestine", "Palestinian Territory", "Palestine, State of", "Palestine"]
     "Türkiye": ["Türkiye", "Turkey", "Turkiye"]
+    "China, Hong Kong SAR": ["China, Hong Kong SAR", "Hong Kong", "Hong Kong SAR"]
+    "China, Taiwan Province of China": ["China, Taiwan Province of China", "Taiwan"]
     "Saint Vincent and the Grenadines": ["Saint Vincent and the Grenadines", "Saint Vincent & the Grenadines", "St. Vincent and the Gren."]
     "Ireland": ["Ireland", "Ireland {Republic}", "Republic of Ireland"]
 
@@ -108,9 +110,9 @@ survey_mappings:
       "Hinduism": ["Hindu"]
       "Buddhism": ["Buddhist"]
       "Judaism": ["Jew"]
-      "I do not identify with any religious group or faith": ["No religious denomination"]
+      "I do not identify with any religious group or faith": ["No religious denomination", "Unaffiliated"]
       "Other religious group": ["Other"]
-      # Note: "No answer" is intentionally excluded (dropped during standardization)
+      # Note: "No answer" should be filtered as missing data, not a religion category
 
     country:
       inherit_from: "benchmark_mappings.country"
