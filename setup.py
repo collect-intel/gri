@@ -15,12 +15,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="gri",
     version="2.0.0",
-    author="GRI Project Contributors",
-    author_email="contact@gri-project.org",
+    author="Evan Hadfield",
+    author_email="evan@cip.org",
     description="Global Representativeness Index calculation toolkit",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/gri",
+    url="https://github.com/collect-intel/gri",
     packages=find_packages(exclude=["tests", "tests.*", "examples", "examples.*", "notebooks"]),
     classifiers=[
         "Development Status :: 4 - Beta",

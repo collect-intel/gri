@@ -109,8 +109,8 @@ from .scorecard import GRIScorecard
 from .benchmark_simplifier import simplify_benchmark, create_adaptive_simplification
 
 __version__ = "2.0.0"
-__author__ = "GRI Project Contributors"
-__email__ = "contact@gri-project.org"
+__author__ = "Evan Hadfield"
+__email__ = "evan@cip.org"
 
 __all__ = [
     # Core functions
