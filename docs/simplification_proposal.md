@@ -31,7 +31,7 @@ def calculate_simplification_threshold(sample_size: int,
 ### 2. **Statistically Justified**
 - Threshold = 1/n means each kept stratum expects ≥1 participant
 - Below this, strata are more likely to have 0 samples
-- Grouping them as "Others" gives more honest VWRS
+- Grouping them as "Others" gives more honest GRI scores
 
 ### 3. **Handles Edge Cases**
 - Always keep countries ≥ 0.1% (major populations)
@@ -96,8 +96,8 @@ For GD3 (n=971):
 - **Auto mode**: ~35 countries + Others (formulaic)
 - **None mode**: 228 countries (full benchmark)
 
-| Mode | Countries | VWRS | More Realistic? |
-|------|-----------|------|-----------------|
+| Mode | Countries | GRI | More Realistic? |
+|------|-----------|-----|-----------------|
 | None | 228 | 0.985 | No - inflated |
 | Legacy | 31 | 0.782 | Yes |
 | Auto | 35 | ~0.79 | Yes - adaptive |

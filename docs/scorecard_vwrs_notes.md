@@ -1,3 +1,5 @@
+> **DEPRECATED**: VWRS has been removed from the GRI framework. The scorecard now reports design effect, effective N, and precision retained instead. See [metrics_comparison.md](metrics_comparison.md).
+
 # GRI Scorecard VWRS Implementation Notes
 
 ## Overview

@@ -66,28 +66,52 @@ class GRIScorecard:
     
     def _prepare_mappings(self):
         """Prepare country/region mappings for efficient lookup."""
+        # Build country name standardization map from segments.yaml
+        # Maps all known variations to a single standard name
+        self._country_name_map = {}
+        country_mappings = self.segments_config.get('benchmark_mappings', {}).get('country', {})
+        for standard_name, variations in country_mappings.items():
+            for variation in variations:
+                self._country_name_map[variation] = standard_name
+
         # Create country to region mapping
         self.country_to_region = {}
         for region, countries in self.regions_config['country_to_region'].items():
             for country in countries:
                 self.country_to_region[country] = region
-        
+
         # Create region to continent mapping
         self.region_to_continent = {}
         for continent, regions in self.regions_config['region_to_continent'].items():
             for region in regions:
                 self.region_to_continent[region] = continent
-        
+
         # Create country to continent mapping
         self.country_to_continent = {}
         for country, region in self.country_to_region.items():
             if region in self.region_to_continent:
                 self.country_to_continent[country] = self.region_to_continent[region]
     
+    def _standardize_country_names(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Standardize country names using segments.yaml mappings.
+
+        Ensures survey data and benchmark data use the same standard names,
+        regardless of source-specific naming conventions (e.g., 'Turkey' vs
+        'Türkiye', 'Russia' vs 'Russian Federation').
+        """
+        if 'country' in df.columns and self._country_name_map:
+            df['country'] = df['country'].map(
+                lambda x: self._country_name_map.get(x, x)
+            )
+        return df
+
     def _add_derived_columns(self, df: pd.DataFrame) -> pd.DataFrame:
         """Add region and continent columns based on country."""
         df = df.copy()
-        
+
+        # Standardize country names first
+        df = self._standardize_country_names(df)
+
         if 'country' in df.columns:
             # Add region column
             df['region'] = df['country'].map(self.country_to_region)
@@ -147,12 +171,16 @@ class GRIScorecard:
             warnings.warn(f"No benchmark data found for dimension: {dimension['name']}")
             return None
         
+        # Standardize country names to match segments.yaml conventions
+        if benchmark_df is not None:
+            benchmark_df = self._standardize_country_names(benchmark_df)
+
         # Apply simplification if needed
         if benchmark_df is not None and self.simplification_mode != 'none':
             benchmark_df = self._simplify_benchmark_if_needed(
                 benchmark_df, dimension, sample_size
             )
-        
+
         return benchmark_df
     
     def _simplify_benchmark_if_needed(self, benchmark_df: pd.DataFrame, 

@@ -1,4 +1,4 @@
-
+> **DEPRECATED**: VWRS has been removed from the GRI framework. The design effect and effective sample size now serve the role of translating representativeness into inferential cost. See [precision_cost_of_low_representativeness.md](precision_cost_of_low_representativeness.md) and [metrics_comparison.md](metrics_comparison.md) for the current approach.
 
 # **The Variance-Weighted Representativeness Score (VWRS)**
 

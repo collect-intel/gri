@@ -55,6 +55,11 @@ benchmark_mappings:
     "China, Taiwan Province of China": ["China, Taiwan Province of China", "Taiwan"]
     "Saint Vincent and the Grenadines": ["Saint Vincent and the Grenadines", "Saint Vincent & the Grenadines", "St. Vincent and the Gren."]
     "Ireland": ["Ireland", "Ireland {Republic}", "Republic of Ireland"]
+    "Czech Republic": ["Czech Republic", "Czechia"]
+    "Bosnia-Herzegovina": ["Bosnia-Herzegovina", "Bosnia and Herzegovina"]
+    "Republic of Macedonia": ["Republic of Macedonia", "North Macedonia", "Macedonia"]
+    "Trinidad and Tobago": ["Trinidad and Tobago", "Trinidad & Tobago"]
+    "Antigua and Barbuda": ["Antigua and Barbuda", "Antigua & Deps", "Antigua & Barbuda"]
 
 # Survey data mappings (Survey sources -> GRI standard)
 survey_mappings:

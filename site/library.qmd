@@ -51,7 +51,7 @@ print(f"GRI: {gri_score:.3f}")
 | `calculate_gri()` | Core GRI calculation via TVD |
 | `calculate_diversity_score()` | Strata coverage measurement |
 | `calculate_gri_scorecard()` | Multi-dimensional scorecard |
-| `calculate_vwrs()` | Variance-Weighted Representativeness Score |
+| `calculate_design_effect()` | Design effect, effective N, and precision retained |
 | `calculate_sri()` | Strategic Representativeness Index |
 | `monte_carlo_max_scores()` | Maximum achievable score simulation |
 | `calculate_efficiency_ratio()` | Actual vs. theoretical maximum |
@@ -102,19 +102,21 @@ Context matters: a GRI of 0.35 on Country x Gender x Age (2,699 strata) is more 
 
 ## Advanced Features
 
-### Variance-Weighted Representativeness Score (VWRS)
+### Design Effect and Effective Sample Size
 
-Weights each stratum's deviation by the variance of responses within that stratum, prioritizing representation in segments where opinions actually differ:
+Quantifies the precision cost of demographic mismatch. Returns the design effect, effective sample size, and precision retained:
 
 ```python
-from gri import calculate_vwrs
+from gri import calculate_design_effect
 
-vwrs = calculate_vwrs(
+result = calculate_design_effect(
     survey_df=survey,
     benchmark_df=benchmark,
-    response_col="ai_sentiment",
-    strata_cols=["country", "gender"]
+    strata_cols=["country", "gender", "age_group"]
 )
+print(f"Design Effect: {result['design_effect']:.2f}")
+print(f"Effective N: {result['effective_n']:.0f}")
+print(f"Precision Retained: {result['precision_retention']:.1%}")
 ```
 
 ### Strategic Representativeness Index (SRI)

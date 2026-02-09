@@ -1,31 +1,32 @@
 # Representativeness Metrics Comparison
 
-This document compares three approaches to measuring survey representativeness:
+This document compares the approaches to measuring survey representativeness in the GRI framework:
 1. **GRI** (Global Representativeness Index)
-2. **SRI** (Strategic Representativeness Index)  
-3. **VWRS** (Variance-Weighted Representativeness Score)
+2. **SRI** (Strategic Representativeness Index)
+3. **Design Effect / Effective N** (Inferential cost measurement)
 
 ## Quick Comparison
 
-| Metric | Target | Best For | GD3 Score |
-|--------|--------|----------|-----------|
-| GRI | Proportional representation | Demographic mirroring | 0.54 |
-| SRI | Strategic allocation (√prop) | Minimizing uncertainty | 0.55 |
-| VWRS | Reliability-weighted | Realistic assessment | 0.78 |
+| Metric | Purpose | Best For | Example (GD3 Country) |
+|--------|---------|----------|-----------------------|
+| GRI | Demographic distance | Measuring representation quality | 0.54 |
+| SRI | Allocation strategy | Survey design guidance | 0.55 |
+| Design Effect | Precision cost | Understanding inferential consequence | d_eff = 3.0 |
+| Effective N | Usable sample size | Interpreting statistical power | N_eff = 330 |
 
-## Traditional GRI
+## Global Representativeness Index (GRI)
 
 **Formula**: `GRI = 1 - 0.5 × Σ|sample_prop - population_prop|`
 
 **Characteristics**:
 - Perfect score (1.0) = exact proportional representation
-- All deviations penalized equally
-- Missing tiny country = same penalty as missing large country
+- Built on Total Variation Distance, a well-understood metric
+- All deviations penalized proportionally
 
 **Use when**:
-- You need strict demographic matching
-- All groups are equally important regardless of size
-- You have resources to sample small populations
+- You need a standardized representativeness measure
+- Comparing surveys across time or across programs
+- Reporting the demographic distance between sample and population
 
 ## Strategic Representativeness Index (SRI)
 
@@ -39,77 +40,64 @@ Where strategic target = `√(population_prop) / Σ√(population_prop)`
 - Balances information gain across all groups
 
 **Use when**:
-- You want to minimize total survey uncertainty
-- You're designing future sample allocation
+- Planning future survey design
+- Budget constraints require smart allocation
 - Small groups need reliable estimates
 
 ### Example Strategic Boosts
 - 0.1% population → 3.2x boost (0.1% → 0.32%)
-- 1% population → 3.2x boost (1% → 3.2%)  
+- 1% population → 3.2x boost (1% → 3.2%)
 - 10% population → 1.0x (no change)
 - 40% population → 0.63x reduction (40% → 25%)
 
-## Variance-Weighted Representativeness Score (VWRS)
+## Design Effect and Effective Sample Size
 
-**Formula**: `VWRS = 1 - Σ(weight × |sample_prop - population_prop|) / Σ(weight)`
+**Formula**: `d_eff = Σ(q_norm² / p_i)` over represented strata
 
-Where weight = `population_prop × standard_error × reliability`
+Where `q_norm` is the population proportion renormalized over strata present in the sample.
+
+**Effective N**: `N_eff = N / d_eff`
+
+**Precision Retained**: `1 / d_eff`
 
 **Characteristics**:
-- Accounts for sampling reliability (standard error)
-- Can incorporate within-group consensus
-- Small/unreliable samples contribute less to score
+- Quantifies the variance inflation from post-stratification reweighting
+- d_eff = 1.0 means perfect allocation (no precision loss)
+- d_eff = 3.0 means the survey has the precision of N/3 optimally allocated respondents
+- Based on standard survey methodology (Kish design effect)
 
 **Use when**:
-- Sample sizes vary dramatically
-- You want realistic assessment of representation
-- Perfect proportional sampling is unachievable
-
-## Practical Example (GD Surveys)
-
-| Country | Population | GD3 Sample | GRI Impact | SRI Target | VWRS Weight |
-|---------|------------|------------|------------|------------|-------------|
-| China | 18.0% | 7.1% | High penalty | 12.7% | Low (reliable n=70) |
-| Denmark | 0.1% | 0.2% | Low penalty | 0.7% | Minimal (unreliable n=2) |
-| Missing small | 0.1% | 0% | Low penalty | 0.7% | Minimal (max uncertainty) |
+- You need to know the actual statistical power of your survey
+- Communicating the inferential cost of demographic mismatch
+- Deciding whether to invest in better recruitment vs. larger samples
 
 ## Which Metric to Use?
 
-### Use GRI when:
-- Regulatory compliance requires proportional representation
-- You have large, well-funded surveys
-- Every demographic group must be heard equally
+These metrics answer different questions:
 
-### Use SRI when:
-- Planning future survey design
-- Budget constraints require smart allocation
-- You need reliable estimates for all groups
+- **GRI**: "How closely does our sample match the population?" (distance)
+- **SRI**: "How well-designed is our sample for minimizing uncertainty?" (design quality)
+- **Design Effect**: "What is the precision cost of our demographic mismatch?" (inferential consequence)
+- **Effective N**: "What is our survey actually worth in statistical power?" (usable sample)
 
-### Use VWRS when:
-- Evaluating existing survey data
-- Sample sizes vary by orders of magnitude
-- You want credit for what's statistically achievable
+**Recommended reporting**: Report GRI + Effective N together. GRI tells stakeholders the representativeness quality; Effective N translates the cost into a concrete, intuitive number.
 
 ## Implementation
 
-All three metrics are available in the GRI package:
-
 ```python
-from gri.calculator import calculate_gri
-from gri.strategic_index import calculate_sri_from_dataframes
-from gri.variance_weighted import calculate_vwrs_from_dataframes
+from gri import calculate_gri, calculate_sri, calculate_design_effect
 
-# Calculate all three
-gri = calculate_gri(survey_df, benchmark_df, ['country'])
-sri, sri_details = calculate_sri_from_dataframes(survey_df, benchmark_df, ['country'])
-vwrs, vwrs_details = calculate_vwrs_from_dataframes(survey_df, benchmark_df, ['country'])
+# GRI: representativeness distance
+gri = calculate_gri(survey_df, benchmark_df, ['country', 'gender', 'age_group'])
+
+# SRI: strategic allocation quality
+sri = calculate_sri(survey_df, benchmark_df, ['country', 'gender', 'age_group'])
+
+# Design effect: precision cost
+result = calculate_design_effect(survey_df, benchmark_df, ['country', 'gender', 'age_group'])
+print(f"Design Effect: {result['design_effect']:.2f}")
+print(f"Effective N: {result['effective_n']:.0f}")
+print(f"Precision Retained: {result['precision_retention']:.1%}")
 ```
 
-## Key Takeaway
-
-These metrics answer different questions:
-- **GRI**: "How proportional is our sample?"
-- **SRI**: "How well-designed is our sample for minimizing uncertainty?"
-- **VWRS**: "How representative is our sample, accounting for what's realistic?"
-
-For global surveys with many small countries, VWRS typically gives the most realistic assessment, while SRI provides the best guidance for future sampling.
+For a complete analysis across all dimensions, use the `GRIScorecard` class which calculates all metrics automatically.

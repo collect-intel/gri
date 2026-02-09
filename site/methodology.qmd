@@ -95,6 +95,50 @@ These ceilings enable **efficiency ratios**---the percentage of the theoretical 
 
 ![Sampling efficiency across waves](images/efficiency_ratios.png){.figure width="100%"}
 
+## Design Effect and Effective Sample Size
+
+The GRI measures *how far* a sample deviates from the population. The **design effect** answers the next question: *what does that deviation cost?*
+
+When a survey's demographic composition differs from the population, analysts must post-stratify---reweight responses so that each stratum contributes proportionally to its population share. Reweighting inflates variance, because over-represented strata get downweighted (wasting collected data) and under-represented strata get upweighted (amplifying noise).
+
+### The Design Effect
+
+$$
+d_{\text{eff}} = \sum_{i \in S} \frac{\hat{q}_i^2}{p_i}
+$$
+
+where $p_i$ is the sample proportion and $\hat{q}_i$ is the population proportion renormalized over represented strata. When $p = q$ (perfect representation), $d_{\text{eff}} = 1$. Any deviation from the population distribution pushes $d_{\text{eff}}$ above 1.
+
+### Effective Sample Size
+
+$$
+N_{\text{eff}} = \frac{N}{d_{\text{eff}}}
+$$
+
+This is the number of optimally-allocated respondents that would yield the same precision. A survey of 58,000 with $d_{\text{eff}} = 29$ has the same statistical power as ~2,000 optimally-allocated respondents.
+
+### Precision Retained
+
+$$
+\text{Precision Retained} = \frac{1}{d_{\text{eff}}}
+$$
+
+This is the fraction of the sample budget that contributes to inferential precision after reweighting. When precision retained is 10%, ninety percent of the survey effort is consumed by correcting demographic mismatch.
+
+### Why Not Just Reweight?
+
+Reweighting can correct *estimates* of population means but cannot recover the *precision* lost to poor allocation. A survey that over-represents one country by 10x and under-represents another by 10x can be reweighted to produce unbiased estimates---but the confidence intervals will be much wider than a survey that allocated respondents proportionally. The design effect quantifies exactly how much wider.
+
+### Relationship to GRI
+
+GRI and design effect measure complementary aspects of representativeness:
+
+- **GRI** captures the total demographic distance (via TVD)
+- **Design effect** captures the variance inflation from that distance
+- **Effective N** translates the cost into an interpretable unit
+
+A survey can have a moderate GRI but a very high design effect if its misallocation is concentrated in a few high-population strata. Reporting both metrics gives a complete picture.
+
 ## Benchmark Data Sources
 
 | Dataset | Source | Year | Use |

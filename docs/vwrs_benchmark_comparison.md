@@ -1,3 +1,5 @@
+> **DEPRECATED**: VWRS has been removed from the GRI framework. See [metrics_comparison.md](metrics_comparison.md) for the current approach using design effect and effective sample size.
+
 # Understanding VWRS: Full vs Simplified Benchmarks
 
 ## The Core Difference

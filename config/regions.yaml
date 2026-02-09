@@ -248,6 +248,7 @@ country_to_region:
   "Caribbean":
     - "Anguilla"
     - "Antigua and Barbuda"
+    - "Antigua & Deps"
     - "Aruba"
     - "Bahamas"
     - "Barbados"
@@ -277,6 +278,7 @@ country_to_region:
     - "Saint Vincent & the Grenadines"
     - "Sint Maarten (Dutch part)"
     - "Trinidad and Tobago"
+    - "Trinidad & Tobago"
     - "Turks and Caicos Islands"
     - "United States Virgin Islands"
     - "U.S. Virgin Islands"
