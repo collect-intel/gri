@@ -46,7 +46,7 @@ $$
 
 where $\hat{q}_i$ is the renormalized population weight over represented strata. A design effect of 3.0 means a survey of 1,000 respondents has the statistical power of only ~333 optimally allocated respondents. The **precision retained** ($1 / d_{\text{eff}}$) tells you what fraction of your sample budget is actually contributing to inferential precision.
 
-**GRI tells you how representative your survey is. Design effect tells you what that costs.**
+The critical distinction: **GRI treats overrepresentation and underrepresentation symmetrically** --- sampling 5% too many or 5% too few in a stratum contributes equally to GRI. **Design effect is asymmetric** --- underrepresentation is far more expensive than overrepresentation, because the few respondents in underrepresented strata must be upweighted, amplifying their noise. Overrepresented strata are merely downweighted, wasting data but not destroying precision. This is why two surveys with similar GRI scores can have very different effective sample sizes.
 
 ## Key Results
 

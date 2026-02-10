@@ -71,13 +71,22 @@ Where `q_norm` is the population proportion renormalized over strata present in 
 - Communicating the inferential cost of demographic mismatch
 - Deciding whether to invest in better recruitment vs. larger samples
 
+## GRI vs. Design Effect: The Symmetry Distinction
+
+The most important difference between GRI and design effect is how they treat overrepresentation vs. underrepresentation:
+
+- **GRI is symmetric.** Overrepresenting a stratum by 5pp and underrepresenting it by 5pp contribute the same amount to the TVD. GRI measures total demographic distance without regard to direction.
+- **Design effect is asymmetric.** Underrepresentation is far more expensive than overrepresentation. A stratum with population share q = 10% but sample share p = 1% has a reweighting ratio of 10x, amplifying that stratum's noise tenfold. The reverse (q = 1%, p = 10%) merely downweights excess respondents --- wasteful, but not precision-destroying.
+
+This means two surveys with the same GRI can have very different effective sample sizes. The one with concentrated underrepresentation in a few strata pays a much higher precision cost.
+
 ## Which Metric to Use?
 
 These metrics answer different questions:
 
-- **GRI**: "How closely does our sample match the population?" (distance)
+- **GRI**: "How closely does our sample match the population?" (symmetric distance)
 - **SRI**: "How well-designed is our sample for minimizing uncertainty?" (design quality)
-- **Design Effect**: "What is the precision cost of our demographic mismatch?" (inferential consequence)
+- **Design Effect**: "How costly is our mismatch for precision?" (asymmetric --- underrepresentation penalized much more)
 - **Effective N**: "What is our survey actually worth in statistical power?" (usable sample)
 
 **Recommended reporting**: Report GRI + Effective N together. GRI tells stakeholders the representativeness quality; Effective N translates the cost into a concrete, intuitive number.

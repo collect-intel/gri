@@ -133,11 +133,13 @@ Reweighting can correct *estimates* of population means but cannot recover the *
 
 GRI and design effect measure complementary aspects of representativeness:
 
-- **GRI** captures the total demographic distance (via TVD)
-- **Design effect** captures the variance inflation from that distance
+- **GRI** captures the total demographic distance (via TVD, an $L_1$ distance)
+- **Design effect** captures the variance inflation from that distance (via a ratio-based $\chi^2$ divergence)
 - **Effective N** translates the cost into an interpretable unit
 
-A survey can have a moderate GRI but a very high design effect if its misallocation is concentrated in a few high-population strata. Reporting both metrics gives a complete picture.
+The key distinction is **symmetry vs. asymmetry**. GRI treats overrepresentation and underrepresentation symmetrically: sampling 5 percentage points too many or too few in a stratum contributes the same amount to the TVD. Design effect is fundamentally asymmetric: underrepresentation is far more expensive. When a stratum has population share $q_i = 0.10$ but sample share $p_i = 0.01$, the reweighting ratio $q/p = 10$ amplifies that stratum's noise tenfold. The reverse --- $q_i = 0.01, p_i = 0.10$ --- merely downweights excess data, wasting budget but preserving precision.
+
+This asymmetry means two surveys with similar GRI scores can have very different design effects. The survey whose misallocation involves severe underrepresentation in a few strata pays a much higher precision cost than one whose misallocation is more evenly distributed. Reporting both metrics gives a complete picture: GRI measures *how much* the sample deviates; design effect reveals *how costly* that deviation is.
 
 ## Benchmark Data Sources
 

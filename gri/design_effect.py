@@ -7,6 +7,12 @@ to correct for demographic imbalance, the variance of weighted estimates is
 inflated relative to a simple random sample. The design effect measures this
 inflation; the effective sample size translates it into an equivalent SRS size.
 
+Unlike GRI (which treats overrepresentation and underrepresentation symmetrically),
+the design effect is asymmetric: underrepresentation is far more costly because
+the reweighting ratio q_i/p_i amplifies noise from few respondents, while
+overrepresentation merely downweights excess data (wasteful but not
+precision-destroying).
+
 Key formulas:
     deff = Σ (q_i² / p_i)          (over represented strata)
     N_eff = N / deff
