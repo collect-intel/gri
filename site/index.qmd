@@ -50,44 +50,51 @@ The critical distinction: **GRI treats overrepresentation and underrepresentatio
 
 ## Key Results
 
-### Global Dialogues vs. World Values Survey
+### Comparing Five Major Survey Programs
 
-We benchmark the GRI against two major survey programs: [Global Dialogues](https://global-dialogues.ai/) (~1,000 participants per wave, deliberately designed for global representation) and the [World Values Survey](https://www.worldvaluessurvey.org/) (~58,000 participants per wave, convenience-sampled across countries).
+We benchmark the GRI against five survey programs spanning different design philosophies, geographic scopes, and sample sizes:
 
-![GD achieves higher representativeness with 1/58th the sample size. Precision retention reveals that much of WVS's raw sample size advantage is consumed by reweighting.](images/gd_vs_wvs_comparison.png){.figure width="100%"}
+| Survey | N | Scope | Benchmark |
+|:---|---:|:---|:---|
+| [Global Dialogues](https://global-dialogues.ai/) (GD1--GD8) | ~1,000/wave | Global (50+ countries) | Global population |
+| [World Values Survey](https://www.worldvaluessurvey.org/) (W1--W7) | ~58,000/wave | Global (60--100 countries) | Global population |
+| [Pew Global Attitudes](https://www.pewresearch.org/global/) (Spring 2024) | 41,483 | 35 countries worldwide | 35-country population |
+| [Afrobarometer](https://www.afrobarometer.org/) (Round 9) | 53,444 | 39 African countries | 39-country population |
+| [Latinobarómetro](https://www.latinobarometro.org/) (2023--2024) | ~19,200/wave | 17 Latin American countries | 17-country population |
 
-### Primary Dimensions: GD1--GD6
+: {.results-table}
 
-| Dimension | GRI | Design Effect | Effective N | Precision Retained |
-|:---|:---:|:---:|:---:|:---:|
-| Country x Gender x Age | 0.34 | 3.0 | 189 | 34% |
-| Country x Religion | 0.50 | 4.1 | 241 | 29% |
-| Country x Environment | 0.42 | 10.9 | 102 | 10% |
-| Continent | 0.83 | 1.1 | 965 | 89% |
-| Gender | 0.99 | 1.0 | 1,083 | 100% |
+::: {.callout-note}
+## Claimed representativeness, not global representativeness
 
-: GD averages across 6 waves (N ≈ 1,000 per wave). {.results-table}
+The GRI measures how well a survey represents its **claimed population**. Regional surveys like Afrobarometer and Latinobarómetro are benchmarked against the populations of the countries they target---not against the entire world. This makes scores comparable across programs: a GRI of 0.80 means "80% representative of the population you claim to cover," whether that population is global or regional.
+:::
 
-### The Same Dimensions: WVS (W1--W7)
+![Five survey programs compared on representativeness (GRI) and statistical precision retained after reweighting. Regional surveys are benchmarked against their claimed populations.](images/survey_comparison.png){.figure width="100%"}
 
-| Dimension | GRI | Design Effect | Effective N | Precision Retained |
-|:---|:---:|:---:|:---:|:---:|
-| Country x Gender x Age | 0.20 | 2.7 | 5,695 | 43% |
-| Country x Religion | 0.30 | 29.4 | 3,634 | 10% |
-| Country x Environment | 0.32 | 45.4 | 5,832 | 22% |
-| Continent | 0.67 | 1.6 | 40,371 | 66% |
-| Gender | 0.98 | 1.0 | 57,550 | 100% |
+### GRI Scores Across Programs
 
-: WVS averages across 7 waves (N ≈ 58,000 per wave). {.results-table}
+| Dimension | GD (global) | WVS (global) | Pew (35 countries) | Afrobarometer (39 African) | Latinobarómetro (17 LatAm) |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Country x Gender x Age | 0.34 | 0.20 | 0.48 | 0.53 | 0.48 |
+| Country x Religion | 0.50 | 0.30 | 0.53 | 0.62 | 0.52 |
+| Country x Environment | 0.42 | 0.32 | 0.55 | 0.63 | 0.51 |
+| Country | 0.60 | 0.31 | 0.56 | 0.63 | 0.53 |
+| Religion | 0.82 | 0.75 | 0.72 | 0.91 | 0.87 |
+| Gender | 0.99 | 0.98 | 0.99 | 0.99 | 0.99 |
+| **Overall (13 dim. avg)** | **0.64** | **0.55** | **0.69** | **0.81** | **0.78** |
+
+: GD and WVS averaged across waves. Latinobarómetro averaged across 2023--2024. {.results-table}
 
 ### What This Reveals
 
 - **Deliberate design beats raw sample size.** Global Dialogues achieves GRI scores 40--70% higher than WVS on intersectional dimensions with 1/58th the participants.
-- **WVS's sample size advantage is largely consumed by reweighting.** On Country x Religion, WVS averages a design effect of 29.4---meaning its ~58,000 respondents yield the precision of ~3,600 optimally allocated respondents.
-- **Both surveys pay a precision cost on intersectional dimensions.** Even GD retains only 10--34% of its nominal precision on primary dimensions, highlighting the fundamental difficulty of simultaneously matching multiple demographic distributions.
-- **Single-axis dimensions are well-served by both.** Gender balance is near-perfect in both programs (GRI > 0.98, precision retained ~100%).
+- **Regional surveys score well against their claimed populations.** Afrobarometer (Overall 0.81) and Latinobarómetro (0.78) achieve strong representativeness *of the populations they target*---but would score much lower against global benchmarks, as expected.
+- **Pew's equal-per-country design limits country-level GRI.** With ~1,000 respondents per country regardless of population, India (1.4B) and Singapore (5.8M) get equal weight, producing a Country GRI of only 0.56 despite 41K total respondents.
+- **All surveys pay a precision cost on intersectional dimensions.** Even the best-performing programs retain only 30--50% of nominal precision on Country x Gender x Age, highlighting the combinatorial difficulty of simultaneously matching multiple distributions.
+- **Gender balance is near-perfect across all programs** (GRI > 0.98), confirming that binary gender matching is a solved problem in modern survey design.
 
-See the [full results](results.qmd) for all 13 dimensions across all waves.
+See the [full results](results.qmd) for all 13 dimensions across all waves and programs.
 
 ## Quick Start
 
@@ -110,6 +117,6 @@ See the [library documentation](library.qmd) for the full API reference and exam
 ## Learn More
 
 - [Methodology](methodology.qmd) --- TVD framework, design effect, multi-dimensional scorecards, maximum achievable scores
-- [Results](results.qmd) --- Complete benchmark results from Global Dialogues and the World Values Survey
+- [Results](results.qmd) --- Complete benchmark results from Global Dialogues, World Values Survey, Pew Global Attitudes, Afrobarometer, and Latinobarómetro
 - [Python Library](library.qmd) --- Installation, API reference, and usage examples
 - [About](about.qmd) --- Citation, authors, license, and data sources

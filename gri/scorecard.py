@@ -30,10 +30,11 @@ from .benchmark_simplifier import simplify_benchmark
 class GRIScorecard:
     """Generate comprehensive representativeness scorecards."""
     
-    def __init__(self, config_dir: Optional[Path] = None, simplification_mode: str = 'auto'):
+    def __init__(self, config_dir: Optional[Path] = None, simplification_mode: str = 'auto',
+                 country_filter: Optional[List[str]] = None):
         """
         Initialize scorecard generator with configuration.
-        
+
         Args:
             config_dir: Path to configuration directory containing dimensions.yaml,
                        segments.yaml, and regions.yaml. If None, uses default.
@@ -41,12 +42,18 @@ class GRIScorecard:
                 'none' - Use full benchmarks as-is
                 'auto' - Formulaic simplification based on sample size
                 'legacy' - Use hard-coded list (deprecated)
+            country_filter: Optional list of country names to restrict benchmarks to.
+                When set, all benchmark data is filtered to only these countries
+                and proportions are renormalized. Use this for regional surveys
+                that claim to represent a specific set of countries rather than
+                the global population (e.g., Afrobarometer for Africa).
         """
         if config_dir is None:
             config_dir = Path(__file__).parent.parent / 'config'
-        
+
         self.config_dir = Path(config_dir)
         self.simplification_mode = simplification_mode
+        self.country_filter = set(country_filter) if country_filter else None
         self._load_configs()
         self._prepare_mappings()
     
@@ -104,6 +111,112 @@ class GRIScorecard:
                 lambda x: self._country_name_map.get(x, x)
             )
         return df
+
+    def _apply_country_filter(self, benchmark_df: pd.DataFrame,
+                             dimension: Dict[str, Any]) -> pd.DataFrame:
+        """Filter benchmark data to only countries in the country_filter set.
+
+        For benchmarks with a 'country' column, filters directly and renormalizes.
+        For benchmarks without 'country' (e.g., Religion, Gender, Age), loads
+        the country-level equivalent, filters, aggregates, and renormalizes to
+        produce the correct regional marginal distribution.
+
+        This allows regional surveys to be scored against their claimed
+        population rather than the global population.
+        """
+        if not self.country_filter:
+            return benchmark_df
+
+        # Standardize filter names through the same country name map
+        standardized_filter = set()
+        for c in self.country_filter:
+            standardized_filter.add(self._country_name_map.get(c, c))
+
+        cols = dimension['columns']
+
+        if 'country' in benchmark_df.columns:
+            # Direct filter: keep only rows for countries in the filter
+            filtered = benchmark_df[benchmark_df['country'].isin(standardized_filter)].copy()
+            if len(filtered) == 0:
+                warnings.warn(
+                    f"Country filter matched 0 rows in benchmark for {dimension['name']}. "
+                    f"Filter has {len(standardized_filter)} countries."
+                )
+                return benchmark_df
+            # Renormalize proportions to sum to 1
+            total = filtered['population_proportion'].sum()
+            if total > 0:
+                filtered['population_proportion'] = filtered['population_proportion'] / total
+            return filtered.reset_index(drop=True)
+
+        elif 'region' in benchmark_df.columns:
+            # Filter to regions that contain any of the filtered countries
+            valid_regions = set()
+            for country in standardized_filter:
+                region = self.country_to_region.get(country)
+                if region:
+                    valid_regions.add(region)
+            filtered = benchmark_df[benchmark_df['region'].isin(valid_regions)].copy()
+            if len(filtered) == 0:
+                return benchmark_df
+            total = filtered['population_proportion'].sum()
+            if total > 0:
+                filtered['population_proportion'] = filtered['population_proportion'] / total
+            return filtered.reset_index(drop=True)
+
+        elif 'continent' in benchmark_df.columns:
+            # Filter to continents that contain any of the filtered countries
+            valid_continents = set()
+            for country in standardized_filter:
+                continent = self.country_to_continent.get(country)
+                if continent:
+                    valid_continents.add(continent)
+            filtered = benchmark_df[benchmark_df['continent'].isin(valid_continents)].copy()
+            if len(filtered) == 0:
+                return benchmark_df
+            total = filtered['population_proportion'].sum()
+            if total > 0:
+                filtered['population_proportion'] = filtered['population_proportion'] / total
+            return filtered.reset_index(drop=True)
+
+        else:
+            # Non-geographic benchmark (e.g., Religion, Gender, Age, Environment)
+            # Need to reconstruct from country-level data
+            # Map the dimension to its country-level equivalent
+            country_equiv_map = {
+                frozenset(['religion']): 'country_religion',
+                frozenset(['gender']): 'country_gender_age',
+                frozenset(['age_group']): 'country_gender_age',
+                frozenset(['environment']): 'country_environment',
+            }
+
+            cols_key = frozenset(cols)
+            equiv_key = country_equiv_map.get(cols_key)
+
+            if equiv_key is None:
+                # Can't reconstruct; return as-is
+                return benchmark_df
+
+            # Load the country-level benchmark to filter and re-aggregate
+            base_path = self.config_dir.parent
+            equiv_file = base_path / f'data/processed/benchmark_{equiv_key}.csv'
+            if not equiv_file.exists():
+                return benchmark_df
+
+            country_bench = load_data(equiv_file)
+            country_bench = self._standardize_country_names(country_bench)
+
+            # Filter to our countries
+            filtered = country_bench[country_bench['country'].isin(standardized_filter)].copy()
+            if len(filtered) == 0:
+                return benchmark_df
+
+            # Aggregate by the dimension columns (drop country)
+            agg = filtered.groupby(cols)['population_proportion'].sum().reset_index()
+            total = agg['population_proportion'].sum()
+            if total > 0:
+                agg['population_proportion'] = agg['population_proportion'] / total
+            return agg
 
     def _add_derived_columns(self, df: pd.DataFrame) -> pd.DataFrame:
         """Add region and continent columns based on country."""
@@ -174,6 +287,10 @@ class GRIScorecard:
         # Standardize country names to match segments.yaml conventions
         if benchmark_df is not None:
             benchmark_df = self._standardize_country_names(benchmark_df)
+
+        # Apply country filter for regional benchmarks
+        if benchmark_df is not None and self.country_filter:
+            benchmark_df = self._apply_country_filter(benchmark_df, dimension)
 
         # Apply simplification if needed
         if benchmark_df is not None and self.simplification_mode != 'none':

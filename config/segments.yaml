@@ -60,6 +60,14 @@ benchmark_mappings:
     "Republic of Macedonia": ["Republic of Macedonia", "North Macedonia", "Macedonia"]
     "Trinidad and Tobago": ["Trinidad and Tobago", "Trinidad & Tobago"]
     "Antigua and Barbuda": ["Antigua and Barbuda", "Antigua & Deps", "Antigua & Barbuda"]
+    # Afrobarometer / Latinobarómetro country name variants
+    "Congo": ["Congo", "Congo-Brazzaville", "Republic of the Congo"]
+    "Côte d'Ivoire": ["Côte d'Ivoire", "Ivory Coast", "Cote d'Ivoire"]
+    "Eswatini": ["Eswatini", "Swaziland"]
+    "Cabo Verde": ["Cabo Verde", "Cape Verde"]
+    "Gambia": ["Gambia", "The Gambia"]
+    "Dem. Rep. of the Congo": ["Dem. Rep. of the Congo", "Democratic Republic of the Congo", "DR Congo", "DRC"]
+    "Dominican Republic": ["Dominican Republic", "Rep. Dominicana"]
 
 # Survey data mappings (Survey sources -> GRI standard)
 survey_mappings:
