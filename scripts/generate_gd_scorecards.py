@@ -192,35 +192,48 @@ def main():
         print(f"Found GD data for: {', '.join(f'GD{n}' for n in gd_nums)}")
     
     # Process each GD
+    all_scorecards = []
     for gd_num in gd_nums:
-        result = generate_scorecard_for_gd(gd_num, base_path, args.format, 
+        result = generate_scorecard_for_gd(gd_num, base_path, args.format,
                                          simplification_mode=args.mode)
-        
+
         if result is None:
             continue
-            
+
         formatted_output, scorecard_df = result
-        
+
         # Determine file extension
         ext = {
             'csv': '.csv',
             'text': '.txt',
             'markdown': '.md'
         }[args.format]
-        
+
         # Save output
         output_file = output_dir / f'GD{gd_num}_scorecard{ext}'
         with open(output_file, 'w') as f:
             f.write(formatted_output)
-        
+
         print(f"  Saved to: {output_file}")
-        
+
         # Also save raw DataFrame as CSV for further analysis
         if args.format != 'csv':
             csv_file = output_dir / f'GD{gd_num}_scorecard.csv'
             scorecard_df.to_csv(csv_file, index=False)
             print(f"  Also saved raw data to: {csv_file}")
-    
+
+        # Collect for combined output
+        tagged = scorecard_df.copy()
+        tagged.insert(0, 'gd', f'GD{gd_num}')
+        all_scorecards.append(tagged)
+
+    # Write combined scorecards CSV
+    if len(all_scorecards) > 1:
+        combined = pd.concat(all_scorecards, ignore_index=True)
+        combined_path = output_dir / 'GD_combined_scorecards.csv'
+        combined.to_csv(combined_path, index=False)
+        print(f"\n  Combined scorecards ({len(combined)} rows) saved to: {combined_path}")
+
     print("\nScorecard generation complete!")
 
 

@@ -85,6 +85,7 @@ def figure1_gri_scores_by_wave(df):
     fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
 
     waves = sorted(df['gd'].unique())
+    wave_nums_all = sorted([int(w.replace('GD', '')) for w in waves])
     colors = plt.cm.viridis(np.linspace(0.2, 0.8, len(primary_dims)))
 
     # Panel A: Primary dimensions
@@ -97,8 +98,8 @@ def figure1_gri_scores_by_wave(df):
     ax.set_xlabel('Global Dialogues Wave')
     ax.set_ylabel('GRI Score')
     ax.set_title('(a) Primary Dimensions')
-    ax.set_xticks(range(1, 7))
-    ax.set_xticklabels([f'GD{i}' for i in range(1, 7)])
+    ax.set_xticks(wave_nums_all)
+    ax.set_xticklabels([f'GD{i}' for i in wave_nums_all])
     ax.legend(fontsize=8, loc='upper left')
     ax.set_ylim(0, 1.05)
     ax.axhline(y=0.4, color='gray', linestyle='--', alpha=0.3, linewidth=0.8)
@@ -118,8 +119,8 @@ def figure1_gri_scores_by_wave(df):
                 label=dim, linewidth=1.5, markersize=5)
     ax.set_xlabel('Global Dialogues Wave')
     ax.set_title('(b) Auxiliary Dimensions')
-    ax.set_xticks(range(1, 7))
-    ax.set_xticklabels([f'GD{i}' for i in range(1, 7)])
+    ax.set_xticks(wave_nums_all)
+    ax.set_xticklabels([f'GD{i}' for i in wave_nums_all])
     ax.legend(fontsize=8, loc='lower left')
     ax.axhline(y=0.4, color='gray', linestyle='--', alpha=0.3, linewidth=0.8)
     ax.axhline(y=0.6, color='gray', linestyle='--', alpha=0.3, linewidth=0.8)
@@ -129,8 +130,11 @@ def figure1_gri_scores_by_wave(df):
     plt.tight_layout()
     out_path = os.path.join(OUTPUT_DIR, 'gri_scores_by_wave.pdf')
     plt.savefig(out_path)
+    out_png = os.path.join(REPO_ROOT, 'site', 'images', 'gri_scores_by_wave.png')
+    plt.savefig(out_png, dpi=200)
     plt.close()
     print(f"  Saved: {out_path}")
+    print(f"  Saved: {out_png}")
 
 
 def figure2_efficiency_ratios(df):
@@ -172,7 +176,7 @@ def figure2_efficiency_ratios(df):
     ax.set_ylabel('Efficiency Ratio (%)')
     ax.set_title('Sampling Efficiency: Actual GRI as Percentage of Maximum Achievable')
     ax.set_xticks(x + width)
-    ax.set_xticklabels([f'GD{i}' for i in range(1, 7)])
+    ax.set_xticklabels(waves)
     ax.legend(fontsize=8)
     ax.set_ylim(0, 70)
     ax.axhline(y=50, color='gray', linestyle='--', alpha=0.3, linewidth=0.8)
@@ -181,8 +185,11 @@ def figure2_efficiency_ratios(df):
     plt.tight_layout()
     out_path = os.path.join(OUTPUT_DIR, 'efficiency_ratios.pdf')
     plt.savefig(out_path)
+    out_png = os.path.join(REPO_ROOT, 'site', 'images', 'efficiency_ratios.png')
+    plt.savefig(out_png, dpi=200)
     plt.close()
     print(f"  Saved: {out_path}")
+    print(f"  Saved: {out_png}")
 
 
 def figure3_scorecard_heatmap(df):
@@ -241,8 +248,11 @@ def figure3_scorecard_heatmap(df):
     plt.tight_layout()
     out_path = os.path.join(OUTPUT_DIR, 'scorecard_heatmap.pdf')
     plt.savefig(out_path)
+    out_png = os.path.join(REPO_ROOT, 'site', 'images', 'scorecard_heatmap.png')
+    plt.savefig(out_png, dpi=200)
     plt.close()
     print(f"  Saved: {out_path}")
+    print(f"  Saved: {out_png}")
 
 
 def figure4_pipeline_diagram():
@@ -295,8 +305,11 @@ def figure4_pipeline_diagram():
     plt.tight_layout()
     out_path = os.path.join(OUTPUT_DIR, 'gri_pipeline.pdf')
     plt.savefig(out_path)
+    out_png = os.path.join(REPO_ROOT, 'site', 'images', 'gri_pipeline.png')
+    plt.savefig(out_png, dpi=200)
     plt.close()
     print(f"  Saved: {out_path}")
+    print(f"  Saved: {out_png}")
 
 
 def main():
@@ -304,6 +317,10 @@ def main():
     print(f"  Repository root: {REPO_ROOT}")
     print(f"  Output directory: {OUTPUT_DIR}")
     print()
+
+    # Ensure site images directory exists
+    site_images = os.path.join(REPO_ROOT, 'site', 'images')
+    os.makedirs(site_images, exist_ok=True)
 
     df = load_scorecard_data()
     print(f"  Loaded scorecard data: {len(df)} rows")

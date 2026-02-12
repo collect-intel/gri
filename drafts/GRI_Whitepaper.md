@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy — yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a [0, 1] scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to six waves of the Global Dialogues survey on AI perceptions (N = 6,500 across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.29–0.37 on fine-grained demographics — capturing roughly 39% of the theoretically maximum achievable representativeness at its sample size. We further introduce the Strategic Representativeness Index (SRI) for optimal sampling design, and show that the GRI connects to classical survey statistics through the design effect: low-GRI samples inflate estimation variance, reducing effective sample size in proportion to the squared coefficient of variation of the post-stratification weights. This connection provides the inferential justification for caring about distributional fidelity beyond its face-value interpretation. We release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks. It provides researchers, funders, and policymakers with a rigorous, reproducible tool for evaluating, comparing, and improving the demographic quality of any dataset with categorical demographic attributes.
+Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy — yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a [0, 1] scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to six waves of the Global Dialogues survey on AI perceptions (N = 6,500 across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.33–0.36 on fine-grained demographics — capturing roughly 43% of the theoretically maximum achievable representativeness at its sample size. We further demonstrate generalizability by applying the framework to seven waves of the World Values Survey (N = 403,000 total), Afrobarometer Round 9 (N = 53,000), and Latinobarómetro (N = 19,000), revealing that even large-scale probability surveys with tens of thousands of respondents can score below 0.22 on fine-grained global demographics when country coverage is limited. We introduce the Strategic Representativeness Index (SRI) for optimal sampling design, and show that the GRI connects to classical survey statistics through the design effect: low-GRI samples inflate estimation variance, reducing effective sample size in proportion to the squared coefficient of variation of the post-stratification weights. We recommend reporting the GRI alongside the design effect's effective sample size as a minimum viable summary of sample quality: GRI quantifies the demographic distance, while effective N translates the inferential cost of that distance into an intuitive metric of statistical power. This connection provides the inferential justification for caring about distributional fidelity beyond its face-value interpretation. We release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks. It provides researchers, funders, and policymakers with a rigorous, reproducible tool for evaluating, comparing, and improving the demographic quality of any dataset with categorical demographic attributes.
 
 ---
 
@@ -36,7 +36,7 @@ This paper makes four contributions:
 
 2. **A multi-dimensional approach** that evaluates representativeness across three benchmark dimensions simultaneously — Country × Gender × Age, Country × Religion, and Country × Urban/Rural Environment — using authoritative population data from the United Nations and Pew Research Center.
 
-3. **Empirical validation** through application to six waves of the Global Dialogues survey (N ≈ 1,000 per wave), including Monte Carlo simulation of maximum achievable scores and efficiency analysis that separates sampling limitations from sampling failures.
+3. **Empirical validation** through application to six waves of the Global Dialogues survey (N ≈ 1,000 per wave), seven waves of the World Values Survey (N = 9,000–85,000 per wave), and regional surveys (Afrobarometer, Latinobarómetro), including Monte Carlo simulation of maximum achievable scores and efficiency analysis that separates sampling limitations from sampling failures.
 
 4. **An open-source Python library** (`gri`) implementing the complete framework — core GRI calculation, a multi-dimensional scorecard, Monte Carlo simulation for maximum possible scores, the SRI metric variant, efficiency analysis, and publication-quality visualization — enabling any researcher to evaluate their survey's representativeness against global benchmarks.
 
@@ -318,18 +318,18 @@ Table 1 presents the core GRI scores for the three primary cross-classified dime
 
 | Dimension | GD1 | GD2 | GD3 | GD4 | GD5 | GD6 | Mean | SD |
 |-----------|-----|-----|-----|-----|-----|-----|------|-----|
-| Country × Gender × Age | 0.293 | 0.282 | 0.374 | 0.319 | 0.301 | 0.292 | 0.310 | 0.033 |
-| Country × Religion | 0.471 | 0.474 | 0.515 | 0.518 | 0.484 | 0.481 | 0.490 | 0.021 |
-| Country × Environment | 0.369 | 0.339 | 0.387 | 0.390 | 0.354 | 0.345 | 0.364 | 0.021 |
-| Country | 0.516 | 0.502 | 0.539 | 0.571 | 0.527 | 0.519 | 0.529 | 0.024 |
+| Country × Gender × Age | 0.337 | 0.329 | 0.348 | 0.361 | 0.347 | 0.341 | 0.344 | 0.011 |
+| Country × Religion | 0.482 | 0.488 | 0.514 | 0.535 | 0.499 | 0.495 | 0.502 | 0.020 |
+| Country × Environment | 0.424 | 0.394 | 0.435 | 0.453 | 0.414 | 0.406 | 0.421 | 0.021 |
+| Country | 0.590 | 0.573 | 0.618 | 0.639 | 0.592 | 0.587 | 0.600 | 0.024 |
 | Region | 0.745 | 0.739 | 0.791 | 0.799 | 0.738 | 0.734 | 0.758 | 0.029 |
-| Continent | 0.832 | 0.830 | 0.886 | 0.883 | 0.773 | 0.802 | 0.834 | 0.043 |
-| Religion | 0.817 | 0.819 | 0.833 | 0.826 | 0.813 | 0.806 | 0.819 | 0.009 |
+| Continent | 0.832 | 0.830 | 0.886 | 0.883 | 0.773 | 0.802 | 0.834 | 0.044 |
+| Religion | 0.817 | 0.819 | 0.833 | 0.826 | 0.813 | 0.806 | 0.819 | 0.010 |
 | Gender | 0.989 | 0.990 | 0.996 | 0.979 | 0.986 | 0.995 | 0.989 | 0.006 |
 
 Several patterns emerge. **Gender balance is essentially perfect** across all waves (GRI > 0.97), reflecting that gender parity is relatively straightforward to achieve in online convenience sampling. **Religious representativeness at the global level is good** (GRI ≈ 0.82), because the major religious categories are broad enough that most samples naturally cover them. **Continental representativeness is also good** (GRI ≈ 0.83), as the GD recruits from all inhabited continents.
 
-The representativeness picture deteriorates sharply as granularity increases. **Country-level GRI averages 0.53**, meaning nearly half the sample's demographic weight is allocated to the wrong countries. The most demanding dimension — **Country × Gender × Age — averages only 0.31**, indicating that roughly 69% of the sample's joint country-gender-age demographic weight is misallocated relative to the global population.
+The representativeness picture deteriorates sharply as granularity increases. **Country-level GRI averages 0.60**, meaning roughly 40% of the sample's demographic weight is allocated to the wrong countries. The most demanding dimension — **Country × Gender × Age — averages only 0.34**, indicating that roughly 66% of the sample's joint country-gender-age demographic weight is misallocated relative to the global population.
 
 ### 4.3 Efficiency Analysis
 
@@ -339,13 +339,13 @@ Raw GRI scores must be interpreted against what is theoretically achievable. Tab
 
 | Dimension | Max GRI (N≈1000) | GD1 | GD2 | GD3 | GD4 | GD5 | GD6 | Mean Efficiency |
 |-----------|-------------------|-----|-----|-----|-----|-----|-----|-----------------|
-| Country × Gender × Age | 0.792 | 37.0% | 35.6% | 47.3% | 40.3% | 38.0% | 36.9% | 39.2% |
-| Country × Religion | 0.938 | 50.2% | 50.6% | 54.9% | 55.2% | 51.6% | 51.3% | 52.3% |
-| Country × Environment | 0.950 | 38.8% | 35.7% | 40.7% | 41.0% | 37.2% | 36.3% | 38.3% |
+| Country × Gender × Age | 0.792 | 42.5% | 41.6% | 44.0% | 45.5% | 43.8% | 43.0% | 43.4% |
+| Country × Religion | 0.938 | 51.4% | 52.0% | 54.8% | 57.0% | 53.2% | 52.7% | 53.5% |
+| Country × Environment | 0.950 | 44.7% | 41.5% | 45.7% | 47.7% | 43.6% | 42.7% | 44.3% |
 
-The efficiency ratios paint a more nuanced picture than raw scores alone. For Country × Religion, the GD achieves about 52% of the theoretical maximum — meaning about half the remaining representativeness gap is due to the structural impossibility of perfectly allocating ~1,000 people across 1,607 strata, and the other half is due to actual sampling imbalances. For Country × Gender × Age, efficiency is lower at ~39%, suggesting more room for improvement through better sampling design.
+The efficiency ratios paint a more nuanced picture than raw scores alone. For Country × Religion, the GD achieves about 53.5% of the theoretical maximum — meaning about half the remaining representativeness gap is due to the structural impossibility of perfectly allocating ~1,000 people across 1,607 strata, and the other half is due to actual sampling imbalances. For Country × Gender × Age, efficiency is ~43%, suggesting room for improvement through better sampling design.
 
-GD3 stands out with notably higher efficiency (47.3% for Country × Gender × Age) compared to other waves, suggesting that its particular geographic and demographic recruitment pattern happened to align better with global population proportions.
+GD4 achieves the highest efficiency across primary dimensions (45.5% for Country × Gender × Age, 57.0% for Country × Religion), suggesting that its particular geographic and demographic recruitment pattern happened to align better with global population proportions.
 
 ### 4.4 Diversity Scores and Strata Coverage
 
@@ -353,13 +353,13 @@ GD3 stands out with notably higher efficiency (47.3% for Country × Gender × Ag
 
 | Dimension | GD1 | GD2 | GD3 | GD4 | GD5 | GD6 | Mean |
 |-----------|-----|-----|-----|-----|-----|-----|------|
-| Country × Gender × Age | 0.464 | 0.458 | 0.470 | 0.476 | 0.464 | 0.458 | 0.465 |
-| Country × Religion | 0.538 | 0.521 | 0.453 | 0.487 | 0.496 | 0.521 | 0.503 |
-| Country × Environment | 0.434 | 0.414 | 0.394 | 0.393 | 0.372 | 0.372 | 0.397 |
+| Country × Gender × Age | 0.589 | 0.577 | 0.564 | 0.565 | 0.560 | 0.560 | 0.569 |
+| Country × Religion | 0.571 | 0.563 | 0.500 | 0.529 | 0.546 | 0.571 | 0.547 |
+| Country × Environment | 0.483 | 0.455 | 0.428 | 0.448 | 0.421 | 0.414 | 0.441 |
 | Continent | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
 | Gender | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
 
-The Diversity Scores reveal that the GD consistently covers only about 46% of relevant Country × Gender × Age strata — meaning more than half of the demographic segments where we would expect at least one participant (given the sample size) go entirely unrepresented. At coarser levels, coverage is complete: all continents and both binary genders are always represented.
+The Diversity Scores reveal that the GD consistently covers about 57% of relevant Country × Gender × Age strata — meaning over 40% of the demographic segments where we would expect at least one participant (given the sample size) go entirely unrepresented. At coarser levels, coverage is complete: all continents and both binary genders are always represented.
 
 ### 4.5 Detailed Analysis: GD4
 
@@ -381,26 +381,96 @@ Second, **urban bias**: urban segments are systematically overrepresented across
 
 | Dimension | GRI | SRI | Max GRI | Efficiency |
 |-----------|-----|-----|---------|-----------|
-| Country × Gender × Age | 0.301 | 0.306 | 0.792 | 38.0% |
-| Country × Religion | 0.484 | 0.424 | 0.938 | 51.6% |
-| Country × Environment | 0.354 | 0.336 | 0.950 | 37.3% |
-| Country | 0.527 | 0.457 | — | — |
+| Country × Gender × Age | 0.347 | 0.381 | 0.792 | 43.8% |
+| Country × Religion | 0.499 | 0.447 | 0.938 | 53.2% |
+| Country × Environment | 0.414 | 0.387 | 0.950 | 43.6% |
+| Country | 0.592 | 0.506 | — | — |
 | Region | 0.738 | 0.749 | — | — |
 | Continent | 0.773 | 0.841 | — | — |
 | Religion | 0.813 | 0.745 | — | — |
 | Gender | 0.986 | 0.986 | — | — |
 
-The two metrics tell coherent but distinct stories. **GRI** provides the strictest assessment: the GD5 sample achieves only 0.301 on Country × Gender × Age, meaning the sample is far from a proportional mirror of the world.
+The two metrics tell coherent but distinct stories. **GRI** provides the strictest assessment: the GD5 sample achieves only 0.347 on Country × Gender × Age, meaning the sample is far from a proportional mirror of the world.
 
 **SRI** scores are generally similar to GRI but differ at extremes. For Continent, SRI is higher (0.841 vs. 0.773), because the square-root transformation increases the target allocation for smaller continents (Oceania, South America), which the GD happens to cover relatively well. For Religion, SRI is lower (0.745 vs. 0.813), because the strategic target boosts smaller religions (Judaism, Sikhism) that the sample underrepresents.
 
-The **efficiency ratio** contextualizes raw GRI scores against structural constraints. Country × Religion has the highest efficiency (51.6%), indicating that about half the gap between the GD5 score and perfect representativeness is due to the structural impossibility of perfectly allocating ~1,000 people across 1,607 strata, while the other half reflects actual sampling imbalances. Country × Gender × Age and Country × Environment have lower efficiencies (~38%), suggesting more room for improvement through better sampling strategy on those dimensions.
+The **efficiency ratio** contextualizes raw GRI scores against structural constraints. Country × Religion has the highest efficiency (53.2%), indicating that about half the gap between the GD5 score and perfect representativeness is due to the structural impossibility of perfectly allocating ~1,000 people across 1,607 strata, while the other half reflects actual sampling imbalances. Country × Gender × Age and Country × Environment have efficiencies of ~44%, suggesting room for improvement through better sampling strategy on those dimensions.
 
 ### 4.7 Cross-Wave Trends
 
-Across six waves, Country × Gender × Age GRI is remarkably stable, ranging from 0.282 (GD2) to 0.374 (GD3) with no clear trend of improvement. This stability suggests that the GD's sampling method — online purposive recruitment — reaches a natural ceiling of demographic representativeness that is not easily surpassed without deliberate stratified oversampling of underrepresented segments.
+Across six waves, Country × Gender × Age GRI is remarkably stable, ranging from 0.329 (GD2) to 0.361 (GD4) with no clear trend of improvement. This stability suggests that the GD's sampling method — online purposive recruitment — reaches a natural ceiling of demographic representativeness that is not easily surpassed without deliberate stratified oversampling of underrepresented segments.
 
-GD3 is the consistent outlier, achieving the highest GRI on most dimensions despite having the smallest sample (N = 971). This wave's superior scores likely reflect a particularly well-distributed geographic recruitment pattern rather than a larger sample. The Country-level GRI for GD3 (0.539) and its continental GRI (0.886) — the highest in the series — corroborate this interpretation.
+GD4 is the consistent top performer, achieving the highest GRI on most primary dimensions (Country × Gender × Age: 0.361, Country × Religion: 0.535, Country × Environment: 0.453, Country: 0.639). This wave's superior scores likely reflect a particularly well-distributed geographic recruitment pattern rather than a substantially larger sample. GD3 also performs well, achieving the highest continental GRI (0.886) in the series.
+
+### 4.8 The Inferential Cost: Design Effect and Effective Sample Size
+
+The GRI measures the demographic distance between sample and population, but does not directly reveal the inferential consequences of that distance. Table 5 presents the design effect, effective sample size, and precision retained for the three primary dimensions across all six GD waves.
+
+**Table 5: Design Effect and Effective Sample Size Across GD Waves**
+
+| Wave | N | CGA d_eff | CGA N_eff | CGA Prec | CR d_eff | CR N_eff | CE d_eff | CE N_eff |
+|------|---|-----------|-----------|----------|----------|----------|----------|----------|
+| GD1 | 1,280 | 3.18 | 199 | 31.4% | 3.80 | 260 | 9.63 | 126 |
+| GD2 | 1,105 | 3.85 | 136 | 25.9% | 4.88 | 173 | 15.92 | 66 |
+| GD3 | 971 | 2.95 | 166 | 33.9% | 4.46 | 170 | 7.86 | 113 |
+| GD4 | 1,050 | 2.46 | 233 | 40.7% | 1.66 | 500 | 7.24 | 136 |
+| GD5 | 1,057 | 3.02 | 195 | 33.1% | 4.69 | 175 | 9.42 | 104 |
+| GD6 | 1,037 | 2.69 | 202 | 37.2% | 4.89 | 168 | 15.12 | 64 |
+| **Mean** | **1,083** | **3.03** | **189** | **33.7%** | **4.07** | **241** | **10.87** | **102** |
+
+The results are striking. On average, the GD's ~1,000 respondents have an effective sample size of only **189** for Country × Gender × Age inference — meaning roughly two-thirds of the data collection budget is consumed by the need to reweight for demographic mismatch. For Country × Environment, the situation is worse: the average design effect of 10.87 means only about 10% of the sample budget contributes to inferential precision, yielding an effective N of just 102.
+
+GD4 again stands out: its Country × Religion design effect of 1.66 (effective N = 500, precision retained 60.2%) is far better than any other wave, meaning its religious demographic composition required minimal reweighting. This wave illustrates how a well-distributed sample composition simultaneously achieves higher GRI *and* lower design effect.
+
+The design effect table reveals the asymmetry discussed in Section 3.6.2. Country × Environment has the highest design effects despite Country × Gender × Age having more strata. This reflects the systematic urban bias of online surveys: rural populations are severely underrepresented (not merely imprecisely represented), and the reweighting ratios required to correct this bias are large enough to inflate variance dramatically.
+
+### 4.9 Cross-Survey Validation: The World Values Survey
+
+To assess the GRI framework's generalizability beyond a single survey program, we apply it to seven waves of the World Values Survey (WVS), the largest and longest-running cross-national survey of human values and beliefs [Haerpfer et al., 2022]. The WVS employs probability sampling within each participating country and has collected data from 10 to 60 countries per wave, with total sample sizes ranging from 9,144 (Wave 1) to 85,219 (Wave 6).
+
+**Table 6: GRI Comparison — Global Dialogues vs. World Values Survey**
+
+| Metric | GD (6-wave mean) | WVS (7-wave mean) |
+|--------|-------------------|-------------------|
+| Sample size per wave | ~1,083 | ~57,600 |
+| Countries per wave | ~58 | ~40 |
+| CGA GRI | 0.344 | 0.195 |
+| Country × Religion GRI | 0.502 | 0.301 |
+| Country × Environment GRI | 0.421 | 0.320 |
+| Country GRI | 0.600 | 0.307 |
+| CGA Design Effect | 3.03 | 2.71 |
+| CGA Effective N | 189 | 5,695 |
+| CGA Precision Retained | 33.7% | 42.6% |
+
+The comparison reveals a fundamental trade-off between *breadth of country coverage* and *depth of within-country sampling*. The GD, despite having 50–80× fewer respondents per wave, achieves substantially higher GRI scores because it recruits from more countries (≈58 vs. ≈40). Country coverage is the dominant driver of global representativeness: a survey that excludes a country entirely receives zero credit for that country's population share, regardless of how many respondents it collects elsewhere.
+
+Conversely, the WVS achieves better *inferential efficiency* within the populations it does cover. Its CGA design effect (mean 2.71) is lower than the GD's (3.03), reflecting the WVS's probability-based sampling design which produces more balanced within-country demographic distributions. The result is a higher effective sample size (5,695 vs. 189) — not because the WVS has better global representativeness, but because its much larger sample dominates despite the design effect penalty.
+
+This comparison demonstrates precisely why we recommend reporting *both* GRI and effective N as a minimum viable summary:
+
+- **GRI alone** would suggest the GD is the more representative survey — but this obscures the WVS's vastly greater statistical power.
+- **Effective N alone** would suggest the WVS is superior — but this obscures its poor coverage of the global population.
+- **Together**, GRI and effective N communicate the complete picture: the GD covers more of the world but with thin statistical power (GRI = 0.34, N_eff = 189); the WVS covers less of the world but with substantial power where it does (GRI = 0.20, N_eff = 5,695).
+
+### 4.10 Regional Surveys: Afrobarometer and Latinobarómetro
+
+The GRI framework extends naturally to regional surveys that claim to represent a defined subset of the global population. We apply the framework to Afrobarometer Round 9 (N = 53,444 across 39 African countries) and Latinobarómetro 2023–2024 (N ≈ 19,200 across 17 Latin American countries), using country-filtered benchmarks that restrict the reference population to each survey's claimed coverage area.
+
+**Table 7: Regional Survey GRI Scores (Country-Filtered Benchmarks)**
+
+| Dimension | Afrobarometer R9 | Latinobarómetro 2023 | Latinobarómetro 2024 |
+|-----------|:---:|:---:|:---:|
+| Country × Gender × Age | 0.532 | 0.480 | 0.482 |
+| Country × Religion | 0.623 | 0.516 | 0.516 |
+| Country × Environment | 0.632 | 0.509 | 0.503 |
+| Country | 0.634 | 0.529 | 0.529 |
+| Overall (13-dim mean) | 0.807 | 0.787 | 0.781 |
+| CGA Design Effect | 2.01 | 2.51 | 2.45 |
+| CGA Effective N | 16,152 | 5,666 | 5,741 |
+
+These regional surveys achieve substantially higher GRI scores than the GD or WVS on global benchmarks, reflecting two advantages: they target a well-defined regional population rather than the entire world, and they use country-filtered benchmarks that match their intended coverage. The Afrobarometer's CGA GRI of 0.532 and low design effect (2.01) demonstrate that large-scale probability surveys with comprehensive regional coverage can achieve good representativeness combined with strong inferential power.
+
+The year-over-year stability of Latinobarómetro scores (2023 vs. 2024) also demonstrates the GRI's utility for longitudinal monitoring of survey quality within a program.
 
 ---
 
@@ -408,17 +478,17 @@ GD3 is the consistent outlier, achieving the highest GRI on most dimensions desp
 
 ### 5.1 The Interpretation Challenge
 
-A GRI of 0.31 for Country × Gender × Age sounds alarming — nearly 70% of the demographic weight is misallocated. But three considerations moderate this alarm.
+A GRI of 0.34 for Country × Gender × Age sounds alarming — roughly 66% of the demographic weight is misallocated. But three considerations moderate this alarm.
 
-First, **high GRI on fine-grained dimensions is mathematically constrained at moderate sample sizes.** The maximum achievable GRI for Country × Gender × Age at N = 1,000 is 0.792 — meaning even a sample drawn by an omniscient designer with perfect proportional allocation would fail to reach the "excellent" threshold of 0.8. At N = 2,000, the maximum rises to 0.873. Achieving truly excellent representativeness on fine-grained dimensions requires sample sizes in the thousands. (We note that the GD's scores reflect purposive online sampling; probability-based global surveys like the World Values Survey may achieve different GRI profiles, and applying the framework to such surveys is an important direction for future validation.)
+First, **high GRI on fine-grained dimensions is mathematically constrained at moderate sample sizes.** The maximum achievable GRI for Country × Gender × Age at N = 1,000 is 0.792 — meaning even a sample drawn by an omniscient designer with perfect proportional allocation would fail to reach the "excellent" threshold of 0.8. At N = 2,000, the maximum rises to 0.873. Achieving truly excellent representativeness on fine-grained dimensions requires sample sizes in the thousands. Our application of the framework to the World Values Survey (Section 4.9), Afrobarometer, and Latinobarómetro (Section 4.10) confirms that this constraint is universal: even the WVS, with 60,000–85,000 respondents per wave and probability sampling, achieves CGA GRI scores of only 0.17–0.22 because it covers fewer countries than the GD. Continued application of the framework across diverse survey programs and sampling modalities will further refine our understanding of achievable representativeness under real-world constraints.
 
 Second, **the GRI measures a different property than most surveys are designed to optimize.** Many surveys target specific analytic comparisons (e.g., between countries, between age groups) rather than perfect demographic mirroring. A survey designed to compare AI attitudes between the US and China might intentionally oversample both, achieving its analytic goals perfectly while scoring poorly on a global GRI. The GRI measures distributional fidelity, not fitness for purpose.
 
-Third, **the gap between actual and maximum GRI is more informative than the raw score.** An efficiency ratio of 39% tells the practitioner: "Your sampling strategy captures less than 40% of the representativeness that is theoretically possible at your sample size." This directly suggests room for improvement — and the segment-level decomposition identifies *where*.
+Third, **the gap between actual and maximum GRI is more informative than the raw score.** An efficiency ratio of 43% tells the practitioner: "Your sampling strategy captures less than half of the representativeness that is theoretically possible at your sample size." This directly suggests room for improvement — and the segment-level decomposition identifies *where*.
 
 ### 5.2 Why Religion Scores Higher Than Demographics
 
-Across all waves, Country × Religion GRI (mean: 0.49) substantially exceeds Country × Gender × Age (mean: 0.31). Three factors explain this pattern.
+Across all waves, Country × Religion GRI (mean: 0.50) substantially exceeds Country × Gender × Age (mean: 0.34). Three factors explain this pattern.
 
 First, **fewer strata**: Country × Religion has 1,607 strata vs. 2,699, making proportional allocation less demanding. Second, **larger stratum proportions**: the major religious groups (Christianity, Islam, Hinduism, Unaffiliated) collectively account for over 85% of the global population, so even imperfect sampling tends to capture them. Third, **geographic correlation**: religious composition is strongly correlated with geography, so a sample that covers many countries naturally captures religious diversity, even without religious stratification.
 
@@ -432,7 +502,7 @@ The efficiency ratio separates two fundamentally different problems:
 - **Low efficiency with high max GRI** (e.g., Country × Religion at N = 1,000, max GRI = 0.94, actual GRI ≈ 0.49, efficiency ≈ 52%): The sample is large enough but poorly allocated. The solution is better sampling strategy.
 - **High efficiency with low raw GRI**: The sample is doing the best it can at its size. Further improvement requires more respondents, not different respondents.
 
-For the Global Dialogues, the efficiency analysis reveals that Country × Religion has the most room for strategic improvement: the theoretical maximum at N = 1,000 is 0.94, but achieved scores hover around 0.49 — an efficiency of only 52%. Targeted oversampling of countries with large non-Christian, non-Muslim populations (China, India, Japan) would substantially close this gap.
+For the Global Dialogues, the efficiency analysis reveals that Country × Religion has the most room for strategic improvement: the theoretical maximum at N = 1,000 is 0.94, but achieved scores hover around 0.50 — an efficiency of about 53.5%. Targeted oversampling of countries with large non-Christian, non-Muslim populations (China, India, Japan) would substantially close this gap.
 
 ### 5.4 Beyond Surveys: Applications to Machine Learning Dataset Auditing
 
@@ -625,11 +695,13 @@ The GRI framework as presented uses global population benchmarks and measures re
 
 The Global Representativeness Index transforms a vague question — "How representative is this survey?" — into a precise, measurable quantity. By grounding representativeness measurement in Total Variation Distance, the GRI provides researchers with a metric that is mathematically rigorous, empirically interpretable, and actionable.
 
-The empirical application to six waves of the Global Dialogues survey reveals a sobering reality: a purposive online survey spanning 60+ countries achieves Country × Gender × Age GRI scores of only 0.29–0.37, capturing less than 40% of the theoretically achievable representativeness at its sample size. The primary drivers are geographic concentration (oversampling of a few countries at the expense of populous nations like China) and structural modality bias (online surveys systematically underrepresent rural populations). While these findings are specific to the Global Dialogues, the underlying challenges — integer allocation constraints, combinatorial explosion of strata, urban-digital bias — are endemic to global survey research broadly.
+The empirical application to six waves of the Global Dialogues survey reveals a sobering reality: a purposive online survey spanning 60+ countries achieves Country × Gender × Age GRI scores of only 0.33–0.36, capturing roughly 43% of the theoretically achievable representativeness at its sample size. The primary drivers are geographic concentration (oversampling of a few countries at the expense of populous nations like China) and structural modality bias (online surveys systematically underrepresent rural populations). Application to the World Values Survey demonstrates that these challenges are not unique to convenience samples: the WVS, despite employing probability sampling with 9,000–85,000 respondents per wave, achieves even lower CGA GRI scores (0.17–0.22) due to limited country coverage, even as it achieves better within-country demographic balance and correspondingly higher effective sample sizes. The underlying challenges — integer allocation constraints, combinatorial explosion of strata, urban-digital bias, and the inherent tension between geographic breadth and within-country depth — are endemic to global survey research broadly.
 
-What changes if researchers adopt the GRI? Three things. First, **transparency**: every survey can report a standardized, comparable representativeness score alongside its results, enabling consumers of research to calibrate their confidence in "global" findings. Second, **optimization**: the segment-level decomposition and efficiency analysis identify exactly which demographic gaps matter most, guiding recruitment strategy. Third, **accountability**: funders and policymakers can set minimum representativeness targets for research that claims to represent global populations, just as they set minimum sample size requirements.
+The GRI and design effect measure complementary aspects of this challenge, and we recommend that surveys report both as a minimum viable summary of sample quality. The **GRI** answers "How closely does this sample mirror the target population?" — a symmetric measure that treats all demographic deviations equally. The **effective sample size** (N / d_eff) answers "What is this survey actually worth for inference?" — an asymmetric measure that penalizes underrepresentation far more heavily than overrepresentation, because reweighting amplifies noise from few respondents. Together, these two numbers communicate in a single glance what neither can alone: a survey with GRI = 0.34 and N_eff = 189 (like the typical GD wave) tells a very different story from one with GRI = 0.20 and N_eff = 5,695 (like the typical WVS wave), even though both are imperfect.
 
-The complementary metrics extend this toolkit: the SRI for designing surveys that maximize statistical power across populations, the efficiency ratio for contextualizing scores against structural constraints, and the design effect for quantifying the inferential cost of distributional mismatch. Together, these metrics span the lifecycle of survey research — design (SRI, Monte Carlo max scores), execution (real-time GRI monitoring, segment deviation analysis), and evaluation (GRI, efficiency ratio, design effect, effective sample size).
+What changes if researchers adopt this framework? Three things. First, **transparency**: every survey can report a standardized, comparable representativeness score alongside its results, enabling consumers of research to calibrate their confidence in "global" findings. Second, **optimization**: the segment-level decomposition and efficiency analysis identify exactly which demographic gaps matter most, guiding recruitment strategy. Third, **accountability**: funders and policymakers can set minimum representativeness targets for research that claims to represent global populations, just as they set minimum sample size requirements.
+
+The complementary metrics extend this toolkit: the SRI for designing surveys that maximize statistical power across populations, the efficiency ratio for contextualizing scores against structural constraints, the diversity score for measuring strata coverage, and the design effect for quantifying the inferential cost of distributional mismatch. Together, these metrics span the lifecycle of survey research — design (SRI, Monte Carlo max scores), execution (real-time GRI monitoring, segment deviation analysis), and evaluation (GRI, efficiency ratio, design effect, effective sample size). We have demonstrated the framework's applicability across purposive online surveys (Global Dialogues), large-scale probability surveys (World Values Survey), and regional survey programs (Afrobarometer, Latinobarómetro), establishing its generalizability across survey modalities, scales, and geographic scopes.
 
 The framework is released as open-source software with authoritative population benchmarks from the United Nations and Pew Research Center. We invite the survey methodology community to adopt, critique, and extend it.
 
@@ -676,6 +748,10 @@ The framework is released as open-source software with authoritative population 
 [Haerpfer et al., 2022] Haerpfer, C., Inglehart, R., Moreno, A., Welzel, C., Kizilova, K., Diez-Medrano, J., Lagos, M., Norris, P., Ponarin, E., and Puranen, B. (eds.) (2022). *World Values Survey: Round Seven — Country-Pooled Datafile Version 5.0*. Madrid, Spain & Vienna, Austria: JD Systems Institute & WVSA Secretariat. doi:10.14281/18241.24
 
 [Gallup, 2024] Gallup (2024). *Worldwide Research Methodology and Codebook*. Gallup World Poll technical documentation. Available at: https://www.gallup.com/178667/gallup-world-poll-work.aspx
+
+[Afrobarometer, 2024] Afrobarometer (2024). *Afrobarometer Round 9 Survey Data*. Available at: https://www.afrobarometer.org/data/
+
+[Latinobarómetro, 2024] Corporación Latinobarómetro (2024). *Latinobarómetro Survey Data 2023–2024*. Available at: https://www.latinobarometro.org/
 
 ---
 
@@ -794,13 +870,13 @@ function MONTE_CARLO_MAX_GRI(benchmark, sample_size, n_simulations):
 
 | Dimension | GD1 (N=1280) | GD2 (N=1105) | GD3 (N=971) | GD4 (N=1050) | GD5 (N=1057) | GD6 (N=1037) |
 |-----------|:------:|:------:|:------:|:------:|:------:|:------:|
-| Country × Gender × Age | 0.293 | 0.282 | 0.374 | 0.319 | 0.301 | 0.292 |
-| Country × Religion | 0.471 | 0.474 | 0.515 | 0.518 | 0.484 | 0.481 |
-| Country × Environment | 0.369 | 0.339 | 0.387 | 0.390 | 0.354 | 0.345 |
-| Country | 0.516 | 0.502 | 0.539 | 0.571 | 0.527 | 0.519 |
-| Region × Gender × Age | 0.545 | 0.543 | 0.580 | 0.577 | 0.563 | 0.559 |
-| Region × Religion | 0.597 | 0.587 | 0.639 | 0.647 | 0.609 | 0.621 |
-| Region × Environment | 0.537 | 0.507 | 0.562 | 0.576 | 0.520 | 0.518 |
+| Country × Gender × Age | 0.337 | 0.329 | 0.348 | 0.361 | 0.347 | 0.341 |
+| Country × Religion | 0.482 | 0.488 | 0.514 | 0.535 | 0.499 | 0.495 |
+| Country × Environment | 0.424 | 0.394 | 0.435 | 0.453 | 0.414 | 0.406 |
+| Country | 0.590 | 0.573 | 0.618 | 0.639 | 0.592 | 0.587 |
+| Region × Gender × Age | 0.544 | 0.543 | 0.570 | 0.577 | 0.563 | 0.559 |
+| Region × Religion | 0.597 | 0.587 | 0.632 | 0.647 | 0.609 | 0.621 |
+| Region × Environment | 0.538 | 0.507 | 0.562 | 0.576 | 0.520 | 0.518 |
 | Region | 0.745 | 0.739 | 0.791 | 0.799 | 0.738 | 0.734 |
 | Continent | 0.832 | 0.830 | 0.886 | 0.883 | 0.773 | 0.802 |
 | Religion | 0.817 | 0.819 | 0.833 | 0.826 | 0.813 | 0.806 |
@@ -812,14 +888,14 @@ function MONTE_CARLO_MAX_GRI(benchmark, sample_size, n_simulations):
 
 | Dimension | GD1 | GD2 | GD3 | GD4 | GD5 | GD6 |
 |-----------|:------:|:------:|:------:|:------:|:------:|:------:|
-| Country × Gender × Age | 0.464 | 0.458 | 0.470 | 0.476 | 0.464 | 0.458 |
-| Country × Religion | 0.538 | 0.521 | 0.453 | 0.487 | 0.496 | 0.521 |
-| Country × Environment | 0.434 | 0.414 | 0.394 | 0.393 | 0.372 | 0.372 |
-| Country | 0.490 | 0.471 | 0.828 | 0.490 | 0.461 | 0.471 |
-| Region × Gender × Age | 0.696 | 0.641 | 0.625 | 0.652 | 0.663 | 0.669 |
-| Region × Religion | 0.852 | 0.852 | 0.824 | 0.852 | 0.796 | 0.815 |
-| Region × Environment | 0.816 | 0.816 | 0.789 | 0.789 | 0.789 | 0.763 |
-| Region | 0.950 | 0.950 | 0.850 | 0.900 | 0.900 | 0.900 |
+| Country × Gender × Age | 0.589 | 0.577 | 0.564 | 0.565 | 0.560 | 0.560 |
+| Country × Religion | 0.571 | 0.563 | 0.500 | 0.529 | 0.546 | 0.571 |
+| Country × Environment | 0.483 | 0.455 | 0.428 | 0.448 | 0.421 | 0.414 |
+| Country | 0.559 | 0.520 | 0.480 | 0.539 | 0.510 | 0.510 |
+| Region × Gender × Age | 0.696 | 0.641 | 0.621 | 0.652 | 0.663 | 0.669 |
+| Region × Religion | 0.870 | 0.852 | 0.808 | 0.852 | 0.889 | 0.815 |
+| Region × Environment | 0.868 | 0.816 | 0.789 | 0.789 | 0.789 | 0.763 |
+| Region | 1.000 | 0.950 | 0.850 | 0.900 | 0.900 | 0.900 |
 | Continent | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
 | Religion | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
 | Environment | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |

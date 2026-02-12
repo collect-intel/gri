@@ -10,7 +10,7 @@ MAIN = main
 FIGDIR = figures
 FIGSCRIPT = $(FIGDIR)/generate_figures.py
 
-.PHONY: all figures paper clean arxiv
+.PHONY: all figures paper clean arxiv reproduce
 
 all: figures paper
 
@@ -30,6 +30,11 @@ clean:
 	rm -f $(MAIN).aux $(MAIN).bbl $(MAIN).blg $(MAIN).log $(MAIN).out
 	rm -f $(MAIN).toc $(MAIN).lof $(MAIN).lot $(MAIN).fls $(MAIN).fdb_latexmk
 	rm -f $(MAIN).synctex.gz
+
+# Regenerate all data then build paper
+reproduce:
+	cd .. && make reproduce
+	$(MAKE) figures
 
 # Create arXiv-ready archive
 arxiv: paper

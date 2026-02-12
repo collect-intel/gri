@@ -22,7 +22,8 @@ RESET := \033[0m
         process-data calculate-gri scorecard run-notebooks \
         venv-check data-check health-check \
         demo validate-data show-benchmarks \
-        submodule-init submodule-update
+        submodule-init submodule-update \
+        reproduce scorecards-gd scorecards-wvs scorecards-regional figures site-figures max-scores
 
 # Default target
 help:
@@ -50,6 +51,15 @@ help:
 	@echo "  $(GREEN)make scorecard MODE=<mode>$(RESET) - Set simplification (none/auto/legacy, default: auto)"
 	@echo "  $(GREEN)make run-notebooks$(RESET)        - Execute all Jupyter notebooks"
 	@echo "  $(GREEN)make demo$(RESET)                 - Run complete demo workflow"
+	@echo ""
+	@echo "$(BLUE)Reproducibility Commands:$(RESET)"
+	@echo "  $(GREEN)make reproduce$(RESET)            - Regenerate all paper artifacts (GD scorecards + figures)"
+	@echo "  $(GREEN)make scorecards-gd$(RESET)        - Generate Global Dialogues scorecards"
+	@echo "  $(GREEN)make scorecards-wvs$(RESET)       - Generate WVS scorecards (requires external data)"
+	@echo "  $(GREEN)make scorecards-regional$(RESET)  - Generate regional scorecards (requires external data)"
+	@echo "  $(GREEN)make figures$(RESET)              - Generate paper figures + site images from GD data"
+	@echo "  $(GREEN)make site-figures$(RESET)         - Generate site comparison figures (requires all survey data)"
+	@echo "  $(GREEN)make max-scores$(RESET)           - Compute Monte Carlo max possible scores"
 	@echo ""
 	@echo "$(BLUE)Development Commands:$(RESET)"
 	@echo "  $(GREEN)make test$(RESET)                 - Run test suite"
@@ -179,6 +189,44 @@ demo: venv-check process-data calculate-gri
 	@echo "  • Run 'make run-notebooks' to execute analysis notebooks"
 	@echo "  • Check 'notebooks/' directory for detailed examples"
 	@echo "  • Use your own survey data with the GRI functions"
+
+# ============================================================
+# Reproducibility pipeline — regenerate all paper artifacts
+# ============================================================
+reproduce: scorecards-gd figures max-scores
+	@echo "$(GREEN)All paper artifacts regenerated.$(RESET)"
+	@echo "$(YELLOW)Note: scorecards-wvs and scorecards-regional require external data.$(RESET)"
+	@echo "$(YELLOW)Run 'make scorecards-wvs' or 'make scorecards-regional' separately if data is available.$(RESET)"
+
+scorecards-gd: venv-check validate-data
+	@echo "$(BLUE)Generating GD scorecards (GD1-GD8)...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py
+	@echo "$(GREEN)GD scorecards saved to analysis_output/scorecards/$(RESET)"
+
+scorecards-wvs: venv-check validate-data
+	@echo "$(BLUE)Generating WVS scorecards (W1-W7)...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_wvs_scorecards.py
+	@echo "$(GREEN)WVS scorecards saved to analysis_output/scorecards/$(RESET)"
+
+scorecards-regional: venv-check validate-data
+	@echo "$(BLUE)Generating regional scorecards (Afrobarometer, Latinobarómetro)...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_regional_scorecards.py
+	@echo "$(GREEN)Regional scorecards saved to analysis_output/scorecards/$(RESET)"
+
+figures: scorecards-gd
+	@echo "$(BLUE)Generating paper figures + site images...$(RESET)"
+	@$(VENV_ACTIVATE) cd latex/figures && $(PYTHON) generate_figures.py
+	@echo "$(GREEN)Figures saved to latex/figures/ and site/images/$(RESET)"
+
+site-figures: scorecards-gd scorecards-wvs scorecards-regional
+	@echo "$(BLUE)Generating site comparison figures...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) site/figures/generate_comparison.py
+	@echo "$(GREEN)Comparison figures saved to site/images/$(RESET)"
+
+max-scores: venv-check validate-data
+	@echo "$(BLUE)Computing max possible scores...$(RESET)"
+	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/calculate_max_possible_scores.py
+	@echo "$(GREEN)Max scores saved to analysis_output/$(RESET)"
 
 # Development commands
 test: venv-check
