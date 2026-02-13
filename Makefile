@@ -199,7 +199,7 @@ reproduce: scorecards-gd figures max-scores
 	@echo "$(YELLOW)Run 'make scorecards-wvs' or 'make scorecards-regional' separately if data is available.$(RESET)"
 
 scorecards-gd: venv-check validate-data
-	@echo "$(BLUE)Generating GD scorecards (GD1-GD8)...$(RESET)"
+	@echo "$(BLUE)Generating GD scorecards (GD1-GD7)...$(RESET)"
 	@$(VENV_ACTIVATE) $(PYTHON) $(SCRIPTS_DIR)/generate_gd_scorecards.py
 	@echo "$(GREEN)GD scorecards saved to analysis_output/scorecards/$(RESET)"
 

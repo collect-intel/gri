@@ -120,7 +120,7 @@ Demonstrate empirically that low GRI corresponds to low effective sample size �
 
 ### Method
 
-For each Global Dialogues wave (GD1–GD6):
+For each Global Dialogues wave (GD1–GD7):
 
 1. **Compute post-stratification weights** for the Country × Gender × Age dimension:
    - For each respondent, $w_i = q_i / p_i$ where $q_i$ is the population proportion and $p_i$ is the sample proportion of their stratum

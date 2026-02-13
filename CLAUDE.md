@@ -50,7 +50,7 @@ python scripts/generate_regional_scorecards.py
 - `WUP_2018_Urban_Rural.csv` — UN urban/rural distribution by country
 
 **Survey Data** (via git submodule):
-- `data/raw/survey_data/global-dialogues/` — Global Dialogues GD1-GD8
+- `data/raw/survey_data/global-dialogues/` — Global Dialogues GD1-GD7
 - WVS, Afrobarometer, Latinobarómetro data requires separate download (license restrictions)
 
 ## Core Concepts

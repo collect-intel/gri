@@ -67,7 +67,7 @@ def load_max_scores():
 
 def figure1_gri_scores_by_wave(df):
     """
-    Multi-panel figure showing GRI scores across GD1-GD6 by dimension.
+    Multi-panel figure showing GRI scores across GD waves by dimension.
     """
     primary_dims = [
         'Country × Gender × Age',
