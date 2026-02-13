@@ -168,7 +168,7 @@ The change in TVD is $\Delta\text{TVD} = \frac{1}{2}(|p_j - \delta - q_j| + |q_k
 
 We propose interpretation guidelines calibrated against Monte Carlo simulations of achievable scores (Table~\ref{tab:interpretation}).
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{GRI interpretation guidelines.}
 \label{tab:interpretation}
@@ -201,7 +201,7 @@ The threshold $X = 1/N$ identifies strata where we would expect at least one obs
 
 Three primary dimensions define the cross-classified strata (Table~\ref{tab:benchmarks}). The choice reflects three criteria: (1) availability of authoritative, country-level data covering virtually all nations; (2) established relevance to opinion formation in social science; and (3) respondent observability.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{Benchmark data sources.}
 \label{tab:benchmarks}
@@ -222,7 +222,7 @@ The scorecard also evaluates representativeness at coarser resolutions---Region 
 
 Perfect representativeness (GRI = 1.0) is mathematically impossible at realistic sample sizes when the number of strata is large. We estimate the \textbf{maximum achievable GRI} through Monte Carlo simulation: for each dimension and sample size, we draw 1,000 optimal sample allocations and report the mean maximum GRI (Table~\ref{tab:max_gri}).
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{Maximum achievable GRI by sample size (Monte Carlo, 1,000 simulations).}
 \label{tab:max_gri}
@@ -284,7 +284,7 @@ Post-stratification reweighting is not a substitute for representative sampling 
 
 The Global Dialogues (GD) is a longitudinal survey of public perceptions of AI, recruiting approximately 1,000 participants per wave through online purposive sampling across 50--70 countries (Table~\ref{tab:gd_waves}).
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{Global Dialogues survey waves.}
 \label{tab:gd_waves}
@@ -307,7 +307,7 @@ GD7 & 1,022 & 65 \\
 
 Table~\ref{tab:gri_scores} presents GRI scores for primary and selected auxiliary dimensions, and Figure~\ref{fig:scorecard_heatmap} provides a visual summary of the complete 13-dimension scorecard across all waves. Gender balance is essentially perfect (GRI $> 0.97$). Continental representativeness is good (GRI $\approx 0.83$). The picture deteriorates sharply at finer granularity: Country $\times$ Gender $\times$ Age averages only 0.34, indicating roughly 66\% of the joint demographic weight is misallocated.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{GRI scores across Global Dialogues waves GD1--GD7.}
 \label{tab:gri_scores}
@@ -338,7 +338,7 @@ Gender & 0.989 & 0.990 & 0.996 & 0.979 & 0.986 & 0.995 & 0.996 & 0.990 & 0.02 \\
 
 Table~\ref{tab:efficiency} shows efficiency ratios---actual GRI divided by Monte Carlo maximum. The GD achieves approximately 43\% efficiency on Country $\times$ Gender $\times$ Age and 53\% on Country $\times$ Religion, indicating room for improvement through better sampling design. GD4 achieves the highest efficiency across all primary dimensions.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{Efficiency ratios (actual GRI / max GRI) for primary dimensions.}
 \label{tab:efficiency}
@@ -357,7 +357,7 @@ C $\times$ Environ. & 0.950 & 44.7\% & 41.5\% & 45.7\% & 47.7\% & 43.6\% & 42.7\
 
 Table~\ref{tab:variants} compares GRI and SRI for GD5 alongside the efficiency ratio. SRI scores are generally similar to GRI but differ at extremes: for Continent, SRI is higher (0.841 vs.\ 0.773) because the square-root transformation boosts smaller continents; for Religion, SRI is lower (0.745 vs.\ 0.813) because strategic targets boost underrepresented religions.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{Comparison of GRI, SRI, and efficiency ratio for GD5 ($N = 1{,}057$).}
 \label{tab:variants}
@@ -381,7 +381,7 @@ Gender & 0.986 & 0.986 & --- & --- \\
 
 Table~\ref{tab:deff} presents the design effect and effective sample size for the three primary dimensions across all GD waves.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{Design effect ($d_{\text{eff}}$), effective $N$, and precision retained for GD waves on Country $\times$ Gender $\times$ Age.}
 \label{tab:deff}
@@ -408,7 +408,7 @@ On average, the GD's $\sim$1,000 respondents yield an effective sample size of o
 
 We apply the framework to seven waves of the World Values Survey \citep{haerpfer2022wvs}, the largest cross-national values survey, employing probability sampling with 10--60 countries per wave and $N = 9{,}144$--$85{,}219$ (Table~\ref{tab:wvs_comparison}).
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{GRI comparison: Global Dialogues vs.\ World Values Survey.}
 \label{tab:wvs_comparison}
