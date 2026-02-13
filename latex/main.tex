@@ -19,6 +19,7 @@
 \usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{microtype}
 
 % ============================================================
 % Theorem environments
@@ -61,7 +62,7 @@
 % Abstract
 % ============================================================
 \begin{abstract}
-Global survey research increasingly informs high-stakes decisions in AI governance, international development, and cross-cultural policy---yet no standardized metric exists to quantify how well a survey sample's demographic composition matches its target population. Response rates and demographic quotas, the prevailing proxies for sample quality, measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a formal framework grounded in Total Variation Distance (TVD) that scores any survey sample against population benchmarks across multiple demographic dimensions simultaneously. The GRI produces interpretable scores on a $[0, 1]$ scale, where 1 indicates a perfect demographic mirror of the target population and values below 0.4 signal serious distributional mismatch. We validate the framework through empirical application to seven waves of the Global Dialogues survey on AI perceptions ($N = 7{,}500$ across 60+ countries), demonstrating that this purposive online survey achieves GRI scores of only 0.33--0.36 on fine-grained demographics---capturing roughly 43\% of the theoretically maximum achievable representativeness at its sample size. We further demonstrate generalizability by applying the framework to seven waves of the World Values Survey ($N = 403{,}000$ total), Afrobarometer Round~9 ($N = 53{,}000$), and Latinobar\'{o}metro ($N = 19{,}000$), revealing that even large-scale probability surveys can score below 0.22 on fine-grained global demographics when country coverage is limited. We introduce the Strategic Representativeness Index (SRI) for optimal sampling design, and show that the GRI connects to classical survey statistics through the design effect. We recommend reporting the GRI alongside the design effect's effective sample size as a minimum viable summary of sample quality: GRI quantifies the demographic distance, while effective $N$ translates the inferential cost into an intuitive metric of statistical power. We release an open-source Python library implementing the complete framework. The GRI is applicable not only to survey research but also to auditing demographic composition of machine learning datasets and AI evaluation benchmarks.
+Global survey research increasingly informs high-stakes decisions in AI governance and cross-cultural policy, yet no standardized metric quantifies how well a sample's demographic composition matches its target population. Response rates and demographic quotas---the prevailing proxies for sample quality---measure effort and coverage but not distributional fidelity. We introduce the Global Representativeness Index (GRI), a framework grounded in Total Variation Distance that scores any survey sample against population benchmarks across multiple demographic dimensions on a $[0, 1]$ scale. We validate the framework on seven waves of the Global Dialogues survey ($N = 7{,}500$ across 60+ countries), finding fine-grained demographic GRI scores of only 0.33--0.36---roughly 43\% of the theoretical maximum at its sample size. Cross-validation on the World Values Survey (seven waves, $N = 403{,}000$), Afrobarometer Round~9 ($N = 53{,}000$), and Latinobar\'{o}metro ($N = 19{,}000$) reveals that even large probability surveys score below 0.22 on fine-grained global demographics when country coverage is limited. We connect the GRI to classical survey statistics through the design effect, and recommend reporting both metrics as a minimum summary of sample quality: GRI quantifies demographic distance symmetrically, while effective $N$ captures the asymmetric inferential cost of underrepresentation. We also introduce the Strategic Representativeness Index (SRI) for optimizing sampling design. The framework is released as an open-source Python library with UN and Pew Research Center population benchmarks, applicable to survey research, machine learning dataset auditing, and AI evaluation benchmarks.
 \end{abstract}
 
 \noindent\textbf{Keywords:} representativeness, survey methodology, Total Variation Distance, demographic measurement, machine learning dataset auditing, AI governance
@@ -271,6 +272,12 @@ where $\text{CV}^2(w) = \text{Var}(w) / \bar{w}^2$ is the squared coefficient of
 
 A design effect of 3.0 means the weighted estimates have the same precision as a simple random sample one-third the size---two-thirds of the data collection budget has been consumed by the need to reweight.
 
+Equations~\eqref{eq:deff}--\eqref{eq:neff} assume full benchmark coverage: every population stratum contains at least one survey respondent. When some strata are unrepresented ($p_i = 0$, $q_i > 0$), reweighting cannot correct for these gaps---point~(2) in the list below. In practice, we compute $d_{\text{eff}}$ over the \emph{covered} subset of strata, renormalizing both $p$ and $q$ to sum to one over that subset. Let $f = \sum_{i \in \mathcal{C}} p_i$ denote the fraction of survey respondents in benchmark-matched strata $\mathcal{C} = \{i : p_i > 0 \text{ and } q_i > 0\}$. The coverage-adjusted effective sample size is:
+\begin{equation}\label{eq:neff_adj}
+    N_{\text{eff}} = \frac{N \cdot f}{d_{\text{eff}}}
+\end{equation}
+where $d_{\text{eff}} = \sum_{i \in \mathcal{C}} \tilde{q}_i^2 / \tilde{p}_i$ uses the renormalized proportions $\tilde{q}_i = q_i / \sum_{j \in \mathcal{C}} q_j$ and $\tilde{p}_i = p_i / f$. When coverage is complete ($f = 1$), this reduces to Equation~\eqref{eq:neff}. All design effect and effective $N$ values reported in this paper use the coverage-adjusted formulation.
+
 The connection to the GRI is through the weight distribution: when $p_i \approx q_i$ for all strata, the weights are near 1.0, the CV of weights is small, and the design effect approaches 1.0. As distributional mismatch grows (GRI decreases), some weights become extreme, the CV increases, and precision degrades. Formally, $d_{\text{eff}} = \sum_i q_i^2 / p_i$---driven by a ratio-based divergence (related to $\chi^2$ distance) rather than the $L_1$ distance underlying TVD. The critical distinction is one of \textbf{symmetry}: TVD treats overrepresentation and underrepresentation of the same absolute magnitude equally, while the design effect is asymmetric---underrepresentation is far more expensive, because the reweighting ratio $q_i/p_i$ amplifies noise from the few respondents in thin strata, whereas overrepresentation merely downweights excess data (wasteful but not precision-destroying). Two surveys with the same GRI can therefore have very different design effects. We recommend reporting \emph{both}: the GRI measures \emph{how much} the sample deviates; the design effect reveals \emph{how costly} that deviation is.
 
 Post-stratification reweighting is not a substitute for representative sampling for four reasons: (1) variance inflation is quadratic---doubling $q_i/p_i$ quadruples that stratum's contribution to the design effect; (2) empty strata ($p_i = 0$) are uncorrectable; (3) extreme weights increase model dependence and sensitivity to outliers; and (4) reweighting treats the symptom (bias) but not the cause (poor allocation), leaving confidence intervals unnecessarily wide.
@@ -383,7 +390,7 @@ Table~\ref{tab:deff} presents the design effect and effective sample size for th
 
 \begin{table}[ht]
 \centering
-\caption{Design effect ($d_{\text{eff}}$), effective $N$, and precision retained for GD waves on Country $\times$ Gender $\times$ Age.}
+\caption{Design effect ($d_{\text{eff}}$), effective $N$ (Equation~\ref{eq:neff_adj}), and precision retained for GD waves on Country $\times$ Gender $\times$ Age.}
 \label{tab:deff}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
@@ -434,6 +441,17 @@ The comparison reveals a fundamental trade-off: the GD achieves higher GRI becau
 
 We also apply the framework to Afrobarometer Round~9 \citep{afrobarometer2024} ($N = 53{,}444$, 39~countries) and Latinobar\'{o}metro 2023--2024 \citep{latinobarometro2024} ($N \approx 19{,}200$, 17~countries), using country-filtered benchmarks restricted to each survey's claimed coverage area. Afrobarometer achieves CGA GRI = 0.532 with $d_{\text{eff}} = 2.01$ ($N_{\text{eff}} = 16{,}152$); Latinobar\'{o}metro 2023 achieves CGA GRI = 0.480 with $d_{\text{eff}} = 2.51$ ($N_{\text{eff}} = 5{,}666$). These regional surveys demonstrate that large-scale probability surveys with comprehensive regional coverage can achieve good representativeness combined with strong inferential power. The year-over-year stability of Latinobar\'{o}metro scores (2023 vs.\ 2024) also demonstrates the GRI's utility for longitudinal monitoring.
 
+\subsection{The Complementarity of GRI and Effective Sample Size}
+
+Figure~\ref{fig:cross_survey} plots GRI against effective sample size for all five surveys across the three primary benchmark dimensions. The clustering reveals the central empirical finding: no survey dominates on both metrics simultaneously. The Global Dialogues achieves moderate GRI through broad country coverage but yields low $N_{\text{eff}}$ due to small per-country samples. The World Values Survey achieves high $N_{\text{eff}}$ through large within-country samples but low GRI because its country selection covers a fraction of the global demographic distribution. The regional surveys---evaluated against country-filtered benchmarks for their claimed coverage areas---achieve both high GRI and high $N_{\text{eff}}$, illustrating the advantage of matching sampling ambition to achievable scope. This figure provides visual evidence for the paper's recommendation: reporting GRI and $N_{\text{eff}}$ together communicates what neither metric captures alone.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{figures/cross_survey_comparison.pdf}
+\caption{GRI vs.\ effective sample size across five surveys and three primary benchmark dimensions (Country $\times$ Gender $\times$ Age, Country $\times$ Religion, Country $\times$ Environment). Each point represents one survey wave evaluated on one dimension. Regional surveys (Afrobarometer, Latinobar\'{o}metro) use country-filtered benchmarks; global surveys (GD, WVS) use world population benchmarks. The log-scale $y$-axis spans three orders of magnitude, reflecting the vast differences in inferential power across survey designs.}
+\label{fig:cross_survey}
+\end{figure}
+
 % ============================================================
 % 5. Discussion
 % ============================================================
@@ -458,7 +476,7 @@ The GRI framework applies to any dataset with categorical demographic attributes
 
 \subsection{The \texttt{gri} Python Library}
 
-The framework is implemented as an open-source Python library comprising 16 modules organized into calculation, analysis, data, and presentation layers. It exposes two API surfaces:
+The framework is implemented as an open-source Python library comprising 16 modules organized into calculation, analysis, data, and presentation layers.\footnote{Source code and documentation: \url{https://github.com/collect-intel/gri}} It exposes two API surfaces:
 
 \begin{lstlisting}[caption={Functional API for scripted pipelines.},label={lst:functional}]
 from gri import calculate_gri, load_benchmark_suite
@@ -508,11 +526,25 @@ analysis.plot_scorecard(save_to='scorecard.png')
 
 The GRI transforms a vague question---``How representative is this survey?''---into a precise, measurable quantity. Application to seven waves of the Global Dialogues survey reveals that a purposive online survey spanning 60+ countries achieves Country $\times$ Gender $\times$ Age GRI scores of only 0.33--0.36, capturing roughly 43\% of the theoretically achievable representativeness. The primary drivers are geographic concentration and structural urban bias. Cross-survey validation using the World Values Survey (seven waves, 9{,}000--85{,}000 respondents per wave) reveals a complementary pattern: WVS achieves lower GRI scores (mean CGA GRI $= 0.20$) despite far larger samples, because its country selection covers fewer of the world's demographic strata---but its effective sample sizes ($N_{\text{eff}} \approx 5{,}700$) dwarf those of the GD waves ($N_{\text{eff}} \approx 189$), reflecting the inferential advantage of probability sampling within covered populations. Application to the Afrobarometer (Round~9, $N = 53{,}444$) and Latinobar\'ometro (2023--2024, $N \approx 19{,}200$) further demonstrates generalizability across survey modalities, scales, and geographic scopes.
 
-The GRI and design effect measure complementary aspects of sample quality, and we recommend that surveys report both as a minimum viable summary. The \textbf{GRI} answers ``How closely does this sample mirror the target population?''---a symmetric measure that treats all demographic deviations equally. The \textbf{effective sample size} ($N / d_{\text{eff}}$) answers ``What is this survey actually worth for inference?''---an asymmetric measure that penalizes underrepresentation far more heavily than overrepresentation, because reweighting amplifies noise from few respondents. Together, these two numbers communicate what neither can alone: a survey with GRI $= 0.34$ and $N_{\text{eff}} = 189$ (like the typical GD wave) tells a very different story from one with GRI $= 0.20$ and $N_{\text{eff}} = 5{,}695$ (like the typical WVS wave), even though both are imperfect.
+The GRI and design effect measure complementary aspects of sample quality, and we recommend that surveys report both as a minimum viable summary. The \textbf{GRI} answers ``How closely does this sample mirror the target population?''---a symmetric measure that treats all demographic deviations equally. The \textbf{effective sample size} (Equation~\ref{eq:neff_adj}) answers ``What is this survey actually worth for inference?''---an asymmetric measure that penalizes underrepresentation far more heavily than overrepresentation, because reweighting amplifies noise from few respondents. Together, these two numbers communicate what neither can alone: a survey with GRI $= 0.34$ and $N_{\text{eff}} = 189$ (like the typical GD wave) tells a very different story from one with GRI $= 0.20$ and $N_{\text{eff}} = 5{,}695$ (like the typical WVS wave), even though both are imperfect.
 
 What changes if researchers adopt this framework? Three things. First, \textbf{transparency}: every survey can report a standardized, comparable representativeness score alongside its results, enabling consumers of research to calibrate their confidence in ``global'' findings. Second, \textbf{optimization}: the segment-level decomposition and efficiency analysis identify exactly which demographic gaps matter most, guiding recruitment strategy. Third, \textbf{accountability}: funders and policymakers can set minimum representativeness targets for research that claims to represent global populations, just as they set minimum sample size requirements.
 
 The complementary metrics extend this toolkit: the SRI for designing surveys that maximize statistical power across populations, the efficiency ratio for contextualizing scores against structural constraints, the diversity score for measuring strata coverage, and the design effect for quantifying the inferential cost of distributional mismatch. Together, these metrics span the lifecycle of survey research---design (SRI, Monte Carlo max scores), execution (real-time GRI monitoring, segment deviation analysis), and evaluation (GRI, efficiency ratio, design effect, effective sample size). The framework is released as open-source software with authoritative population benchmarks from the United Nations and Pew Research Center. We invite the survey methodology community to adopt, critique, and extend it.
+
+% ============================================================
+% Acknowledgments
+% ============================================================
+\section*{Acknowledgments}
+
+We thank the Collective Intelligence Project team, especially Zarinah Agnew, for developing the Global Dialogues project, survey instruments, and partnerships, and Joal Stein for maintaining the Global Dialogues website and public data access. We thank the Prolific team for their collaboration on globally representative sampling across each Global Dialogue wave. We also thank the World Values Survey Association, Afrobarometer, and Corporaci\'{o}n Latinobar\'{o}metro for making their survey data publicly available.
+
+% ============================================================
+% Code and Data Availability
+% ============================================================
+\section*{Code and Data Availability}
+
+The \texttt{gri} Python library, including all benchmark data from the United Nations and Pew Research Center, is available at \url{https://github.com/collect-intel/gri}. Complete scorecard tables for all surveys analyzed in this paper are included in the repository and can be reproduced via \texttt{make reproduce}. Global Dialogues survey data is available via the repository as a git submodule. World Values Survey data is available from \url{https://www.worldvaluessurvey.org}. Afrobarometer data is available from \url{https://www.afrobarometer.org}. Latinobar\'{o}metro data is available from \url{https://www.latinobarometro.org}.
 
 % ============================================================
 % References
@@ -569,6 +601,6 @@ Equation~\eqref{eq:pinsker} is Pinsker's inequality \citep{lecam1986asymptotic,t
 
 \section{Extended Scorecard Tables}\label{app:tables}
 
-Figure~\ref{fig:scorecard_heatmap} provides a visual summary of GRI scores across all dimensions and waves. Complete GRI and Diversity Score tables for all 13 dimensions are provided in the supplementary materials and the project repository.
+Figure~\ref{fig:scorecard_heatmap} provides a visual summary of GRI scores across all dimensions and waves. Complete scorecard tables for all 13 dimensions---including GRI, Diversity Score, SRI, design effect, effective $N$, and precision retention---are available in the project repository (\texttt{analysis\_output/scorecards/}) and can be reproduced with \texttt{make reproduce}.
 
 \end{document}

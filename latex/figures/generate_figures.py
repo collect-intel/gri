@@ -312,6 +312,118 @@ def figure4_pipeline_diagram():
     print(f"  Saved: {out_png}")
 
 
+def load_all_survey_data():
+    """Load scorecard data from all surveys for cross-survey comparison."""
+    scorecards_dir = os.path.join(REPO_ROOT, 'analysis_output', 'scorecards')
+    surveys = {}
+
+    # GD combined (aggregate to per-wave means for primary dims)
+    gd_path = os.path.join(scorecards_dir, 'GD_combined_scorecards.csv')
+    if os.path.exists(gd_path):
+        surveys['Global Dialogues'] = pd.read_csv(gd_path)
+
+    # WVS combined
+    wvs_path = os.path.join(scorecards_dir, 'WVS_combined_scorecards.csv')
+    if os.path.exists(wvs_path):
+        surveys['World Values Survey'] = pd.read_csv(wvs_path)
+
+    # Regional surveys
+    for name, filename in [
+        ('Afrobarometer R9', 'Afrobarometer_R9_scorecard.csv'),
+        ('Latinobarómetro 2023', 'Latinobarometro_2023_scorecard.csv'),
+        ('Latinobarómetro 2024', 'Latinobarometro_2024_scorecard.csv'),
+    ]:
+        path = os.path.join(scorecards_dir, filename)
+        if os.path.exists(path):
+            surveys[name] = pd.read_csv(path)
+
+    return surveys
+
+
+def figure5_cross_survey_comparison(surveys):
+    """
+    Scatter plot of GRI vs Effective N across all surveys and primary dimensions.
+    Visualizes the paper's central argument: GRI and effective N capture
+    complementary aspects of sample quality.
+    """
+    primary_dims = [
+        'Country × Gender × Age',
+        'Country × Religion',
+        'Country × Environment',
+    ]
+    dim_short = {
+        'Country × Gender × Age': 'C×G×A',
+        'Country × Religion': 'C×Rel',
+        'Country × Environment': 'C×Env',
+    }
+
+    survey_colors = {
+        'Global Dialogues': '#2196F3',
+        'World Values Survey': '#FF9800',
+        'Afrobarometer R9': '#4CAF50',
+        'Latinobarómetro 2023': '#9C27B0',
+        'Latinobarómetro 2024': '#E91E63',
+    }
+    dim_markers = {
+        'Country × Gender × Age': 'o',
+        'Country × Religion': 's',
+        'Country × Environment': '^',
+    }
+
+    fig, ax = plt.subplots(figsize=(8, 5.5))
+
+    for survey_name, df in surveys.items():
+        color = survey_colors.get(survey_name, 'gray')
+        for dim in primary_dims:
+            dim_data = df[df['dimension'] == dim]
+            if dim_data.empty:
+                continue
+            marker = dim_markers[dim]
+            gri_vals = dim_data['gri'].values
+            neff_vals = dim_data['effective_n'].values
+
+            # Only label survey name on first dimension to avoid legend clutter
+            label = survey_name if dim == primary_dims[0] else None
+            ax.scatter(gri_vals, neff_vals, c=color, marker=marker,
+                       s=40, alpha=0.75, edgecolors='white', linewidths=0.3,
+                       label=label, zorder=3)
+
+    ax.set_yscale('log')
+    ax.set_xlabel('GRI Score')
+    ax.set_ylabel('Effective Sample Size ($N_{\\mathrm{eff}}$)')
+    # No title — caption is in the LaTeX figure environment
+
+    # GRI interpretation bands
+    ax.axvline(x=0.4, color='gray', linestyle='--', alpha=0.2, linewidth=0.8)
+    ax.axvline(x=0.6, color='gray', linestyle='--', alpha=0.2, linewidth=0.8)
+    ax.axvline(x=0.8, color='gray', linestyle='--', alpha=0.2, linewidth=0.8)
+    ax.grid(True, alpha=0.15, which='both')
+
+    # Dimension legend (markers)
+    dim_handles = [
+        plt.Line2D([0], [0], marker=dim_markers[d], color='gray',
+                   linestyle='None', markersize=6, label=dim_short[d])
+        for d in primary_dims
+    ]
+
+    # Survey legend
+    first_legend = ax.legend(loc='upper left', fontsize=8, framealpha=0.9)
+    ax.add_artist(first_legend)
+    ax.legend(handles=dim_handles, loc='lower right', fontsize=8,
+              title='Dimension', title_fontsize=8, framealpha=0.9)
+
+    ax.set_xlim(-0.02, 0.85)
+
+    plt.tight_layout()
+    out_path = os.path.join(OUTPUT_DIR, 'cross_survey_comparison.pdf')
+    plt.savefig(out_path)
+    out_png = os.path.join(REPO_ROOT, 'site', 'images', 'cross_survey_comparison.png')
+    plt.savefig(out_png, dpi=200)
+    plt.close()
+    print(f"  Saved: {out_path}")
+    print(f"  Saved: {out_png}")
+
+
 def main():
     print("Generating figures for GRI Whitepaper...")
     print(f"  Repository root: {REPO_ROOT}")
@@ -336,6 +448,14 @@ def main():
 
     print("\n--- Figure 4: Pipeline Diagram ---")
     figure4_pipeline_diagram()
+
+    print("\n--- Figure 5: Cross-Survey Comparison ---")
+    surveys = load_all_survey_data()
+    if len(surveys) > 1:
+        print(f"  Loaded {len(surveys)} surveys: {list(surveys.keys())}")
+        figure5_cross_survey_comparison(surveys)
+    else:
+        print("  Skipping: need multiple survey scorecards")
 
     print("\nDone! All figures saved to:", OUTPUT_DIR)
 
