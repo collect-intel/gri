@@ -10,7 +10,7 @@ MAIN = main
 FIGDIR = figures
 FIGSCRIPT = $(FIGDIR)/generate_figures.py
 
-.PHONY: all figures paper clean arxiv reproduce
+.PHONY: all figures paper clean reproduce
 
 all: figures paper
 
@@ -36,13 +36,4 @@ reproduce:
 	cd .. && make reproduce
 	$(MAKE) figures
 
-# Create arXiv-ready archive
-arxiv: paper
-	tar -czf gri-whitepaper-arxiv.tar.gz \
-		$(MAIN).tex \
-		$(MAIN).bbl \
-		references.bib \
-		$(FIGDIR)/*.pdf \
-		$(FIGDIR)/generate_figures.py
-	@echo "Created: gri-whitepaper-arxiv.tar.gz"
-	@echo "Upload this file to arXiv."
+# arXiv archive: use `make arxiv` from project root

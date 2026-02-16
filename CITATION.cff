@@ -6,9 +6,6 @@ authors:
   - given-names: Evan
     family-names: Hadfield
     affiliation: The Collective Intelligence Project
-  - given-names: Andrew
-    family-names: Konya
-    affiliation: Remesh.ai
 repository-code: https://github.com/collect-intel/gri
 url: https://collect-intel.github.io/gri/
 license: MIT

@@ -1,6 +1,6 @@
 # The Global Representativeness Index: A Total Variation Distance Framework for Measuring Demographic Fidelity in Survey Research
 
-**Evan Hadfield and Andrew Konya**
+**Evan Hadfield**
 
 *Correspondence: evan@cip.org*
 

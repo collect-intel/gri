@@ -23,7 +23,8 @@ RESET := \033[0m
         venv-check data-check health-check \
         demo validate-data show-benchmarks \
         submodule-init submodule-update \
-        reproduce scorecards-gd scorecards-wvs scorecards-regional figures site-figures max-scores
+        reproduce scorecards-gd scorecards-wvs scorecards-regional figures site-figures max-scores \
+        arxiv
 
 # Default target
 help:
@@ -60,6 +61,9 @@ help:
 	@echo "  $(GREEN)make figures$(RESET)              - Generate paper figures + site images from GD data"
 	@echo "  $(GREEN)make site-figures$(RESET)         - Generate site comparison figures (requires all survey data)"
 	@echo "  $(GREEN)make max-scores$(RESET)           - Compute Monte Carlo max possible scores"
+	@echo ""
+	@echo "$(BLUE)Publishing Commands:$(RESET)"
+	@echo "  $(GREEN)make arxiv$(RESET)                - Create arXiv submission archive (latex/gri-whitepaper-arxiv.tar.gz)"
 	@echo ""
 	@echo "$(BLUE)Development Commands:$(RESET)"
 	@echo "  $(GREEN)make test$(RESET)                 - Run test suite"
@@ -255,6 +259,26 @@ clean:
 	@find . -name ".ipynb_checkpoints" -type d -exec rm -rf {} + 2>/dev/null || true
 	@rm -rf build/ dist/ 2>/dev/null || true
 	@echo "$(GREEN)Cleanup complete!$(RESET)"
+
+# arXiv submission archive
+LATEX_DIR := latex
+ARXIV_FIGURES := $(LATEX_DIR)/figures/scorecard_heatmap.pdf $(LATEX_DIR)/figures/cross_survey_comparison.pdf
+
+arxiv:
+	@echo "$(BLUE)Creating arXiv submission archive...$(RESET)"
+	@for f in $(LATEX_DIR)/main.tex $(LATEX_DIR)/references.bib $(ARXIV_FIGURES); do \
+		if [ ! -f "$$f" ]; then \
+			echo "$(RED)Error: Missing $$f$(RESET)"; \
+			exit 1; \
+		fi; \
+	done
+	@cd $(LATEX_DIR) && tar -czf gri-whitepaper-arxiv.tar.gz \
+		main.tex \
+		references.bib \
+		figures/scorecard_heatmap.pdf \
+		figures/cross_survey_comparison.pdf
+	@echo "$(GREEN)Created: $(LATEX_DIR)/gri-whitepaper-arxiv.tar.gz$(RESET)"
+	@echo "$(YELLOW)Upload to arXiv (select pdflatex, TeX Live 2025)$(RESET)"
 
 # Git submodule commands
 submodule-init:

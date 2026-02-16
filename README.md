@@ -85,7 +85,7 @@ config/               YAML configuration for dimensions and segments
 ```bibtex
 @software{hadfield2025gri,
   title  = {Global Representativeness Index (GRI)},
-  author = {Hadfield, Evan and Konya, Andrew},
+  author = {Hadfield, Evan},
   year   = {2025},
   url    = {https://github.com/collect-intel/gri}
 }
