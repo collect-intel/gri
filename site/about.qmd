@@ -18,17 +18,16 @@ The Collective Intelligence Project
 If you use the GRI in your research, please cite:
 
 ```bibtex
-@software{hadfield2025gri,
+@article{hadfield2025gri,
   author    = {Hadfield, Evan},
   title     = {The Global Representativeness Index: Measuring Demographic
                Representativeness in Survey Samples Using Total Variation Distance},
   year      = {2025},
-  url       = {https://github.com/collect-intel/gri},
-  license   = {MIT}
+  eprint    = {2602.14835},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2602.14835}
 }
 ```
-
-An arXiv preprint is forthcoming.
 
 ## License
 

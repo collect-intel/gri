@@ -2,7 +2,7 @@
 
 A framework for measuring how well survey samples represent their target population across demographic dimensions. The GRI uses Total Variation Distance to produce interpretable scores on a [0, 1] scale, where 1 indicates a perfect demographic mirror and values below 0.4 signal serious distributional mismatch.
 
-**Paper:** [`latex/main.tex`](latex/main.tex) (preprint)
+**Paper:** [arXiv:2602.14835](https://arxiv.org/abs/2602.14835)
 **Website:** [gri.cip.org](https://collect-intel.github.io/gri/)
 **Citation:** See [below](#citation)
 
@@ -83,11 +83,14 @@ config/               YAML configuration for dimensions and segments
 ## Citation
 
 ```bibtex
-@software{hadfield2025gri,
-  title  = {Global Representativeness Index (GRI)},
+@article{hadfield2025gri,
+  title  = {The Global Representativeness Index: Measuring Demographic
+            Representativeness in Survey Samples Using Total Variation Distance},
   author = {Hadfield, Evan},
   year   = {2025},
-  url    = {https://github.com/collect-intel/gri}
+  eprint = {2602.14835},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2602.14835}
 }
 ```
 
