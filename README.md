@@ -86,7 +86,7 @@ config/               YAML configuration for dimensions and segments
 @article{hadfield2025gri,
   title  = {The Global Representativeness Index: Measuring Demographic
             Representativeness in Survey Samples Using Total Variation Distance},
-  author = {Hadfield, Evan},
+  author = {Hadfield, Evan and Konya, Andrew},
   year   = {2025},
   eprint = {2602.14835},
   archivePrefix = {arXiv},

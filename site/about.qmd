@@ -13,13 +13,15 @@ As large-scale surveys and public consultations increasingly shape AI policy and
 **[Evan Hadfield](https://www.evanh.is)**
 The Collective Intelligence Project
 
+**Andrew Konya**
+
 ## Citation
 
 If you use the GRI in your research, please cite:
 
 ```bibtex
 @article{hadfield2025gri,
-  author    = {Hadfield, Evan},
+  author    = {Hadfield, Evan and Konya, Andrew},
   title     = {The Global Representativeness Index: Measuring Demographic
                Representativeness in Survey Samples Using Total Variation Distance},
   year      = {2025},
